@@ -1,0 +1,38 @@
+{
+  "name": "b-components",
+  "version": "0.0.0-alpha",
+  "description": "Generate Bootstrap components through JavaScript",
+  "main": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ZhangChengLin/b-components.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap5",
+    "components",
+    "modal",
+    "offcanvas",
+    "Alerts",
+    "Carousel",
+    "Collapse",
+    "Dropdowns",
+    "Progress",
+    "Scrollspy",
+    "Tab",
+    "Toasts"
+  ],
+  "author": {
+    "name": "ZhangChengLin",
+    "email": "469946668@qq.com",
+    "url": "https://ZhangChengLin.github.io"
+  },
+  "license": "MIT",
+  "engines": {
+    "bootstrap": "^6.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": []
+}
