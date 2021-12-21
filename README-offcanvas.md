@@ -1,8 +1,8 @@
-# bsOffcanvasJs
+# bOffcanvas
 
 ## Demo
 
-[https://ZhangChengLin.github.io/bs-components-js/docs/demo-offcanvas.html](https://ZhangChengLin.github.io/bs-components-js/docs/demo-offcanvas.html)
+[https://ZhangChengLin.github.io/b-components-js/docs/demo-offcanvas.html](https://ZhangChengLin.github.io/b-components-js/docs/demo-offcanvas.html)
 
 ---
 
@@ -17,7 +17,7 @@
 ## How to install
 
 ```
-npm i bs-components-js --save
+npm i b-components-js --save
 ```
 
 ---
@@ -25,9 +25,9 @@ npm i bs-components-js --save
 ## How to use
 
 ```
-<a href="javascript:;" onclick="bsOffcanvasJs(parameter)">text</a>
+<a href="javascript:;" onclick="bOffcanvas(parameter)">text</a>
 
-<script src="./dist/umd/bsOffcanvasJs.js"></script>
+<script src="./dist/umd/bOffcanvas.min.js"></script>
 ```
 
 OR
@@ -35,11 +35,11 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="./dist/umd/bsOffcanvasJs.js"></script>
+<script src="./dist/umd/bOffcanvas.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
-        bsOffcanvasJs(parameter);
+        bOffcanvas(parameter);
     })
 </script>
 ```
@@ -52,5 +52,5 @@ OR MORE
 ## Parameter Description
 
 ```
-bsOffcanvasJs(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction)
+bOffcanvas(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction)
 ```

@@ -1,8 +1,8 @@
-# bsModalJs
+# bModal
 
 ## Demo
 
-[https://ZhangChengLin.github.io/bs-components-js/docs/demo-modal.html](https://ZhangChengLin.github.io/bs-components-js/docs/demo-modal.html)
+[https://ZhangChengLin.github.io/b-components-js/docs/demo-modal.html](https://ZhangChengLin.github.io/b-components-js/docs/demo-modal.html)
 
 
 ---
@@ -20,7 +20,7 @@
 - Install via NPM package
 
 ```
-npm i bs-components-js --save
+npm i b-components-js --save
 ```
 
 ---
@@ -28,9 +28,9 @@ npm i bs-components-js --save
 ## How to use
 
 ```
-<a href="javascript:;" onclick="bsModalJs(parameter)">text</a>
+<a href="javascript:;" onclick="bModal(parameter)">text</a>
 
-<script src="./dist/umd/bsModalJs.js"></script>
+<script src="./dist/umd/bModal.min.js"></script>
 ```
 
 OR
@@ -38,11 +38,11 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="./dist/umd/bsOffcanvasJs.js"></script>
+<script src="./dist/umd/bModal.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
-        bsModalJs(parameter);
+        bModal(parameter);
     })
 </script>
 ```
@@ -56,7 +56,7 @@ Currently, relying on Bootstrap v5, because it is a function package of Bootstra
 Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
 ```
-bsModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventType, CallbackFunction)
+bModal(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventType, CallbackFunction)
 ```
 
 **Return Values**
