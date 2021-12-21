@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <link rel="icon" href="./static/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="./static/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/styles/atom-one-dark.min.css">
+  <title>Modal demo</title>
+  <meta name="description"
+        content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
+  <meta name="keywords"
+        content="Bootstrap,Bootstrap5,Modal,dynamic,backdrop,keyboard,focus,getInstance,getOrCreateInstance,show.bs.modal,shown.bs.modal,hide.bs.modal,hidden.bs.modal">
+  <script>
+    function close_all_modals() {
+      let all_modals = document.querySelectorAll('.modal');
+      let all_modals_length = all_modals.length;
+      for (let i = 0; i < all_modals_length; i++) {
+        let x = bootstrap.Modal.getInstance(all_modals[i]);
+        x.hide();
+      }
+    }
+  </script>
+</head>
+<body>
+<div class="container alert alert-primary alert-dismissible fade show" role="alert">
+  <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
+  <div class="small">
+    <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+  </div>
+  <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+</div>
+<div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
+  <div class="py-4 container border rounded">
+    <div class="my-4 p-4 border rounded">
+      <label for="title">title</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">modal-title</span>
+        <input type="text" class="form-control" id="title" placeholder="When empty, there will be no modal header" value="default title">
+      </div>
+      <div class="mb-2 form-check form-switch">
+        <input class="form-check-input" id="titleFunctionSwitch" role="switch" type="checkbox">
+        <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.</label>
+      </div>
+      <div class="w-75 input-group mb-3 d-none">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="titleFunctionSelect">Function</label>
+        <select class="form-select" id="titleFunctionSelect">
+          <option value="return_title" selected>return_title</option>
+          <option value="return_body">return_body</option>
+          <option value="return_footer">return_footer</option>
+          <option value="calc_number">calc_number</option>
+          <option value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+        </select>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <label for="body">body</label>
+      <div>When testing long content, please increase the content of the body to see the effect.</div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">body</span>
+        <textarea class="form-control" id="body" placeholder="Please enter content" rows="4">this is default body content.</textarea>
+      </div>
+      <div class="mb-2 form-check form-switch">
+        <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
+        <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
+      </div>
+      <div class="w-75 input-group mb-3 d-none">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
+        <select class="form-select" id="bodyFunctionSelect">
+          <option value="return_title">return_title</option>
+          <option value="return_body" selected>return_body</option>
+          <option value="return_footer">return_footer</option>
+          <option value="calc_number">calc_number</option>
+          <option value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+        </select>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <label for="footer">footer</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">footer</span>
+        <textarea rows="9" class="form-control" id="footer" placeholder="Please enter content">
+<div>
+<div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">&nbsp;flexbox</a>
+</div>
+<input type="button" class="btn btn-outline-success" data-bs-dismiss="modal" value="Close">
+<input type="button" class="btn btn-outline-success" onclick="close_all_modals()" value="Close All">
+<button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
+</div></textarea>
+      </div>
+      <div class="mb-2 form-check form-switch">
+        <input class="form-check-input" id="footerFunctionSwitch" role="switch" type="checkbox">
+        <label class="form-check-label" for="footerFunctionSwitch">Use Function control footer content.</label>
+      </div>
+      <div class="w-75 input-group mb-3 d-none">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="footerFunctionSelect">Function</label>
+        <select class="form-select" id="footerFunctionSelect">
+          <option value="return_title">return_title</option>
+          <option value="return_body">return_body</option>
+          <option value="return_footer" selected>return_footer</option>
+          <option value="calc_number">calc_number</option>
+          <option value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+        </select>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div>ModalSizes</div>
+      <div class="input-group">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="ModalSizes">ModalSizes</label>
+        <select class="form-select" id="ModalSizes">
+          <option value="">default</option>
+          <option value="sm">sm</option>
+          <option value="lg">lg</option>
+          <option value="xl">xl</option>
+          <option value="modal-fullscreen">modal-fullscreen</option>
+          <option value="modal-fullscreen-sm-down">modal-fullscreen-sm-down</option>
+          <option value="modal-fullscreen-md-down">modal-fullscreen-md-down</option>
+          <option value="modal-fullscreen-lg-down">modal-fullscreen-lg-down</option>
+          <option value="modal-fullscreen-xl-down">modal-fullscreen-xl-down</option>
+          <option disabled value="custom">custom (disabled)</option>
+        </select>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>VerticallyCentered</div>
+        <span class="small text-muted"></span>
+      </div>
+      <div class="custom-control custom-radio form-check-inline">
+        <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio" value="1">
+        <label class="form-check-label" for="VerticallyCentered_true" title="true"> true </label>
+      </div>
+      <div class="custom-control custom-radio form-check-inline">
+        <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio" value="">
+        <label class="form-check-label" for="VerticallyCentered_false" title="default"> false </label>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>LongContentType</div>
+        <span class="small text-muted"></span>
+      </div>
+      <div class="custom-control custom-radio form-check-inline">
+        <input class="form-check-input" id="LongContentType_true" name="LongContentType" type="radio" value="1">
+        <label class="form-check-label" for="LongContentType_true" title="true"> true </label>
+      </div>
+      <div class="custom-control custom-radio form-check-inline">
+        <input checked class="form-check-input" id="LongContentType_false" name="LongContentType" type="radio" value="">
+        <label class="form-check-label" for="LongContentType_false" title="default"> false </label>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>Options</div>
+        <span class="small text-muted"></span>
+      </div>
+      <div class="my-1 p-2">
+        <div class="form-check form-switch form-check-inline">
+          <input checked class="form-check-input" id="backdrop" name="backdrop" type="checkbox">
+          <label class="form-check-label" for="backdrop">backdrop</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" disabled id="backdrop_static" name="backdrop" type="checkbox">
+          <label class="form-check-label" for="backdrop_static">backdrop_static</label>
+        </div>
+      </div>
+      <div class="my-1 p-2">
+        <div class="mb-2 form-check form-switch">
+          <input checked class="form-check-input" id="keyboard" type="checkbox">
+          <label class="form-check-label" for="keyboard">keyboard</label>
+        </div>
+      </div>
+      <div class="my-1 p-2">
+        <div class="mb-2 form-check form-switch">
+          <input type="checkbox" class="form-check-input" id="focus" checked>
+          <label class="form-check-label" for="focus">focus</label>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3 gap-md-4">
+        <div>
+          <div class="mb-1">
+            <div>Event Type</div>
+            <span class="small text-muted">Events Type and Events Function must exist at the same time if used</span>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" id="EventsType_show" name="EventsType" type="radio" value="show">
+                <label class="form-check-label" for="EventsType_show" title="show.bs.modal">show</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" id="EventsType_shown" name="EventsType" type="radio" value="shown">
+                <label class="form-check-label" for="EventsType_shown" title="shown.bs.modal">shown</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" id="EventsType_hide" name="EventsType" type="radio" value="hide">
+                <label class="form-check-label" for="EventsType_hide" title="hide.bs.modal">hide</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" id="EventsType_hidden" name="EventsType" type="radio" value="hidden">
+                <label class="form-check-label" for="EventsType_hidden" title="hidden.bs.modal">hidden</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" id="EventsType_hidePrevented" name="EventsType" type="radio" value="hidden">
+                <label class="form-check-label" for="EventsType_hidePrevented" title="hidePrevented.bs.modal">hidePrevented</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="d-block d-md-none dropdown-divider border-light"></span>
+        <span class="d-none d-md-block vr bg-white"></span>
+        <div>
+          <div class="mb-1">
+            <div>Event Function</div>
+            <span class="small text-muted">Events Type and Events Function must exist at the same time if used</span>
+          </div>
+          <div class="input-group">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
+            <select class="form-select" id="EventsFunction">
+              <option value="" disabled selected>Choose...</option>
+              <option value="alert_some_text">alert_some_text</option>
+              <option value="console_log_some_text">console_log_some_text</option>
+              <option value="get_number">get_number</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="fixed-bottom btn btn-lg btn-block btn-outline-success bg-dark bg-gradient" href="javascript:" id="bs_modal_click"
+       style="z-index:1055;">Click to generate modal box</a>
+  </div>
+</div>
+<div class="min-vh-100 bg-black bg-opacity-50">
+  <div class="container">
+    <span>Events Function code</span>
+    <div>
+        <pre>
+          <code class="language-javascript language-plaintext" style="max-height: 70vh;">
+function alert_some_text() {
+    alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+}
+
+function console_log_some_text() {
+    console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+}
+
+function return_number() {
+    return 222 + 333;
+}
+
+function get_number() {
+    alert(return_number());
+}
+
+function calc_number() {
+    return (1 + 2 + 3).toString();
+}
+
+function return_title() {
+    return "function title";
+}
+
+function return_body() {
+    return "function body";
+}
+
+function return_footer() {
+    return "function footer";
+}
+
+function return_Fun_HTML_Element() {
+    const html = document.createElement("div");
+    const p = document.createElement("p");
+    html.className = "bg-success";
+    p.className = "text-center";
+    p.innerHTML = "this is html obj.";
+    html.appendChild(p);
+    return html;
+}
+          </code>
+        </pre>
+    </div>
+  </div>
+</div>
+
+<script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/umd/bModal.min.js"></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script id="sampleFunctionCode">
+  function alert_some_text() {
+    alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+  }
+
+  function console_log_some_text() {
+    console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+  }
+
+  function return_number() {
+    return 222 + 333;
+  }
+
+  function get_number() {
+    alert(return_number());
+  }
+
+  function calc_number() {
+    return (1 + 2 + 3).toString();
+  }
+
+  function return_title() {
+    return "function title";
+  }
+
+  function return_body() {
+    return "function body";
+  }
+
+  function return_footer() {
+    return "function footer";
+  }
+
+  function return_obj() {
+    return {
+      "aaa": "111",
+      "bbb": "222",
+      "ccc": "333",
+    };
+  }
+
+  function return_Fun_HTML_Element() {
+    const html = document.createElement("div");
+    const p = document.createElement("p");
+    html.className = "bg-success";
+    p.className = "text-center";
+    p.innerHTML = "this is html obj.";
+    html.appendChild(p);
+    return html;
+  }
+</script>
+<script>
+  (function () {
+    const bs_modal_click = document.querySelector("#bs_modal_click");
+    bs_modal_click.addEventListener("click", function () {
+
+      const title_value = checkbox_status("titleFunction") ? select_function_value("titleFunction") : select_value("title");
+      const body_value = checkbox_status("bodyFunction") ? select_function_value("bodyFunction") : select_value("body");
+      const footer_value = checkbox_status("footerFunction") ? select_function_value("footerFunction") : select_value("footer");
+      const ModalSizes_value = select_value("ModalSizes");
+      const VerticallyCentered_value = radio_boolean_value("VerticallyCentered");
+      const LongContentType_value = radio_boolean_value("LongContentType");
+      const EventType_value = radio_value("EventsType");
+      const EventsFunction = select_value("EventsFunction");
+      const EventsFunction_value = EventsFunction ? eval(EventsFunction) : "";
+      const Options_obj_value = get_checkbox_arr_value(["backdrop", "keyboard", "focus"]);
+
+      bModal(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, Options_obj_value, EventType_value, EventsFunction_value);
+    });
+
+    function get_checkbox_arr_value(arr) {
+      const obj = {};
+      for (const i of arr) {
+        const dom = document.querySelector("#" + i);
+        dom.checked
+          ? obj[i] = true
+          : dom.id !== 'backdrop'
+            ? obj[i] = false
+            : obj[i] = get_backdrop_static_checkbox_value();
+      }
+      return obj;
+    }
+
+    let backdrop_switch = document.querySelector('#backdrop');
+    let backdrop_static_checkbox = document.querySelector('#backdrop_static');
+    backdrop_switch.addEventListener('click', function () {
+      if (backdrop_switch.checked === false) {
+        backdrop_static_checkbox.removeAttribute('disabled');
+      } else {
+        backdrop_static_checkbox.checked = false;
+        backdrop_static_checkbox.setAttribute('disabled', '');
+      }
+    });
+
+    function get_backdrop_static_checkbox_value() {
+      if (backdrop_static_checkbox.checked === true) {
+        return 'static';
+      } else {
+        return false;
+      }
+    }
+
+    function checkbox_status(id) {
+      const checkbox = document.querySelector("#" + id + "Switch");
+      return checkbox.checked === true ? true : "";
+    }
+
+    function select_function_value(id) {
+      const fun_name = document.querySelector("#" + id + "Select").value;
+      return eval(fun_name);
+    }
+
+    function select_value(id) {
+      const option = document.querySelector("#" + id);
+      return option.value;
+    }
+
+    function radio_value(name) {
+      const radio = document.querySelectorAll("[name='" + name + "']");
+      let radioValue;
+      for (let i = 0; i < radio.length; i++) {
+        if (radio[i].checked === true) {
+          radioValue = radio[i].value;
+          break;
+        }
+      }
+      return radioValue;
+    }
+
+    function radio_boolean_value(name) {
+      let radio = document.querySelectorAll("[name='" + name + "']");
+      let radioValue;
+      for (let i = 0; i < radio.length; i++) {
+        if (radio[i].checked === true) {
+          radioValue = radio[i].value;
+          break;
+        }
+      }
+      return Boolean(radioValue);
+    }
+
+    function_switch("titleFunction");
+    function_switch("bodyFunction");
+    function_switch("footerFunction");
+
+    function function_switch(id) {
+      let switchEl = document.querySelector("#" + id + "Switch");
+      let select = document.querySelector("#" + id + "Select");
+      switchEl.addEventListener("click", function () {
+        select.parentElement.classList.toggle("d-none");
+      })
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:unicorn/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": "error",
+    "unicorn/filename-case": "off",
+    "unicorn/no-null": "off",
+    "unicorn/no-array-for-each": "off",
+    "unicorn/no-unused-properties": "error",
+    "unicorn/prevent-abbreviations": "off"
+  }
+}

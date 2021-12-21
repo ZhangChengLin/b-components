@@ -1,0 +1,7 @@
+.github
+demoFiles
+node_modules
+
+*.html
+
+dist

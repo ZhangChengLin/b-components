@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <link rel="icon" href="./static/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="./static/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/styles/atom-one-dark.min.css">
+  <title>Offcanvas demo</title>
+  <meta name="description"
+        content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
+  <meta name="keywords"
+        content="Bootstrap,Bootstrap5,Offcanvas,dynamic,backdrop,keyboard,scroll,getInstance,getOrCreateInstance,show.bs.offcanvas,shown.bs.offcanvas,hide.bs.offcanvas,hidden.bs.offcanvas">
+</head>
+<body>
+<div class="container alert alert-primary alert-dismissible fade show" role="alert">
+  <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
+  <div class="small">
+    <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+  </div>
+  <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+</div>
+<div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
+  <div class="py-4 container border rounded">
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">offcanvas-header</div>
+      <div class="input-group">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
+        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">offcanvas-body</div>
+      <div class="input-group">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
+        <textarea class="form-control" rows="4" id="offcanvasBody" placeholder="Please enter content">default body </textarea>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>Placement</div>
+        <span class="small text-muted">Placed, null value defaults to 'start' </span>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="start" id="offcanvasPlacement_start" checked>
+            <label class="form-check-label" for="offcanvasPlacement_start">start</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="top" id="offcanvasPlacement_top">
+            <label class="form-check-label" for="offcanvasPlacement_top">top</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="end" id="offcanvasPlacement_end">
+            <label class="form-check-label" for="offcanvasPlacement_end">end</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="bottom" id="offcanvasPlacement_bottom">
+            <label class="form-check-label" for="offcanvasPlacement_bottom">bottom</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>Options</div>
+        <span class="small text-muted">The boolean value is true when it is turned on, and it is false when it is turned off</span>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="1" id="offcanvasBackdrop_true" checked>
+            <label class="form-check-label" for="offcanvasBackdrop_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="" id="offcanvasBackdrop_false">
+            <label class="form-check-label" for="offcanvasBackdrop_false">false</label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="1" id="offcanvasKeyboard_true" checked>
+            <label class="form-check-label" for="offcanvasKeyboard_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="" id="offcanvasKeyboard_false">
+            <label class="form-check-label" for="offcanvasKeyboard_false">false</label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">scroll</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="offcanvasScroll" value="1" id="offcanvasScroll_true">
+            <label class="form-check-label" for="offcanvasScroll_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="offcanvasScroll" value="" id="offcanvasScroll_false" checked>
+            <label class="form-check-label" for="offcanvasScroll_false">false</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3 gap-md-4">
+        <div>
+          <div class="mb-1">
+            <div>Event Type</div>
+            <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="show" id="offcanvasEvents_show">
+                <label class="form-check-label" for="offcanvasEvents_show">show</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="shown" id="offcanvasEvents_shown">
+                <label class="form-check-label" for="offcanvasEvents_shown">shown</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="hide" id="offcanvasEvents_hide">
+                <label class="form-check-label" for="offcanvasEvents_hide">hide</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="hidden" id="offcanvasEvents_hidden">
+                <label class="form-check-label" for="offcanvasEvents_hidden">hidden</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="d-block d-md-none dropdown-divider border-light"></span>
+        <span class="d-none d-md-block vr bg-white"></span>
+        <div>
+          <div class="mb-1">
+            <div>Event Function</div>
+            <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
+          </div>
+          <div class="input-group">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
+            <select class="form-select" id="EventsFunction">
+              <option selected>Choose...</option>
+              <option value="eventFun_1">EventsFunction_1</option>
+              <option value="eventFun_2">EventsFunction_2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="my-4 mx-auto d-block btn btn-outline-primary bg-gradient" type="button" id="renderOffcanvas">Render Offcanvas effect</button>
+  </div>
+</div>
+<div class="min-vh-100 bg-black bg-opacity-50">
+  <div class="container">
+    <span>Events Function code</span>
+    <pre><code class="language-javascript language-plaintext">
+function EventsFunction_1() {
+  alert('EventsFunction_1')
+}
+
+function EventsFunction_2() {
+  alert('EventsFunction_2')
+}
+    </code></pre>
+  </div>
+</div>
+<div class="min-vh-100 bg-secondary bg-opacity-50">
+  <div class="position-relative min-vh-100">
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <div class="mx-auto position-relative" style="width: 50vw;height: 30vh;">
+        <div class="position-absolute top-0 start-50 translate-middle">
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_top" data-offcanvas-placement="top">top</button>
+        </div>
+        <div class="position-absolute top-50 start-0 translate-middle">
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_start" data-offcanvas-placement="start">start</button>
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle">Offcanvas</div>
+        <div class="position-absolute top-50 start-100 translate-middle">
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_end" data-offcanvas-placement="end">end</button>
+        </div>
+        <div class="position-absolute top-100 start-50 translate-middle">
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">bottom</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/umd/bOffcanvas.min.js"></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+  let renderOffcanvas = document.querySelector('#renderOffcanvas')
+  renderOffcanvas.addEventListener('click', () => {
+    let options = {
+      backdrop: getRadio('offcanvasBackdrop', 'bool'),
+      keyboard: getRadio('offcanvasKeyboard', 'bool'),
+      scroll: getRadio('offcanvasScroll', 'bool')
+    }
+
+    let offcanvasTitle = document.querySelector('#offcanvasTitle')
+    let offcanvasBody = document.querySelector('#offcanvasBody')
+
+    bOffcanvas(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
+  })
+
+  function getRadio(name, returnType = 'val') {
+    let radio = document.querySelectorAll("[name='" + name + "']");
+    let radioValue;
+    let returnValue
+
+    for (let i = 0; i < radio.length; i++) {
+      if (radio[i].checked === true) {
+        radioValue = radio[i].value;
+        break;
+      }
+    }
+    switch (returnType) {
+      case "val":
+        returnValue = radioValue
+        break
+      case 'bool':
+      default:
+        returnValue = Boolean(radioValue)
+        break
+    }
+
+    return returnValue;
+  }
+
+</script>
+<script>
+  let btnList = document.querySelectorAll("[id^=offcanvas_]")
+  btnList.forEach(currentBtn => {
+    currentBtn.addEventListener('click', () => {
+      bOffcanvas(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
+    })
+  })
+</script>
+<script id="sampleFunctionCode">
+  function EventsFunction_1() {
+    alert('EventsFunction_1')
+  }
+
+  function EventsFunction_2() {
+    alert('EventsFunction_2')
+  }
+</script>
+
+</body>
+</html>
