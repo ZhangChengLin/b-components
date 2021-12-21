@@ -1,10 +1,10 @@
 # b-components-js
 
 <p align="center">
-<a href="https://github.com/ZhangChengLin/b-components-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components-js.svg?style=social"></a>
-<a href="https://github.com/ZhangChengLin/b-components-js/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components-js.svg"></a>
-<a href="https://github.com/ZhangChengLin/b-components-js/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components-js.svg"></a>
-<a href="https://github.com/ZhangChengLin/b-components-js/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/ZhangChengLin/b-components-js.svg"></a>
+<a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
+<a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components.svg"></a>
+<a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components.svg"></a>
+<a href="https://github.com/ZhangChengLin/b-components/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/ZhangChengLin/b-components.svg"></a>
 </p>
 
 <p align="center">
