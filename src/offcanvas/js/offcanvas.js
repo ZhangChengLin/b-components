@@ -22,13 +22,13 @@ const offcanvas = (headerElement = null, bodyElement = null, placement) => {
     case 'bottom':
       break;
     default:
-    throw `placement 参数错误`
+      throw `placement 参数错误`
   }
 
   _offcanvas.className = `offcanvas offcanvas-${placement}`
-  _offcanvas.id = timeString
+  _offcanvas.id = 'Offcanvas_' + timeString
   _offcanvas.tabIndex = -1
-  _offcanvas.setAttribute('aria-labelledby', 'offcanvasLabel')
+  _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel')
 
   _offcanvas.append(header, body)
 

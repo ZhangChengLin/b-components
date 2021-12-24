@@ -1,12 +1,12 @@
 /**
- * @param {Node|string} contentElement
+ * @param {Node|string} bodyElement
  */
-const offcanvasBody = (contentElement) => {
+const offcanvasBody = (bodyElement) => {
   let offcanvas_body = document.createElement('div')
 
   offcanvas_body.className = 'offcanvas-body'
 
-  contentElement instanceof HTMLElement ? offcanvas_body.append(contentElement) : offcanvas_body.innerHTML = contentElement
+  bodyElement instanceof HTMLElement ? offcanvas_body.append(bodyElement) : offcanvas_body.innerHTML = bodyElement
 
   return offcanvas_body
 }

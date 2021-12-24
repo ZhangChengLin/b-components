@@ -26,10 +26,6 @@ const bModal = (title, body, footer, ModalSizes, VerticallyCentered, LongContent
   const document_body = document.querySelector("body");
   const TimeID = new Date().getTime().toString();
   const modal_ID = "Modal_" + TimeID;
-  const modal_header_ID = "modalHeader_" + TimeID;
-  const modal_title_ID = "modalTitle_" + TimeID;
-  const modal_body_ID = "modalBody_" + TimeID;
-  const modal_footer_ID = "modalFooter_" + TimeID;
   const modal = document.createElement("div");
   const modal_dialog = document.createElement("div");
   const modal_content = document.createElement("div");
@@ -44,7 +40,7 @@ const bModal = (title, body, footer, ModalSizes, VerticallyCentered, LongContent
   modal.className = "modal fade";
   modal.tabIndex = -1;
   modal.role = "dialog";
-  typeof title === "string" ? modal.setAttribute("aria-labelledby", modal_title_ID) : "";
+  typeof title === "string" ? modal.setAttribute("aria-labelledby", 'ModalLabel') : "";
 
   modal_dialog.className = "modal-dialog";
   switch (ModalSizes) {
@@ -93,14 +89,12 @@ const bModal = (title, body, footer, ModalSizes, VerticallyCentered, LongContent
     case false:
     default:
   }
-  modal_dialog.role = "document";
 
   modal_content.className = "modal-content shadow-lg overflow-hidden";
 
   modal_header.className = "modal-header";
-  modal_header.id = modal_header_ID;
 
-  typeof title === "string" ? modal_title.id = modal_title_ID : "";
+  typeof title === "string" ? modal_title.id = 'ModalLabel' : "";
   title instanceof HTMLElement ? modal_header.appendChild(title) : modal_title.innerHTML = title;
 
   modal_close_btn.className = "btn-close";
@@ -111,11 +105,9 @@ const bModal = (title, body, footer, ModalSizes, VerticallyCentered, LongContent
   modal_close_span.setAttribute("aria-hidden", "true");
 
   modal_body.className = "modal-body";
-  modal_body.id = modal_body_ID;
   body instanceof HTMLElement ? modal_body.appendChild(body) : modal_body.innerHTML = body;
 
   modal_footer.className = "modal-footer";
-  modal_footer.id = modal_footer_ID;
   footer instanceof HTMLElement ? modal_footer.appendChild(footer) : modal_footer.innerHTML = footer;
 
   title ? modal_close_btn.appendChild(modal_close_span) : "";
