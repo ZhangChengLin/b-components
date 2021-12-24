@@ -102,8 +102,11 @@ cnpm i b-components-js --save
 - **jsDelivr**
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bModal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bOffcanvas.min.js"></script>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bModal.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bOffcanvas.min.js"></script>
 ```
 
 View all versions
