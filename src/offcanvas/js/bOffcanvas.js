@@ -1,5 +1,5 @@
 import offcanvas from "./offcanvas";
-import {getTimeString, offcanvasEvents} from "./util/index";
+import {getTimeString, offcanvasEvents,rem} from "./util/index";
 
 
 /**
