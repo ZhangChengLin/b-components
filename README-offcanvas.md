@@ -2,7 +2,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components-js/docs/demo-offcanvas.html](https://ZhangChengLin.github.io/b-components-js/docs/demo-offcanvas.html)
+[https://ZhangChengLin.github.io/b-components/docs/demo-offcanvas.html](https://ZhangChengLin.github.io/b-components/docs/demo-offcanvas.html)
 
 ---
 

@@ -77,7 +77,7 @@ If it helps you, please **star** this repository
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components-js/docs/index.html](https://ZhangChengLin.github.io/b-components-js/docs/index.html)
+[https://ZhangChengLin.github.io/b-components/docs/index.html](https://ZhangChengLin.github.io/b-components/docs/index.html)
 
 ---
 
@@ -102,7 +102,8 @@ cnpm i b-components-js --save
 - **jsDelivr**
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bs-components-js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.min.js"></script>
 ```
 
 View all versions
