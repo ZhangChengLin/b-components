@@ -1,7 +1,7 @@
 /**
- * @param {Node | string} titleElement
+ * @param {Node | string} headerNodeElement
  */
-const modalHeader = (titleElement) => {
+const modalHeader = (headerNodeElement) => {
   let header = document.createElement('div')
   let title = document.createElement('h5')
   let btn = document.createElement('button')
@@ -10,11 +10,11 @@ const modalHeader = (titleElement) => {
 
   title.className = 'modal-title'
   title.id = 'modalTitleLabel'
-  titleElement instanceof Function
-    ? title.append(titleElement())
-    : titleElement instanceof HTMLElement
-      ? title.append(titleElement)
-      : title.innerHTML = titleElement
+  headerNodeElement instanceof Function
+    ? title.append(headerNodeElement())
+    : headerNodeElement instanceof HTMLElement
+      ? title.append(headerNodeElement)
+      : title.innerHTML = headerNodeElement
 
   btn.className = 'btn-close text-reset'
   btn.type = 'button'

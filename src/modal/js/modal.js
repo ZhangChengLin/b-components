@@ -1,15 +1,16 @@
 import modalDialog from "./modal-dialog"
 
+
 /**
- * @param {Node|string} titleElement
- * @param {Node|string} bodyElement
- * @param {Node|string} footerElement
+ * @param {Node|string} headerNodeElement
+ * @param {Node|string} bodyNodeElement
+ * @param {Node|string} footerNodeElement
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
- * @param {boolean} LongContentType
+ * @param {boolean} ScrollingLongContent
  * @param {string} modalId
  */
-const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType, modalId) => {
+const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
   const _modal = document.createElement('div')
 
   _modal.id = modalId
@@ -18,7 +19,7 @@ const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyC
   _modal.role = "dialog"
   _modal.setAttribute('aria-labelledby', 'modalTitleLabel')
 
-  _modal.append(modalDialog(titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType))
+  _modal.append(modalDialog(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent))
 
   return _modal
 }

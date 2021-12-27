@@ -1,15 +1,15 @@
 /**
- * @param {Node|string} bodyElement
+ * @param {Node|string} bodyNodeElement
  */
-const modalBody = (bodyElement) => {
+const modalBody = (bodyNodeElement) => {
   let modal_body = document.createElement('div')
 
   modal_body.className = 'modal-body'
-  bodyElement instanceof Function
-    ? modal_body.append(bodyElement())
-    : bodyElement instanceof HTMLElement
-      ? modal_body.append(bodyElement)
-      : modal_body.innerHTML = bodyElement
+  bodyNodeElement instanceof Function
+    ? modal_body.append(bodyNodeElement())
+    : bodyNodeElement instanceof HTMLElement
+      ? modal_body.append(bodyNodeElement)
+      : modal_body.innerHTML = bodyNodeElement
 
   return modal_body
 }

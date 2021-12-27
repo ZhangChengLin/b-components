@@ -1,14 +1,14 @@
 import modalContent from "./modal-content"
 
 /**
- * @param {Node|string} titleElement
- * @param {Node|string} bodyElement
- * @param {Node|string} footerElement
+ * @param {Node|string} headerNodeElement
+ * @param {Node|string} bodyNodeElement
+ * @param {Node|string} footerNodeElement
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
- * @param {boolean} LongContentType
+ * @param {boolean} ScrollingLongContent
  */
-const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', VerticallyCentered = false, LongContentType = false) => {
+const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
   const dialog = document.createElement('div')
 
   dialog.className = 'modal-dialog'
@@ -54,7 +54,7 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', 
     default:
   }
 
-  switch (LongContentType) {
+  switch (ScrollingLongContent) {
     case true:
       dialog.classList.add('modal-dialog-scrollable')
       break
@@ -62,7 +62,7 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', 
     default:
   }
 
-  dialog.append(modalContent(titleElement, bodyElement, footerElement))
+  dialog.append(modalContent(headerNodeElement, bodyNodeElement, footerNodeElement))
 
   return dialog
 }

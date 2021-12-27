@@ -1,15 +1,15 @@
 /**
- * @param {Node | string} footerElement
+ * @param {Node | string} footerNodeElement
  */
-const modalFooter = (footerElement) => {
+const modalFooter = (footerNodeElement) => {
   let modal_footer = document.createElement('div')
 
   modal_footer.className = 'modal-footer'
-  footerElement instanceof Function
-    ? modal_footer.append(footerElement())
-    : footerElement instanceof HTMLElement
-      ? modal_footer.append(footerElement)
-      : modal_footer.innerHTML = footerElement
+  footerNodeElement instanceof Function
+    ? modal_footer.append(footerNodeElement())
+    : footerNodeElement instanceof HTMLElement
+      ? modal_footer.append(footerNodeElement)
+      : modal_footer.innerHTML = footerNodeElement
 
   return modal_footer
 }

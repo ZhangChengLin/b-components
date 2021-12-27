@@ -4,19 +4,19 @@ import modalFooter from "./modal-footer"
 
 
 /**
- * @param {Node|string} titleContent
- * @param {Node|string} bodyContent
- * @param {Node|string} footerContent
+ * @param {Node|string} headerNodeElement
+ * @param {Node|string} bodyNodeElement
+ * @param {Node|string} footerNodeElement
  */
-const modalContent = (titleContent, bodyContent, footerContent) => {
+const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
   const content = document.createElement("div")
 
   content.className = "modal-content"
 
   content.append(
-    modalHeader(titleContent),
-    modalBody(bodyContent),
-    modalFooter(footerContent)
+    modalHeader(headerNodeElement),
+    modalBody(bodyNodeElement),
+    modalFooter(footerNodeElement)
   )
 
   return content

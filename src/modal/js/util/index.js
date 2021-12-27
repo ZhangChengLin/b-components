@@ -2,6 +2,11 @@ const getTimeString = () => {
   return new Date().getTime().toString()
 }
 
+/**
+ * @param {string} modalId
+ * @param {string} EventsType
+ * @param {function} EventsFun
+ */
 const modalEvents = (modalId, EventsType, EventsFun) => {
   const modal = document.querySelector("#" + modalId);
   switch (EventsType) {

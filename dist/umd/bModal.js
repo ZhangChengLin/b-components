@@ -20,6 +20,11 @@
     return new Date().getTime().toString()
   };
 
+  /**
+   * @param {string} modalId
+   * @param {string} EventsType
+   * @param {function} EventsFun
+   */
   const modalEvents = (modalId, EventsType, EventsFun) => {
     const modal = document.querySelector("#" + modalId);
     switch (EventsType) {
@@ -63,9 +68,9 @@
   };
 
   /**
-   * @param {Node | string} titleElement
+   * @param {Node | string} headerNodeElement
    */
-  const modalHeader = (titleElement) => {
+  const modalHeader = (headerNodeElement) => {
     let header = document.createElement('div');
     let title = document.createElement('h5');
     let btn = document.createElement('button');
@@ -74,11 +79,11 @@
 
     title.className = 'modal-title';
     title.id = 'modalTitleLabel';
-    titleElement instanceof Function
-      ? title.append(titleElement())
-      : titleElement instanceof HTMLElement
-        ? title.append(titleElement)
-        : title.innerHTML = titleElement;
+    headerNodeElement instanceof Function
+      ? title.append(headerNodeElement())
+      : headerNodeElement instanceof HTMLElement
+        ? title.append(headerNodeElement)
+        : title.innerHTML = headerNodeElement;
 
     btn.className = 'btn-close text-reset';
     btn.type = 'button';
@@ -90,65 +95,65 @@
   };
 
   /**
-   * @param {Node|string} bodyElement
+   * @param {Node|string} bodyNodeElement
    */
-  const modalBody = (bodyElement) => {
+  const modalBody = (bodyNodeElement) => {
     let modal_body = document.createElement('div');
 
     modal_body.className = 'modal-body';
-    bodyElement instanceof Function
-      ? modal_body.append(bodyElement())
-      : bodyElement instanceof HTMLElement
-        ? modal_body.append(bodyElement)
-        : modal_body.innerHTML = bodyElement;
+    bodyNodeElement instanceof Function
+      ? modal_body.append(bodyNodeElement())
+      : bodyNodeElement instanceof HTMLElement
+        ? modal_body.append(bodyNodeElement)
+        : modal_body.innerHTML = bodyNodeElement;
 
     return modal_body
   };
 
   /**
-   * @param {Node | string} footerElement
+   * @param {Node | string} footerNodeElement
    */
-  const modalFooter = (footerElement) => {
+  const modalFooter = (footerNodeElement) => {
     let modal_footer = document.createElement('div');
 
     modal_footer.className = 'modal-footer';
-    footerElement instanceof Function
-      ? modal_footer.append(footerElement())
-      : footerElement instanceof HTMLElement
-        ? modal_footer.append(footerElement)
-        : modal_footer.innerHTML = footerElement;
+    footerNodeElement instanceof Function
+      ? modal_footer.append(footerNodeElement())
+      : footerNodeElement instanceof HTMLElement
+        ? modal_footer.append(footerNodeElement)
+        : modal_footer.innerHTML = footerNodeElement;
 
     return modal_footer
   };
 
   /**
-   * @param {Node|string} titleContent
-   * @param {Node|string} bodyContent
-   * @param {Node|string} footerContent
+   * @param {Node|string} headerNodeElement
+   * @param {Node|string} bodyNodeElement
+   * @param {Node|string} footerNodeElement
    */
-  const modalContent = (titleContent, bodyContent, footerContent) => {
+  const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
     const content = document.createElement("div");
 
     content.className = "modal-content";
 
     content.append(
-      modalHeader(titleContent),
-      modalBody(bodyContent),
-      modalFooter(footerContent)
+      modalHeader(headerNodeElement),
+      modalBody(bodyNodeElement),
+      modalFooter(footerNodeElement)
     );
 
     return content
   };
 
   /**
-   * @param {Node|string} titleElement
-   * @param {Node|string} bodyElement
-   * @param {Node|string} footerElement
+   * @param {Node|string} headerNodeElement
+   * @param {Node|string} bodyNodeElement
+   * @param {Node|string} footerNodeElement
    * @param {string} ModalSizes
    * @param {boolean} VerticallyCentered
-   * @param {boolean} LongContentType
+   * @param {boolean} ScrollingLongContent
    */
-  const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', VerticallyCentered = false, LongContentType = false) => {
+  const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
     const dialog = document.createElement('div');
 
     dialog.className = 'modal-dialog';
@@ -192,27 +197,27 @@
         break
     }
 
-    switch (LongContentType) {
+    switch (ScrollingLongContent) {
       case true:
         dialog.classList.add('modal-dialog-scrollable');
         break
     }
 
-    dialog.append(modalContent(titleElement, bodyElement, footerElement));
+    dialog.append(modalContent(headerNodeElement, bodyNodeElement, footerNodeElement));
 
     return dialog
   };
 
   /**
-   * @param {Node|string} titleElement
-   * @param {Node|string} bodyElement
-   * @param {Node|string} footerElement
+   * @param {Node|string} headerNodeElement
+   * @param {Node|string} bodyNodeElement
+   * @param {Node|string} footerNodeElement
    * @param {string} ModalSizes
    * @param {boolean} VerticallyCentered
-   * @param {boolean} LongContentType
+   * @param {boolean} ScrollingLongContent
    * @param {string} modalId
    */
-  const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType, modalId) => {
+  const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
     const _modal = document.createElement('div');
 
     _modal.id = modalId;
@@ -221,16 +226,27 @@
     _modal.role = "dialog";
     _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
 
-    _modal.append(modalDialog(titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType));
+    _modal.append(modalDialog(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent));
 
     return _modal
   };
 
-  const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, LongContentType, Options, EventsType, EventsFunction) => {
+  /**
+   * @param {string} headerNodeElement
+   * @param {string} bodyNodeElement
+   * @param {string} footerNodeElement
+   * @param {string} ModalSizes
+   * @param {boolean} VerticallyCentered
+   * @param {boolean} ScrollingLongContent
+   * @param {{}} Options
+   * @param {string} EventsType
+   * @param {*|string} EventsFunction
+   */
+  const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
     let timeString = getTimeString();
     let mId = 'modalId_' + timeString;
 
-    document.body.append(modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, LongContentType, mId));
+    document.body.append(modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, mId));
 
     EventsType && EventsFunction ? modalEvents(mId, EventsType, EventsFunction) : "";
 
