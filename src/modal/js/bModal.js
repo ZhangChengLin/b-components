@@ -3,15 +3,15 @@ import modal from "./modal";
 
 
 /**
- * @param {string} headerNodeElement
- * @param {string} bodyNodeElement
- * @param {string} footerNodeElement
+ * @param {Node|string|Function|null} headerNodeElement
+ * @param {Node|string|Function|null} bodyNodeElement
+ * @param {Node|string|Function|null} footerNodeElement
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
  * @param {boolean} ScrollingLongContent
  * @param {{}} Options
  * @param {string} EventsType
- * @param {*|string} EventsFunction
+ * @param {Function} EventsFunction
  */
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
   let timeString = getTimeString()

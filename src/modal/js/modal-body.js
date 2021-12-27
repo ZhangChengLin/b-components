@@ -1,5 +1,5 @@
 /**
- * @param {Node|string} bodyNodeElement
+ * @param {Node|string|Function|null} bodyNodeElement
  */
 const modalBody = (bodyNodeElement) => {
   let modal_body = document.createElement('div')

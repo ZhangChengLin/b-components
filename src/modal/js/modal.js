@@ -2,9 +2,9 @@ import modalDialog from "./modal-dialog"
 
 
 /**
- * @param {Node|string} headerNodeElement
- * @param {Node|string} bodyNodeElement
- * @param {Node|string} footerNodeElement
+ * @param {Node|string|Function} headerNodeElement
+ * @param {Node|string|Function} bodyNodeElement
+ * @param {Node|string|Function} footerNodeElement
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
  * @param {boolean} ScrollingLongContent

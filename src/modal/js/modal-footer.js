@@ -1,5 +1,5 @@
 /**
- * @param {Node | string} footerNodeElement
+ * @param {Node|string|Function|null} footerNodeElement
  */
 const modalFooter = (footerNodeElement) => {
   let modal_footer = document.createElement('div')

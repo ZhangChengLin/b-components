@@ -68,7 +68,7 @@
   };
 
   /**
-   * @param {Node | string} headerNodeElement
+   * @param {Node|string|Function|null} headerNodeElement
    */
   const modalHeader = (headerNodeElement) => {
     let header = document.createElement('div');
@@ -95,7 +95,7 @@
   };
 
   /**
-   * @param {Node|string} bodyNodeElement
+   * @param {Node|string|Function|null} bodyNodeElement
    */
   const modalBody = (bodyNodeElement) => {
     let modal_body = document.createElement('div');
@@ -111,7 +111,7 @@
   };
 
   /**
-   * @param {Node | string} footerNodeElement
+   * @param {Node|string|Function|null} footerNodeElement
    */
   const modalFooter = (footerNodeElement) => {
     let modal_footer = document.createElement('div');
@@ -127,9 +127,9 @@
   };
 
   /**
-   * @param {Node|string} headerNodeElement
-   * @param {Node|string} bodyNodeElement
-   * @param {Node|string} footerNodeElement
+   * @param {Node|string|Function|null} headerNodeElement
+   * @param {Node|string|Function|null} bodyNodeElement
+   * @param {Node|string|Function|null} footerNodeElement
    */
   const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
     const content = document.createElement("div");
@@ -146,9 +146,9 @@
   };
 
   /**
-   * @param {Node|string} headerNodeElement
-   * @param {Node|string} bodyNodeElement
-   * @param {Node|string} footerNodeElement
+   * @param {Node|string|Function} headerNodeElement
+   * @param {Node|string|Function} bodyNodeElement
+   * @param {Node|string|Function} footerNodeElement
    * @param {string} ModalSizes
    * @param {boolean} VerticallyCentered
    * @param {boolean} ScrollingLongContent
@@ -209,9 +209,9 @@
   };
 
   /**
-   * @param {Node|string} headerNodeElement
-   * @param {Node|string} bodyNodeElement
-   * @param {Node|string} footerNodeElement
+   * @param {Node|string|Function} headerNodeElement
+   * @param {Node|string|Function} bodyNodeElement
+   * @param {Node|string|Function} footerNodeElement
    * @param {string} ModalSizes
    * @param {boolean} VerticallyCentered
    * @param {boolean} ScrollingLongContent
@@ -232,15 +232,15 @@
   };
 
   /**
-   * @param {string} headerNodeElement
-   * @param {string} bodyNodeElement
-   * @param {string} footerNodeElement
+   * @param {Node|string|Function|null} headerNodeElement
+   * @param {Node|string|Function|null} bodyNodeElement
+   * @param {Node|string|Function|null} footerNodeElement
    * @param {string} ModalSizes
    * @param {boolean} VerticallyCentered
    * @param {boolean} ScrollingLongContent
    * @param {{}} Options
    * @param {string} EventsType
-   * @param {*|string} EventsFunction
+   * @param {Function} EventsFunction
    */
   const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
     let timeString = getTimeString();

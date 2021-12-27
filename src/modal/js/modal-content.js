@@ -2,11 +2,10 @@ import modalHeader from "./modal-header"
 import modalBody from "./modal-body"
 import modalFooter from "./modal-footer"
 
-
 /**
- * @param {Node|string} headerNodeElement
- * @param {Node|string} bodyNodeElement
- * @param {Node|string} footerNodeElement
+ * @param {Node|string|Function|null} headerNodeElement
+ * @param {Node|string|Function|null} bodyNodeElement
+ * @param {Node|string|Function|null} footerNodeElement
  */
 const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
   const content = document.createElement("div")
