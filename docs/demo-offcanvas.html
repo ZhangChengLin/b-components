@@ -298,6 +298,19 @@ function EventsFunction_2() {
 
 </script>
 <script>
+  function_switch("headerFunction");
+  function_switch("bodyFunction");
+  function_switch("footerFunction");
+
+  function function_switch(id) {
+    let switchEl = document.querySelector("#" + id + "Switch");
+    let select = document.querySelector("#" + id + "Select");
+    switchEl.addEventListener("click", function () {
+      select.parentElement.classList.toggle("d-none");
+    })
+  }
+</script>
+<script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
   btnList.forEach(currentBtn => {
     currentBtn.addEventListener('click', () => {
