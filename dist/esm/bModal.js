@@ -52,7 +52,7 @@ const removeModal = modalId => {
     x.dispose();
     setTimeout(function () {
       modal_element.parentElement.removeChild(modal_element);
-    }, 3e3);
+    }, 2e3);
   });
 };
 
@@ -115,6 +115,11 @@ const modalFooter = (footerElement) => {
   return modal_footer
 };
 
+/**
+ * @param {Node|string} titleContent
+ * @param {Node|string} bodyContent
+ * @param {Node|string} footerContent
+ */
 const modalContent = (titleContent, bodyContent, footerContent) => {
   const content = document.createElement("div");
 
@@ -129,7 +134,15 @@ const modalContent = (titleContent, bodyContent, footerContent) => {
   return content
 };
 
-const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType) => {
+/**
+ * @param {Node|string} titleElement
+ * @param {Node|string} bodyElement
+ * @param {Node|string} footerElement
+ * @param {string} ModalSizes
+ * @param {boolean} VerticallyCentered
+ * @param {boolean} LongContentType
+ */
+const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', VerticallyCentered = false, LongContentType = false) => {
   const dialog = document.createElement('div');
 
   dialog.className = 'modal-dialog';
@@ -159,6 +172,12 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, Verti
     case "full-xl":
       dialog.classList.add('modal-fullscreen-xl-down');
       break
+    case "":
+    case "default":
+      break
+    default:
+      dialog.classList.add(ModalSizes);
+      break
   }
 
   switch (VerticallyCentered) {
@@ -178,6 +197,15 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, Verti
   return dialog
 };
 
+/**
+ * @param {Node|string} titleElement
+ * @param {Node|string} bodyElement
+ * @param {Node|string} footerElement
+ * @param {string} ModalSizes
+ * @param {boolean} VerticallyCentered
+ * @param {boolean} LongContentType
+ * @param {string} modalId
+ */
 const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType, modalId) => {
   const _modal = document.createElement('div');
 

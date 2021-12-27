@@ -1,6 +1,14 @@
 import modalDialog from "./modal-dialog"
 
-
+/**
+ * @param {Node|string} titleElement
+ * @param {Node|string} bodyElement
+ * @param {Node|string} footerElement
+ * @param {string} ModalSizes
+ * @param {boolean} VerticallyCentered
+ * @param {boolean} LongContentType
+ * @param {string} modalId
+ */
 const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType, modalId) => {
   const _modal = document.createElement('div')
 

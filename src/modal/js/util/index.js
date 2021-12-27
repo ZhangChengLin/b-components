@@ -42,7 +42,7 @@ const removeModal = modalId => {
     x.dispose();
     setTimeout(function () {
       modal_element.parentElement.removeChild(modal_element);
-    }, 3e3);
+    }, 2e3);
   });
 };
 

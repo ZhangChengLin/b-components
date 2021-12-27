@@ -58,7 +58,7 @@
       x.dispose();
       setTimeout(function () {
         modal_element.parentElement.removeChild(modal_element);
-      }, 3e3);
+      }, 2e3);
     });
   };
 
@@ -121,6 +121,11 @@
     return modal_footer
   };
 
+  /**
+   * @param {Node|string} titleContent
+   * @param {Node|string} bodyContent
+   * @param {Node|string} footerContent
+   */
   const modalContent = (titleContent, bodyContent, footerContent) => {
     const content = document.createElement("div");
 
@@ -135,7 +140,15 @@
     return content
   };
 
-  const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType) => {
+  /**
+   * @param {Node|string} titleElement
+   * @param {Node|string} bodyElement
+   * @param {Node|string} footerElement
+   * @param {string} ModalSizes
+   * @param {boolean} VerticallyCentered
+   * @param {boolean} LongContentType
+   */
+  const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', VerticallyCentered = false, LongContentType = false) => {
     const dialog = document.createElement('div');
 
     dialog.className = 'modal-dialog';
@@ -165,6 +178,12 @@
       case "full-xl":
         dialog.classList.add('modal-fullscreen-xl-down');
         break
+      case "":
+      case "default":
+        break
+      default:
+        dialog.classList.add(ModalSizes);
+        break
     }
 
     switch (VerticallyCentered) {
@@ -184,6 +203,15 @@
     return dialog
   };
 
+  /**
+   * @param {Node|string} titleElement
+   * @param {Node|string} bodyElement
+   * @param {Node|string} footerElement
+   * @param {string} ModalSizes
+   * @param {boolean} VerticallyCentered
+   * @param {boolean} LongContentType
+   * @param {string} modalId
+   */
   const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType, modalId) => {
     const _modal = document.createElement('div');
 

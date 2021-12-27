@@ -47,11 +47,11 @@
       <div class="w-75 input-group mb-3 d-none">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="titleFunctionSelect">Function</label>
         <select class="form-select" id="titleFunctionSelect">
-          <option value="return_title" selected>return_title</option>
-          <option value="return_body">return_body</option>
-          <option value="return_footer">return_footer</option>
-          <option value="calc_number">calc_number</option>
-          <option value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+          <option value="returnTitle" selected>returnTitle</option>
+          <option value="returnBody">returnBody</option>
+          <option value="returnFooter">returnFooter</option>
+          <option value="calcNumber">calcNumber</option>
+          <option value="returnHTML_Element">returnHTML_Element</option>
         </select>
       </div>
     </div>
@@ -69,11 +69,11 @@
       <div class="w-75 input-group mb-3 d-none">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
         <select class="form-select" id="bodyFunctionSelect">
-          <option value="return_title">return_title</option>
-          <option value="return_body" selected>return_body</option>
-          <option value="return_footer">return_footer</option>
-          <option value="calc_number">calc_number</option>
-          <option value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+          <option value="returnTitle">returnTitle</option>
+          <option value="returnBody" selected>returnBody</option>
+          <option value="returnFooter">returnFooter</option>
+          <option value="calcNumber">calcNumber</option>
+          <option value="returnHTML_Element">returnHTML_Element</option>
         </select>
       </div>
     </div>
@@ -97,11 +97,11 @@
       <div class="w-75 input-group mb-3 d-none">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="footerFunctionSelect">Function</label>
         <select class="form-select" id="footerFunctionSelect">
-          <option value="return_title">return_title</option>
-          <option value="return_body">return_body</option>
-          <option value="return_footer" selected>return_footer</option>
-          <option value="calc_number">calc_number</option>
-          <option value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+          <option value="returnTitle">returnTitle</option>
+          <option value="returnBody">returnBody</option>
+          <option value="returnFooter" selected>returnFooter</option>
+          <option value="calcNumber">calcNumber</option>
+          <option value="returnHTML_Element">returnHTML_Element</option>
         </select>
       </div>
     </div>
@@ -110,8 +110,8 @@
       <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="ModalSizes">ModalSizes</label>
         <select class="form-select" id="ModalSizes">
-          <option value="">default</option>
           <option value="sm">sm</option>
+          <option value="" selected>default None</option>
           <option value="lg">lg</option>
           <option value="xl">xl</option>
           <option value="modal-fullscreen">modal-fullscreen</option>
@@ -230,9 +230,9 @@
             <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
             <select class="form-select" id="EventsFunction">
               <option value="" disabled selected>Choose...</option>
-              <option value="alert_some_text">alert_some_text</option>
-              <option value="console_log_some_text">console_log_some_text</option>
-              <option value="get_number">get_number</option>
+              <option value="alertText">alert_some_text</option>
+              <option value="consoleLogText">console_log_some_text</option>
+              <option value="alertNumber">get_number</option>
             </select>
           </div>
         </div>
@@ -248,46 +248,46 @@
     <div>
         <pre>
           <code class="language-javascript language-plaintext" style="max-height: 70vh;">
-function alert_some_text() {
-    alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+function alertText() {
+  alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
 }
 
-function console_log_some_text() {
-    console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+function alertNumber() {
+  alert(returnNumber());
 }
 
-function return_number() {
-    return 222 + 333;
+function consoleLogText() {
+  console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
 }
 
-function get_number() {
-    alert(return_number());
+function returnNumber() {
+  return 222 + 333;
 }
 
-function calc_number() {
-    return (1 + 2 + 3).toString();
+function calcNumber() {
+  return (1 + 2 + 3).toString();
 }
 
-function return_title() {
-    return "function title";
+function returnTitle() {
+  return "function title";
 }
 
-function return_body() {
-    return "function body";
+function returnBody() {
+  return "function body";
 }
 
-function return_footer() {
-    return "function footer";
+function returnFooter() {
+  return "function footer";
 }
 
-function return_Fun_HTML_Element() {
-    const html = document.createElement("div");
-    const p = document.createElement("p");
-    html.className = "bg-success";
-    p.className = "text-center";
-    p.innerHTML = "this is html obj.";
-    html.appendChild(p);
-    return html;
+function returnHTML_Element() {
+  const html = document.createElement("div");
+  const p = document.createElement("p");
+  html.className = "bg-success";
+  p.className = "text-center";
+  p.innerHTML = "this is html obj.";
+  html.appendChild(p);
+  return html;
 }
           </code>
         </pre>
@@ -300,47 +300,39 @@ function return_Fun_HTML_Element() {
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script id="sampleFunctionCode">
-  function alert_some_text() {
+  function alertText() {
     alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
   }
 
-  function console_log_some_text() {
+  function alertNumber() {
+    alert(returnNumber());
+  }
+
+  function consoleLogText() {
     console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
   }
 
-  function return_number() {
+  function returnNumber() {
     return 222 + 333;
   }
 
-  function get_number() {
-    alert(return_number());
-  }
-
-  function calc_number() {
+  function calcNumber() {
     return (1 + 2 + 3).toString();
   }
 
-  function return_title() {
+  function returnTitle() {
     return "function title";
   }
 
-  function return_body() {
+  function returnBody() {
     return "function body";
   }
 
-  function return_footer() {
+  function returnFooter() {
     return "function footer";
   }
 
-  function return_obj() {
-    return {
-      "aaa": "111",
-      "bbb": "222",
-      "ccc": "333",
-    };
-  }
-
-  function return_Fun_HTML_Element() {
+  function returnHTML_Element() {
     const html = document.createElement("div");
     const p = document.createElement("p");
     html.className = "bg-success";

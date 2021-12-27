@@ -1,7 +1,14 @@
 import modalContent from "./modal-content"
 
-
-const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType) => {
+/**
+ * @param {Node|string} titleElement
+ * @param {Node|string} bodyElement
+ * @param {Node|string} footerElement
+ * @param {string} ModalSizes
+ * @param {boolean} VerticallyCentered
+ * @param {boolean} LongContentType
+ */
+const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes = '', VerticallyCentered = false, LongContentType = false) => {
   const dialog = document.createElement('div')
 
   dialog.className = 'modal-dialog'
@@ -31,9 +38,11 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, Verti
     case "full-xl":
       dialog.classList.add('modal-fullscreen-xl-down')
       break
+    case "":
     case "default":
+      break
     default:
-      // dialog.classList.add(ModalSizes)
+      dialog.classList.add(ModalSizes)
       break
   }
 
