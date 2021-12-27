@@ -1,6 +1,6 @@
-import offcanvasHeader from "./offcanvas-header";
-import offcanvasBody from "./offcanvas-body";
-import {getTimeString} from "./util/index";
+import offcanvasHeader from "./offcanvas-header"
+import offcanvasBody from "./offcanvas-body"
+import {getTimeString} from "./util/index"
 
 
 /**
@@ -20,7 +20,7 @@ const offcanvas = (headerElement = null, bodyElement = null, placement) => {
     case 'top':
     case 'end':
     case 'bottom':
-      break;
+      break
     default:
       throw `placement 参数错误`
   }

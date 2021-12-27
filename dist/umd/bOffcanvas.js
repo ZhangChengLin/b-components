@@ -108,7 +108,7 @@
       case 'top':
       case 'end':
       case 'bottom':
-        break;
+        break
       default:
         throw `placement 参数错误`
     }

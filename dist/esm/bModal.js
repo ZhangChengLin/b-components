@@ -185,6 +185,7 @@ const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyC
   _modal.className = "modal fade";
   _modal.tabIndex = -1;
   _modal.role = "dialog";
+  _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
 
   _modal.append(modalDialog(titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType));
 
@@ -203,7 +204,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
   const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
   xxx.show();
   removeModal(mId);
-  return timeString;
+  return mId;
 };
 
 export { bModal };

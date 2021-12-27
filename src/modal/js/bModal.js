@@ -14,7 +14,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
   const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
   xxx.show();
   removeModal(mId);
-  return timeString;
+  return mId;
 };
 
 export default bModal

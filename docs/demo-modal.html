@@ -296,7 +296,7 @@ function return_Fun_HTML_Element() {
 </div>
 
 <script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../dist/umd/bModal.js"></script>
+<script src="../dist/umd/bModal.min.js"></script>
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script id="sampleFunctionCode">
@@ -366,7 +366,8 @@ function return_Fun_HTML_Element() {
       const EventsFunction_value = EventsFunction ? eval(EventsFunction) : "";
       const Options_obj_value = get_checkbox_arr_value(["backdrop", "keyboard", "focus"]);
 
-      bModal(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, Options_obj_value, EventType_value, EventsFunction_value);
+      let x = bModal(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, Options_obj_value, EventType_value, EventsFunction_value);
+      console.log('The return value of the current Model : ',x);
     });
 
     function get_checkbox_arr_value(arr) {

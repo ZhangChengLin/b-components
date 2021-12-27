@@ -191,6 +191,7 @@
     _modal.className = "modal fade";
     _modal.tabIndex = -1;
     _modal.role = "dialog";
+    _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
 
     _modal.append(modalDialog(titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType));
 
@@ -209,7 +210,7 @@
     const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
     xxx.show();
     removeModal(mId);
-    return timeString;
+    return mId;
   };
 
   return bModal;
