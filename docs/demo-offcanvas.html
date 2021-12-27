@@ -34,10 +34,13 @@
 <div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
   <div class="py-4 container border rounded">
     <div class="my-4 p-4 border rounded">
-      <div class="mb-1">offcanvas-header</div>
+      <div class="mb-1">
+        <div>offcanvas-header</div>
+        <span class="small text-muted"></span>
+      </div>
       <div class="input-group">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
-        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">header</label>
+        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default header">
       </div>
       <div class="py-3">
         <div class="mb-2 form-check form-switch">
@@ -47,7 +50,7 @@
         <div class="w-75 input-group mb-3 d-none">
           <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="headerFunctionSelect">Function</label>
           <select class="form-select" id="headerFunctionSelect">
-            <option value="returnTitle" selected>returnTitle</option>
+            <option value="returnHeader" selected>returnHeader</option>
             <option value="returnBody">returnBody</option>
             <option value="returnFooter">returnFooter</option>
             <option value="calcNumber">calcNumber</option>
@@ -57,9 +60,12 @@
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
-      <div class="mb-1">offcanvas-body</div>
+      <div class="mb-1">
+        <div>offcanvas-body</div>
+        <span class="small text-muted"></span>
+      </div>
       <div class="input-group">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">body</label>
         <textarea class="form-control" id="offcanvasBody" placeholder="Please enter content" rows="9">
 <div>
 <input type="button" class="btn btn-outline-success" data-bs-dismiss="offcanvas" value="Close">
@@ -76,7 +82,7 @@
         <div class="w-75 input-group mb-3 d-none">
           <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
           <select class="form-select" id="bodyFunctionSelect">
-            <option value="returnTitle" selected>returnTitle</option>
+            <option value="returnHeader" selected>returnHeader</option>
             <option value="returnBody">returnBody</option>
             <option value="returnFooter">returnFooter</option>
             <option value="calcNumber">calcNumber</option>
@@ -269,7 +275,8 @@ function EventsFunction_2() {
     let offcanvasTitle = document.querySelector('#offcanvasTitle')
     let offcanvasBody = document.querySelector('#offcanvasBody')
 
-    bOffcanvas(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
+    let x = bOffcanvas(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
+    console.log('The return value of the current Offcanvas', x);
   })
 
   function getRadio(name, returnType = 'val') {
