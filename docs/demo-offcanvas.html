@@ -39,6 +39,22 @@
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
         <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
       </div>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="headerFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="headerFunctionSwitch">Use Function control header content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="headerFunctionSelect">Function</label>
+          <select class="form-select" id="headerFunctionSelect">
+            <option value="returnTitle" selected>returnTitle</option>
+            <option value="returnBody">returnBody</option>
+            <option value="returnFooter">returnFooter</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
+      </div>
     </div>
     <div class="my-4 p-4 border rounded">
       <div class="mb-1">offcanvas-body</div>
@@ -51,6 +67,22 @@
 <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
 </div>
         </textarea>
+      </div>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control header content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
+          <select class="form-select" id="bodyFunctionSelect">
+            <option value="returnTitle" selected>returnTitle</option>
+            <option value="returnBody">returnBody</option>
+            <option value="returnFooter">returnFooter</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">

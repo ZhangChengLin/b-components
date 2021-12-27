@@ -39,23 +39,25 @@
         <div>modal-header</div>
         <span class="small text-muted"></span>
       </div>
-      <div class="input-group mb-3">
+      <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="header">header</label>
         <input type="text" class="form-control" id="header" placeholder="When empty, there will be no modal header" value="default header">
       </div>
-      <div class="mb-2 form-check form-switch">
-        <input class="form-check-input" id="headerFunctionSwitch" role="switch" type="checkbox">
-        <label class="form-check-label" for="headerFunctionSwitch">Use Function control header content.</label>
-      </div>
-      <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="headerFunctionSelect">Function</label>
-        <select class="form-select" id="headerFunctionSelect">
-          <option value="returnTitle" selected>returnTitle</option>
-          <option value="returnBody">returnBody</option>
-          <option value="returnFooter">returnFooter</option>
-          <option value="calcNumber">calcNumber</option>
-          <option value="returnHTML_Element">returnHTML_Element</option>
-        </select>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="headerFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="headerFunctionSwitch">Use Function control header content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="headerFunctionSelect">Function</label>
+          <select class="form-select" id="headerFunctionSelect">
+            <option value="returnTitle" selected>returnTitle</option>
+            <option value="returnBody">returnBody</option>
+            <option value="returnFooter">returnFooter</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
@@ -63,23 +65,25 @@
         <div>modal-body</div>
         <span class="small text-muted">When testing long content, please increase the content of the body to see the effect.</span>
       </div>
-      <div class="input-group mb-3">
+      <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="body">body</label>
         <textarea class="form-control" id="body" placeholder="Please enter content" rows="4">this is default body content.</textarea>
       </div>
-      <div class="mb-2 form-check form-switch">
-        <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
-        <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
-      </div>
-      <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
-        <select class="form-select" id="bodyFunctionSelect">
-          <option value="returnTitle">returnTitle</option>
-          <option value="returnBody" selected>returnBody</option>
-          <option value="returnFooter">returnFooter</option>
-          <option value="calcNumber">calcNumber</option>
-          <option value="returnHTML_Element">returnHTML_Element</option>
-        </select>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
+          <select class="form-select" id="bodyFunctionSelect">
+            <option value="returnTitle">returnTitle</option>
+            <option value="returnBody" selected>returnBody</option>
+            <option value="returnFooter">returnFooter</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
@@ -87,7 +91,7 @@
         <div>modal-footer</div>
         <span class="small text-muted"></span>
       </div>
-      <div class="input-group mb-3">
+      <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="footer">footer</label>
         <textarea class="form-control" id="footer" placeholder="Please enter content" rows="9">
 <div>
@@ -98,19 +102,21 @@
 </div>
         </textarea>
       </div>
-      <div class="mb-2 form-check form-switch">
-        <input class="form-check-input" id="footerFunctionSwitch" role="switch" type="checkbox">
-        <label class="form-check-label" for="footerFunctionSwitch">Use Function control footer content.</label>
-      </div>
-      <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="footerFunctionSelect">Function</label>
-        <select class="form-select" id="footerFunctionSelect">
-          <option value="returnTitle">returnTitle</option>
-          <option value="returnBody">returnBody</option>
-          <option value="returnFooter" selected>returnFooter</option>
-          <option value="calcNumber">calcNumber</option>
-          <option value="returnHTML_Element">returnHTML_Element</option>
-        </select>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="footerFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="footerFunctionSwitch">Use Function control footer content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="footerFunctionSelect">Function</label>
+          <select class="form-select" id="footerFunctionSelect">
+            <option value="returnTitle">returnTitle</option>
+            <option value="returnBody">returnBody</option>
+            <option value="returnFooter" selected>returnFooter</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
