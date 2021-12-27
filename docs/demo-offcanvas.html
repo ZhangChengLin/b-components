@@ -13,6 +13,15 @@
         content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
   <meta name="keywords"
         content="Bootstrap,Bootstrap5,Offcanvas,dynamic,backdrop,keyboard,scroll,getInstance,getOrCreateInstance,show.bs.offcanvas,shown.bs.offcanvas,hide.bs.offcanvas,hidden.bs.offcanvas">
+  <script>
+    function close_all_offcanvas() {
+      let all_offcanvas = document.querySelectorAll('.offcanvas');
+      for (let i = 0, x = all_offcanvas.length; i < x; i++) {
+        let x = bootstrap.Offcanvas.getInstance(all_offcanvas[i]);
+        x.hide();
+      }
+    }
+  </script>
 </head>
 <body>
 <div class="container alert alert-primary alert-dismissible fade show" role="alert">
@@ -35,7 +44,13 @@
       <div class="mb-1">offcanvas-body</div>
       <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
-        <textarea class="form-control" rows="4" id="offcanvasBody" placeholder="Please enter content">default body </textarea>
+        <textarea class="form-control" id="offcanvasBody" placeholder="Please enter content" rows="9">
+<div>
+<input type="button" class="btn btn-outline-success" data-bs-dismiss="offcanvas" value="Close">
+<input type="button" class="btn btn-outline-success" onclick="close_all_offcanvas()" value="Close All">
+<button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
+</div>
+        </textarea>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">

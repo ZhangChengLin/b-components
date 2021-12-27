@@ -81,14 +81,14 @@
       <label for="footer">footer</label>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">footer</span>
-        <textarea rows="9" class="form-control" id="footer" placeholder="Please enter content">
+        <textarea class="form-control" id="footer" placeholder="Please enter content" rows="9">
 <div>
-<div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">&nbsp;flexbox</a>
-</div>
+<div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">&nbsp;flexbox</a></div>
 <input type="button" class="btn btn-outline-success" data-bs-dismiss="modal" value="Close">
 <input type="button" class="btn btn-outline-success" onclick="close_all_modals()" value="Close All">
 <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
-</div></textarea>
+</div>
+        </textarea>
       </div>
       <div class="mb-2 form-check form-switch">
         <input class="form-check-input" id="footerFunctionSwitch" role="switch" type="checkbox">
@@ -296,7 +296,7 @@ function return_Fun_HTML_Element() {
 </div>
 
 <script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../dist/umd/bModal.min.js"></script>
+<script src="../dist/umd/bModal.js"></script>
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script id="sampleFunctionCode">

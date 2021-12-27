@@ -1,4 +1,4 @@
-import content from "./modal-content"
+import modalContent from "./modal-content"
 
 
 const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType) => {
@@ -7,8 +7,6 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, Verti
   dialog.className = 'modal-dialog'
 
   switch (ModalSizes) {
-    case "default":
-      break
     case "sm":
       dialog.classList.add('modal-sm')
       break
@@ -33,8 +31,10 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, Verti
     case "full-xl":
       dialog.classList.add('modal-fullscreen-xl-down')
       break
+    case "default":
     default:
-      dialog.classList.add(ModalSizes)
+      // dialog.classList.add(ModalSizes)
+      break
   }
 
   switch (VerticallyCentered) {
@@ -53,7 +53,7 @@ const modalDialog = (titleElement, bodyElement, footerElement, ModalSizes, Verti
     default:
   }
 
-  dialog.append(content(titleElement, bodyElement, footerElement))
+  dialog.append(modalContent(titleElement, bodyElement, footerElement))
 
   return dialog
 }

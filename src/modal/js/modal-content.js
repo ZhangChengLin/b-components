@@ -9,9 +9,9 @@ const modalContent = (titleContent, bodyContent, footerContent) => {
   content.className = "modal-content";
 
   content.append(
-    !titleContent ?? modalHeader(titleContent),
+    modalHeader(titleContent),
     modalBody(bodyContent),
-    !footerContent ?? modalFooter(footerContent)
+    modalFooter(footerContent)
   )
 
   return content

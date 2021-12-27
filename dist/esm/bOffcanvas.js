@@ -7,8 +7,8 @@
     * Copyright (c) 2020 - 2021 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-    * GitHub: https://github.com/ZhangChengLin/bs-components-js
-    * issues: https://github.com/ZhangChengLin/bs-components-js/issues
+    * GitHub: https://github.com/ZhangChengLin/b-components
+    * issues: https://github.com/ZhangChengLin/b-components/issues
 */
 /**
  * @param {Node|string} titleElement
@@ -21,8 +21,12 @@ const offcanvasHeader = (titleElement) => {
   header.className = 'offcanvas-header';
 
   title.className = 'offcanvas-title';
-  title.id = 'offcanvasLabel';
-  titleElement instanceof HTMLElement ? title.append(titleElement) : title.innerHTML = titleElement;
+  title.id = 'offcanvasTitleLabel';
+  titleElement instanceof Function
+    ? title.append(titleElement())
+    : titleElement instanceof HTMLElement
+      ? title.append(titleElement)
+      : title.innerHTML = titleElement;
 
   btn.className = 'btn-close text-reset';
   btn.type = 'button';
@@ -34,14 +38,17 @@ const offcanvasHeader = (titleElement) => {
 };
 
 /**
- * @param {Node|string} contentElement
+ * @param {Node|string} bodyElement
  */
-const offcanvasBody = (contentElement) => {
+const offcanvasBody = (bodyElement) => {
   let offcanvas_body = document.createElement('div');
 
   offcanvas_body.className = 'offcanvas-body';
-
-  contentElement instanceof HTMLElement ? offcanvas_body.append(contentElement) : offcanvas_body.innerHTML = contentElement;
+  bodyElement instanceof Function
+    ? offcanvas_body.append(bodyElement())
+    : bodyElement instanceof HTMLElement
+      ? offcanvas_body.append(bodyElement)
+      : offcanvas_body.innerHTML = bodyElement;
 
   return offcanvas_body
 };
@@ -50,33 +57,27 @@ const getTimeString = () => {
   return new Date().getTime().toString()
 };
 
-
-/**
- * @param {string} offcanvasId
- * @param {string} eventName
- * @param {function} eventFunction
- */
-const offcanvasEvents = (offcanvasId, eventName, eventFunction) => {
+const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
   const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
-  switch (eventName) {
+  switch (EventsType) {
     case "show":
-      offcanvas.addEventListener("show.bs.modal", function () {
-        return eventFunction();
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        return EventsFun();
       });
       break;
     case "shown":
-      offcanvas.addEventListener("shown.bs.modal", function () {
-        return eventFunction();
+      offcanvas.addEventListener("shown.bs.offcanvas", function () {
+        return EventsFun();
       });
       break;
     case "hide":
-      offcanvas.addEventListener("hide.bs.modal", function () {
-        return eventFunction();
+      offcanvas.addEventListener("hide.bs.offcanvas", function () {
+        return EventsFun();
       });
       break;
     case "hidden":
-      offcanvas.addEventListener("hidden.bs.modal", function () {
-        return eventFunction();
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        return EventsFun();
       });
       break;
     default:
@@ -103,13 +104,13 @@ const offcanvas = (headerElement = null, bodyElement = null, placement) => {
     case 'bottom':
       break;
     default:
-    throw `placement 参数错误`
+      throw `placement 参数错误`
   }
 
   _offcanvas.className = `offcanvas offcanvas-${placement}`;
-  _offcanvas.id = timeString;
+  _offcanvas.id = 'Offcanvas_' + timeString;
   _offcanvas.tabIndex = -1;
-  _offcanvas.setAttribute('aria-labelledby', 'offcanvasLabel');
+  _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel');
 
   _offcanvas.append(header, body);
 

@@ -1,15 +1,15 @@
 import modalDialog from "./modal-dialog";
 
 
-const modal = () => {
+const modal = (titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType, modalId) => {
   const _modal = document.createElement('div')
 
-  _modal.id = 'modal_ID';
+  _modal.id = modalId;
   _modal.className = "modal fade";
   _modal.tabIndex = -1;
   _modal.role = "dialog";
 
-  _modal.append(modalDialog())
+  _modal.append(modalDialog(titleElement, bodyElement, footerElement, ModalSizes, VerticallyCentered, LongContentType))
 
   return _modal
 }
