@@ -35,18 +35,21 @@
 <div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
   <div class="py-4 container border rounded">
     <div class="my-4 p-4 border rounded">
-      <label for="title">title</label>
+      <div class="mb-1">
+        <div>modal-header</div>
+        <span class="small text-muted"></span>
+      </div>
       <div class="input-group mb-3">
-        <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">modal-title</span>
-        <input type="text" class="form-control" id="title" placeholder="When empty, there will be no modal header" value="default title">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="header">header</label>
+        <input type="text" class="form-control" id="header" placeholder="When empty, there will be no modal header" value="default header">
       </div>
       <div class="mb-2 form-check form-switch">
-        <input class="form-check-input" id="titleFunctionSwitch" role="switch" type="checkbox">
-        <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.</label>
+        <input class="form-check-input" id="headerFunctionSwitch" role="switch" type="checkbox">
+        <label class="form-check-label" for="headerFunctionSwitch">Use Function control header content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="titleFunctionSelect">Function</label>
-        <select class="form-select" id="titleFunctionSelect">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="headerFunctionSelect">Function</label>
+        <select class="form-select" id="headerFunctionSelect">
           <option value="returnTitle" selected>returnTitle</option>
           <option value="returnBody">returnBody</option>
           <option value="returnFooter">returnFooter</option>
@@ -56,10 +59,12 @@
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
-      <label for="body">body</label>
-      <div>When testing long content, please increase the content of the body to see the effect.</div>
+      <div class="mb-1">
+        <div>modal-body</div>
+        <span class="small text-muted">When testing long content, please increase the content of the body to see the effect.</span>
+      </div>
       <div class="input-group mb-3">
-        <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">body</span>
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="body">body</label>
         <textarea class="form-control" id="body" placeholder="Please enter content" rows="4">this is default body content.</textarea>
       </div>
       <div class="mb-2 form-check form-switch">
@@ -78,9 +83,12 @@
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
-      <label for="footer">footer</label>
+      <div class="mb-1">
+        <div>modal-footer</div>
+        <span class="small text-muted"></span>
+      </div>
       <div class="input-group mb-3">
-        <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">footer</span>
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="footer">footer</label>
         <textarea class="form-control" id="footer" placeholder="Please enter content" rows="9">
 <div>
 <div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">&nbsp;flexbox</a></div>
@@ -268,8 +276,8 @@ function calcNumber() {
   return (1 + 2 + 3).toString();
 }
 
-function returnTitle() {
-  return "function title";
+function returnHeader() {
+  return "function header";
 }
 
 function returnBody() {
@@ -320,8 +328,8 @@ function returnHTML_Element() {
     return (1 + 2 + 3).toString();
   }
 
-  function returnTitle() {
-    return "function title";
+  function returnHeader() {
+    return "function header";
   }
 
   function returnBody() {
@@ -347,7 +355,7 @@ function returnHTML_Element() {
     const bs_modal_click = document.querySelector("#bs_modal_click");
     bs_modal_click.addEventListener("click", function () {
 
-      const title_value = checkbox_status("titleFunction") ? select_function_value("titleFunction") : select_value("title");
+      const title_value = checkbox_status("headerFunction") ? select_function_value("headerFunction") : select_value("header");
       const body_value = checkbox_status("bodyFunction") ? select_function_value("bodyFunction") : select_value("body");
       const footer_value = checkbox_status("footerFunction") ? select_function_value("footerFunction") : select_value("footer");
       const ModalSizes_value = select_value("ModalSizes");
@@ -433,7 +441,7 @@ function returnHTML_Element() {
       return Boolean(radioValue);
     }
 
-    function_switch("titleFunction");
+    function_switch("headerFunction");
     function_switch("bodyFunction");
     function_switch("footerFunction");
 
