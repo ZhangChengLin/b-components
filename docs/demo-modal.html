@@ -143,12 +143,12 @@
         <span class="small text-muted"></span>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio" value="1">
-        <label class="form-check-label" for="VerticallyCentered_true" title="true"> true </label>
+        <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio" value="true">
+        <label class="form-check-label" for="VerticallyCentered_true" title="true">true</label>
       </div>
       <div class="form-check form-check-inline">
-        <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio" value="">
-        <label class="form-check-label" for="VerticallyCentered_false" title="default"> false </label>
+        <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio" value="false">
+        <label class="form-check-label" for="VerticallyCentered_false" title="default">false</label>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
@@ -157,12 +157,12 @@
         <span class="small text-muted"></span>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" id="LongContentType_true" name="LongContentType" type="radio" value="1">
-        <label class="form-check-label" for="LongContentType_true" title="true"> true </label>
+        <input class="form-check-input" id="LongContentType_true" name="LongContentType" type="radio" value="true">
+        <label class="form-check-label" for="LongContentType_true" title="true">true</label>
       </div>
       <div class="form-check form-check-inline">
-        <input checked class="form-check-input" id="LongContentType_false" name="LongContentType" type="radio" value="">
-        <label class="form-check-label" for="LongContentType_false" title="default"> false </label>
+        <input checked class="form-check-input" id="LongContentType_false" name="LongContentType" type="radio" value="false">
+        <label class="form-check-label" for="LongContentType_false" title="default">false</label>
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
@@ -174,11 +174,11 @@
         <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalBackdrop" value="1" id="modalBackdrop_true" checked>
+            <input class="form-check-input" type="radio" name="modalBackdrop" value='true' id="modalBackdrop_true" checked>
             <label class="form-check-label" for="modalBackdrop_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalBackdrop" value="" id="modalBackdrop_false">
+            <input class="form-check-input" type="radio" name="modalBackdrop" value='false' id="modalBackdrop_false">
             <label class="form-check-label" for="modalBackdrop_false">false</label>
           </div>
           <div class="form-check form-check-inline">
@@ -191,11 +191,11 @@
         <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalKeyboard" value="1" id="modalKeyboard_true" checked>
+            <input class="form-check-input" type="radio" name="modalKeyboard" value="true" id="modalKeyboard_true" checked>
             <label class="form-check-label" for="modalKeyboard_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalKeyboard" value="" id="modalKeyboard_false">
+            <input class="form-check-input" type="radio" name="modalKeyboard" value="false" id="modalKeyboard_false">
             <label class="form-check-label" for="modalKeyboard_false">false</label>
           </div>
         </div>
@@ -204,11 +204,11 @@
         <div class="col-4 col-sm-2 col-lg-1">focus</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalFocus" value="1" id="modalFocus_true" checked>
+            <input class="form-check-input" type="radio" name="modalFocus" value="true" id="modalFocus_true" checked>
             <label class="form-check-label" for="modalFocus_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalFocus" value="" id="modalFocus_false">
+            <input class="form-check-input" type="radio" name="modalFocus" value="false" id="modalFocus_false">
             <label class="form-check-label" for="modalFocus_false">false</label>
           </div>
         </div>
@@ -388,71 +388,24 @@ function returnHTML_Element() {
     const bs_modal_click = document.querySelector("#bs_modal_click");
     bs_modal_click.addEventListener("click", function () {
 
-      const title_value = checkbox_status("headerFunction") ? select_function_value("headerFunction") : select_value("header");
-      const body_value = checkbox_status("bodyFunction") ? select_function_value("bodyFunction") : select_value("body");
-      const footer_value = checkbox_status("footerFunction") ? select_function_value("footerFunction") : select_value("footer");
-      const ModalSizes_value = select_value("ModalSizes");
-      const VerticallyCentered_value = getRadio("VerticallyCentered", 'bool');
-      const LongContentType_value = getRadio("LongContentType", 'bool');
+      const header_value = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("header");
+      const body_value = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("body");
+      const footer_value = checkboxStatus("footerFunction") ? selectFunctionValue("footerFunction") : selectValue("footer");
+      const ModalSizes_value = selectValue("ModalSizes");
+      const VerticallyCentered_value = getRadio("VerticallyCentered");
+      const LongContentType_value = getRadio("LongContentType");
       const EventType_value = getRadio("EventsType");
-      const EventsFunction = select_value("EventsFunction");
+      const EventsFunction = selectValue("EventsFunction");
       const EventsFunction_value = EventsFunction ? eval(EventsFunction) : "";
       let options = {
-        backdrop: getRadio('modalBackdrop', 'bool'),
-        keyboard: getRadio('modalKeyboard', 'bool'),
-        focus: getRadio('modalFocus', 'bool')
+        backdrop: getRadio('modalBackdrop'),
+        keyboard: getRadio('modalKeyboard'),
+        focus: getRadio('modalFocus')
       }
 
-      let x = bModal(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, options, EventType_value, EventsFunction_value);
+      let x = bModal(header_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, options, EventType_value, EventsFunction_value);
       console.log('The return value of the current Model : ', x);
     });
-
-    function get_checkbox_arr_value(arr) {
-      const obj = {};
-      for (const i of arr) {
-        const dom = document.querySelector("#" + i);
-        dom.checked
-          ? obj[i] = true
-          : dom.id !== 'backdrop'
-            ? obj[i] = false
-            : obj[i] = get_backdrop_static_checkbox_value();
-      }
-      return obj;
-    }
-
-    let backdrop_switch = document.querySelector('#backdrop');
-    let backdrop_static_checkbox = document.querySelector('#backdrop_static');
-    backdrop_switch.addEventListener('click', function () {
-      if (backdrop_switch.checked === false) {
-        backdrop_static_checkbox.removeAttribute('disabled');
-      } else {
-        backdrop_static_checkbox.checked = false;
-        backdrop_static_checkbox.setAttribute('disabled', '');
-      }
-    });
-
-    function get_backdrop_static_checkbox_value() {
-      if (backdrop_static_checkbox.checked === true) {
-        return 'static';
-      } else {
-        return false;
-      }
-    }
-
-    function checkbox_status(id) {
-      const checkbox = document.querySelector("#" + id + "Switch");
-      return checkbox.checked === true ? true : "";
-    }
-
-    function select_function_value(id) {
-      const fun_name = document.querySelector("#" + id + "Select").value;
-      return eval(fun_name);
-    }
-
-    function select_value(id) {
-      const option = document.querySelector("#" + id);
-      return option.value;
-    }
 
   })();
 </script>

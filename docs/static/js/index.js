@@ -6,7 +6,7 @@ function functionSwitch(id) {
   })
 }
 
-function getRadio(name, returnType = 'val') {
+function getRadio(name) {
   let radio = document.querySelectorAll("[name='" + name + "']")
   let radioValue
   let returnValue
@@ -17,15 +17,33 @@ function getRadio(name, returnType = 'val') {
       break
     }
   }
-  switch (returnType) {
-    case "val":
-      returnValue = radioValue
+
+  switch (radioValue) {
+    case 'true':
+      returnValue = true
       break
-    case 'bool':
+    case 'false':
+      returnValue = false
+      break
     default:
-      returnValue = Boolean(radioValue)
+      returnValue = radioValue
       break
   }
 
   return returnValue;
+}
+
+function checkboxStatus(id) {
+  const checkbox = document.querySelector("#" + id + "Switch");
+  return checkbox.checked ?? false;
+}
+
+function selectFunctionValue(id) {
+  const fun_name = document.querySelector("#" + id + "Select").value;
+  return eval(fun_name);
+}
+
+function selectValue(id) {
+  const option = document.querySelector("#" + id);
+  return option.value;
 }

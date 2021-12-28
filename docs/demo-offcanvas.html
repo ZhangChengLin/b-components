@@ -39,8 +39,8 @@
         <span class="small text-muted"></span>
       </div>
       <div class="input-group">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">header</label>
-        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default header">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasHeader">header</label>
+        <input type="text" class="form-control" id="offcanvasHeader" placeholder="When empty, there will be no offcanvas header" value="default header">
       </div>
       <div class="py-3">
         <div class="mb-2 form-check form-switch">
@@ -132,11 +132,11 @@
         <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="1" id="offcanvasBackdrop_true" checked>
+            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="true" id="offcanvasBackdrop_true" checked>
             <label class="form-check-label" for="offcanvasBackdrop_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="" id="offcanvasBackdrop_false">
+            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="false" id="offcanvasBackdrop_false">
             <label class="form-check-label" for="offcanvasBackdrop_false">false</label>
           </div>
         </div>
@@ -145,11 +145,11 @@
         <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="1" id="offcanvasKeyboard_true" checked>
+            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="true" id="offcanvasKeyboard_true" checked>
             <label class="form-check-label" for="offcanvasKeyboard_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="" id="offcanvasKeyboard_false">
+            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="false" id="offcanvasKeyboard_false">
             <label class="form-check-label" for="offcanvasKeyboard_false">false</label>
           </div>
         </div>
@@ -158,11 +158,11 @@
         <div class="col-4 col-sm-2 col-lg-1">scroll</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="offcanvasScroll" value="1" id="offcanvasScroll_true">
+            <input class="form-check-input" type="radio" name="offcanvasScroll" value="true" id="offcanvasScroll_true">
             <label class="form-check-label" for="offcanvasScroll_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="offcanvasScroll" value="" id="offcanvasScroll_false" checked>
+            <input class="form-check-input" type="radio" name="offcanvasScroll" value="false" id="offcanvasScroll_false" checked>
             <label class="form-check-label" for="offcanvasScroll_false">false</label>
           </div>
         </div>
@@ -271,19 +271,17 @@ function EventsFunction_2() {
   let renderOffcanvas = document.querySelector('#renderOffcanvas')
   renderOffcanvas.addEventListener('click', () => {
     let options = {
-      backdrop: getRadio('offcanvasBackdrop', 'bool'),
-      keyboard: getRadio('offcanvasKeyboard', 'bool'),
-      scroll: getRadio('offcanvasScroll', 'bool')
+      backdrop: getRadio('offcanvasBackdrop'),
+      keyboard: getRadio('offcanvasKeyboard'),
+      scroll: getRadio('offcanvasScroll')
     }
 
-    let offcanvasTitle = document.querySelector('#offcanvasTitle')
+    let offcanvasHeader = document.querySelector('#offcanvasHeader')
     let offcanvasBody = document.querySelector('#offcanvasBody')
 
-    let x = bOffcanvas(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
+    let x = bOffcanvas(offcanvasHeader.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
     console.log('The return value of the current Offcanvas', x);
   })
-
-
 </script>
 <script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
