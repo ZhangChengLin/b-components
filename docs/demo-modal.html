@@ -37,11 +37,11 @@
     <div class="my-4 p-4 border rounded">
       <div class="mb-1">
         <div>modal-header</div>
-        <span class="small text-muted"></span>
+        <span class="small text-muted">When empty, there will be no modal header</span>
       </div>
       <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="header">header</label>
-        <input type="text" class="form-control" id="header" placeholder="When empty, there will be no modal header" value="default header">
+        <input type="text" class="form-control" id="header" placeholder="" value="default header">
       </div>
       <div class="py-3">
         <div class="mb-2 form-check form-switch">
@@ -142,11 +142,11 @@
         <div>VerticallyCentered</div>
         <span class="small text-muted"></span>
       </div>
-      <div class="custom-control custom-radio form-check-inline">
+      <div class="form-check form-check-inline">
         <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio" value="1">
         <label class="form-check-label" for="VerticallyCentered_true" title="true"> true </label>
       </div>
-      <div class="custom-control custom-radio form-check-inline">
+      <div class="form-check form-check-inline">
         <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio" value="">
         <label class="form-check-label" for="VerticallyCentered_false" title="default"> false </label>
       </div>
@@ -156,11 +156,11 @@
         <div>LongContentType</div>
         <span class="small text-muted"></span>
       </div>
-      <div class="custom-control custom-radio form-check-inline">
+      <div class="form-check form-check-inline">
         <input class="form-check-input" id="LongContentType_true" name="LongContentType" type="radio" value="1">
         <label class="form-check-label" for="LongContentType_true" title="true"> true </label>
       </div>
-      <div class="custom-control custom-radio form-check-inline">
+      <div class="form-check form-check-inline">
         <input checked class="form-check-input" id="LongContentType_false" name="LongContentType" type="radio" value="">
         <label class="form-check-label" for="LongContentType_false" title="default"> false </label>
       </div>
@@ -170,26 +170,47 @@
         <div>Options</div>
         <span class="small text-muted"></span>
       </div>
-      <div class="my-1 p-2">
-        <div class="form-check form-switch form-check-inline">
-          <input checked class="form-check-input" id="backdrop" name="backdrop" type="checkbox">
-          <label class="form-check-label" for="backdrop">backdrop</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" disabled id="backdrop_static" name="backdrop" type="checkbox">
-          <label class="form-check-label" for="backdrop_static">backdrop_static</label>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalBackdrop" value="1" id="modalBackdrop_true" checked>
+            <label class="form-check-label" for="modalBackdrop_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalBackdrop" value="" id="modalBackdrop_false">
+            <label class="form-check-label" for="modalBackdrop_false">false</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalBackdrop" value="static" id="modalBackdrop_static">
+            <label class="form-check-label" for="modalBackdrop_static">"static"</label>
+          </div>
         </div>
       </div>
-      <div class="my-1 p-2">
-        <div class="mb-2 form-check form-switch">
-          <input checked class="form-check-input" id="keyboard" type="checkbox">
-          <label class="form-check-label" for="keyboard">keyboard</label>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalKeyboard" value="1" id="modalKeyboard_true" checked>
+            <label class="form-check-label" for="modalKeyboard_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalKeyboard" value="" id="modalKeyboard_false">
+            <label class="form-check-label" for="modalKeyboard_false">false</label>
+          </div>
         </div>
       </div>
-      <div class="my-1 p-2">
-        <div class="mb-2 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="focus" checked>
-          <label class="form-check-label" for="focus">focus</label>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">focus</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalFocus" value="1" id="modalFocus_true" checked>
+            <label class="form-check-label" for="modalFocus_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="modalFocus" value="" id="modalFocus_false">
+            <label class="form-check-label" for="modalFocus_false">false</label>
+          </div>
         </div>
       </div>
     </div>
@@ -252,8 +273,8 @@
         </div>
       </div>
     </div>
-    <a class="fixed-bottom btn btn-lg btn-block btn-outline-success bg-dark bg-gradient" href="javascript:" id="bs_modal_click"
-       style="z-index:1055;">Click to generate modal box</a>
+    <a class="fixed-bottom btn btn-lg btn-block btn-outline-success bg-dark bg-gradient" href="javascript:"
+       id="bs_modal_click" style="z-index:1055;">Click to generate modal box</a>
   </div>
 </div>
 <div class="min-vh-100 bg-black bg-opacity-50">
@@ -311,6 +332,7 @@ function returnHTML_Element() {
 
 <script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/umd/bModal.min.js"></script>
+<script src="./static/js/index.js"></script>
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script id="sampleFunctionCode">
@@ -357,6 +379,11 @@ function returnHTML_Element() {
   }
 </script>
 <script>
+  functionSwitch("headerFunction");
+  functionSwitch("bodyFunction");
+  functionSwitch("footerFunction");
+</script>
+<script>
   (function () {
     const bs_modal_click = document.querySelector("#bs_modal_click");
     bs_modal_click.addEventListener("click", function () {
@@ -365,15 +392,19 @@ function returnHTML_Element() {
       const body_value = checkbox_status("bodyFunction") ? select_function_value("bodyFunction") : select_value("body");
       const footer_value = checkbox_status("footerFunction") ? select_function_value("footerFunction") : select_value("footer");
       const ModalSizes_value = select_value("ModalSizes");
-      const VerticallyCentered_value = radio_boolean_value("VerticallyCentered");
-      const LongContentType_value = radio_boolean_value("LongContentType");
-      const EventType_value = radio_value("EventsType");
+      const VerticallyCentered_value = getRadio("VerticallyCentered", 'bool');
+      const LongContentType_value = getRadio("LongContentType", 'bool');
+      const EventType_value = getRadio("EventsType");
       const EventsFunction = select_value("EventsFunction");
       const EventsFunction_value = EventsFunction ? eval(EventsFunction) : "";
-      const Options_obj_value = get_checkbox_arr_value(["backdrop", "keyboard", "focus"]);
+      let options = {
+        backdrop: getRadio('modalBackdrop', 'bool'),
+        keyboard: getRadio('modalKeyboard', 'bool'),
+        focus: getRadio('modalFocus', 'bool')
+      }
 
-      let x = bModal(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, Options_obj_value, EventType_value, EventsFunction_value);
-      console.log('The return value of the current Model : ',x);
+      let x = bModal(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, options, EventType_value, EventsFunction_value);
+      console.log('The return value of the current Model : ', x);
     });
 
     function get_checkbox_arr_value(arr) {
@@ -423,44 +454,7 @@ function returnHTML_Element() {
       return option.value;
     }
 
-    function radio_value(name) {
-      const radio = document.querySelectorAll("[name='" + name + "']");
-      let radioValue;
-      for (let i = 0; i < radio.length; i++) {
-        if (radio[i].checked === true) {
-          radioValue = radio[i].value;
-          break;
-        }
-      }
-      return radioValue;
-    }
-
-    function radio_boolean_value(name) {
-      let radio = document.querySelectorAll("[name='" + name + "']");
-      let radioValue;
-      for (let i = 0; i < radio.length; i++) {
-        if (radio[i].checked === true) {
-          radioValue = radio[i].value;
-          break;
-        }
-      }
-      return Boolean(radioValue);
-    }
-
   })();
-</script>
-<script>
-  function_switch("headerFunction");
-  function_switch("bodyFunction");
-  function_switch("footerFunction");
-
-  function function_switch(id) {
-    let switchEl = document.querySelector("#" + id + "Switch");
-    let select = document.querySelector("#" + id + "Select");
-    switchEl.addEventListener("click", function () {
-      select.parentElement.classList.toggle("d-none");
-    })
-  }
 </script>
 </body>
 </html>

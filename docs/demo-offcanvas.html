@@ -261,9 +261,13 @@ function EventsFunction_2() {
 
 <script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/umd/bOffcanvas.min.js"></script>
+<script src="./static/js/index.js"></script>
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
+  functionSwitch("headerFunction");
+  functionSwitch("bodyFunction");
+
   let renderOffcanvas = document.querySelector('#renderOffcanvas')
   renderOffcanvas.addEventListener('click', () => {
     let options = {
@@ -279,42 +283,7 @@ function EventsFunction_2() {
     console.log('The return value of the current Offcanvas', x);
   })
 
-  function getRadio(name, returnType = 'val') {
-    let radio = document.querySelectorAll("[name='" + name + "']");
-    let radioValue;
-    let returnValue
 
-    for (let i = 0; i < radio.length; i++) {
-      if (radio[i].checked === true) {
-        radioValue = radio[i].value;
-        break;
-      }
-    }
-    switch (returnType) {
-      case "val":
-        returnValue = radioValue
-        break
-      case 'bool':
-      default:
-        returnValue = Boolean(radioValue)
-        break
-    }
-
-    return returnValue;
-  }
-
-</script>
-<script>
-  function_switch("headerFunction");
-  function_switch("bodyFunction");
-
-  function function_switch(id) {
-    let switchEl = document.querySelector("#" + id + "Switch");
-    let select = document.querySelector("#" + id + "Select");
-    switchEl.addEventListener("click", function () {
-      select.parentElement.classList.toggle("d-none");
-    })
-  }
 </script>
 <script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
