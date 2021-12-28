@@ -2,6 +2,11 @@ const getTimeString = () => {
   return new Date().getTime().toString()
 }
 
+/**
+ * @param {string} offcanvasId
+ * @param {string} EventsType
+ * @param {Function} EventsFun
+ */
 const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
   const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
   switch (EventsType) {
