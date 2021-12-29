@@ -17,7 +17,7 @@
 })(this, (function () { 'use strict';
 
   /**
-   * @param {Node|string} titleElement
+   * @param {Node|string|Function|null} titleElement
    */
   const offcanvasHeader = (titleElement) => {
     let header = document.createElement('div');
@@ -44,7 +44,7 @@
   };
 
   /**
-   * @param {Node|string} bodyElement
+   * @param {Node|string|Function|null} bodyElement
    */
   const offcanvasBody = (bodyElement) => {
     let offcanvas_body = document.createElement('div');
@@ -59,10 +59,48 @@
     return offcanvas_body
   };
 
+  /**
+   * @param {Node|string|Function|null} headerElement
+   * @param {Node|string|Function|null} bodyElement
+   * @param {string} placement
+   * @param {string} offcanvasId
+   */
+  const offcanvas = (headerElement = null, bodyElement = null, placement, offcanvasId) => {
+    let _offcanvas = document.createElement('div');
+    let header = offcanvasHeader(headerElement);
+    let body = offcanvasBody(bodyElement);
+
+    placement = placement ?? 'start';
+    switch (placement) {
+      case 'start':
+      case 'top':
+      case 'end':
+      case 'bottom':
+        break
+      default:
+        throw `placement 参数错误`
+    }
+
+    _offcanvas.className = `offcanvas offcanvas-${placement}`;
+    _offcanvas.id = offcanvasId;
+    _offcanvas.tabIndex = -1;
+    _offcanvas.role = 'dialog';
+    _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel');
+
+    _offcanvas.append(header, body);
+
+    return _offcanvas
+  };
+
   const getTimeString = () => {
     return new Date().getTime().toString()
   };
 
+  /**
+   * @param {string} offcanvasId
+   * @param {string} EventsType
+   * @param {Function} EventsFun
+   */
   const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
     const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
     switch (EventsType) {
@@ -91,58 +129,38 @@
     }
   };
 
-  /**
-   * @param {Node|string|null} headerElement
-   * @param {Node|string|null} bodyElement
-   * @param {string|null} placement
-   */
-  const offcanvas = (headerElement = null, bodyElement = null, placement) => {
-    let _offcanvas = document.createElement('div');
-    let header = offcanvasHeader(headerElement);
-    let body = offcanvasBody(bodyElement);
-    let timeString = getTimeString();
-
-    placement = placement ?? 'start';
-    switch (placement) {
-      case 'start':
-      case 'top':
-      case 'end':
-      case 'bottom':
-        break
-      default:
-        throw `placement 参数错误`
-    }
-
-    _offcanvas.className = `offcanvas offcanvas-${placement}`;
-    _offcanvas.id = 'Offcanvas_' + timeString;
-    _offcanvas.tabIndex = -1;
-    _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel');
-
-    _offcanvas.append(header, body);
-
-    return _offcanvas
+  const removeOffcanvas = offcanvasId => {
+    const offcanvas_element = document.querySelector("#" + offcanvasId);
+    offcanvas_element.addEventListener("hidden.bs.offcanvas", function () {
+      let x = bootstrap.Offcanvas.getInstance(offcanvas_element);
+      x.dispose();
+      setTimeout(function () {
+        offcanvas_element.parentElement.removeChild(offcanvas_element);
+      }, 3e3);
+    });
   };
 
   /**
-   * @param {string|null} headerNodeElement
-   * @param {string|null} bodyNodeElement
+   * @param {Node|string|Function|null} headerNodeElement
+   * @param {Node|string|Function|null} bodyNodeElement
    * @param {string} Placement
-   * @param {object|null} Options
-   * @param {string|null} EventsType
-   * @param {Function|null} EventsFunction
+   * @param {Object} Options
+   * @param {string} EventsType
+   * @param {Function} EventsFunction
    */
   const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
     let timeString = getTimeString();
+    let offcanvasId = 'offcanvasId_' + timeString;
 
-    let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement);
+    let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
     document.body.append(_offcanvas);
-
-    let x = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
-    x.show();
 
     EventsType && EventsFunction ? offcanvasEvents(timeString, EventsType, EventsFunction) : '';
 
-    return timeString
+    let xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
+    xxx.show();
+    removeOffcanvas(offcanvasId);
+    return offcanvasId
   };
 
   return bOffcanvas;

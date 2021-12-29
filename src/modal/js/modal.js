@@ -13,8 +13,8 @@ import modalDialog from "./modal-dialog"
 const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
   const _modal = document.createElement('div')
 
-  _modal.id = modalId
   _modal.className = "modal fade"
+  _modal.id = modalId
   _modal.tabIndex = -1
   _modal.role = "dialog"
   _modal.setAttribute('aria-labelledby', 'modalTitleLabel')

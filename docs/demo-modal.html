@@ -266,9 +266,9 @@
             <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
             <select class="form-select" id="EventsFunction">
               <option value="" disabled selected>Choose...</option>
-              <option value="alertText">alertText</option>
-              <option value="consoleLogText">consoleLogText</option>
-              <option value="alertNumber">alertNumber</option>
+              <option value="EventsFunction_1">EventsFunction_1</option>
+              <option value="EventsFunction_2">EventsFunction_2</option>
+              <option value="EventsFunction_3">EventsFunction_3</option>
             </select>
           </div>
         </div>
@@ -284,46 +284,30 @@
     <div>
         <pre>
           <code class="language-javascript language-plaintext" style="max-height: 70vh;">
-function alertText() {
-  alert("alertText");
-}
-
-function alertNumber() {
-  alert(returnNumber());
-}
-
-function consoleLogText() {
-  console.log("consoleLogText");
-}
-
-function returnNumber() {
-  return 222 + 333;
-}
-
 function calcNumber() {
-  return (1 + 2 + 3).toString();
+  return (1 + 2 + 3).toString()
 }
 
 function returnHeader() {
-  return "function header";
+  return "function header"
 }
 
 function returnBody() {
-  return "function body";
+  return "function body"
 }
 
 function returnFooter() {
-  return "function footer";
+  return "function footer"
 }
 
 function returnHTML_Element() {
-  const html = document.createElement("div");
-  const p = document.createElement("p");
-  html.className = "bg-success";
-  p.className = "text-center";
-  p.innerHTML = "this is html obj.";
-  html.appendChild(p);
-  return html;
+  const html = document.createElement("div")
+  const p = document.createElement("p")
+  html.className = "bg-success"
+  p.className = "text-center"
+  p.innerHTML = "this is html obj."
+  html.appendChild(p)
+  return html
 }
 
 function EventsFunction_1() {
@@ -332,6 +316,10 @@ function EventsFunction_1() {
 
 function EventsFunction_2() {
   alert('EventsFunction_2')
+}
+
+function EventsFunction_3() {
+  console.log('EventsFunction_3')
 }
           </code>
         </pre>

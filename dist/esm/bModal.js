@@ -214,8 +214,8 @@ const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, Moda
 const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
   const _modal = document.createElement('div');
 
-  _modal.id = modalId;
   _modal.className = "modal fade";
+  _modal.id = modalId;
   _modal.tabIndex = -1;
   _modal.role = "dialog";
   _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
@@ -232,23 +232,23 @@ const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
  * @param {boolean} ScrollingLongContent
- * @param {{}} Options
+ * @param {Object} Options
  * @param {string} EventsType
  * @param {Function} EventsFunction
  */
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
   let timeString = getTimeString();
-  let mId = 'modalId_' + timeString;
+  let modalId = 'modalId_' + timeString;
 
-  document.body.append(modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, mId));
+  let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
+  document.body.append(_modal);
 
-  EventsType && EventsFunction ? modalEvents(mId, EventsType, EventsFunction) : "";
+  EventsType && EventsFunction ? modalEvents(modalId, EventsType, EventsFunction) : "";
 
-  const modal_element = document.querySelector("#" + mId);
-  const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
+  let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
   xxx.show();
-  removeModal(mId);
-  return mId;
+  removeModal(modalId);
+  return modalId
 };
 
 export { bModal };

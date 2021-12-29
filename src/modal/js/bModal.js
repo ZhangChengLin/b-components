@@ -1,5 +1,5 @@
-import {getTimeString, removeModal, modalEvents} from "./util/index";
-import modal from "./modal";
+import {getTimeString, removeModal, modalEvents} from "./util/index"
+import modal from "./modal"
 
 
 /**
@@ -9,23 +9,23 @@ import modal from "./modal";
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
  * @param {boolean} ScrollingLongContent
- * @param {{}} Options
+ * @param {Object} Options
  * @param {string} EventsType
  * @param {Function} EventsFunction
  */
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
   let timeString = getTimeString()
-  let mId = 'modalId_' + timeString
+  let modalId = 'modalId_' + timeString
 
-  document.body.append(modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, mId))
+  let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId)
+  document.body.append(_modal)
 
-  EventsType && EventsFunction ? modalEvents(mId, EventsType, EventsFunction) : "";
+  EventsType && EventsFunction ? modalEvents(modalId, EventsType, EventsFunction) : ""
 
-  const modal_element = document.querySelector("#" + mId);
-  const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
-  xxx.show();
-  removeModal(mId);
-  return mId;
-};
+  let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
+  xxx.show()
+  removeModal(modalId)
+  return modalId
+}
 
 export default bModal
