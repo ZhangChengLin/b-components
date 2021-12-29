@@ -14,6 +14,22 @@ function returnFooter() {
   return "function footer"
 }
 
+function returnEmpty() {
+  return ''
+}
+
+function returnNull() {
+  return null
+}
+
+function returnNaN() {
+  return NaN
+}
+
+function returnUndefined() {
+  return undefined
+}
+
 function returnHTML_Element() {
   const html = document.createElement("div")
   const p = document.createElement("p")

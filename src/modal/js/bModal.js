@@ -3,9 +3,9 @@ import modal from "./modal"
 
 
 /**
- * @param {Node|string|Function|null} headerNodeElement
- * @param {Node|string|Function|null} bodyNodeElement
- * @param {Node|string|Function|null} footerNodeElement
+ * @param {Node|string|function} headerNodeElement
+ * @param {Node|string|function} bodyNodeElement
+ * @param {Node|string|function} footerNodeElement
  * @param {string} ModalSizes
  * @param {boolean} VerticallyCentered
  * @param {boolean} ScrollingLongContent

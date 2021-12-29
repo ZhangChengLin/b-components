@@ -17,7 +17,7 @@
 })(this, (function () { 'use strict';
 
   /**
-   * @param {Node|string|Function|null} titleElement
+   * @param {Node|string|Function} titleElement
    */
   const offcanvasHeader = (titleElement) => {
     let header = document.createElement('div');
@@ -44,7 +44,7 @@
   };
 
   /**
-   * @param {Node|string|Function|null} bodyElement
+   * @param {Node|string|Function} bodyElement
    */
   const offcanvasBody = (bodyElement) => {
     let offcanvas_body = document.createElement('div');
@@ -60,8 +60,8 @@
   };
 
   /**
-   * @param {Node|string|Function|null} headerElement
-   * @param {Node|string|Function|null} bodyElement
+   * @param {Node|string|Function} headerElement
+   * @param {Node|string|Function} bodyElement
    * @param {string} placement
    * @param {string} offcanvasId
    */
@@ -141,8 +141,8 @@
   };
 
   /**
-   * @param {Node|string|Function|null} headerNodeElement
-   * @param {Node|string|Function|null} bodyNodeElement
+   * @param {Node|string|Function} headerNodeElement
+   * @param {Node|string|Function} bodyNodeElement
    * @param {string} Placement
    * @param {Object} Options
    * @param {string} EventsType

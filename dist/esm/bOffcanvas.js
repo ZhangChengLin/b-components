@@ -11,7 +11,7 @@
     * issues: https://github.com/ZhangChengLin/b-components/issues
 */
 /**
- * @param {Node|string|Function|null} titleElement
+ * @param {Node|string|Function} titleElement
  */
 const offcanvasHeader = (titleElement) => {
   let header = document.createElement('div');
@@ -38,7 +38,7 @@ const offcanvasHeader = (titleElement) => {
 };
 
 /**
- * @param {Node|string|Function|null} bodyElement
+ * @param {Node|string|Function} bodyElement
  */
 const offcanvasBody = (bodyElement) => {
   let offcanvas_body = document.createElement('div');
@@ -54,8 +54,8 @@ const offcanvasBody = (bodyElement) => {
 };
 
 /**
- * @param {Node|string|Function|null} headerElement
- * @param {Node|string|Function|null} bodyElement
+ * @param {Node|string|Function} headerElement
+ * @param {Node|string|Function} bodyElement
  * @param {string} placement
  * @param {string} offcanvasId
  */
@@ -135,8 +135,8 @@ const removeOffcanvas = offcanvasId => {
 };
 
 /**
- * @param {Node|string|Function|null} headerNodeElement
- * @param {Node|string|Function|null} bodyNodeElement
+ * @param {Node|string|Function} headerNodeElement
+ * @param {Node|string|Function} bodyNodeElement
  * @param {string} Placement
  * @param {Object} Options
  * @param {string} EventsType

@@ -3,8 +3,8 @@ import offcanvasBody from "./offcanvas-body"
 
 
 /**
- * @param {Node|string|Function|null} headerElement
- * @param {Node|string|Function|null} bodyElement
+ * @param {Node|string|Function} headerElement
+ * @param {Node|string|Function} bodyElement
  * @param {string} placement
  * @param {string} offcanvasId
  */

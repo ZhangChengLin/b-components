@@ -1,5 +1,5 @@
 /**
- * @param {Node|string|Function|null} headerNodeElement
+ * @param {Node|string|Function} headerNodeElement
  */
 const modalHeader = (headerNodeElement) => {
   let header = document.createElement('div')

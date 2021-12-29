@@ -1,5 +1,5 @@
 /**
- * @param {Node|string|Function|null} titleElement
+ * @param {Node|string|Function} titleElement
  */
 const offcanvasHeader = (titleElement) => {
   let header = document.createElement('div')

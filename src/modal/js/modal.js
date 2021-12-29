@@ -6,8 +6,8 @@ import modalDialog from "./modal-dialog"
  * @param {Node|string|Function} bodyNodeElement
  * @param {Node|string|Function} footerNodeElement
  * @param {string} ModalSizes
- * @param {boolean} VerticallyCentered
- * @param {boolean} ScrollingLongContent
+ * @param {*} VerticallyCentered
+ * @param {*} ScrollingLongContent
  * @param {string} modalId
  */
 const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {

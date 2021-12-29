@@ -3,8 +3,8 @@ import {getTimeString, offcanvasEvents, removeOffcanvas} from "./util/index"
 
 
 /**
- * @param {Node|string|Function|null} headerNodeElement
- * @param {Node|string|Function|null} bodyNodeElement
+ * @param {Node|string|Function} headerNodeElement
+ * @param {Node|string|Function} bodyNodeElement
  * @param {string} Placement
  * @param {Object} Options
  * @param {string} EventsType
