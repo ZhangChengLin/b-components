@@ -1,6 +1,6 @@
 /*!
     * Name: b-components-js
-    * Version: 0.0.1-alpha.0
+    * Version: 0.0.1-alpha.1
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
     * Description: Generate Bootstrap components through JavaScript
@@ -21,8 +21,8 @@
   };
 
   /**
-   * @param {string} modalId
-   * @param {string} EventsType
+   * @param {String} modalId
+   * @param {String} EventsType
    * @param {function} EventsFun
    */
   const modalEvents = (modalId, EventsType, EventsFun) => {
@@ -82,7 +82,7 @@
   };
 
   /**
-   * @param {Node|string|Function} headerNodeElement
+   * @param {Node|String|Function} headerNodeElement
    */
   const modalHeader = (headerNodeElement) => {
     if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
@@ -107,7 +107,7 @@
   };
 
   /**
-   * @param {Node|string|Function} bodyNodeElement
+   * @param {Node|String|Function} bodyNodeElement
    */
   const modalBody = (bodyNodeElement) => {
     let modal_body = document.createElement('div');
@@ -123,7 +123,7 @@
   };
 
   /**
-   * @param {Node|string|Function} footerNodeElement
+   * @param {Node|String|Function} footerNodeElement
    */
   const modalFooter = (footerNodeElement) => {
     if (isNull(footerNodeElement) || isEmpty(footerNodeElement)) {
@@ -143,9 +143,9 @@
   };
 
   /**
-   * @param {Node|string|function} headerNodeElement
-   * @param {Node|string|function} bodyNodeElement
-   * @param {Node|string|function} footerNodeElement
+   * @param {Node|String|Function} headerNodeElement
+   * @param {Node|String|Function} bodyNodeElement
+   * @param {Node|String|Function} footerNodeElement
    */
   const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
     const content = document.createElement("div");
@@ -162,10 +162,10 @@
   };
 
   /**
-   * @param {Node|string|Function} headerNodeElement
-   * @param {Node|string|Function} bodyNodeElement
-   * @param {Node|string|Function} footerNodeElement
-   * @param {string} ModalSizes
+   * @param {Node|String|Function} headerNodeElement
+   * @param {Node|String|Function} bodyNodeElement
+   * @param {Node|String|Function} footerNodeElement
+   * @param {String} ModalSizes
    */
   const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
     const dialog = document.createElement('div');
@@ -223,13 +223,13 @@
   };
 
   /**
-   * @param {Node|string|Function} headerNodeElement
-   * @param {Node|string|Function} bodyNodeElement
-   * @param {Node|string|Function} footerNodeElement
-   * @param {string} ModalSizes
+   * @param {Node|String|Function} headerNodeElement
+   * @param {Node|String|Function} bodyNodeElement
+   * @param {Node|String|Function} footerNodeElement
+   * @param {String} ModalSizes
    * @param {*} VerticallyCentered
    * @param {*} ScrollingLongContent
-   * @param {string} modalId
+   * @param {String} modalId
    */
   const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
     const _modal = document.createElement('div');
@@ -246,14 +246,14 @@
   };
 
   /**
-   * @param {Node|string|function} headerNodeElement
-   * @param {Node|string|function} bodyNodeElement
-   * @param {Node|string|function} footerNodeElement
-   * @param {string} ModalSizes
+   * @param {Node|String|Function} headerNodeElement
+   * @param {Node|String|Function} bodyNodeElement
+   * @param {Node|String|Function} footerNodeElement
+   * @param {String} ModalSizes
    * @param {boolean} VerticallyCentered
    * @param {boolean} ScrollingLongContent
    * @param {Object} Options
-   * @param {string} EventsType
+   * @param {String} EventsType
    * @param {Function} EventsFunction
    */
   const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {

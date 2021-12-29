@@ -1,5 +1,5 @@
 /**
- * @param {Node|string|Function} bodyNodeElement
+ * @param {Node|String|Function} bodyNodeElement
  */
 const offcanvasBody = (bodyNodeElement) => {
   let offcanvas_body = document.createElement('div')

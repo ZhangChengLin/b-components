@@ -1,7 +1,7 @@
 import {isNull, isEmpty, bsDismissBtn} from "../../util/index";
 
 /**
- * @param {Node|string|Function} headerNodeElement
+ * @param {Node|String|Function} headerNodeElement
  */
 const modalHeader = (headerNodeElement) => {
   if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {

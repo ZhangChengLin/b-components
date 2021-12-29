@@ -2,10 +2,10 @@ import modalContent from "./modal-content"
 
 
 /**
- * @param {Node|string|Function} headerNodeElement
- * @param {Node|string|Function} bodyNodeElement
- * @param {Node|string|Function} footerNodeElement
- * @param {string} ModalSizes
+ * @param {Node|String|Function} headerNodeElement
+ * @param {Node|String|Function} bodyNodeElement
+ * @param {Node|String|Function} footerNodeElement
+ * @param {String} ModalSizes
  */
 const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
   const dialog = document.createElement('div')

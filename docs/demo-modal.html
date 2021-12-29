@@ -84,10 +84,6 @@
             <option value="returnHeader">returnHeader</option>
             <option value="returnBody" selected>returnBody</option>
             <option value="returnFooter">returnFooter</option>
-            <option value="returnEmpty">returnEmpty</option>
-            <option value="returnNull">returnNull</option>
-            <option value="returnNaN">returnNaN</option>
-            <option value="returnUndefined">returnUndefined</option>
             <option value="calcNumber">calcNumber</option>
             <option value="returnHTML_Element">returnHTML_Element</option>
           </select>
@@ -312,8 +308,20 @@ function returnFooter() {
   return "function footer"
 }
 
+function returnEmpty() {
+  return ''
+}
+
 function returnNull() {
   return null
+}
+
+function returnNaN() {
+  return NaN
+}
+
+function returnUndefined() {
+  return undefined
 }
 
 function returnHTML_Element() {

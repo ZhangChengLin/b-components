@@ -1,7 +1,7 @@
 import {isEmpty, isNull} from "../../util/index";
 
 /**
- * @param {Node|string|Function} footerNodeElement
+ * @param {Node|String|Function} footerNodeElement
  */
 const modalFooter = (footerNodeElement) => {
   if (isNull(footerNodeElement) || isEmpty(footerNodeElement)) {

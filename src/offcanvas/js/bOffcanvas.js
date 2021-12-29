@@ -3,11 +3,11 @@ import {getTimeString, offcanvasEvents, removeOffcanvas} from "./util/index"
 
 
 /**
- * @param {Node|string|Function} headerNodeElement
- * @param {Node|string|Function} bodyNodeElement
- * @param {string} Placement
+ * @param {Node|String|Function} headerNodeElement
+ * @param {Node|String|Function} bodyNodeElement
+ * @param {String} Placement
  * @param {Object} Options
- * @param {string} EventsType
+ * @param {String} EventsType
  * @param {Function} EventsFunction
  */
 const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {

@@ -3,8 +3,8 @@ const getTimeString = () => {
 }
 
 /**
- * @param {string} offcanvasId
- * @param {string} EventsType
+ * @param {String} offcanvasId
+ * @param {String} EventsType
  * @param {Function} EventsFun
  */
 const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {

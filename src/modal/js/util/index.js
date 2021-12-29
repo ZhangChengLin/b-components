@@ -3,8 +3,8 @@ const getTimeString = () => {
 }
 
 /**
- * @param {string} modalId
- * @param {string} EventsType
+ * @param {String} modalId
+ * @param {String} EventsType
  * @param {function} EventsFun
  */
 const modalEvents = (modalId, EventsType, EventsFun) => {

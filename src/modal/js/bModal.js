@@ -3,14 +3,14 @@ import modal from "./modal"
 
 
 /**
- * @param {Node|string|function} headerNodeElement
- * @param {Node|string|function} bodyNodeElement
- * @param {Node|string|function} footerNodeElement
- * @param {string} ModalSizes
+ * @param {Node|String|Function} headerNodeElement
+ * @param {Node|String|Function} bodyNodeElement
+ * @param {Node|String|Function} footerNodeElement
+ * @param {String} ModalSizes
  * @param {boolean} VerticallyCentered
  * @param {boolean} ScrollingLongContent
  * @param {Object} Options
- * @param {string} EventsType
+ * @param {String} EventsType
  * @param {Function} EventsFunction
  */
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {

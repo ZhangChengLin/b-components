@@ -1,6 +1,6 @@
 /*!
     * Name: b-components-js
-    * Version: 0.0.1-alpha.0
+    * Version: 0.0.1-alpha.1
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
     * Description: Generate Bootstrap components through JavaScript
@@ -31,7 +31,7 @@
   };
 
   /**
-   * @param {Node|string|Function} headerNodeElement
+   * @param {Node|String|Function} headerNodeElement
    */
   const offcanvasHeader = (headerNodeElement) => {
     if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
@@ -56,7 +56,7 @@
   };
 
   /**
-   * @param {Node|string|Function} bodyNodeElement
+   * @param {Node|String|Function} bodyNodeElement
    */
   const offcanvasBody = (bodyNodeElement) => {
     let offcanvas_body = document.createElement('div');
@@ -72,10 +72,10 @@
   };
 
   /**
-   * @param {Node|string|Function} headerNodeElement
-   * @param {Node|string|Function} bodyNodeElement
-   * @param {string} placement
-   * @param {string} offcanvasId
+   * @param {Node|String|Function} headerNodeElement
+   * @param {Node|String|Function} bodyNodeElement
+   * @param {String} placement
+   * @param {String} offcanvasId
    */
   const offcanvas = (headerNodeElement, bodyNodeElement, placement, offcanvasId) => {
     let _offcanvas = document.createElement('div');
@@ -109,8 +109,8 @@
   };
 
   /**
-   * @param {string} offcanvasId
-   * @param {string} EventsType
+   * @param {String} offcanvasId
+   * @param {String} EventsType
    * @param {Function} EventsFun
    */
   const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
@@ -153,11 +153,11 @@
   };
 
   /**
-   * @param {Node|string|Function} headerNodeElement
-   * @param {Node|string|Function} bodyNodeElement
-   * @param {string} Placement
+   * @param {Node|String|Function} headerNodeElement
+   * @param {Node|String|Function} bodyNodeElement
+   * @param {String} Placement
    * @param {Object} Options
-   * @param {string} EventsType
+   * @param {String} EventsType
    * @param {Function} EventsFunction
    */
   const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
