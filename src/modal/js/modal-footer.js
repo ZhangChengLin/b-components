@@ -1,7 +1,13 @@
+import {isEmpty, isNull} from "../../util/index";
+
 /**
  * @param {Node|string|Function} footerNodeElement
  */
 const modalFooter = (footerNodeElement) => {
+  if (isNull(footerNodeElement) || isEmpty(footerNodeElement)) {
+    return ''
+  }
+
   let modal_footer = document.createElement('div')
 
   modal_footer.className = 'modal-footer'

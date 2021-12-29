@@ -67,13 +67,30 @@
     });
   };
 
+  const isNull = value => null === value;
+  const isEmpty = value => "string" === typeof value && '' === value;
+
+  const bsDismissBtn = DismissType => {
+    let btn = document.createElement('button');
+
+    btn.className = 'btn-close text-reset';
+    btn.type = 'button';
+    btn.dataset['bsDismiss'] = DismissType;
+    btn.ariaLabel = 'Close';
+
+    return btn
+  };
+
   /**
    * @param {Node|string|Function} headerNodeElement
    */
   const modalHeader = (headerNodeElement) => {
+    if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
+      return ''
+    }
+
     let header = document.createElement('div');
     let title = document.createElement('h5');
-    let btn = document.createElement('button');
 
     header.className = 'modal-header';
 
@@ -85,12 +102,7 @@
         ? title.append(headerNodeElement)
         : title.innerHTML = headerNodeElement;
 
-    btn.className = 'btn-close text-reset';
-    btn.type = 'button';
-    btn.dataset['bsDismiss'] = 'modal';
-    btn.ariaLabel = 'Close';
-
-    header.append(title, btn);
+    header.append(title, bsDismissBtn('offcanvas'));
     return header
   };
 
@@ -114,6 +126,10 @@
    * @param {Node|string|Function} footerNodeElement
    */
   const modalFooter = (footerNodeElement) => {
+    if (isNull(footerNodeElement) || isEmpty(footerNodeElement)) {
+      return ''
+    }
+
     let modal_footer = document.createElement('div');
 
     modal_footer.className = 'modal-footer';

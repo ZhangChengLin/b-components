@@ -3,15 +3,15 @@ import offcanvasBody from "./offcanvas-body"
 
 
 /**
- * @param {Node|string|Function} headerElement
- * @param {Node|string|Function} bodyElement
+ * @param {Node|string|Function} headerNodeElement
+ * @param {Node|string|Function} bodyNodeElement
  * @param {string} placement
  * @param {string} offcanvasId
  */
-const offcanvas = (headerElement = null, bodyElement = null, placement, offcanvasId) => {
+const offcanvas = (headerNodeElement, bodyNodeElement, placement, offcanvasId) => {
   let _offcanvas = document.createElement('div')
-  let header = offcanvasHeader(headerElement)
-  let body = offcanvasBody(bodyElement)
+  let header = offcanvasHeader(headerNodeElement)
+  let body = offcanvasBody(bodyNodeElement)
 
   placement = placement ?? 'start'
   switch (placement) {

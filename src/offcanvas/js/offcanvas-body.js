@@ -1,15 +1,15 @@
 /**
- * @param {Node|string|Function} bodyElement
+ * @param {Node|string|Function} bodyNodeElement
  */
-const offcanvasBody = (bodyElement) => {
+const offcanvasBody = (bodyNodeElement) => {
   let offcanvas_body = document.createElement('div')
 
   offcanvas_body.className = 'offcanvas-body'
-  bodyElement instanceof Function
-    ? offcanvas_body.append(bodyElement())
-    : bodyElement instanceof HTMLElement
-      ? offcanvas_body.append(bodyElement)
-      : offcanvas_body.innerHTML = bodyElement
+  bodyNodeElement instanceof Function
+    ? offcanvas_body.append(bodyNodeElement())
+    : bodyNodeElement instanceof HTMLElement
+      ? offcanvas_body.append(bodyNodeElement)
+      : offcanvas_body.innerHTML = bodyNodeElement
 
   return offcanvas_body
 }

@@ -1,27 +1,27 @@
+import {isNull, isEmpty, bsDismissBtn} from "../../util/index";
+
 /**
- * @param {Node|string|Function} titleElement
+ * @param {Node|string|Function} headerNodeElement
  */
-const offcanvasHeader = (titleElement) => {
+const offcanvasHeader = (headerNodeElement) => {
+  if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
+    return ''
+  }
+
   let header = document.createElement('div')
   let title = document.createElement('h5')
-  let btn = document.createElement('button')
 
   header.className = 'offcanvas-header'
 
   title.className = 'offcanvas-title'
   title.id = 'offcanvasTitleLabel'
-  titleElement instanceof Function
-    ? title.append(titleElement())
-    : titleElement instanceof HTMLElement
-      ? title.append(titleElement)
-      : title.innerHTML = titleElement
+  headerNodeElement instanceof Function
+    ? title.append(headerNodeElement())
+    : headerNodeElement instanceof HTMLElement
+      ? title.append(headerNodeElement)
+      : title.innerHTML = headerNodeElement
 
-  btn.className = 'btn-close text-reset'
-  btn.type = 'button'
-  btn.dataset['bsDismiss'] = 'offcanvas'
-  btn.ariaLabel = 'Close'
-
-  header.append(title, btn)
+  header.append(title, bsDismissBtn('offcanvas'))
   return header
 }
 

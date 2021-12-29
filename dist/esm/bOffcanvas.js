@@ -10,59 +10,71 @@
     * GitHub: https://github.com/ZhangChengLin/b-components
     * issues: https://github.com/ZhangChengLin/b-components/issues
 */
+const isNull = value => null === value;
+const isEmpty = value => "string" === typeof value && '' === value;
+
+const bsDismissBtn = DismissType => {
+  let btn = document.createElement('button');
+
+  btn.className = 'btn-close text-reset';
+  btn.type = 'button';
+  btn.dataset['bsDismiss'] = DismissType;
+  btn.ariaLabel = 'Close';
+
+  return btn
+};
+
 /**
- * @param {Node|string|Function} titleElement
+ * @param {Node|string|Function} headerNodeElement
  */
-const offcanvasHeader = (titleElement) => {
+const offcanvasHeader = (headerNodeElement) => {
+  if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
+    return ''
+  }
+
   let header = document.createElement('div');
   let title = document.createElement('h5');
-  let btn = document.createElement('button');
 
   header.className = 'offcanvas-header';
 
   title.className = 'offcanvas-title';
   title.id = 'offcanvasTitleLabel';
-  titleElement instanceof Function
-    ? title.append(titleElement())
-    : titleElement instanceof HTMLElement
-      ? title.append(titleElement)
-      : title.innerHTML = titleElement;
+  headerNodeElement instanceof Function
+    ? title.append(headerNodeElement())
+    : headerNodeElement instanceof HTMLElement
+      ? title.append(headerNodeElement)
+      : title.innerHTML = headerNodeElement;
 
-  btn.className = 'btn-close text-reset';
-  btn.type = 'button';
-  btn.dataset['bsDismiss'] = 'offcanvas';
-  btn.ariaLabel = 'Close';
-
-  header.append(title, btn);
+  header.append(title, bsDismissBtn('offcanvas'));
   return header
 };
 
 /**
- * @param {Node|string|Function} bodyElement
+ * @param {Node|string|Function} bodyNodeElement
  */
-const offcanvasBody = (bodyElement) => {
+const offcanvasBody = (bodyNodeElement) => {
   let offcanvas_body = document.createElement('div');
 
   offcanvas_body.className = 'offcanvas-body';
-  bodyElement instanceof Function
-    ? offcanvas_body.append(bodyElement())
-    : bodyElement instanceof HTMLElement
-      ? offcanvas_body.append(bodyElement)
-      : offcanvas_body.innerHTML = bodyElement;
+  bodyNodeElement instanceof Function
+    ? offcanvas_body.append(bodyNodeElement())
+    : bodyNodeElement instanceof HTMLElement
+      ? offcanvas_body.append(bodyNodeElement)
+      : offcanvas_body.innerHTML = bodyNodeElement;
 
   return offcanvas_body
 };
 
 /**
- * @param {Node|string|Function} headerElement
- * @param {Node|string|Function} bodyElement
+ * @param {Node|string|Function} headerNodeElement
+ * @param {Node|string|Function} bodyNodeElement
  * @param {string} placement
  * @param {string} offcanvasId
  */
-const offcanvas = (headerElement = null, bodyElement = null, placement, offcanvasId) => {
+const offcanvas = (headerNodeElement, bodyNodeElement, placement, offcanvasId) => {
   let _offcanvas = document.createElement('div');
-  let header = offcanvasHeader(headerElement);
-  let body = offcanvasBody(bodyElement);
+  let header = offcanvasHeader(headerNodeElement);
+  let body = offcanvasBody(bodyNodeElement);
 
   placement = placement ?? 'start';
   switch (placement) {
