@@ -112,24 +112,24 @@ const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
   switch (EventsType) {
     case "show":
       offcanvas.addEventListener("show.bs.offcanvas", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "shown":
       offcanvas.addEventListener("shown.bs.offcanvas", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "hide":
       offcanvas.addEventListener("hide.bs.offcanvas", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "hidden":
       offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     default:
       throw 'eventName error'
   }

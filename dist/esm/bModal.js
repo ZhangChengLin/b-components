@@ -24,29 +24,29 @@ const modalEvents = (modalId, EventsType, EventsFun) => {
   switch (EventsType) {
     case "show":
       modal.addEventListener("show.bs.modal", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "shown":
       modal.addEventListener("shown.bs.modal", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "hide":
       modal.addEventListener("hide.bs.modal", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "hidden":
       modal.addEventListener("hidden.bs.modal", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
     case "hidePrevented":
       modal.addEventListener("hidePrevented.bs.modal", function () {
-        return EventsFun();
+        return EventsFun()
       });
-      break;
+      break
   }
 };
 
