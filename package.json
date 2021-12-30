@@ -11,6 +11,7 @@
     "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js",
     "lint": "npm-run-all --aggregate-output --parallel lint-*",
     "lint-js": "",
+    "release": "npm-run-all js-compile",
     "copyBsFiles": "gulp copyBsFiles"
   },
   "repository": {
