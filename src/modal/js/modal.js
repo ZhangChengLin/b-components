@@ -1,6 +1,5 @@
 import modalDialog from "./modal-dialog"
 
-
 /**
  * @param {Node|String|Function} headerNodeElement
  * @param {Node|String|Function} bodyNodeElement

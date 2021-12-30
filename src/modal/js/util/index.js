@@ -3,53 +3,44 @@ const getTimeString = () => {
 }
 
 /**
- * @param {String} modalId
+ * @param {HTMLElement} _modal
  * @param {String} EventsType
  * @param {function} EventsFun
  */
-const modalEvents = (modalId, EventsType, EventsFun) => {
-  const modal = document.querySelector("#" + modalId);
+const modalEvents = (_modal, EventsType, EventsFun) => {
   switch (EventsType) {
     case "show":
-      modal.addEventListener("show.bs.modal", function () {
-        return EventsFun();
-      });
-      break;
+      _modal.addEventListener("show.bs.modal", () => EventsFun())
+      break
     case "shown":
-      modal.addEventListener("shown.bs.modal", function () {
-        return EventsFun();
-      });
-      break;
+      _modal.addEventListener("shown.bs.modal", () => EventsFun())
+      break
     case "hide":
-      modal.addEventListener("hide.bs.modal", function () {
-        return EventsFun();
-      });
-      break;
+      _modal.addEventListener("hide.bs.modal", () => EventsFun())
+      break
     case "hidden":
-      modal.addEventListener("hidden.bs.modal", function () {
-        return EventsFun();
-      });
-      break;
+      _modal.addEventListener("hidden.bs.modal", () => EventsFun())
+      break
     case "hidePrevented":
-      modal.addEventListener("hidePrevented.bs.modal", function () {
-        return EventsFun();
-      });
-      break;
+      _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun())
+      break
     default:
-      break;
+      break
   }
-};
+}
 
-const removeModal = modalId => {
-  const modal_element = document.querySelector("#" + modalId);
-  modal_element.addEventListener("hidden.bs.modal", function () {
-    let x = bootstrap.Modal.getInstance(modal_element);
-    x.dispose();
-    setTimeout(function () {
-      modal_element.parentElement.removeChild(modal_element);
-    }, 2e3);
-  });
-};
+/**
+ * @param {HTMLElement} _modal
+ */
+const removeModal = _modal => {
+  _modal.addEventListener("hidden.bs.modal", () => {
+    let x = bootstrap.Modal.getInstance(_modal)
+    x.dispose()
+    setTimeout(() => {
+      _modal.parentElement.removeChild(_modal)
+    }, 2e3)
+  })
+}
 
 export {
   getTimeString,

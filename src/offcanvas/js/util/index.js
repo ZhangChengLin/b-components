@@ -3,49 +3,41 @@ const getTimeString = () => {
 }
 
 /**
- * @param {String} offcanvasId
+ * @param {HTMLElement} _offcanvas
  * @param {String} EventsType
  * @param {Function} EventsFun
  */
-const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
-  const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
+const offcanvasEvents = (_offcanvas, EventsType, EventsFun) => {
   switch (EventsType) {
     case "show":
-      offcanvas.addEventListener("show.bs.offcanvas", function () {
-        return EventsFun();
-      });
-      break;
+      _offcanvas.addEventListener("show.bs.offcanvas", () => EventsFun())
+      break
     case "shown":
-      offcanvas.addEventListener("shown.bs.offcanvas", function () {
-        return EventsFun();
-      });
-      break;
+      _offcanvas.addEventListener("shown.bs.offcanvas", () => EventsFun())
+      break
     case "hide":
-      offcanvas.addEventListener("hide.bs.offcanvas", function () {
-        return EventsFun();
-      });
-      break;
+      _offcanvas.addEventListener("hide.bs.offcanvas", () => EventsFun())
+      break
     case "hidden":
-      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-        return EventsFun();
-      });
-      break;
+      _offcanvas.addEventListener("hidden.bs.offcanvas", () => EventsFun())
+      break
     default:
-      throw 'eventName error'
+      throw 'EventsType error'
   }
 }
 
-const removeOffcanvas = offcanvasId => {
-  const offcanvas_element = document.querySelector("#" + offcanvasId);
-  offcanvas_element.addEventListener("hidden.bs.offcanvas", function () {
-    let x = bootstrap.Offcanvas.getInstance(offcanvas_element);
-    x.dispose();
-    setTimeout(function () {
-      offcanvas_element.parentElement.removeChild(offcanvas_element);
-    }, 3e3);
-  });
-};
-
+/**
+ * @param {HTMLElement} _offcanvas
+ */
+const removeOffcanvas = _offcanvas => {
+  _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+    let x = bootstrap.Offcanvas.getInstance(_offcanvas)
+    x.dispose()
+    setTimeout(() => {
+      _offcanvas.parentElement.removeChild(_offcanvas)
+    }, 3e3)
+  })
+}
 
 export {
   getTimeString,

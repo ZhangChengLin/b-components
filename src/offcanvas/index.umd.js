@@ -1,3 +1,3 @@
-import bOffcanvas from "./js/bOffcanvas";
+import bOffcanvas from "./js/bOffcanvas"
 
 export default bOffcanvas

@@ -21,48 +21,39 @@
   };
 
   /**
-   * @param {String} modalId
+   * @param {HTMLElement} _modal
    * @param {String} EventsType
    * @param {function} EventsFun
    */
-  const modalEvents = (modalId, EventsType, EventsFun) => {
-    const modal = document.querySelector("#" + modalId);
+  const modalEvents = (_modal, EventsType, EventsFun) => {
     switch (EventsType) {
       case "show":
-        modal.addEventListener("show.bs.modal", function () {
-          return EventsFun();
-        });
-        break;
+        _modal.addEventListener("show.bs.modal", () => EventsFun());
+        break
       case "shown":
-        modal.addEventListener("shown.bs.modal", function () {
-          return EventsFun();
-        });
-        break;
+        _modal.addEventListener("shown.bs.modal", () => EventsFun());
+        break
       case "hide":
-        modal.addEventListener("hide.bs.modal", function () {
-          return EventsFun();
-        });
-        break;
+        _modal.addEventListener("hide.bs.modal", () => EventsFun());
+        break
       case "hidden":
-        modal.addEventListener("hidden.bs.modal", function () {
-          return EventsFun();
-        });
-        break;
+        _modal.addEventListener("hidden.bs.modal", () => EventsFun());
+        break
       case "hidePrevented":
-        modal.addEventListener("hidePrevented.bs.modal", function () {
-          return EventsFun();
-        });
-        break;
+        _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
+        break
     }
   };
 
-  const removeModal = modalId => {
-    const modal_element = document.querySelector("#" + modalId);
-    modal_element.addEventListener("hidden.bs.modal", function () {
-      let x = bootstrap.Modal.getInstance(modal_element);
+  /**
+   * @param {HTMLElement} _modal
+   */
+  const removeModal = _modal => {
+    _modal.addEventListener("hidden.bs.modal", () => {
+      let x = bootstrap.Modal.getInstance(_modal);
       x.dispose();
-      setTimeout(function () {
-        modal_element.parentElement.removeChild(modal_element);
+      setTimeout(() => {
+        _modal.parentElement.removeChild(_modal);
       }, 2e3);
     });
   };
@@ -250,8 +241,8 @@
    * @param {Node|String|Function} bodyNodeElement
    * @param {Node|String|Function} footerNodeElement
    * @param {String} ModalSizes
-   * @param {boolean} VerticallyCentered
-   * @param {boolean} ScrollingLongContent
+   * @param {Boolean} VerticallyCentered
+   * @param {Boolean} ScrollingLongContent
    * @param {Object} Options
    * @param {String} EventsType
    * @param {Function} EventsFunction
@@ -263,11 +254,11 @@
     let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
     document.body.append(_modal);
 
-    EventsType && EventsFunction ? modalEvents(modalId, EventsType, EventsFunction) : "";
+    EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : "";
 
     let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
     xxx.show();
-    removeModal(modalId);
+    removeModal(_modal);
     return modalId
   };
 

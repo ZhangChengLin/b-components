@@ -1,5 +1,7 @@
 # bModal
 
+<a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
+
 ## Demo
 
 [https://ZhangChengLin.github.io/b-components/docs/demo-modal.html](https://ZhangChengLin.github.io/b-components/docs/demo-modal.html)
@@ -49,157 +51,32 @@ OR
 
 OR MORE
 
+
 ## Parameter Description
 
-Currently, relying on Bootstrap v5, because it is a function package of Bootstrap modal.
-
-Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
-
 ```
-bModal(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventType, CallbackFunction)
+bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
 ```
 
 **Return Values**
 
-|  type  |    such as    |     Description      |
-|:------:|:-------------:|:--------------------:|
-| String | 1552756356601 | modal element number |
+|  type  |        such as        |                 Description                 |
+|:------:|:---------------------:|:-------------------------------------------:|
+| String | modalId_1552756356601 | "modalId_" starts with a 13-digit timestamp |
 
 ---
 
-**title**
--
 
-Type: String \| Function \| Function HTMLElement
-
-Default value: undefined
-
-Description: If you want to add a child element to the '.modal-header' element, use the Function HTMLElement.
-
-说明： 如果要向 ".modal-header" 元素添加子元素，请使用 Function HTMLElement。
-
----
-
-**body**
--
-
-Type: String \| Function \| Function HTMLElement
-
-Default value: undefined
-
-Description:
+| Order |       Argument       |                Type                |                        Default                         |                                                           Alternative                                                            |                                                                  Description                                                                  |
+|:-----:|:--------------------:|:----------------------------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|
+|   1   |  headerNodeElement   | Node &#124; String &#124; Function |                           ""                           |                                                               None                                                               |                                                   h5.modal-title The content of the element                                                   |
+|   2   |   bodyNodeElement    | Node &#124; String &#124; Function |                           ""                           |                                                               None                                                               |                                                   div.modal-body The content of the element                                                   |
+|   3   |  footerNodeElement   | Node &#124; String &#124; Function |                           ""                           |                                                               None                                                               |                                                  div.modal-footer The content of the element                                                  |
+|   4   |      ModalSizes      |               String               |                           ""                           | "sm" &#124; "lg" &#124; "xl" &#124; "full" &#124; "full-sm" &#124; "full-md" &#124; "full-lg" &#124; "full-xl" &#124; "full-xxl" | https://getbootstrap.com/docs/5.1/components/modal/#optional-sizes <br/> https://getbootstrap.com/docs/5.1/components/modal/#fullscreen-modal |
+|   5   |  VerticallyCentered  |              Boolean               |                         false                          |                                                        true &#124; false                                                         |                                    https://getbootstrap.com/docs/5.1/components/modal/#vertically-centered                                    |
+|   6   | ScrollingLongContent |              Boolean               |                         false                          |                                                        true &#124; false                                                         |                                  https://getbootstrap.com/docs/5.1/components/modal/#scrolling-long-content                                   |
+|   7   |       Options        |               Object               | backdrop : true,<br/>keyboard : true,<br/>focus : true |          backdrop : true &#124; false &#124; "static",<br/>keyboard : true &#124; false,<br/>focus : true &#124; false           |                                          https://getbootstrap.com/docs/5.1/components/modal/#options                                          |
+|   8   |      EventsType      |               String               |                          None                          |                             "show" &#124; "shown" &#124; "hide" &#124; "hidden" &#124; hidePrevented                             |                                          https://getbootstrap.com/docs/5.1/components/modal/#events                                           |
+|   9   |    EventsFunction    |              Function              |                          None                          |                                                               None                                                               |                                          https://getbootstrap.com/docs/5.1/components/modal/#events                                           |
 
 ---
-
-**footer**
--
-
-Type: String \| Function \| Function HTMLElement
-
-Default value: undefined
-
-Description:
-
----
-
-**ModalSizes**
--
-
-Type: String
-
-Default value: undefined
-
-Description:
-
-| parameter |
-|:---------:|
-|    sm     |
-|    lg     |
-|    xl     |
-|   full    |
-|  full-sm  |
-|  full-md  |
-|  full-lg  |
-|  full-xl  |
-| full-xxl  |
-
----
-
-**VerticallyCentered**
--
-
-Type: Boolean
-
-Default value: false
-
-Description:
-
-| parameter |
-|:---------:|
-|   true    |
-|   false   |
-
----
-
-**LongContentType**
--
-
-Type: Boolean
-
-Default value: false
-
-Description:
-
-| parameter |
-|:---------:|
-|   true    |
-|   false   |
-
----
-
-**Options**
--
-
-Type: Object
-
-Default value:
-
-Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal
-options</a>
-
-| parameter | default value (boolean) |         other         |
-|:---------:|:-----------------------:|:---------------------:|
-| backdrop  |          true           | false &#124; "static" |
-| keyboard  |          true           |         false         |
-|   focus   |          true           |         false         |
-
----
-
-**Events Type**
--
-
-Type: String
-
-Default value: undefined
-
-Description:
-
-|   parameter   |
-|:-------------:|
-|     show      |
-|     shown     |
-|     hide      |
-|    hidden     |
-| hidePrevented |
-
----
-
-**Events Function**
--
-
-Type: Function
-
-Default value: undefined
-
-Description:
-

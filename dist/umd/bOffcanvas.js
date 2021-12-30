@@ -74,26 +74,26 @@
   /**
    * @param {Node|String|Function} headerNodeElement
    * @param {Node|String|Function} bodyNodeElement
-   * @param {String} placement
+   * @param {String} Placement
    * @param {String} offcanvasId
    */
-  const offcanvas = (headerNodeElement, bodyNodeElement, placement, offcanvasId) => {
+  const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) => {
     let _offcanvas = document.createElement('div');
     let header = offcanvasHeader(headerNodeElement);
     let body = offcanvasBody(bodyNodeElement);
 
-    placement = placement ?? 'start';
-    switch (placement) {
+    Placement = Placement ?? 'start';
+    switch (Placement) {
       case 'start':
       case 'top':
       case 'end':
       case 'bottom':
         break
       default:
-        throw `placement 参数错误`
+        throw 'Placement error'
     }
 
-    _offcanvas.className = `offcanvas offcanvas-${placement}`;
+    _offcanvas.className = `offcanvas offcanvas-${Placement}`;
     _offcanvas.id = offcanvasId;
     _offcanvas.tabIndex = -1;
     _offcanvas.role = 'dialog';
@@ -109,45 +109,38 @@
   };
 
   /**
-   * @param {String} offcanvasId
+   * @param {HTMLElement} _offcanvas
    * @param {String} EventsType
    * @param {Function} EventsFun
    */
-  const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
-    const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
+  const offcanvasEvents = (_offcanvas, EventsType, EventsFun) => {
     switch (EventsType) {
       case "show":
-        offcanvas.addEventListener("show.bs.offcanvas", function () {
-          return EventsFun();
-        });
-        break;
+        _offcanvas.addEventListener("show.bs.offcanvas", () => EventsFun());
+        break
       case "shown":
-        offcanvas.addEventListener("shown.bs.offcanvas", function () {
-          return EventsFun();
-        });
-        break;
+        _offcanvas.addEventListener("shown.bs.offcanvas", () => EventsFun());
+        break
       case "hide":
-        offcanvas.addEventListener("hide.bs.offcanvas", function () {
-          return EventsFun();
-        });
-        break;
+        _offcanvas.addEventListener("hide.bs.offcanvas", () => EventsFun());
+        break
       case "hidden":
-        offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-          return EventsFun();
-        });
-        break;
+        _offcanvas.addEventListener("hidden.bs.offcanvas", () => EventsFun());
+        break
       default:
-        throw 'eventName error'
+        throw 'EventsType error'
     }
   };
 
-  const removeOffcanvas = offcanvasId => {
-    const offcanvas_element = document.querySelector("#" + offcanvasId);
-    offcanvas_element.addEventListener("hidden.bs.offcanvas", function () {
-      let x = bootstrap.Offcanvas.getInstance(offcanvas_element);
+  /**
+   * @param {HTMLElement} _offcanvas
+   */
+  const removeOffcanvas = _offcanvas => {
+    _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+      let x = bootstrap.Offcanvas.getInstance(_offcanvas);
       x.dispose();
-      setTimeout(function () {
-        offcanvas_element.parentElement.removeChild(offcanvas_element);
+      setTimeout(() => {
+        _offcanvas.parentElement.removeChild(_offcanvas);
       }, 3e3);
     });
   };
@@ -167,11 +160,11 @@
     let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
     document.body.append(_offcanvas);
 
-    EventsType && EventsFunction ? offcanvasEvents(timeString, EventsType, EventsFunction) : '';
+    EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : '';
 
     let xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
     xxx.show();
-    removeOffcanvas(offcanvasId);
+    removeOffcanvas(_offcanvas);
     return offcanvasId
   };
 
