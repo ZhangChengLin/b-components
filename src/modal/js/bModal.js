@@ -19,7 +19,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
   let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId)
   document.body.append(_modal)
 
-  EventsType && EventsFunction ? modalEvents(modalId, EventsType, EventsFunction) : ""
+  EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : ""
 
   let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
   xxx.show()

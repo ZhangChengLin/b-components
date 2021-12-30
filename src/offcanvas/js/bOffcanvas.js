@@ -16,7 +16,7 @@ const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, Even
   let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId)
   document.body.append(_offcanvas)
 
-  EventsType && EventsFunction ? offcanvasEvents(timeString, EventsType, EventsFunction) : ''
+  EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : ''
 
   let xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas)
   xxx.show()

@@ -21,40 +21,39 @@
   };
 
   /**
-   * @param {String} modalId
+   * @param {HTMLElement} _modal
    * @param {String} EventsType
    * @param {function} EventsFun
    */
-  const modalEvents = (modalId, EventsType, EventsFun) => {
-    const modal = document.querySelector("#" + modalId);
+  const modalEvents = (_modal, EventsType, EventsFun) => {
     switch (EventsType) {
       case "show":
-        modal.addEventListener("show.bs.modal", () => EventsFun());
+        _modal.addEventListener("show.bs.modal", () => EventsFun());
         break
       case "shown":
-        modal.addEventListener("shown.bs.modal", () => EventsFun());
+        _modal.addEventListener("shown.bs.modal", () => EventsFun());
         break
       case "hide":
-        modal.addEventListener("hide.bs.modal", () => EventsFun());
+        _modal.addEventListener("hide.bs.modal", () => EventsFun());
         break
       case "hidden":
-        modal.addEventListener("hidden.bs.modal", () => EventsFun());
+        _modal.addEventListener("hidden.bs.modal", () => EventsFun());
         break
       case "hidePrevented":
-        modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
+        _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
         break
     }
   };
 
   /**
-   * @param {HTMLElement} modal
+   * @param {HTMLElement} _modal
    */
-  const removeModal = modal => {
-    modal.addEventListener("hidden.bs.modal", () => {
-      let x = bootstrap.Modal.getInstance(modal);
+  const removeModal = _modal => {
+    _modal.addEventListener("hidden.bs.modal", () => {
+      let x = bootstrap.Modal.getInstance(_modal);
       x.dispose();
       setTimeout(() => {
-        modal.parentElement.removeChild(modal);
+        _modal.parentElement.removeChild(_modal);
       }, 2e3);
     });
   };
@@ -255,7 +254,7 @@
     let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
     document.body.append(_modal);
 
-    EventsType && EventsFunction ? modalEvents(modalId, EventsType, EventsFunction) : "";
+    EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : "";
 
     let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
     xxx.show();

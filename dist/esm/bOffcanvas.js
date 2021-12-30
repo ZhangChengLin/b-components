@@ -103,24 +103,23 @@ const getTimeString = () => {
 };
 
 /**
- * @param {String} offcanvasId
+ * @param {HTMLElement} _offcanvas
  * @param {String} EventsType
  * @param {Function} EventsFun
  */
-const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
-  const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
+const offcanvasEvents = (_offcanvas, EventsType, EventsFun) => {
   switch (EventsType) {
     case "show":
-      offcanvas.addEventListener("show.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("show.bs.offcanvas", () => EventsFun());
       break
     case "shown":
-      offcanvas.addEventListener("shown.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("shown.bs.offcanvas", () => EventsFun());
       break
     case "hide":
-      offcanvas.addEventListener("hide.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("hide.bs.offcanvas", () => EventsFun());
       break
     case "hidden":
-      offcanvas.addEventListener("hidden.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("hidden.bs.offcanvas", () => EventsFun());
       break
     default:
       throw 'EventsType error'
@@ -128,14 +127,14 @@ const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
 };
 
 /**
- * @param {HTMLElement} offcanvas
+ * @param {HTMLElement} _offcanvas
  */
-const removeOffcanvas = offcanvas => {
-  offcanvas.addEventListener("hidden.bs.offcanvas", () => {
-    let x = bootstrap.Offcanvas.getInstance(offcanvas);
+const removeOffcanvas = _offcanvas => {
+  _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+    let x = bootstrap.Offcanvas.getInstance(_offcanvas);
     x.dispose();
     setTimeout(() => {
-      offcanvas.parentElement.removeChild(offcanvas);
+      _offcanvas.parentElement.removeChild(_offcanvas);
     }, 3e3);
   });
 };
@@ -155,7 +154,7 @@ const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, Even
   let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
   document.body.append(_offcanvas);
 
-  EventsType && EventsFunction ? offcanvasEvents(timeString, EventsType, EventsFunction) : '';
+  EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : '';
 
   let xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
   xxx.show();
