@@ -1,5 +1,7 @@
 # bModal
 
+<a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
+
 ## Demo
 
 [https://ZhangChengLin.github.io/b-components/docs/demo-modal.html](https://ZhangChengLin.github.io/b-components/docs/demo-modal.html)
