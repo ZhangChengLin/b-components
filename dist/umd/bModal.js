@@ -29,40 +29,32 @@
     const modal = document.querySelector("#" + modalId);
     switch (EventsType) {
       case "show":
-        modal.addEventListener("show.bs.modal", function () {
-          return EventsFun()
-        });
+        modal.addEventListener("show.bs.modal", () => EventsFun());
         break
       case "shown":
-        modal.addEventListener("shown.bs.modal", function () {
-          return EventsFun()
-        });
+        modal.addEventListener("shown.bs.modal", () => EventsFun());
         break
       case "hide":
-        modal.addEventListener("hide.bs.modal", function () {
-          return EventsFun()
-        });
+        modal.addEventListener("hide.bs.modal", () => EventsFun());
         break
       case "hidden":
-        modal.addEventListener("hidden.bs.modal", function () {
-          return EventsFun()
-        });
+        modal.addEventListener("hidden.bs.modal", () => EventsFun());
         break
       case "hidePrevented":
-        modal.addEventListener("hidePrevented.bs.modal", function () {
-          return EventsFun()
-        });
+        modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
         break
     }
   };
 
-  const removeModal = modalId => {
-    const modal_element = document.querySelector("#" + modalId);
-    modal_element.addEventListener("hidden.bs.modal", function () {
-      let x = bootstrap.Modal.getInstance(modal_element);
+  /**
+   * @param {HTMLElement} modal
+   */
+  const removeModal = modal => {
+    modal.addEventListener("hidden.bs.modal", () => {
+      let x = bootstrap.Modal.getInstance(modal);
       x.dispose();
-      setTimeout(function () {
-        modal_element.parentElement.removeChild(modal_element);
+      setTimeout(() => {
+        modal.parentElement.removeChild(modal);
       }, 2e3);
     });
   };
@@ -267,7 +259,7 @@
 
     let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
     xxx.show();
-    removeModal(modalId);
+    removeModal(_modal);
     return modalId
   };
 

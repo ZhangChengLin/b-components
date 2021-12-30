@@ -13,4 +13,5 @@ const modalBody = (bodyNodeElement) => {
 
   return modal_body
 }
+
 export default modalBody

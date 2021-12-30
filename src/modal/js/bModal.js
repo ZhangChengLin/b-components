@@ -1,7 +1,6 @@
 import {getTimeString, removeModal, modalEvents} from "./util/index"
 import modal from "./modal"
 
-
 /**
  * @param {Node|String|Function} headerNodeElement
  * @param {Node|String|Function} bodyNodeElement
@@ -24,7 +23,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
 
   let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
   xxx.show()
-  removeModal(modalId)
+  removeModal(_modal)
   return modalId
 }
 

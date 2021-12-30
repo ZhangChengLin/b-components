@@ -1,6 +1,5 @@
 import modalContent from "./modal-content"
 
-
 /**
  * @param {Node|String|Function} headerNodeElement
  * @param {Node|String|Function} bodyNodeElement

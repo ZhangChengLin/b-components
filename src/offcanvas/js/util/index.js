@@ -11,41 +11,34 @@ const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
   const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId)
   switch (EventsType) {
     case "show":
-      offcanvas.addEventListener("show.bs.offcanvas", function () {
-        return EventsFun()
-      })
+      offcanvas.addEventListener("show.bs.offcanvas", () => EventsFun())
       break
     case "shown":
-      offcanvas.addEventListener("shown.bs.offcanvas", function () {
-        return EventsFun()
-      })
+      offcanvas.addEventListener("shown.bs.offcanvas", () => EventsFun())
       break
     case "hide":
-      offcanvas.addEventListener("hide.bs.offcanvas", function () {
-        return EventsFun()
-      })
+      offcanvas.addEventListener("hide.bs.offcanvas", () => EventsFun())
       break
     case "hidden":
-      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-        return EventsFun()
-      })
+      offcanvas.addEventListener("hidden.bs.offcanvas", () => EventsFun())
       break
     default:
       throw 'EventsType error'
   }
 }
 
-const removeOffcanvas = offcanvasId => {
-  const offcanvas_element = document.querySelector("#" + offcanvasId)
-  offcanvas_element.addEventListener("hidden.bs.offcanvas", function () {
-    let x = bootstrap.Offcanvas.getInstance(offcanvas_element)
+/**
+ * @param {HTMLElement} offcanvas
+ */
+const removeOffcanvas = offcanvas => {
+  offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+    let x = bootstrap.Offcanvas.getInstance(offcanvas)
     x.dispose()
-    setTimeout(function () {
-      offcanvas_element.parentElement.removeChild(offcanvas_element)
+    setTimeout(() => {
+      offcanvas.parentElement.removeChild(offcanvas)
     }, 3e3)
   })
 }
-
 
 export {
   getTimeString,
