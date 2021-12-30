@@ -74,26 +74,26 @@
   /**
    * @param {Node|String|Function} headerNodeElement
    * @param {Node|String|Function} bodyNodeElement
-   * @param {String} placement
+   * @param {String} Placement
    * @param {String} offcanvasId
    */
-  const offcanvas = (headerNodeElement, bodyNodeElement, placement, offcanvasId) => {
+  const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) => {
     let _offcanvas = document.createElement('div');
     let header = offcanvasHeader(headerNodeElement);
     let body = offcanvasBody(bodyNodeElement);
 
-    placement = placement ?? 'start';
-    switch (placement) {
+    Placement = Placement ?? 'start';
+    switch (Placement) {
       case 'start':
       case 'top':
       case 'end':
       case 'bottom':
         break
       default:
-        throw `placement 参数错误`
+        throw 'Placement error'
     }
 
-    _offcanvas.className = `offcanvas offcanvas-${placement}`;
+    _offcanvas.className = `offcanvas offcanvas-${Placement}`;
     _offcanvas.id = offcanvasId;
     _offcanvas.tabIndex = -1;
     _offcanvas.role = 'dialog';
@@ -137,7 +137,7 @@
         });
         break
       default:
-        throw 'eventName error'
+        throw 'EventsType error'
     }
   };
 

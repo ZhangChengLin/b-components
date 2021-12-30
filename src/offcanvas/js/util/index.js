@@ -31,7 +31,7 @@ const offcanvasEvents = (offcanvasId, EventsType, EventsFun) => {
       })
       break
     default:
-      throw 'eventName error'
+      throw 'EventsType error'
   }
 }
 
