@@ -89,17 +89,11 @@ If it helps you, please **star** this repository
 npm i b-components-js --save
 ```
 
-OR
-
-```
-cnpm i b-components-js --save
-```
-
 ---
 
 ## CDN
 
-- **jsDelivr**
+- **[jsDelivr](https://www.jsdelivr.com/package/npm/b-components-js)**
 
 ```
 <script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bModal.min.js"></script>
@@ -109,25 +103,40 @@ cnpm i b-components-js --save
 <script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bOffcanvas.min.js"></script>
 ```
 
-View all versions
+- Get the files published by the GitHub repository through jsDelivr
+
+```
+https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bModal.min.js
+https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bOffcanvas.min.js
+
+https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bModal.min.js
+https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bOffcanvas.min.js
+```
+
+- View all versions
 
 ```
 https://cdn.jsdelivr.net/npm/b-components-js/
 ```
 
-- **UNPKG**
+- **[UNPKG](https://unpkg.com/browse/b-components-js/)**
 
-View all versions
-
-```
-https://unpkg.com/b-components-js/
-```
-
-After the browser parses, get the latest version address
+`After the browser parses, get the latest version address`
 
 ```
-https://unpkg.com/b-components-js
+<script src="https://unpkg.com/b-components-js/dist/umd/bModal.min.js"></script>
+<script src="https://unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js"></script>
+
+<script type="module" src="https://unpkg.com/b-components-js/dist/esm/bModal.min.js"></script>
+<script type="module" src="https://unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js"></script>
 ```
+
+- View all versions
+
+```
+https://unpkg.com/browse/b-components-js/
+```
+
 
 ---
 

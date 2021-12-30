@@ -7,8 +7,8 @@ import modal from "./modal"
  * @param {Node|String|Function} bodyNodeElement
  * @param {Node|String|Function} footerNodeElement
  * @param {String} ModalSizes
- * @param {boolean} VerticallyCentered
- * @param {boolean} ScrollingLongContent
+ * @param {Boolean} VerticallyCentered
+ * @param {Boolean} ScrollingLongContent
  * @param {Object} Options
  * @param {String} EventsType
  * @param {Function} EventsFunction
