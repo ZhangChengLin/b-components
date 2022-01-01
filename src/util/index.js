@@ -12,8 +12,11 @@ const bsDismissBtn = DismissType => {
   return btn
 }
 
+const getTimeString = () => new Date().getTime().toString();
+
 export {
   isNull,
   isEmpty,
+  getTimeString,
   bsDismissBtn
 }

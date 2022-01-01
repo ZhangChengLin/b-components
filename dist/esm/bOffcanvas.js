@@ -4,7 +4,7 @@
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
     * Description: Generate Bootstrap components through JavaScript
-    * Copyright (c) 2020 - 2021 ZhangChengLin
+    * Copyright (c) 2020 - 2022 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
     * GitHub: https://github.com/ZhangChengLin/b-components
@@ -23,6 +23,8 @@ const bsDismissBtn = DismissType => {
 
   return btn
 };
+
+const getTimeString = () => new Date().getTime().toString();
 
 /**
  * @param {Node|String|Function} headerNodeElement
@@ -96,10 +98,6 @@ const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) =
   _offcanvas.append(header, body);
 
   return _offcanvas
-};
-
-const getTimeString = () => {
-  return new Date().getTime().toString()
 };
 
 /**

@@ -4,54 +4,12 @@
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
     * Description: Generate Bootstrap components through JavaScript
-    * Copyright (c) 2020 - 2021 ZhangChengLin
+    * Copyright (c) 2020 - 2022 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
     * GitHub: https://github.com/ZhangChengLin/b-components
     * issues: https://github.com/ZhangChengLin/b-components/issues
 */
-const getTimeString = () => {
-  return new Date().getTime().toString()
-};
-
-/**
- * @param {HTMLElement} _modal
- * @param {String} EventsType
- * @param {function} EventsFun
- */
-const modalEvents = (_modal, EventsType, EventsFun) => {
-  switch (EventsType) {
-    case "show":
-      _modal.addEventListener("show.bs.modal", () => EventsFun());
-      break
-    case "shown":
-      _modal.addEventListener("shown.bs.modal", () => EventsFun());
-      break
-    case "hide":
-      _modal.addEventListener("hide.bs.modal", () => EventsFun());
-      break
-    case "hidden":
-      _modal.addEventListener("hidden.bs.modal", () => EventsFun());
-      break
-    case "hidePrevented":
-      _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
-      break
-  }
-};
-
-/**
- * @param {HTMLElement} _modal
- */
-const removeModal = _modal => {
-  _modal.addEventListener("hidden.bs.modal", () => {
-    let x = bootstrap.Modal.getInstance(_modal);
-    x.dispose();
-    setTimeout(() => {
-      _modal.parentElement.removeChild(_modal);
-    }, 2e3);
-  });
-};
-
 const isNull = value => null === value;
 const isEmpty = value => "string" === typeof value && '' === value;
 
@@ -65,6 +23,8 @@ const bsDismissBtn = DismissType => {
 
   return btn
 };
+
+const getTimeString = () => new Date().getTime().toString();
 
 /**
  * @param {Node|String|Function} headerNodeElement
@@ -228,6 +188,44 @@ const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes
   _modal.append(modalDialog(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent));
 
   return _modal
+};
+
+/**
+ * @param {HTMLElement} _modal
+ * @param {String} EventsType
+ * @param {function} EventsFun
+ */
+const modalEvents = (_modal, EventsType, EventsFun) => {
+  switch (EventsType) {
+    case "show":
+      _modal.addEventListener("show.bs.modal", () => EventsFun());
+      break
+    case "shown":
+      _modal.addEventListener("shown.bs.modal", () => EventsFun());
+      break
+    case "hide":
+      _modal.addEventListener("hide.bs.modal", () => EventsFun());
+      break
+    case "hidden":
+      _modal.addEventListener("hidden.bs.modal", () => EventsFun());
+      break
+    case "hidePrevented":
+      _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
+      break
+  }
+};
+
+/**
+ * @param {HTMLElement} _modal
+ */
+const removeModal = _modal => {
+  _modal.addEventListener("hidden.bs.modal", () => {
+    let x = bootstrap.Modal.getInstance(_modal);
+    x.dispose();
+    setTimeout(() => {
+      _modal.parentElement.removeChild(_modal);
+    }, 2e3);
+  });
 };
 
 /**
