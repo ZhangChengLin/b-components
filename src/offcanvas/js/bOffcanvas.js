@@ -11,8 +11,7 @@ import {offcanvasEvents, removeOffcanvas} from "./util/index"
  * @param {Function} EventsFunction
  */
 const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
-  let timeString = getTimeString()
-  let offcanvasId = 'offcanvasId_' + timeString
+  let offcanvasId = 'offcanvasId_' + getTimeString()
 
   let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId)
   document.body.append(_offcanvas)

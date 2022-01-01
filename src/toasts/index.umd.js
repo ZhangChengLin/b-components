@@ -1,3 +1,3 @@
-import bToasts from "./js/bToasts"
+import bToast from "./js/bToast"
 
-export default bToasts
+export default bToast

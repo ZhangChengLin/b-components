@@ -46,6 +46,7 @@
 |:-----------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | bModal     |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bModal.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bModal.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |
 | bOffcanvas | <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js" alt="UNPKG minified size" title="UNPKG minified size"> | <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js" alt="UNPKG minified size" title="UNPKG minified size"> |
+| bToast     |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bToast.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bToast.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |
 
 
 ---
@@ -57,6 +58,7 @@ support Bootstrap 5 components
 
 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
+[Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
 
 
 ---
@@ -71,6 +73,8 @@ If it helps you, please **star** this repository
 [README-modal](/README-modal.md)
 
 [README-offcanvas](/README-offcanvas.md)
+
+[README-toast](/README-toast.md)
 
 
 ---
@@ -98,9 +102,11 @@ npm i b-components-js --save
 ```
 <script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bModal.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bOffcanvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bToast.min.js"></script>
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bModal.min.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bOffcanvas.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bToast.min.js"></script>
 ```
 
 - Get the files published by the GitHub repository through jsDelivr
@@ -108,9 +114,11 @@ npm i b-components-js --save
 ```
 https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bModal.min.js
 https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bOffcanvas.min.js
+https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bToast.min.js
 
 https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bModal.min.js
 https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bOffcanvas.min.js
+https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bToast.min.js
 ```
 
 - View all versions
@@ -126,9 +134,11 @@ https://cdn.jsdelivr.net/npm/b-components-js/
 ```
 <script src="https://unpkg.com/b-components-js/dist/umd/bModal.min.js"></script>
 <script src="https://unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js"></script>
+<script src="https://unpkg.com/b-components-js/dist/umd/bToast.min.js"></script>
 
 <script type="module" src="https://unpkg.com/b-components-js/dist/esm/bModal.min.js"></script>
 <script type="module" src="https://unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js"></script>
+<script type="module" src="https://unpkg.com/b-components-js/dist/esm/bToast.min.js"></script>
 ```
 
 - View all versions

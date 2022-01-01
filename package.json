@@ -9,6 +9,8 @@
     "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
     "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
     "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js",
+    "js-compile-toast": "rollup --environment BsNAME:toast --config buildConfig/rollup.config.js",
+    "js-compile-toast-esm": "rollup --environment BsNAME:toast,ESM:true --config buildConfig/rollup.config.js",
     "lint": "npm-run-all --aggregate-output --parallel lint-*",
     "lint-js": "",
     "release": "npm-run-all js-compile",
@@ -52,7 +54,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-unicorn": "^39.0.0",
+    "eslint-plugin-unicorn": "^40.0.0",
     "gulp": "^4.0.2",
     "gulp-npm-dist": "^1.0.3",
     "nodemon": "^2.0.15",

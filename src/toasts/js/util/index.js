@@ -1,21 +1,21 @@
 /**
- * @param {HTMLElement} _toasts
+ * @param {HTMLElement} _toast
  * @param {String} EventsType
  * @param {Function} EventsFun
  */
-const toastsEvents = (_toasts, EventsType, EventsFun) => {
+const toastEvents = (_toast, EventsType, EventsFun) => {
   switch (EventsType) {
     case "show":
-      _toasts.addEventListener("show.bs.toasts", () => EventsFun())
+      _toast.addEventListener("show.bs.toast", () => EventsFun())
       break
     case "shown":
-      _toasts.addEventListener("shown.bs.toasts", () => EventsFun())
+      _toast.addEventListener("shown.bs.toast", () => EventsFun())
       break
     case "hide":
-      _toasts.addEventListener("hide.bs.toasts", () => EventsFun())
+      _toast.addEventListener("hide.bs.toast", () => EventsFun())
       break
     case "hidden":
-      _toasts.addEventListener("hidden.bs.toasts", () => EventsFun())
+      _toast.addEventListener("hidden.bs.toast", () => EventsFun())
       break
     default:
       throw 'EventsType error'
@@ -23,20 +23,19 @@ const toastsEvents = (_toasts, EventsType, EventsFun) => {
 }
 
 /**
- * @param {HTMLElement} _toasts
+ * @param {HTMLElement} _toast
  */
-const removeToasts = _toasts => {
-  _toasts.addEventListener("hidden.bs.toasts", () => {
-    let x = bootstrap.Toasts.getInstance(_toasts)
+const removeToast = _toast => {
+  _toast.addEventListener("hidden.bs.toast", () => {
+    let x = bootstrap.Toast.getInstance(_toast)
     x.dispose()
     setTimeout(() => {
-      _toasts.parentElement.removeChild(_toasts)
+      _toast.parentElement.removeChild(_toast)
     }, 3e3)
   })
 }
 
 export {
-  getTimeString,
-  toastsEvents,
-  removeToasts
+  toastEvents,
+  removeToast
 }

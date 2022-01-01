@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <link rel="icon" href="./static/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="./static/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/styles/atom-one-dark.min.css">
+  <title>Toast demo</title>
+  <meta name="description"
+        content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.">
+  <meta name="keywords"
+        content="Bootstrap,Bootstrap5,Toast,dynamic,animation,autohide,delay,getInstance,getOrCreateInstance,show.bs.toast,shown.bs.toast,hide.bs.toast,hidden.bs.toast">
+  <script>
+    function close_all_toast() {
+      let all_toast = document.querySelectorAll('.toast');
+      let all_toast_length = all_toast.length;
+      for (let i = 0; i < all_toast_length; i++) {
+        let x = bootstrap.Toast.getInstance(all_toast[i]);
+        x.hide();
+      }
+    }
+  </script>
+</head>
+<body>
+<div class="container alert alert-primary alert-dismissible fade show" role="alert">
+  <a class="alert-link small" href="https://zhangchenglin.github.io/b-components/README-toast.html" target="_blank" title="GitHub">GitHub</a>
+  <div class="small">
+    <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+  </div>
+  <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+</div>
+
+<div class="min-vh-100 bg-black bg-opacity-50">
+  <div class="container">
+    <span>Events Function code</span>
+    <div>
+        <pre>
+          <code class="language-javascript language-plaintext" style="max-height: 70vh;">
+function calcNumber() {
+  return (1 + 2 + 3).toString()
+}
+
+function returnHeader() {
+  return "function header"
+}
+
+function returnBody() {
+  return "function body"
+}
+
+function returnFooter() {
+  return "function footer"
+}
+
+function returnEmpty() {
+  return ''
+}
+
+function returnNull() {
+  return null
+}
+
+function returnNaN() {
+  return NaN
+}
+
+function returnUndefined() {
+  return undefined
+}
+
+function returnHTML_Element() {
+  const html = document.createElement("div")
+  const p = document.createElement("p")
+  html.className = "bg-success"
+  p.className = "text-center"
+  p.innerHTML = "this is html obj."
+  html.appendChild(p)
+  return html
+}
+
+function EventsFunction_1() {
+  alert('EventsFunction_1')
+}
+
+function EventsFunction_2() {
+  alert('EventsFunction_2')
+}
+
+function EventsFunction_3() {
+  console.log('EventsFunction_3')
+}
+          </code>
+        </pre>
+    </div>
+  </div>
+</div>
+
+<script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/umd/bToast.min.js"></script>
+<script src="./static/js/index.js"></script>
+<script src="./static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+  functionSwitch("headerFunction")
+  functionSwitch("bodyFunction")
+  functionSwitch("footerFunction")
+
+</script>
+</body>
+</html>

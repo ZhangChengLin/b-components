@@ -1,7 +1,3 @@
-const getTimeString = () => {
-  return new Date().getTime().toString()
-}
-
 /**
  * @param {HTMLElement} _modal
  * @param {String} EventsType
@@ -43,7 +39,6 @@ const removeModal = _modal => {
 }
 
 export {
-  getTimeString,
   modalEvents,
   removeModal
 }

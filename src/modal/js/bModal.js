@@ -14,8 +14,7 @@ import {removeModal, modalEvents} from "./util/index"
  * @param {Function} EventsFunction
  */
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
-  let timeString = getTimeString()
-  let modalId = 'modalId_' + timeString
+  let modalId = 'modalId_' + getTimeString()
 
   let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId)
   document.body.append(_modal)
