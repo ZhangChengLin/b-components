@@ -21,7 +21,7 @@ const modalHeader = (headerNodeElement) => {
       ? title.append(headerNodeElement)
       : title.innerHTML = headerNodeElement
 
-  header.append(title, bsDismissBtn('offcanvas'))
+  header.append(title, bsDismissBtn('modal'))
   return header
 }
 
