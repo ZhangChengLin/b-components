@@ -54,27 +54,19 @@
 
 Currently, supports bootstrap v5.x
 
-support Bootstrap 5 components
-
 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
-
-
----
-
-If it helps you, please **star** this repository
-
 
 ---
 
 ## MORE README
 
-[README-modal](/README-modal.md)
+[README-modal](/docs/readme/modal.md)
 
-[README-offcanvas](/README-offcanvas.md)
+[README-offcanvas](/docs/readme/offcanvas.md)
 
-[README-toast](/README-toast.md)
+[README-toast](/docs/readme/toast.md)
 
 
 ---

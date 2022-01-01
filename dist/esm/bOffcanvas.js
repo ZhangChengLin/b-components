@@ -55,16 +55,16 @@ const offcanvasHeader = (headerNodeElement) => {
  * @param {Node|String|Function} bodyNodeElement
  */
 const offcanvasBody = (bodyNodeElement) => {
-  let offcanvas_body = document.createElement('div');
+  let body = document.createElement('div');
 
-  offcanvas_body.className = 'offcanvas-body';
+  body.className = 'offcanvas-body';
   bodyNodeElement instanceof Function
-    ? offcanvas_body.append(bodyNodeElement())
+    ? body.append(bodyNodeElement())
     : bodyNodeElement instanceof HTMLElement
-      ? offcanvas_body.append(bodyNodeElement)
-      : offcanvas_body.innerHTML = bodyNodeElement;
+      ? body.append(bodyNodeElement)
+      : body.innerHTML = bodyNodeElement;
 
-  return offcanvas_body
+  return body
 };
 
 /**
