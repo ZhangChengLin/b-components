@@ -2,6 +2,7 @@ name: Node.js Package
 
 on:
   push:
+    tags: [v*]
     branches:
       - release
   release:
