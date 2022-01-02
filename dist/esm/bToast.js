@@ -16,7 +16,7 @@ const isEmpty = value => "string" === typeof value && '' === value;
 const bsDismissBtn = DismissType => {
   let btn = document.createElement('button');
 
-  btn.className = 'btn-close text-reset';
+  btn.className = 'btn-close';
   btn.type = 'button';
   btn.dataset['bsDismiss'] = DismissType;
   btn.ariaLabel = 'Close';
@@ -137,7 +137,7 @@ const toastContainer = (Placement) => {
       throw 'Placement error'
   }
 
-  container.className = `toast-container position-absolute ${Placement}`;
+  container.className = `toast-container position-fixed ${Placement}`;
 
   return container
 };

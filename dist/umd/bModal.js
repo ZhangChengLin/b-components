@@ -22,7 +22,7 @@
   const bsDismissBtn = DismissType => {
     let btn = document.createElement('button');
 
-    btn.className = 'btn-close text-reset';
+    btn.className = 'btn-close';
     btn.type = 'button';
     btn.dataset['bsDismiss'] = DismissType;
     btn.ariaLabel = 'Close';

@@ -47,7 +47,7 @@ const toastContainer = (Placement) => {
       throw 'Placement error'
   }
 
-  container.className = `toast-container position-absolute ${Placement}`
+  container.className = `toast-container position-fixed ${Placement}`
 
   return container
 }

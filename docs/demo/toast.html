@@ -82,13 +82,13 @@
       <div class="py-3">
         <div class="mb-2 form-check form-switch">
           <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
-          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control header content.</label>
+          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
         </div>
         <div class="w-75 input-group mb-3 d-none">
           <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
           <select class="form-select" id="bodyFunctionSelect">
-            <option value="returnHeader" selected>returnHeader</option>
-            <option value="returnBody">returnBody</option>
+            <option value="returnHeader">returnHeader</option>
+            <option value="returnBody" selected>returnBody</option>
             <option value="returnFooter">returnFooter</option>
             <option value="calcNumber">calcNumber</option>
             <option value="returnHTML_Element">returnHTML_Element</option>
@@ -99,31 +99,61 @@
     <div class="my-4 p-4 border rounded">
       <div class="mb-1">
         <div>Placement</div>
-        <span class="small text-muted">Placed, null value defaults to 'start' </span>
+        <span class="small text-muted">Placed, null value defaults to 'be' </span>
       </div>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
-        <div class="my-1 my-md-auto col">
+      <div class="row row-cols-3">
+        <div class="my-1 col">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="toastPlacement" value="start" id="toastPlacement_start" checked>
-            <label class="form-check-label" for="toastPlacement_start">start</label>
+            <input class="form-check-input" type="radio" name="toastPlacement" value="ts" id="toastPlacement_ts">
+            <label class="form-check-label" for="toastPlacement_ts">ts (Top Start)</label>
           </div>
         </div>
-        <div class="my-1 my-md-auto col">
+        <div class="my-1 col">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="toastPlacement" value="top" id="toastPlacement_top">
-            <label class="form-check-label" for="toastPlacement_top">top</label>
+            <input class="form-check-input" type="radio" name="toastPlacement" value="tc" id="toastPlacement_tc">
+            <label class="form-check-label" for="toastPlacement_tc">tc (Top Center)</label>
           </div>
         </div>
-        <div class="my-1 my-md-auto col">
+        <div class="my-1 col">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="toastPlacement" value="end" id="toastPlacement_end">
-            <label class="form-check-label" for="toastPlacement_end">end</label>
+            <input class="form-check-input" type="radio" name="toastPlacement" value="te" id="toastPlacement_te">
+            <label class="form-check-label" for="toastPlacement_te">te (Top End)</label>
           </div>
         </div>
-        <div class="my-1 my-md-auto col">
+        <div class="my-1 col">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="toastPlacement" value="bottom" id="toastPlacement_bottom">
-            <label class="form-check-label" for="toastPlacement_bottom">bottom</label>
+            <input class="form-check-input" type="radio" name="toastPlacement" value="ms" id="toastPlacement_ms">
+            <label class="form-check-label" for="toastPlacement_ms">ms (Middle Start)</label>
+          </div>
+        </div>
+        <div class="my-1 col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="mc" id="toastPlacement_mc">
+            <label class="form-check-label" for="toastPlacement_mc">mc (Middle Center)</label>
+          </div>
+        </div>
+        <div class="my-1 col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="me" id="toastPlacement_me">
+            <label class="form-check-label" for="toastPlacement_me">me (Middle End)</label>
+          </div>
+        </div>
+        <div class="my-1 col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="bs" id="toastPlacement_bs">
+            <label class="form-check-label" for="toastPlacement_bs">bs (Bottom Start)</label>
+          </div>
+        </div>
+        <div class="my-1 col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="bc" id="toastPlacement_bc">
+            <label class="form-check-label" for="toastPlacement_bc">bc (Bottom Center)</label>
+          </div>
+        </div>
+        <div class="my-1 col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="be" id="toastPlacement_be" checked>
+            <label class="form-check-label" for="toastPlacement_be">be (Bottom End)</label>
           </div>
         </div>
       </div>
@@ -294,9 +324,27 @@ function EventsFunction_3() {
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-  functionSwitch("headerFunction")
-  functionSwitch("bodyFunction")
+  functionSwitch("headerFunction");
+  functionSwitch("bodyFunction");
 
+  let render = document.querySelector('#renderToast')
+  render.addEventListener('click', () => {
+    let Options = {
+      animation: getRadio('toastAnimation'),
+      autohide: getRadio('toastAutohide'),
+      delay: getNumberValue('toastDelay')
+    }
+
+    let toastHeader = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("toastHeader")
+    let toastBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("toastBody")
+    let Placement = getRadio('toastPlacement')
+    let EventsType = getRadio("EventsType")
+    let EventsFunctionSelect = selectValue("EventsFunction")
+    let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
+
+    let x = bToast(toastHeader, toastBody, Placement, Options, EventsType, EventsFunction)
+    console.log('The return value of the current Toast', x);
+  })
 </script>
 </body>
 </html>

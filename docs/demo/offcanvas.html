@@ -81,13 +81,13 @@
       <div class="py-3">
         <div class="mb-2 form-check form-switch">
           <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
-          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control header content.</label>
+          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
         </div>
         <div class="w-75 input-group mb-3 d-none">
           <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
           <select class="form-select" id="bodyFunctionSelect">
-            <option value="returnHeader" selected>returnHeader</option>
-            <option value="returnBody">returnBody</option>
+            <option value="returnHeader">returnHeader</option>
+            <option value="returnBody" selected>returnBody</option>
             <option value="returnFooter">returnFooter</option>
             <option value="calcNumber">calcNumber</option>
             <option value="returnHTML_Element">returnHTML_Element</option>
@@ -320,8 +320,8 @@ function EventsFunction_3() {
   functionSwitch("headerFunction");
   functionSwitch("bodyFunction");
 
-  let renderOffcanvas = document.querySelector('#renderOffcanvas')
-  renderOffcanvas.addEventListener('click', () => {
+  let render = document.querySelector('#renderOffcanvas')
+  render.addEventListener('click', () => {
     let Options = {
       backdrop: getRadio('offcanvasBackdrop'),
       keyboard: getRadio('offcanvasKeyboard'),
