@@ -32,7 +32,196 @@
   </div>
   <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
 </div>
-
+<div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
+  <div class="py-4 container border rounded">
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>toast-header</div>
+        <span class="small text-muted"></span>
+      </div>
+      <div class="input-group">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="toastHeader">header</label>
+        <input type="text" class="form-control" id="toastHeader" placeholder="When empty, there will be no toast header" value="default header">
+      </div>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="headerFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="headerFunctionSwitch">Use Function control header content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="headerFunctionSelect">Function</label>
+          <select class="form-select" id="headerFunctionSelect">
+            <option value="returnHeader" selected>returnHeader</option>
+            <option value="returnBody">returnBody</option>
+            <option value="returnFooter">returnFooter</option>
+            <option value="returnEmpty">returnEmpty</option>
+            <option value="returnNull">returnNull</option>
+            <option value="returnNaN">returnNaN</option>
+            <option value="returnUndefined">returnUndefined</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>toast-body</div>
+        <span class="small text-muted"></span>
+      </div>
+      <div class="input-group">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="toastBody">body</label>
+        <textarea class="form-control" id="toastBody" placeholder="Please enter content" rows="9">
+<div>
+<input type="button" class="btn btn-outline-success" data-bs-dismiss="toast" value="Close">
+<input type="button" class="btn btn-outline-success" onclick="close_all_toast()" value="Close All">
+<button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
+</div>
+        </textarea>
+      </div>
+      <div class="py-3">
+        <div class="mb-2 form-check form-switch">
+          <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
+          <label class="form-check-label" for="bodyFunctionSwitch">Use Function control header content.</label>
+        </div>
+        <div class="w-75 input-group mb-3 d-none">
+          <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="bodyFunctionSelect">Function</label>
+          <select class="form-select" id="bodyFunctionSelect">
+            <option value="returnHeader" selected>returnHeader</option>
+            <option value="returnBody">returnBody</option>
+            <option value="returnFooter">returnFooter</option>
+            <option value="calcNumber">calcNumber</option>
+            <option value="returnHTML_Element">returnHTML_Element</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>Placement</div>
+        <span class="small text-muted">Placed, null value defaults to 'start' </span>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="start" id="toastPlacement_start" checked>
+            <label class="form-check-label" for="toastPlacement_start">start</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="top" id="toastPlacement_top">
+            <label class="form-check-label" for="toastPlacement_top">top</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="end" id="toastPlacement_end">
+            <label class="form-check-label" for="toastPlacement_end">end</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toastPlacement" value="bottom" id="toastPlacement_bottom">
+            <label class="form-check-label" for="toastPlacement_bottom">bottom</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="mb-1">
+        <div>Options</div>
+        <span class="small text-muted">The boolean value is true when it is turned on, and it is false when it is turned off</span>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">animation</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="toastAnimation" value="true" id="toastAnimation_true" checked>
+            <label class="form-check-label" for="toastAnimation_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="toastAnimation" value="false" id="toastAnimation_false">
+            <label class="form-check-label" for="toastAnimation_false">false</label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">autohide</div>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="toastAutohide" value="true" id="toastAutohide_true" checked>
+            <label class="form-check-label" for="toastAutohide_true">true</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="toastAutohide" value="false" id="toastAutohide_false">
+            <label class="form-check-label" for="toastAutohide_false">false</label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 row">
+        <label class="col-4 col-sm-2 col-lg-1 col-form-label" for="toastDelay_number">delay</label>
+        <div class="col col-sm-5 col-md-4 col-lg-3">
+          <input class="form-control" type="number" name="toastDelay" value='5000' step="500" min="0" max="10000" id="toastDelay_number">
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3 gap-md-4">
+        <div>
+          <div class="mb-1">
+            <div>Events Type</div>
+            <span class="small text-muted">Bootstrap’s toast class exposes a few events for hooking into toast functionality.</span>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+            <div class="my-1 my-lg-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="EventsType" value="show" id="toastEvents_show">
+                <label class="form-check-label" for="toastEvents_show" title="show.bs.toast">show</label>
+              </div>
+            </div>
+            <div class="my-1 my-lg-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="EventsType" value="shown" id="toastEvents_shown">
+                <label class="form-check-label" for="toastEvents_shown" title="shown.bs.toast">shown</label>
+              </div>
+            </div>
+            <div class="my-1 my-lg-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="EventsType" value="hide" id="toastEvents_hide">
+                <label class="form-check-label" for="toastEvents_hide" title="hide.bs.toast">hide</label>
+              </div>
+            </div>
+            <div class="my-1 my-lg-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="EventsType" value="hidden" id="toastEvents_hidden">
+                <label class="form-check-label" for="toastEvents_hidden" title="hidden.bs.toast">hidden</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="d-block d-md-none dropdown-divider border-light"></span>
+        <span class="d-none d-md-block vr bg-white"></span>
+        <div>
+          <div class="mb-1">
+            <div>Events Function</div>
+            <span class="small text-muted">Bootstrap’s toast class exposes a few events for hooking into toast functionality.</span>
+          </div>
+          <div class="input-group">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
+            <select class="form-select" id="EventsFunction">
+              <option value="" disabled selected>Choose...</option>
+              <option value="EventsFunction_1">EventsFunction_1</option>
+              <option value="EventsFunction_2">EventsFunction_2</option>
+              <option value="EventsFunction_3">EventsFunction_3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="my-4 mx-auto d-block btn btn-outline-primary bg-gradient" type="button" id="renderToast">Render Toast effect</button>
+  </div>
+</div>
 <div class="min-vh-100 bg-black bg-opacity-50">
   <div class="container">
     <span>Events Function code</span>
@@ -107,7 +296,6 @@ function EventsFunction_3() {
 <script>
   functionSwitch("headerFunction")
   functionSwitch("bodyFunction")
-  functionSwitch("footerFunction")
 
 </script>
 </body>
