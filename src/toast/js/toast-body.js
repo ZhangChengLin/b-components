@@ -1,10 +1,10 @@
 /**
  * @param {Node|String|Function} bodyNodeElement
  */
-const offcanvasBody = (bodyNodeElement) => {
+const toastBody = (bodyNodeElement) => {
   let body = document.createElement('div')
 
-  body.className = 'offcanvas-body'
+  body.className = 'toast-body'
   bodyNodeElement instanceof Function
     ? body.append(bodyNodeElement())
     : bodyNodeElement instanceof HTMLElement
@@ -14,4 +14,4 @@ const offcanvasBody = (bodyNodeElement) => {
   return body
 }
 
-export default offcanvasBody
+export default toastBody

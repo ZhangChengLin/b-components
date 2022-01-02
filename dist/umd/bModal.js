@@ -1,10 +1,10 @@
 /*!
     * Name: b-components-js
-    * Version: 0.0.1-alpha.1
+    * Version: 0.0.1-alpha.2
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
     * Description: Generate Bootstrap components through JavaScript
-    * Copyright (c) 2020 - 2021 ZhangChengLin
+    * Copyright (c) 2020 - 2022 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
     * GitHub: https://github.com/ZhangChengLin/b-components
@@ -16,61 +16,21 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bModal = factory());
 })(this, (function () { 'use strict';
 
-  const getTimeString = () => {
-    return new Date().getTime().toString()
-  };
-
-  /**
-   * @param {HTMLElement} _modal
-   * @param {String} EventsType
-   * @param {function} EventsFun
-   */
-  const modalEvents = (_modal, EventsType, EventsFun) => {
-    switch (EventsType) {
-      case "show":
-        _modal.addEventListener("show.bs.modal", () => EventsFun());
-        break
-      case "shown":
-        _modal.addEventListener("shown.bs.modal", () => EventsFun());
-        break
-      case "hide":
-        _modal.addEventListener("hide.bs.modal", () => EventsFun());
-        break
-      case "hidden":
-        _modal.addEventListener("hidden.bs.modal", () => EventsFun());
-        break
-      case "hidePrevented":
-        _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
-        break
-    }
-  };
-
-  /**
-   * @param {HTMLElement} _modal
-   */
-  const removeModal = _modal => {
-    _modal.addEventListener("hidden.bs.modal", () => {
-      let x = bootstrap.Modal.getInstance(_modal);
-      x.dispose();
-      setTimeout(() => {
-        _modal.parentElement.removeChild(_modal);
-      }, 2e3);
-    });
-  };
-
   const isNull = value => null === value;
   const isEmpty = value => "string" === typeof value && '' === value;
 
   const bsDismissBtn = DismissType => {
     let btn = document.createElement('button');
 
-    btn.className = 'btn-close text-reset';
+    btn.className = 'btn-close';
     btn.type = 'button';
     btn.dataset['bsDismiss'] = DismissType;
     btn.ariaLabel = 'Close';
 
     return btn
   };
+
+  const getTimeString = () => new Date().getTime().toString();
 
   /**
    * @param {Node|String|Function} headerNodeElement
@@ -93,7 +53,7 @@
         ? title.append(headerNodeElement)
         : title.innerHTML = headerNodeElement;
 
-    header.append(title, bsDismissBtn('offcanvas'));
+    header.append(title, bsDismissBtn('modal'));
     return header
   };
 
@@ -101,16 +61,16 @@
    * @param {Node|String|Function} bodyNodeElement
    */
   const modalBody = (bodyNodeElement) => {
-    let modal_body = document.createElement('div');
+    let body = document.createElement('div');
 
-    modal_body.className = 'modal-body';
+    body.className = 'modal-body';
     bodyNodeElement instanceof Function
-      ? modal_body.append(bodyNodeElement())
+      ? body.append(bodyNodeElement())
       : bodyNodeElement instanceof HTMLElement
-        ? modal_body.append(bodyNodeElement)
-        : modal_body.innerHTML = bodyNodeElement;
+        ? body.append(bodyNodeElement)
+        : body.innerHTML = bodyNodeElement;
 
-    return modal_body
+    return body
   };
 
   /**
@@ -121,16 +81,16 @@
       return ''
     }
 
-    let modal_footer = document.createElement('div');
+    let footer = document.createElement('div');
 
-    modal_footer.className = 'modal-footer';
+    footer.className = 'modal-footer';
     footerNodeElement instanceof Function
-      ? modal_footer.append(footerNodeElement())
+      ? footer.append(footerNodeElement())
       : footerNodeElement instanceof HTMLElement
-        ? modal_footer.append(footerNodeElement)
-        : modal_footer.innerHTML = footerNodeElement;
+        ? footer.append(footerNodeElement)
+        : footer.innerHTML = footerNodeElement;
 
-    return modal_footer
+    return footer
   };
 
   /**
@@ -237,6 +197,44 @@
   };
 
   /**
+   * @param {HTMLElement} _modal
+   * @param {String} EventsType
+   * @param {function} EventsFun
+   */
+  const modalEvents = (_modal, EventsType, EventsFun) => {
+    switch (EventsType) {
+      case "show":
+        _modal.addEventListener("show.bs.modal", () => EventsFun());
+        break
+      case "shown":
+        _modal.addEventListener("shown.bs.modal", () => EventsFun());
+        break
+      case "hide":
+        _modal.addEventListener("hide.bs.modal", () => EventsFun());
+        break
+      case "hidden":
+        _modal.addEventListener("hidden.bs.modal", () => EventsFun());
+        break
+      case "hidePrevented":
+        _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
+        break
+    }
+  };
+
+  /**
+   * @param {HTMLElement} _modal
+   */
+  const removeModal = _modal => {
+    _modal.addEventListener("hidden.bs.modal", () => {
+      let x = bootstrap.Modal.getInstance(_modal);
+      x.dispose();
+      setTimeout(() => {
+        _modal.parentElement.removeChild(_modal);
+      }, 2e3);
+    });
+  };
+
+  /**
    * @param {Node|String|Function} headerNodeElement
    * @param {Node|String|Function} bodyNodeElement
    * @param {Node|String|Function} footerNodeElement
@@ -248,8 +246,7 @@
    * @param {Function} EventsFunction
    */
   const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
-    let timeString = getTimeString();
-    let modalId = 'modalId_' + timeString;
+    let modalId = 'modalId_' + getTimeString();
 
     let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
     document.body.append(_modal);

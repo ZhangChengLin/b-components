@@ -8,16 +8,16 @@ const modalFooter = (footerNodeElement) => {
     return ''
   }
 
-  let modal_footer = document.createElement('div')
+  let footer = document.createElement('div')
 
-  modal_footer.className = 'modal-footer'
+  footer.className = 'modal-footer'
   footerNodeElement instanceof Function
-    ? modal_footer.append(footerNodeElement())
+    ? footer.append(footerNodeElement())
     : footerNodeElement instanceof HTMLElement
-      ? modal_footer.append(footerNodeElement)
-      : modal_footer.innerHTML = footerNodeElement
+      ? footer.append(footerNodeElement)
+      : footer.innerHTML = footerNodeElement
 
-  return modal_footer
+  return footer
 }
 
 export default modalFooter

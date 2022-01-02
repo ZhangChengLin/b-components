@@ -47,3 +47,9 @@ function selectValue(id) {
   const option = document.querySelector("#" + id);
   return option.value;
 }
+
+function getNumberValue(name) {
+  let element = document.querySelector("[name='" + name + "']")
+
+  return Number(element.value)
+}

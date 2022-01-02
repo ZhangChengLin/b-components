@@ -1,10 +1,10 @@
 /*!
     * Name: b-components-js
-    * Version: 0.0.1-alpha.1
+    * Version: 0.0.1-alpha.2
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
     * Description: Generate Bootstrap components through JavaScript
-    * Copyright (c) 2020 - 2021 ZhangChengLin
+    * Copyright (c) 2020 - 2022 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
     * GitHub: https://github.com/ZhangChengLin/b-components
@@ -22,13 +22,15 @@
   const bsDismissBtn = DismissType => {
     let btn = document.createElement('button');
 
-    btn.className = 'btn-close text-reset';
+    btn.className = 'btn-close';
     btn.type = 'button';
     btn.dataset['bsDismiss'] = DismissType;
     btn.ariaLabel = 'Close';
 
     return btn
   };
+
+  const getTimeString = () => new Date().getTime().toString();
 
   /**
    * @param {Node|String|Function} headerNodeElement
@@ -59,16 +61,16 @@
    * @param {Node|String|Function} bodyNodeElement
    */
   const offcanvasBody = (bodyNodeElement) => {
-    let offcanvas_body = document.createElement('div');
+    let body = document.createElement('div');
 
-    offcanvas_body.className = 'offcanvas-body';
+    body.className = 'offcanvas-body';
     bodyNodeElement instanceof Function
-      ? offcanvas_body.append(bodyNodeElement())
+      ? body.append(bodyNodeElement())
       : bodyNodeElement instanceof HTMLElement
-        ? offcanvas_body.append(bodyNodeElement)
-        : offcanvas_body.innerHTML = bodyNodeElement;
+        ? body.append(bodyNodeElement)
+        : body.innerHTML = bodyNodeElement;
 
-    return offcanvas_body
+    return body
   };
 
   /**
@@ -102,10 +104,6 @@
     _offcanvas.append(header, body);
 
     return _offcanvas
-  };
-
-  const getTimeString = () => {
-    return new Date().getTime().toString()
   };
 
   /**
@@ -154,8 +152,7 @@
    * @param {Function} EventsFunction
    */
   const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
-    let timeString = getTimeString();
-    let offcanvasId = 'offcanvasId_' + timeString;
+    let offcanvasId = 'offcanvasId_' + getTimeString();
 
     let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
     document.body.append(_offcanvas);

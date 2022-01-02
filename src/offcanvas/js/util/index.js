@@ -1,7 +1,3 @@
-const getTimeString = () => {
-  return new Date().getTime().toString()
-}
-
 /**
  * @param {HTMLElement} _offcanvas
  * @param {String} EventsType
@@ -40,7 +36,6 @@ const removeOffcanvas = _offcanvas => {
 }
 
 export {
-  getTimeString,
   offcanvasEvents,
   removeOffcanvas
 }
