@@ -58,16 +58,16 @@ Currently, supports bootstrap v5.x
 
 ---
 
-|                               Entrance                                |
-|:---------------------------------------------------------------------:|
-| [README](https://ZhangChengLin.github.io/b-components/README.md.html) |
-| [DEMO](https://ZhangChengLin.github.io/b-components/docs/index.html)  |
+|                               Entrance                               |
+|:--------------------------------------------------------------------:|
+|       [README](https://ZhangChengLin.github.io/b-components/)        |
+| [DEMO](https://ZhangChengLin.github.io/b-components/docs/index.html) |
 
-|            |                                         README                                          |                                        DEMO                                        |
-|:-----------|:---------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|
-| bModal     |     [modal](https://ZhangChengLin.github.io/b-components/docs/readme/modal.md.html)     |     [modal](https://ZhangChengLin.github.io/b-components/docs/demo/modal.html)     |
-| bOffcanvas | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.md.html) | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html) |
-| bToast     |     [toast](https://ZhangChengLin.github.io/b-components/docs/readme/toast.md.html)     |     [toast](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)     |
+|            |                                        README                                        |                                        DEMO                                        |
+|:-----------|:------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|
+| bModal     |     [modal](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)     |     [modal](https://ZhangChengLin.github.io/b-components/docs/demo/modal.html)     |
+| bOffcanvas | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html) |
+| bToast     |     [toast](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)     |     [toast](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)     |
 
 ---
 
