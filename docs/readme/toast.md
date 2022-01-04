@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components/docs/demo-toast.html](https://ZhangChengLin.github.io/b-components/docs/demo-toast.html)
+[https://ZhangChengLin.github.io/b-components/docs/demo/toast.html](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)
 
 
 ---
