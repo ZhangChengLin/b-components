@@ -20,6 +20,7 @@ const outputOptions = [
     file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `${PREFIX}${toUpperCase(BsNAME)}.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
+    plugins: [],
     sourcemap: true
   },
   {
