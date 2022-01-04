@@ -1,14 +1,13 @@
 /*!
-    * Name: b-components-js
-    * Version: 0.0.1-alpha.3
-    * Author: ZhangChengLin
-    * Email: 469946668@qq.com
-    * Description: Generate Bootstrap components through JavaScript
-    * Copyright (c) 2020 - 2022 ZhangChengLin
-    * Licenses: MIT
-    * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-    * GitHub: https://github.com/ZhangChengLin/b-components
-    * issues: https://github.com/ZhangChengLin/b-components/issues
+ * Name: b-components-js
+ * Version: 0.0.1-alpha.3
+ * Author: ZhangChengLin
+ * Email: 469946668@qq.com
+ * Description: Generate Bootstrap components through JavaScript
+ * Copyright (c) 2020 - 2022 ZhangChengLin
+ * Licenses: MIT
+ * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
+ * GitHub: https://github.com/ZhangChengLin/b-components
 */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :

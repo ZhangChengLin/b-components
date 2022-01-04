@@ -1,7 +1,7 @@
 'use strict'
 
 import {terser} from "rollup-plugin-terser";
-import banner from "./banner.js";
+import {default as banner} from "./banner.js";
 
 const paths = require('./paths')
 
