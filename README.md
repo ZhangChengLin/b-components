@@ -39,15 +39,13 @@
 <img src="https://img.shields.io/jsdelivr/npm/hy/b-components-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year">
 </p>
 
-
 - Minimize file size
 
-|            |                                                                               esm                                                                                |                                                                               umd                                                                                |
-|:-----------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| bModal     |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bModal.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bModal.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |
-| bOffcanvas | <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js" alt="UNPKG minified size" title="UNPKG minified size"> | <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js" alt="UNPKG minified size" title="UNPKG minified size"> |
-| bToast     |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bToast.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |   <img src="https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bToast.min.js" alt="UNPKG minified size" title="UNPKG minified size">   |
-
+|            |                                                                     esm                                                                      |                                                                     umd                                                                      |
+|:-----------|:--------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------:|
+| bModal     |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bModal.min.js "UNPKG minified size")   |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bModal.min.js "UNPKG minified size")   |
+| bOffcanvas | ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js "UNPKG minified size") | ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js "UNPKG minified size") |
+| bToast     |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bToast.min.js "UNPKG minified size")   |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bToast.min.js "UNPKG minified size")   |
 
 ---
 
@@ -60,20 +58,16 @@ Currently, supports bootstrap v5.x
 
 ---
 
-## MORE README
+|                               Entrance                               |
+|:--------------------------------------------------------------------:|
+|                         [README](/README.md)                         |
+| [DEMO](https://ZhangChengLin.github.io/b-components/docs/index.html) |
 
-[README-modal](/docs/readme/modal.md)
-
-[README-offcanvas](/docs/readme/offcanvas.md)
-
-[README-toast](/docs/readme/toast.md)
-
-
----
-
-## Demo
-
-[https://ZhangChengLin.github.io/b-components/docs/index.html](https://ZhangChengLin.github.io/b-components/docs/index.html)
+|            |                                       README                                       |                                        DEMO                                        |
+|:----------:|:----------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|
+|   bModal   |     [modal](https://ZhangChengLin.github.io/b-components/docs/readme/modal.md)     |     [modal](https://ZhangChengLin.github.io/b-components/docs/demo/modal.html)     |
+| bOffcanvas | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.md) | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html) |
+|   bToast   |     [toast](https://ZhangChengLin.github.io/b-components/docs/readme/toast.md)     |     [toast](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)     |
 
 ---
 
@@ -138,7 +132,6 @@ https://cdn.jsdelivr.net/npm/b-components-js/
 ```
 https://unpkg.com/browse/b-components-js/
 ```
-
 
 ---
 
