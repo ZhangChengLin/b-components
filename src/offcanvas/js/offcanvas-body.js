@@ -2,7 +2,7 @@
  * @param {Node|String|Function} bodyNodeElement
  */
 const offcanvasBody = (bodyNodeElement) => {
-  let body = document.createElement('div')
+  const body = document.createElement('div')
 
   body.className = 'offcanvas-body'
   bodyNodeElement instanceof Function

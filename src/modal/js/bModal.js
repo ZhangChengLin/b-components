@@ -14,14 +14,14 @@ import {removeModal, modalEvents} from "./util/index"
  * @param {Function} EventsFunction
  */
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
-  let modalId = 'modalId_' + getTimeString()
+  const modalId = 'modalId_' + getTimeString()
 
-  let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId)
+  const _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId)
   document.body.append(_modal)
 
   EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : ""
 
-  let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
+  const xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
   xxx.show()
   removeModal(_modal)
   return modalId

@@ -9,10 +9,9 @@ const npmDistConfig = {
   packageJsonPath: paths.root
 }
 
-const copyBsFiles = () => {
-  return src(npmDist(npmDistConfig), {base: paths.node_modules})
+const copyBsFiles = () =>
+  src(npmDist(npmDistConfig), {base: paths.nodeModules})
     .pipe(dest(paths.assets))
-}
 
 module.exports = {
   copyBsFiles,

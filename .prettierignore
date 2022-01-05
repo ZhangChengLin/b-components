@@ -1,7 +1,4 @@
 .github
-demoFiles
 node_modules
-
-*.html
-
+docs
 dist

@@ -1,24 +1,24 @@
 /**
  * @param {HTMLElement} _modal
- * @param {String} EventsType
- * @param {function} EventsFun
+ * @param {String} eventsType
+ * @param {function} eventsFun
  */
-const modalEvents = (_modal, EventsType, EventsFun) => {
-  switch (EventsType) {
+const modalEvents = (_modal, eventsType, eventsFun) => {
+  switch (eventsType) {
     case "show":
-      _modal.addEventListener("show.bs.modal", () => EventsFun())
+      _modal.addEventListener("show.bs.modal", () => eventsFun())
       break
     case "shown":
-      _modal.addEventListener("shown.bs.modal", () => EventsFun())
+      _modal.addEventListener("shown.bs.modal", () => eventsFun())
       break
     case "hide":
-      _modal.addEventListener("hide.bs.modal", () => EventsFun())
+      _modal.addEventListener("hide.bs.modal", () => eventsFun())
       break
     case "hidden":
-      _modal.addEventListener("hidden.bs.modal", () => EventsFun())
+      _modal.addEventListener("hidden.bs.modal", () => eventsFun())
       break
     case "hidePrevented":
-      _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun())
+      _modal.addEventListener("hidePrevented.bs.modal", () => eventsFun())
       break
     default:
       break
@@ -30,10 +30,10 @@ const modalEvents = (_modal, EventsType, EventsFun) => {
  */
 const removeModal = _modal => {
   _modal.addEventListener("hidden.bs.modal", () => {
-    let x = bootstrap.Modal.getInstance(_modal)
+    const x = bootstrap.Modal.getInstance(_modal)
     x.dispose()
     setTimeout(() => {
-      _modal.parentElement.removeChild(_modal)
+      _modal.remove()
     }, 2e3)
   })
 }

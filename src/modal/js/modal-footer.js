@@ -8,7 +8,7 @@ const modalFooter = (footerNodeElement) => {
     return ''
   }
 
-  let footer = document.createElement('div')
+  const footer = document.createElement('div')
 
   footer.className = 'modal-footer'
   footerNodeElement instanceof Function

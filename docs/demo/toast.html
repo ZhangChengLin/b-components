@@ -26,7 +26,7 @@
 </head>
 <body>
 <div class="container alert alert-primary alert-dismissible fade show" role="alert">
-  <a class="alert-link small" href="https://zhangchenglin.github.io/b-components/README-toast.html" target="_blank" title="GitHub">GitHub</a>
+  <a class="alert-link small" href="https://zhangchenglin.github.io/b-components/docs/readme/toast.html" target="_blank" title="GitHub">GitHub</a>
   <div class="small">
     <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
   </div>
@@ -206,25 +206,25 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="show" id="toastEvents_show">
+                <input class="form-check-input" type="radio" name="eventsType" value="show" id="toastEvents_show">
                 <label class="form-check-label" for="toastEvents_show" title="show.bs.toast">show</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="shown" id="toastEvents_shown">
+                <input class="form-check-input" type="radio" name="eventsType" value="shown" id="toastEvents_shown">
                 <label class="form-check-label" for="toastEvents_shown" title="shown.bs.toast">shown</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hide" id="toastEvents_hide">
+                <input class="form-check-input" type="radio" name="eventsType" value="hide" id="toastEvents_hide">
                 <label class="form-check-label" for="toastEvents_hide" title="hide.bs.toast">hide</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hidden" id="toastEvents_hidden">
+                <input class="form-check-input" type="radio" name="eventsType" value="hidden" id="toastEvents_hidden">
                 <label class="form-check-label" for="toastEvents_hidden" title="hidden.bs.toast">hidden</label>
               </div>
             </div>
@@ -238,12 +238,12 @@
             <span class="small text-muted">Bootstrap’s toast class exposes a few events for hooking into toast functionality.</span>
           </div>
           <div class="input-group">
-            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
-            <select class="form-select" id="EventsFunction">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="eventsFunction">Functions</label>
+            <select class="form-select" id="eventsFunction">
               <option value="" disabled selected>Choose...</option>
-              <option value="EventsFunction_1">EventsFunction_1</option>
-              <option value="EventsFunction_2">EventsFunction_2</option>
-              <option value="EventsFunction_3">EventsFunction_3</option>
+              <option value="eventsFunction_1">eventsFunction_1</option>
+              <option value="eventsFunction_2">eventsFunction_2</option>
+              <option value="eventsFunction_3">eventsFunction_3</option>
             </select>
           </div>
         </div>
@@ -300,16 +300,16 @@ function returnHTML_Element() {
   return html
 }
 
-function EventsFunction_1() {
-  alert('EventsFunction_1')
+function eventsFunction_1() {
+  alert('eventsFunction_1')
 }
 
-function EventsFunction_2() {
-  alert('EventsFunction_2')
+function eventsFunction_2() {
+  alert('eventsFunction_2')
 }
 
-function EventsFunction_3() {
-  console.log('EventsFunction_3')
+function eventsFunction_3() {
+  console.log('eventsFunction_3')
 }
           </code>
         </pre>
@@ -338,11 +338,11 @@ function EventsFunction_3() {
     let toastHeader = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("toastHeader")
     let toastBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("toastBody")
     let Placement = getRadio('toastPlacement')
-    let EventsType = getRadio("EventsType")
-    let EventsFunctionSelect = selectValue("EventsFunction")
-    let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
+    let eventsType = getRadio("eventsType")
+    let eventsFunctionSelect = selectValue("eventsFunction")
+    let eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ""
 
-    let x = bToast(toastHeader, toastBody, Placement, Options, EventsType, EventsFunction)
+    let x = bToast(toastHeader, toastBody, Placement, Options, eventsType, eventsFunction)
     console.log('The return value of the current Toast', x);
   })
 </script>

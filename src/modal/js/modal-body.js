@@ -2,7 +2,7 @@
  * @param {Node|String|Function} bodyNodeElement
  */
 const modalBody = (bodyNodeElement) => {
-  let body = document.createElement('div')
+  const body = document.createElement('div')
 
   body.className = 'modal-body'
   bodyNodeElement instanceof Function

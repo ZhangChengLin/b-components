@@ -2,7 +2,7 @@
  * @param {Node|String|Function} bodyNodeElement
  */
 const toastBody = (bodyNodeElement) => {
-  let body = document.createElement('div')
+  const body = document.createElement('div')
 
   body.className = 'toast-body'
   bodyNodeElement instanceof Function

@@ -11,14 +11,14 @@ import {offcanvasEvents, removeOffcanvas} from "./util/index"
  * @param {Function} EventsFunction
  */
 const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
-  let offcanvasId = 'offcanvasId_' + getTimeString()
+  const offcanvasId = 'offcanvasId_' + getTimeString()
 
-  let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId)
+  const _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId)
   document.body.append(_offcanvas)
 
   EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : ''
 
-  let xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas)
+  const xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas)
   xxx.show()
   removeOffcanvas(_offcanvas)
   return offcanvasId
