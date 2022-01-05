@@ -1,8 +1,7 @@
-'use strict'
-
-import {terser} from "rollup-plugin-terser"
 import {default as banner} from "./banner.js"
 import {default as paths} from "./paths";
+
+const {terser} = require('rollup-plugin-terser')
 
 const PREFIX = 'b'
 const ESM = process.env.ESM === 'true'
