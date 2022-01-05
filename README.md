@@ -2,8 +2,10 @@
 
 <p align="center">
 <a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
-<a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components.svg"></a>
 <a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components.svg"></a>
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ZhangChengLin/b-components">
+<img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/ZhangChengLin/b-components">
+<a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components.svg"></a>
 <a href="https://github.com/ZhangChengLin/b-components/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/ZhangChengLin/b-components.svg"></a>
 </p>
 
@@ -13,12 +15,16 @@
 </p>
 
 <p align="center">
+<img alt="LGTM Alerts" src="https://img.shields.io/lgtm/alerts/github/ZhangChengLin/b-components">
+<img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/github/ZhangChengLin/b-components">
+</p>
+
+<p align="center">
 <a href="https://www.npmjs.com/package/b-components-js" target="_blank"><img alt="NPM Version" title="NPM Package" src="https://img.shields.io/npm/v/b-components-js.svg"></a>
-<img alt="npm download number" src="https://img.shields.io/npm/dt/b-components-js.svg">
-<img alt="npm download number" src="https://img.shields.io/npm/dy/b-components-js.svg">
-<img alt="npm download number" src="https://img.shields.io/npm/dm/b-components-js.svg">
-<img alt="npm download number" src="https://img.shields.io/npm/dw/b-components-js.svg">
-<img alt="npm License" src="https://img.shields.io/npm/l/b-components-js.svg">
+<img alt="npms.io (final)" src="https://img.shields.io/npms-io/final-score/b-components-js">
+<img alt="npms.io (maintenance)" src="https://img.shields.io/npms-io/maintenance-score/b-components-js">
+<img alt="npms.io (popularity)" src="https://img.shields.io/npms-io/popularity-score/b-components-js">
+<img alt="npms.io (quality)" src="https://img.shields.io/npms-io/quality-score/b-components-js">
 </p>
 
 <p align="center">
@@ -31,13 +37,11 @@
 <img src="https://cnpmjs.org/badge/d/b-components-js.svg" alt="cnpm download number">
 </p>
 
-<p align="center">
-<a href="https://www.jsdelivr.com/package/npm/b-components-js" target="_blank" title="jsDelivr"><img src="https://img.shields.io/badge/jsDelivr-jsDelivr-orange.svg" alt="jsDelivr" title="jsDelivr"></a>
-<img src="https://img.shields.io/jsdelivr/npm/hd/b-components-js.svg" alt="jsDelivr hits (npm) day" title="jsDelivr hits (npm) day">
-<img src="https://img.shields.io/jsdelivr/npm/hw/b-components-js.svg" alt="jsDelivr hits (npm) week" title="jsDelivr hits (npm) week">
-<img src="https://img.shields.io/jsdelivr/npm/hm/b-components-js.svg" alt="jsDelivr hits (npm) month" title="jsDelivr hits (npm) month">
-<img src="https://img.shields.io/jsdelivr/npm/hy/b-components-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year">
-</p>
+|                        |                                                                 day                                                                  |                                                                  week                                                                  |                                                                  month                                                                   |                                                                  year                                                                  |                                          total                                          |
+|:----------------------:|:------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
+|          npm           |                                                                                                                                      |                        <img alt="npm download number" src="https://img.shields.io/npm/dw/b-components-js.svg">                         |                         <img alt="npm download number" src="https://img.shields.io/npm/dm/b-components-js.svg">                          |                        <img alt="npm download number" src="https://img.shields.io/npm/dy/b-components-js.svg">                         | <img alt="npm download number" src="https://img.shields.io/npm/dt/b-components-js.svg"> |
+|  jsDelivr hits (npm)   | <img src="https://img.shields.io/jsdelivr/npm/hd/b-components-js.svg" alt="jsDelivr hits (npm) day" title="jsDelivr hits (npm) day"> | <img src="https://img.shields.io/jsdelivr/npm/hw/b-components-js.svg" alt="jsDelivr hits (npm) week" title="jsDelivr hits (npm) week"> | <img src="https://img.shields.io/jsdelivr/npm/hm/b-components-js.svg" alt="jsDelivr hits (npm) month" title="jsDelivr hits (npm) month"> | <img src="https://img.shields.io/jsdelivr/npm/hy/b-components-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year"> |                                                                                         |
+| jsDelivr hits (GitHub) |            <img alt="jsDelivr hits (GitHub) day" src="https://img.shields.io/jsdelivr/gh/hd/ZhangChengLin/b-components">             |             <img alt="jsDelivr hits (GitHub) week" src="https://img.shields.io/jsdelivr/gh/hw/ZhangChengLin/b-components">             |             <img alt="jsDelivr hits (GitHub) month" src="https://img.shields.io/jsdelivr/gh/hm/ZhangChengLin/b-components">              |             <img alt="jsDelivr hits (GitHub) year" src="https://img.shields.io/jsdelivr/gh/hy/ZhangChengLin/b-components">             ||
 
 - Minimize file size
 
@@ -137,11 +141,11 @@ https://unpkg.com/browse/b-components-js/
 
 ## Donate
 
-|   Method   |                              Type                               |
-|:----------:|:---------------------------------------------------------------:|
-|   AliPay   | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
-|     QQ     |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
-|   PayPal   |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
+| Method |                              Type                               |
+|:-------|:---------------------------------------------------------------:|
+| AliPay | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
+| QQ     |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
+| PayPal |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
 
 ---
 
