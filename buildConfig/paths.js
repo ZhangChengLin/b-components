@@ -6,7 +6,8 @@ const docs = root + 'docs/'
 const assets = root + 'docs/assets/'
 const dist = root + 'dist/'
 
-module.exports = {
+
+export default {
   root: root,
   node_modules: node_modules,
   gulpfile: gulpfile,
@@ -14,4 +15,4 @@ module.exports = {
   docs: docs,
   assets: assets,
   dist: dist,
-}
+};

@@ -2,8 +2,7 @@
 
 import {terser} from "rollup-plugin-terser"
 import {default as banner} from "./banner.js"
-
-const paths = require('./paths')
+import {default as paths} from "./paths";
 
 const PREFIX = 'b'
 const ESM = process.env.ESM === 'true'
