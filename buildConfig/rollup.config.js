@@ -1,5 +1,5 @@
 import {default as banner} from "./banner.js"
-import {default as paths} from "./paths";
+import {default as paths} from "./paths"
 
 const {terser} = require('rollup-plugin-terser')
 

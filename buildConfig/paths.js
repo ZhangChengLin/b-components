@@ -15,4 +15,4 @@ export default {
   docs: docs,
   assets: assets,
   dist: dist,
-};
+}

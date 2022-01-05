@@ -12,6 +12,6 @@ const Banner = () =>
  * Licenses: ${pkg.license}
  * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
  * GitHub: ${pkg.github}
-*/`;
+*/`
 
 export default Banner

@@ -1,6 +1,6 @@
 import {getTimeString} from "../../util/index"
 import toast from "./toast"
-import {toastContainerOutside, toastContainer} from "./toast-container";
+import {toastContainerOutside, toastContainer} from "./toast-container"
 import {toastEvents, removeToast} from "./util/index"
 
 /**
