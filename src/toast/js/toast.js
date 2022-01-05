@@ -7,9 +7,9 @@ import toastBody from "./toast-body"
  * @param {String} toastId
  */
 const toast = (headerNodeElement, bodyNodeElement, toastId) => {
-  let _toast = document.createElement('div')
-  let header = toastHeader(headerNodeElement)
-  let body = toastBody(bodyNodeElement)
+  const _toast = document.createElement('div')
+  const header = toastHeader(headerNodeElement)
+  const body = toastBody(bodyNodeElement)
 
   _toast.className = 'toast'
   _toast.id = toastId

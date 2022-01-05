@@ -12,11 +12,11 @@ import {toastEvents, removeToast} from "./util/index"
  * @param {Function} EventsFunction
  */
 const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
-  let toastId = 'toastId_' + getTimeString()
+  const toastId = 'toastId_' + getTimeString()
 
-  let _containerOutsize = toastContainerOutside()
-  let _container = toastContainer(Placement)
-  let _toast = toast(headerNodeElement, bodyNodeElement, toastId)
+  const _containerOutsize = toastContainerOutside()
+  const _container = toastContainer(Placement)
+  const _toast = toast(headerNodeElement, bodyNodeElement, toastId)
 
   _container.append(_toast)
   _containerOutsize.append(_container)
@@ -24,7 +24,7 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
 
   EventsType && EventsFunction ? toastEvents(_toast, EventsType, EventsFunction) : ''
 
-  let xxx = Options ? new bootstrap.Toast(_toast, Options) : new bootstrap.Toast(_toast)
+  const xxx = Options ? new bootstrap.Toast(_toast, Options) : new bootstrap.Toast(_toast)
   xxx.show()
   removeToast(_toast)
   return toastId

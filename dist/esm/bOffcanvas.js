@@ -9,15 +9,15 @@
  * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
  * GitHub: https://github.com/ZhangChengLin/b-components
 */
-const isNull = value => null === value;
-const isEmpty = value => "string" === typeof value && '' === value;
+const isNull = value => value === null;
+const isEmpty = value => typeof value === "string" && value === '';
 
 const bsDismissBtn = DismissType => {
-  let btn = document.createElement('button');
+  const btn = document.createElement('button');
 
   btn.className = 'btn-close';
   btn.type = 'button';
-  btn.dataset['bsDismiss'] = DismissType;
+  btn.dataset.bsDismiss = DismissType;
   btn.ariaLabel = 'Close';
 
   return btn
@@ -33,8 +33,8 @@ const offcanvasHeader = (headerNodeElement) => {
     return ''
   }
 
-  let header = document.createElement('div');
-  let title = document.createElement('h5');
+  const header = document.createElement('div');
+  const title = document.createElement('h5');
 
   header.className = 'offcanvas-header';
 
@@ -54,7 +54,7 @@ const offcanvasHeader = (headerNodeElement) => {
  * @param {Node|String|Function} bodyNodeElement
  */
 const offcanvasBody = (bodyNodeElement) => {
-  let body = document.createElement('div');
+  const body = document.createElement('div');
 
   body.className = 'offcanvas-body';
   bodyNodeElement instanceof Function
@@ -73,9 +73,9 @@ const offcanvasBody = (bodyNodeElement) => {
  * @param {String} offcanvasId
  */
 const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) => {
-  let _offcanvas = document.createElement('div');
-  let header = offcanvasHeader(headerNodeElement);
-  let body = offcanvasBody(bodyNodeElement);
+  const _offcanvas = document.createElement('div');
+  const header = offcanvasHeader(headerNodeElement);
+  const body = offcanvasBody(bodyNodeElement);
 
   Placement = Placement ?? 'start';
   switch (Placement) {
@@ -101,25 +101,25 @@ const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) =
 
 /**
  * @param {HTMLElement} _offcanvas
- * @param {String} EventsType
- * @param {Function} EventsFun
+ * @param {String} eventsType
+ * @param {Function} eventsFun
  */
-const offcanvasEvents = (_offcanvas, EventsType, EventsFun) => {
-  switch (EventsType) {
+const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
+  switch (eventsType) {
     case "show":
-      _offcanvas.addEventListener("show.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("show.bs.offcanvas", () => eventsFun());
       break
     case "shown":
-      _offcanvas.addEventListener("shown.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("shown.bs.offcanvas", () => eventsFun());
       break
     case "hide":
-      _offcanvas.addEventListener("hide.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("hide.bs.offcanvas", () => eventsFun());
       break
     case "hidden":
-      _offcanvas.addEventListener("hidden.bs.offcanvas", () => EventsFun());
+      _offcanvas.addEventListener("hidden.bs.offcanvas", () => eventsFun());
       break
     default:
-      throw 'EventsType error'
+      throw 'eventsType error'
   }
 };
 
@@ -128,7 +128,7 @@ const offcanvasEvents = (_offcanvas, EventsType, EventsFun) => {
  */
 const removeOffcanvas = _offcanvas => {
   _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
-    let x = bootstrap.Offcanvas.getInstance(_offcanvas);
+    const x = bootstrap.Offcanvas.getInstance(_offcanvas);
     x.dispose();
     setTimeout(() => {
       _offcanvas.remove();
@@ -145,14 +145,14 @@ const removeOffcanvas = _offcanvas => {
  * @param {Function} EventsFunction
  */
 const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
-  let offcanvasId = 'offcanvasId_' + getTimeString();
+  const offcanvasId = 'offcanvasId_' + getTimeString();
 
-  let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
+  const _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
   document.body.append(_offcanvas);
 
   EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : '';
 
-  let xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
+  const xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
   xxx.show();
   removeOffcanvas(_offcanvas);
   return offcanvasId

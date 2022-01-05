@@ -182,25 +182,25 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="show" id="offcanvasEvents_show">
+                <input class="form-check-input" type="radio" name="eventsType" value="show" id="offcanvasEvents_show">
                 <label class="form-check-label" for="offcanvasEvents_show" title="show.bs.offcanvas">show</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="shown" id="offcanvasEvents_shown">
+                <input class="form-check-input" type="radio" name="eventsType" value="shown" id="offcanvasEvents_shown">
                 <label class="form-check-label" for="offcanvasEvents_shown" title="shown.bs.offcanvas">shown</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hide" id="offcanvasEvents_hide">
+                <input class="form-check-input" type="radio" name="eventsType" value="hide" id="offcanvasEvents_hide">
                 <label class="form-check-label" for="offcanvasEvents_hide" title="hide.bs.offcanvas">hide</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hidden" id="offcanvasEvents_hidden">
+                <input class="form-check-input" type="radio" name="eventsType" value="hidden" id="offcanvasEvents_hidden">
                 <label class="form-check-label" for="offcanvasEvents_hidden" title="hidden.bs.offcanvas">hidden</label>
               </div>
             </div>
@@ -331,11 +331,11 @@ function EventsFunction_3() {
     let offcanvasHeader = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("offcanvasHeader")
     let offcanvasBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("offcanvasBody")
     let Placement = getRadio('offcanvasPlacement')
-    let EventsType = getRadio("EventsType")
+    let eventsType = getRadio("eventsType")
     let EventsFunctionSelect = selectValue("EventsFunction")
     let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
 
-    let x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, EventsType, EventsFunction)
+    let x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, eventsType, EventsFunction)
     console.log('The return value of the current Offcanvas', x);
   })
 </script>

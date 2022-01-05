@@ -8,8 +8,8 @@ const offcanvasHeader = (headerNodeElement) => {
     return ''
   }
 
-  let header = document.createElement('div')
-  let title = document.createElement('h5')
+  const header = document.createElement('div')
+  const title = document.createElement('h5')
 
   header.className = 'offcanvas-header'
 

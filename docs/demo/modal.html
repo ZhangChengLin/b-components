@@ -233,32 +233,32 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" id="EventsType_show" name="EventsType" type="radio" value="show">
-                <label class="form-check-label" for="EventsType_show" title="show.bs.modal">show</label>
+                <input class="form-check-input" id="eventsType_show" name="eventsType" type="radio" value="show">
+                <label class="form-check-label" for="eventsType_show" title="show.bs.modal">show</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" id="EventsType_shown" name="EventsType" type="radio" value="shown">
-                <label class="form-check-label" for="EventsType_shown" title="shown.bs.modal">shown</label>
+                <input class="form-check-input" id="eventsType_shown" name="eventsType" type="radio" value="shown">
+                <label class="form-check-label" for="eventsType_shown" title="shown.bs.modal">shown</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" id="EventsType_hide" name="EventsType" type="radio" value="hide">
-                <label class="form-check-label" for="EventsType_hide" title="hide.bs.modal">hide</label>
+                <input class="form-check-input" id="eventsType_hide" name="eventsType" type="radio" value="hide">
+                <label class="form-check-label" for="eventsType_hide" title="hide.bs.modal">hide</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" id="EventsType_hidden" name="EventsType" type="radio" value="hidden">
-                <label class="form-check-label" for="EventsType_hidden" title="hidden.bs.modal">hidden</label>
+                <input class="form-check-input" id="eventsType_hidden" name="eventsType" type="radio" value="hidden">
+                <label class="form-check-label" for="eventsType_hidden" title="hidden.bs.modal">hidden</label>
               </div>
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" id="EventsType_hidePrevented" name="EventsType" type="radio" value="hidden">
-                <label class="form-check-label" for="EventsType_hidePrevented" title="hidePrevented.bs.modal">hidePrevented</label>
+                <input class="form-check-input" id="eventsType_hidePrevented" name="eventsType" type="radio" value="hidden">
+                <label class="form-check-label" for="eventsType_hidePrevented" title="hidePrevented.bs.modal">hidePrevented</label>
               </div>
             </div>
           </div>
@@ -271,12 +271,12 @@
             <span class="small text-muted">Events Type and Events Function must exist at the same time if used</span>
           </div>
           <div class="input-group">
-            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
-            <select class="form-select" id="EventsFunction">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="eventsFunction">Functions</label>
+            <select class="form-select" id="eventsFunction">
               <option value="" disabled selected>Choose...</option>
-              <option value="EventsFunction_1">EventsFunction_1</option>
-              <option value="EventsFunction_2">EventsFunction_2</option>
-              <option value="EventsFunction_3">EventsFunction_3</option>
+              <option value="eventsFunction_1">eventsFunction_1</option>
+              <option value="eventsFunction_2">eventsFunction_2</option>
+              <option value="eventsFunction_3">eventsFunction_3</option>
             </select>
           </div>
         </div>
@@ -334,16 +334,16 @@ function returnHTML_Element() {
   return html
 }
 
-function EventsFunction_1() {
-  alert('EventsFunction_1')
+function eventsFunction_1() {
+  alert('eventsFunction_1')
 }
 
-function EventsFunction_2() {
-  alert('EventsFunction_2')
+function eventsFunction_2() {
+  alert('eventsFunction_2')
 }
 
-function EventsFunction_3() {
-  console.log('EventsFunction_3')
+function eventsFunction_3() {
+  console.log('eventsFunction_3')
 }
           </code>
         </pre>
@@ -369,16 +369,16 @@ function EventsFunction_3() {
     let ModalSizes = selectValue("modalSizes")
     let VerticallyCentered = getRadio("VerticallyCentered")
     let ScrollingLongContent = getRadio("ScrollingLongContent")
-    let EventsType = getRadio("EventsType")
-    let EventsFunctionSelect = selectValue("EventsFunction")
-    let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
+    let eventsType = getRadio("eventsType")
+    let eventsFunctionSelect = selectValue("eventsFunction")
+    let eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ""
     let options = {
       backdrop: getRadio('modalBackdrop'),
       keyboard: getRadio('modalKeyboard'),
       focus: getRadio('modalFocus')
     }
 
-    let x = bModal(header, body, footer, ModalSizes, VerticallyCentered, ScrollingLongContent, options, EventsType, EventsFunction)
+    let x = bModal(header, body, footer, ModalSizes, VerticallyCentered, ScrollingLongContent, options, eventsType, eventsFunction)
     console.log('The return value of the current Model : ', x)
   })
 </script>

@@ -15,15 +15,15 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bModal = factory());
 })(this, (function () { 'use strict';
 
-  const isNull = value => null === value;
-  const isEmpty = value => "string" === typeof value && '' === value;
+  const isNull = value => value === null;
+  const isEmpty = value => typeof value === "string" && value === '';
 
   const bsDismissBtn = DismissType => {
-    let btn = document.createElement('button');
+    const btn = document.createElement('button');
 
     btn.className = 'btn-close';
     btn.type = 'button';
-    btn.dataset['bsDismiss'] = DismissType;
+    btn.dataset.bsDismiss = DismissType;
     btn.ariaLabel = 'Close';
 
     return btn
@@ -39,8 +39,8 @@
       return ''
     }
 
-    let header = document.createElement('div');
-    let title = document.createElement('h5');
+    const header = document.createElement('div');
+    const title = document.createElement('h5');
 
     header.className = 'modal-header';
 
@@ -60,7 +60,7 @@
    * @param {Node|String|Function} bodyNodeElement
    */
   const modalBody = (bodyNodeElement) => {
-    let body = document.createElement('div');
+    const body = document.createElement('div');
 
     body.className = 'modal-body';
     bodyNodeElement instanceof Function
@@ -80,7 +80,7 @@
       return ''
     }
 
-    let footer = document.createElement('div');
+    const footer = document.createElement('div');
 
     footer.className = 'modal-footer';
     footerNodeElement instanceof Function
@@ -197,25 +197,25 @@
 
   /**
    * @param {HTMLElement} _modal
-   * @param {String} EventsType
-   * @param {function} EventsFun
+   * @param {String} eventsType
+   * @param {function} eventsFun
    */
-  const modalEvents = (_modal, EventsType, EventsFun) => {
-    switch (EventsType) {
+  const modalEvents = (_modal, eventsType, eventsFun) => {
+    switch (eventsType) {
       case "show":
-        _modal.addEventListener("show.bs.modal", () => EventsFun());
+        _modal.addEventListener("show.bs.modal", () => eventsFun());
         break
       case "shown":
-        _modal.addEventListener("shown.bs.modal", () => EventsFun());
+        _modal.addEventListener("shown.bs.modal", () => eventsFun());
         break
       case "hide":
-        _modal.addEventListener("hide.bs.modal", () => EventsFun());
+        _modal.addEventListener("hide.bs.modal", () => eventsFun());
         break
       case "hidden":
-        _modal.addEventListener("hidden.bs.modal", () => EventsFun());
+        _modal.addEventListener("hidden.bs.modal", () => eventsFun());
         break
       case "hidePrevented":
-        _modal.addEventListener("hidePrevented.bs.modal", () => EventsFun());
+        _modal.addEventListener("hidePrevented.bs.modal", () => eventsFun());
         break
     }
   };
@@ -225,7 +225,7 @@
    */
   const removeModal = _modal => {
     _modal.addEventListener("hidden.bs.modal", () => {
-      let x = bootstrap.Modal.getInstance(_modal);
+      const x = bootstrap.Modal.getInstance(_modal);
       x.dispose();
       setTimeout(() => {
         _modal.remove();
@@ -245,14 +245,14 @@
    * @param {Function} EventsFunction
    */
   const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
-    let modalId = 'modalId_' + getTimeString();
+    const modalId = 'modalId_' + getTimeString();
 
-    let _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
+    const _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
     document.body.append(_modal);
 
     EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : "";
 
-    let xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
+    const xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
     xxx.show();
     removeModal(_modal);
     return modalId
