@@ -4,7 +4,8 @@
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
-    "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
+    "compile": "npm-run-all --aggregate-output -p js-compile",
+    "js-compile": "npm-run-all --aggregate-output -p js-compile-*",
     "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
     "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
     "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
@@ -13,9 +14,9 @@
     "js-compile-toast-esm": "rollup --environment BsNAME:toast,ESM:true --config buildConfig/rollup.config.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js-lint-fix": "eslint --fix .",
-    "lint": "npm-run-all --aggregate-output --parallel js-lint",
-    "lint-fix": "npm-run-all --aggregate-output --parallel js-lint-fix",
-    "release": "npm-run-all js-compile",
+    "lint": "npm-run-all --aggregate-output -p js-lint",
+    "lint-fix": "npm-run-all --aggregate-output -p js-lint-fix",
+    "release": "npm-run-all -s lint compile",
     "copyBsFiles": "gulp copyBsFiles"
   },
   "repository": {
