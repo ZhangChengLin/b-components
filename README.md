@@ -90,9 +90,9 @@ npm i b-components-js --save
 - **[jsDelivr](https://www.jsdelivr.com/package/npm/b-components-js)**
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bModal.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bOffcanvas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bToast.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bModal.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bOffcanvas.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/umd/bToast.min.js"></script>
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bModal.min.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/esm/bOffcanvas.min.js"></script>
@@ -102,13 +102,13 @@ npm i b-components-js --save
 - Get the files published by the GitHub repository through jsDelivr
 
 ```
-https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bModal.min.js
-https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bOffcanvas.min.js
-https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bToast.min.js
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bModal.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bOffcanvas.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/umd/bToast.min.js"></script>
 
-https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bModal.min.js
-https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bOffcanvas.min.js
-https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bToast.min.js
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bModal.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bOffcanvas.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/esm/bToast.min.js"></script>
 ```
 
 - View all versions
@@ -122,9 +122,9 @@ https://cdn.jsdelivr.net/npm/b-components-js/
 `After the browser parses, get the latest version address`
 
 ```
-<script src="https://unpkg.com/b-components-js/dist/umd/bModal.min.js"></script>
-<script src="https://unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js"></script>
-<script src="https://unpkg.com/b-components-js/dist/umd/bToast.min.js"></script>
+<script type="javascript" src="https://unpkg.com/b-components-js/dist/umd/bModal.min.js"></script>
+<script type="javascript" src="https://unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js"></script>
+<script type="javascript" src="https://unpkg.com/b-components-js/dist/umd/bToast.min.js"></script>
 
 <script type="module" src="https://unpkg.com/b-components-js/dist/esm/bModal.min.js"></script>
 <script type="module" src="https://unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js"></script>
