@@ -30,7 +30,7 @@ const removeToast = _toast => {
     let x = bootstrap.Toast.getInstance(_toast)
     x.dispose()
     setTimeout(() => {
-      _toast.parentElement.removeChild(_toast)
+      _toast.remove()
     }, 3e3)
   })
 }

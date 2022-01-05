@@ -23,7 +23,7 @@ const bsDismissBtn = DismissType => {
   return btn
 };
 
-const getTimeString = () => new Date().getTime().toString();
+const getTimeString = () => Date.now().toString();
 
 /**
  * @param {Node|String|Function} headerNodeElement
@@ -173,7 +173,7 @@ const removeToast = _toast => {
     let x = bootstrap.Toast.getInstance(_toast);
     x.dispose();
     setTimeout(() => {
-      _toast.parentElement.removeChild(_toast);
+      _toast.remove();
     }, 3e3);
   });
 };

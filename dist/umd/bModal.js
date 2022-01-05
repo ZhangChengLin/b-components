@@ -29,7 +29,7 @@
     return btn
   };
 
-  const getTimeString = () => new Date().getTime().toString();
+  const getTimeString = () => Date.now().toString();
 
   /**
    * @param {Node|String|Function} headerNodeElement
@@ -228,7 +228,7 @@
       let x = bootstrap.Modal.getInstance(_modal);
       x.dispose();
       setTimeout(() => {
-        _modal.parentElement.removeChild(_modal);
+        _modal.remove();
       }, 2e3);
     });
   };

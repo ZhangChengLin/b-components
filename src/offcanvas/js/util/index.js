@@ -30,7 +30,7 @@ const removeOffcanvas = _offcanvas => {
     let x = bootstrap.Offcanvas.getInstance(_offcanvas)
     x.dispose()
     setTimeout(() => {
-      _offcanvas.parentElement.removeChild(_offcanvas)
+      _offcanvas.remove()
     }, 3e3)
   })
 }

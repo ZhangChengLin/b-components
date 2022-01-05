@@ -29,7 +29,7 @@
     return btn
   };
 
-  const getTimeString = () => new Date().getTime().toString();
+  const getTimeString = () => Date.now().toString();
 
   /**
    * @param {Node|String|Function} headerNodeElement
@@ -179,7 +179,7 @@
       let x = bootstrap.Toast.getInstance(_toast);
       x.dispose();
       setTimeout(() => {
-        _toast.parentElement.removeChild(_toast);
+        _toast.remove();
       }, 3e3);
     });
   };

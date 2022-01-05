@@ -12,7 +12,7 @@ const bsDismissBtn = DismissType => {
   return btn
 }
 
-const getTimeString = () => new Date().getTime().toString();
+const getTimeString = () => Date.now().toString();
 
 export {
   isNull,

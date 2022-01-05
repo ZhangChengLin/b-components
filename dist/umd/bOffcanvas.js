@@ -29,7 +29,7 @@
     return btn
   };
 
-  const getTimeString = () => new Date().getTime().toString();
+  const getTimeString = () => Date.now().toString();
 
   /**
    * @param {Node|String|Function} headerNodeElement
@@ -137,7 +137,7 @@
       let x = bootstrap.Offcanvas.getInstance(_offcanvas);
       x.dispose();
       setTimeout(() => {
-        _offcanvas.parentElement.removeChild(_offcanvas);
+        _offcanvas.remove();
       }, 3e3);
     });
   };
