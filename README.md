@@ -4,7 +4,7 @@
 <a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
 <a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components.svg"></a>
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ZhangChengLin/b-components">
-<img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/ZhangChengLin/b-components">
+<a href="https://snyk.io.cnpmjs.org/test/npm/b-components-js" title="Snyk Vulnerabilities for GitHub Repo" target="_blank"><img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/ZhangChengLin/b-components"></a>
 <a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components.svg"></a>
 <a href="https://github.com/ZhangChengLin/b-components/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/ZhangChengLin/b-components.svg"></a>
 </p>
@@ -15,8 +15,8 @@
 </p>
 
 <p align="center">
-<img alt="LGTM Alerts" src="https://img.shields.io/lgtm/alerts/github/ZhangChengLin/b-components">
-<img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/github/ZhangChengLin/b-components">
+<a href="https://lgtm.com/projects/g/ZhangChengLin/b-components/alerts" title="LGTM Alerts" target="_blank"><img alt="LGTM Alerts" src="https://img.shields.io/lgtm/alerts/github/ZhangChengLin/b-components"></a>
+<a href="https://lgtm.com/projects/g/ZhangChengLin/b-components/context:javascript" title="LGTM Grade" target="_blank"><img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/github/ZhangChengLin/b-components"></a>
 </p>
 
 <p align="center">
