@@ -381,5 +381,13 @@ function eventsFunction_3() {
     console.log('The return value of the current Toast', x);
   })
 </script>
+<script>
+  let btnList = document.querySelectorAll("[id^=toast_]")
+  btnList.forEach(currentBtn => {
+    currentBtn.addEventListener('click', () => {
+      bToast(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['toastPlacement'])
+    })
+  })
+</script>
 </body>
 </html>
