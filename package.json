@@ -16,8 +16,7 @@
     "js-lint-fix": "eslint --fix .",
     "lint": "npm-run-all --aggregate-output -p js-lint",
     "lint-fix": "npm-run-all --aggregate-output -p js-lint-fix",
-    "release": "npm-run-all -s lint compile",
-    "copyBsFiles": "gulp copyBsFiles"
+    "release": "npm-run-all -s lint compile"
   },
   "repository": {
     "type": "git",
@@ -49,20 +48,17 @@
     "url": "https://ZhangChengLin.github.io"
   },
   "license": "MIT",
-  "engines": {
-    "bootstrap": "^5.1.3"
+  "engines": {},
+  "peerDependencies": {
+    "bootstrap": "^5.x"
   },
-  "dependencies": {
-    "bootstrap": "^5.1.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-xo": "^0.39.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-unicorn": "^40.0.0",
-    "gulp": "^4.0.2",
-    "gulp-npm-dist": "^1.0.3",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
