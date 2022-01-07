@@ -195,9 +195,13 @@
     const toastId = 'toastId_' + getTimeString();
 
     const _containerOutsize = toastContainerOutside();
-    const _container = toastContainer(Placement);
+    const _container = document.querySelector('.toast-container') ?? toastContainer(Placement);
     const _toast = toast(headerNodeElement, bodyNodeElement, toastId);
 
+    // if (document.querySelector('.toast-container')) {
+    //   document.querySelector('.toast-container').append(_toast)
+    // } else {
+    // }
     _container.append(_toast);
     _containerOutsize.append(_container);
     document.body.append(_containerOutsize);
