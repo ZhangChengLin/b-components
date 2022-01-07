@@ -362,7 +362,9 @@ function eventsFunction_3() {
   functionSwitch("bodyFunction")
   functionSwitch("footerFunction")
 
-  document.querySelector("#bs_modal_click").addEventListener("click", function () {
+  document.querySelector("#bs_modal_click").addEventListener("click", renderResult)
+
+  function renderResult() {
     let header = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("modalHeader")
     let body = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("modalBody")
     let footer = checkboxStatus("footerFunction") ? selectFunctionValue("footerFunction") : selectValue("modalFooter")
@@ -380,7 +382,7 @@ function eventsFunction_3() {
 
     let x = bModal(header, body, footer, ModalSizes, VerticallyCentered, ScrollingLongContent, options, eventsType, eventsFunction)
     console.log('The return value of the current Model : ', x)
-  })
+  }
 </script>
 </body>
 </html>

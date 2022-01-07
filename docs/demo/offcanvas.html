@@ -317,11 +317,12 @@ function EventsFunction_3() {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-  functionSwitch("headerFunction");
-  functionSwitch("bodyFunction");
+  functionSwitch("headerFunction")
+  functionSwitch("bodyFunction")
 
-  let render = document.querySelector('#renderOffcanvas')
-  render.addEventListener('click', () => {
+  document.querySelector('#renderOffcanvas').addEventListener('click', renderResult)
+
+  function renderResult() {
     let Options = {
       backdrop: getRadio('offcanvasBackdrop'),
       keyboard: getRadio('offcanvasKeyboard'),
@@ -336,8 +337,8 @@ function EventsFunction_3() {
     let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
 
     let x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, eventsType, EventsFunction)
-    console.log('The return value of the current Offcanvas', x);
-  })
+    console.log('The return value of the current Offcanvas', x)
+  }
 </script>
 <script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")

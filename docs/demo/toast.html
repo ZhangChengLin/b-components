@@ -359,11 +359,12 @@ function eventsFunction_3() {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-  functionSwitch("headerFunction");
-  functionSwitch("bodyFunction");
+  functionSwitch("headerFunction")
+  functionSwitch("bodyFunction")
 
-  let render = document.querySelector('#renderToast')
-  render.addEventListener('click', () => {
+  document.querySelector('#renderToast').addEventListener('click', renderResult)
+
+  function renderResult() {
     let Options = {
       animation: getRadio('toastAnimation'),
       autohide: getRadio('toastAutohide'),
@@ -378,8 +379,8 @@ function eventsFunction_3() {
     let eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ""
 
     let x = bToast(toastHeader, toastBody, Placement, Options, eventsType, eventsFunction)
-    console.log('The return value of the current Toast', x);
-  })
+    console.log('The return value of the current Toast', x)
+  }
 </script>
 <script>
   let btnList = document.querySelectorAll("[id^=toast_]")
