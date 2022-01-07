@@ -30,26 +30,33 @@ function getRadio(name) {
       break
   }
 
-  return returnValue;
+  return returnValue
 }
 
 function checkboxStatus(id) {
-  const checkbox = document.querySelector("#" + id + "Switch");
-  return checkbox.checked ?? false;
+  const checkbox = document.querySelector("#" + id + "Switch")
+  return checkbox.checked ?? false
 }
 
 function selectFunctionValue(id) {
-  const fun_name = document.querySelector("#" + id + "Select").value;
-  return eval(fun_name);
+  const fun_name = document.querySelector("#" + id + "Select").value
+  return eval(fun_name)
 }
 
 function selectValue(id) {
-  const option = document.querySelector("#" + id);
-  return option.value;
+  const option = document.querySelector("#" + id)
+  return option.value
 }
 
 function getNumberValue(name) {
   let element = document.querySelector("[name='" + name + "']")
 
   return Number(element.value)
+}
+
+function enterRender() {
+  document.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    e.keyCode === 13 ? renderResult() : ''
+  })
 }
