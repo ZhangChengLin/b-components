@@ -43,16 +43,7 @@
 |  jsDelivr hits (npm)   | <img src="https://img.shields.io/jsdelivr/npm/hd/b-components-js.svg" alt="jsDelivr hits (npm) day" title="jsDelivr hits (npm) day"> | <img src="https://img.shields.io/jsdelivr/npm/hw/b-components-js.svg" alt="jsDelivr hits (npm) week" title="jsDelivr hits (npm) week"> | <img src="https://img.shields.io/jsdelivr/npm/hm/b-components-js.svg" alt="jsDelivr hits (npm) month" title="jsDelivr hits (npm) month"> | <img src="https://img.shields.io/jsdelivr/npm/hy/b-components-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year"> |                                                                                         |
 | jsDelivr hits (GitHub) |            <img alt="jsDelivr hits (GitHub) day" src="https://img.shields.io/jsdelivr/gh/hd/ZhangChengLin/b-components">             |             <img alt="jsDelivr hits (GitHub) week" src="https://img.shields.io/jsdelivr/gh/hw/ZhangChengLin/b-components">             |             <img alt="jsDelivr hits (GitHub) month" src="https://img.shields.io/jsdelivr/gh/hm/ZhangChengLin/b-components">              |             <img alt="jsDelivr hits (GitHub) year" src="https://img.shields.io/jsdelivr/gh/hy/ZhangChengLin/b-components">             ||
 
-- Minimize file size
-
-|            |                                                                     esm                                                                      |                                                                     umd                                                                      |
-|:-----------|:--------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------:|
-| bModal     |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bModal.min.js "UNPKG minified size")   |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bModal.min.js "UNPKG minified size")   |
-| bOffcanvas | ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bOffcanvas.min.js "UNPKG minified size") | ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bOffcanvas.min.js "UNPKG minified size") |
-| bToast     |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/esm/bToast.min.js "UNPKG minified size")   |   ![UNPKG minified size](https://badgen.net/badgesize/normal/https/unpkg.com/b-components-js/dist/umd/bToast.min.js "UNPKG minified size")   |
-
 ---
-
 
 Currently, supports bootstrap v5.x
 
