@@ -189,13 +189,9 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
   const toastId = 'toastId_' + getTimeString();
 
   const _containerOutsize = toastContainerOutside();
-  const _container = document.querySelector('.toast-container') ?? toastContainer(Placement);
+  const _container = document.querySelector('.toast-container') ?? toastContainer(Placement);//todo:尝试让新toast的位置可控
   const _toast = toast(headerNodeElement, bodyNodeElement, toastId);
 
-  // if (document.querySelector('.toast-container')) {
-  //   document.querySelector('.toast-container').append(_toast)
-  // } else {
-  // }
   _container.append(_toast);
   _containerOutsize.append(_container);
   document.body.append(_containerOutsize);
