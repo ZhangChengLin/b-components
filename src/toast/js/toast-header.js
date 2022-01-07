@@ -9,12 +9,11 @@ const toastHeader = (headerNodeElement) => {
   }
 
   const header = document.createElement('div')
-  const title = document.createElement('h5')
+  const title = document.createElement('strong')
 
   header.className = 'toast-header'
 
-  title.className = 'toast-title'
-  title.id = 'toastTitleLabel'
+  title.className = 'toast-title me-auto'
   headerNodeElement instanceof Function
     ? title.append(headerNodeElement())
     : headerNodeElement instanceof HTMLElement
