@@ -55,8 +55,10 @@ function getNumberValue(name) {
 }
 
 function enterRender() {
-  document.addEventListener('keyup', (e) => {
-    e.preventDefault()
-    e.keyCode === 13 ? renderResult() : ''
+  document.body.addEventListener('keyup', (e) => {
+    if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+      e.preventDefault()
+      renderResult()
+    }
   })
 }
