@@ -26,6 +26,43 @@ const bsDismissBtn = (dismissType, whiteVariant = false) => {
 const getTimeString = () => Date.now().toString();
 
 /**
+ * @param {HTMLElement} _toast
+ * @param {String} eventsType
+ * @param {Function} eventsFun
+ */
+const toastEvents = (_toast, eventsType, eventsFun) => {
+  switch (eventsType) {
+    case "show":
+      _toast.addEventListener("show.bs.toast", () => eventsFun());
+      break
+    case "shown":
+      _toast.addEventListener("shown.bs.toast", () => eventsFun());
+      break
+    case "hide":
+      _toast.addEventListener("hide.bs.toast", () => eventsFun());
+      break
+    case "hidden":
+      _toast.addEventListener("hidden.bs.toast", () => eventsFun());
+      break
+    default:
+      throw 'eventsType error'
+  }
+};
+
+/**
+ * @param {HTMLElement} _toast
+ */
+const removeToast = _toast => {
+  _toast.addEventListener("hidden.bs.toast", () => {
+    const x = bootstrap.Toast.getInstance(_toast);
+    x.dispose();
+    setTimeout(() => {
+      _toast.remove();
+    }, 3e3);
+  });
+};
+
+/**
  * @param {Node|String|Function} headerNodeElement
  */
 const toastHeader = (headerNodeElement) => {
@@ -141,43 +178,6 @@ const toastContainer = (Placement) => {
 };
 
 /**
- * @param {HTMLElement} _toast
- * @param {String} eventsType
- * @param {Function} eventsFun
- */
-const toastEvents = (_toast, eventsType, eventsFun) => {
-  switch (eventsType) {
-    case "show":
-      _toast.addEventListener("show.bs.toast", () => eventsFun());
-      break
-    case "shown":
-      _toast.addEventListener("shown.bs.toast", () => eventsFun());
-      break
-    case "hide":
-      _toast.addEventListener("hide.bs.toast", () => eventsFun());
-      break
-    case "hidden":
-      _toast.addEventListener("hidden.bs.toast", () => eventsFun());
-      break
-    default:
-      throw 'eventsType error'
-  }
-};
-
-/**
- * @param {HTMLElement} _toast
- */
-const removeToast = _toast => {
-  _toast.addEventListener("hidden.bs.toast", () => {
-    const x = bootstrap.Toast.getInstance(_toast);
-    x.dispose();
-    setTimeout(() => {
-      _toast.remove();
-    }, 3e3);
-  });
-};
-
-/**
  * @param {Node|String|Function} headerNodeElement
  * @param {Node|String|Function} bodyNodeElement
  * @param {String} Placement
@@ -189,7 +189,7 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
   const toastId = 'toastId_' + getTimeString();
 
   const _containerOutsize = toastContainerOutside();
-  const _container = document.querySelector('.toast-container') ?? toastContainer(Placement);// Todo:尝试让新toast的位置可控
+  const _container = document.querySelector('.toast-container') ?? toastContainer(Placement);// Todo:尝试让新 toast 的位置可控
   const _toast = toast(headerNodeElement, bodyNodeElement, toastId);
 
   _container.append(_toast);

@@ -1,6 +1,5 @@
-import {getTimeString} from "../../util/index"
 import modal from "./modal"
-import {removeModal, modalEvents} from "./util/index"
+import {removeModal, modalEvents, getTimeString} from "./util/index"
 
 /**
  * @param {Node|String|Function} headerNodeElement

@@ -1,3 +1,5 @@
+export * from "../../../util/index"
+
 /**
  * @param {HTMLElement} _toast
  * @param {String} eventsType

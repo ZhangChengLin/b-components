@@ -1,3 +1,5 @@
+export * from "../../../util/index"
+
 /**
  * @param {HTMLElement} _modal
  * @param {String} eventsType

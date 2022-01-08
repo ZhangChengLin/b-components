@@ -1,4 +1,4 @@
-import {isNull, isEmpty, bsDismissBtn} from "../../util/index"
+import {isNull, isEmpty, bsDismissBtn} from "./util/index"
 
 /**
  * @param {Node|String|Function} headerNodeElement

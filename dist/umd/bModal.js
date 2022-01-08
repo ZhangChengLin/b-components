@@ -32,6 +32,44 @@
   const getTimeString = () => Date.now().toString();
 
   /**
+   * @param {HTMLElement} _modal
+   * @param {String} eventsType
+   * @param {function} eventsFun
+   */
+  const modalEvents = (_modal, eventsType, eventsFun) => {
+    switch (eventsType) {
+      case "show":
+        _modal.addEventListener("show.bs.modal", () => eventsFun());
+        break
+      case "shown":
+        _modal.addEventListener("shown.bs.modal", () => eventsFun());
+        break
+      case "hide":
+        _modal.addEventListener("hide.bs.modal", () => eventsFun());
+        break
+      case "hidden":
+        _modal.addEventListener("hidden.bs.modal", () => eventsFun());
+        break
+      case "hidePrevented":
+        _modal.addEventListener("hidePrevented.bs.modal", () => eventsFun());
+        break
+    }
+  };
+
+  /**
+   * @param {HTMLElement} _modal
+   */
+  const removeModal = _modal => {
+    _modal.addEventListener("hidden.bs.modal", () => {
+      const x = bootstrap.Modal.getInstance(_modal);
+      x.dispose();
+      setTimeout(() => {
+        _modal.remove();
+      }, 2e3);
+    });
+  };
+
+  /**
    * @param {Node|String|Function} headerNodeElement
    */
   const modalHeader = (headerNodeElement) => {
@@ -193,44 +231,6 @@
     _modal.append(modalDialog(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent));
 
     return _modal
-  };
-
-  /**
-   * @param {HTMLElement} _modal
-   * @param {String} eventsType
-   * @param {function} eventsFun
-   */
-  const modalEvents = (_modal, eventsType, eventsFun) => {
-    switch (eventsType) {
-      case "show":
-        _modal.addEventListener("show.bs.modal", () => eventsFun());
-        break
-      case "shown":
-        _modal.addEventListener("shown.bs.modal", () => eventsFun());
-        break
-      case "hide":
-        _modal.addEventListener("hide.bs.modal", () => eventsFun());
-        break
-      case "hidden":
-        _modal.addEventListener("hidden.bs.modal", () => eventsFun());
-        break
-      case "hidePrevented":
-        _modal.addEventListener("hidePrevented.bs.modal", () => eventsFun());
-        break
-    }
-  };
-
-  /**
-   * @param {HTMLElement} _modal
-   */
-  const removeModal = _modal => {
-    _modal.addEventListener("hidden.bs.modal", () => {
-      const x = bootstrap.Modal.getInstance(_modal);
-      x.dispose();
-      setTimeout(() => {
-        _modal.remove();
-      }, 2e3);
-    });
   };
 
   /**

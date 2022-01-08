@@ -26,6 +26,43 @@ const bsDismissBtn = (dismissType, whiteVariant = false) => {
 const getTimeString = () => Date.now().toString();
 
 /**
+ * @param {HTMLElement} _offcanvas
+ * @param {String} eventsType
+ * @param {Function} eventsFun
+ */
+const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
+  switch (eventsType) {
+    case "show":
+      _offcanvas.addEventListener("show.bs.offcanvas", () => eventsFun());
+      break
+    case "shown":
+      _offcanvas.addEventListener("shown.bs.offcanvas", () => eventsFun());
+      break
+    case "hide":
+      _offcanvas.addEventListener("hide.bs.offcanvas", () => eventsFun());
+      break
+    case "hidden":
+      _offcanvas.addEventListener("hidden.bs.offcanvas", () => eventsFun());
+      break
+    default:
+      throw 'eventsType error'
+  }
+};
+
+/**
+ * @param {HTMLElement} _offcanvas
+ */
+const removeOffcanvas = _offcanvas => {
+  _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+    const x = bootstrap.Offcanvas.getInstance(_offcanvas);
+    x.dispose();
+    setTimeout(() => {
+      _offcanvas.remove();
+    }, 3e3);
+  });
+};
+
+/**
  * @param {Node|String|Function} headerNodeElement
  */
 const offcanvasHeader = (headerNodeElement) => {
@@ -97,43 +134,6 @@ const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) =
   _offcanvas.append(header, body);
 
   return _offcanvas
-};
-
-/**
- * @param {HTMLElement} _offcanvas
- * @param {String} eventsType
- * @param {Function} eventsFun
- */
-const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
-  switch (eventsType) {
-    case "show":
-      _offcanvas.addEventListener("show.bs.offcanvas", () => eventsFun());
-      break
-    case "shown":
-      _offcanvas.addEventListener("shown.bs.offcanvas", () => eventsFun());
-      break
-    case "hide":
-      _offcanvas.addEventListener("hide.bs.offcanvas", () => eventsFun());
-      break
-    case "hidden":
-      _offcanvas.addEventListener("hidden.bs.offcanvas", () => eventsFun());
-      break
-    default:
-      throw 'eventsType error'
-  }
-};
-
-/**
- * @param {HTMLElement} _offcanvas
- */
-const removeOffcanvas = _offcanvas => {
-  _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
-    const x = bootstrap.Offcanvas.getInstance(_offcanvas);
-    x.dispose();
-    setTimeout(() => {
-      _offcanvas.remove();
-    }, 3e3);
-  });
 };
 
 /**

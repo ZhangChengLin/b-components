@@ -1,6 +1,5 @@
-import {getTimeString} from "../../util/index"
 import offcanvas from "./offcanvas"
-import {offcanvasEvents, removeOffcanvas} from "./util/index"
+import {offcanvasEvents, removeOffcanvas, getTimeString} from "./util/index"
 
 /**
  * @param {Node|String|Function} headerNodeElement
