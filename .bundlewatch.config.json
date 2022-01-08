@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "path": "./dist/esm/bModal.js",
+      "maxSize": "7.10 kB"
+    },
+    {
+      "path": "./dist/esm/bModal.min.js",
+      "maxSize": "3.00 kB"
+    },
+    {
+      "path": "./dist/esm/bOffcanvas.js",
+      "maxSize": "4.60 kB"
+    },
+    {
+      "path": "./dist/esm/bOffcanvas.min.js",
+      "maxSize": "2.10 kB"
+    },
+    {
+      "path": "./dist/esm/bToast.js",
+      "maxSize": "5.50 kB"
+    },
+    {
+      "path": "./dist/esm/bToast.min.js",
+      "maxSize": "2.60 kB"
+    },
+    {
+      "path": "./dist/umd/bModal.js",
+      "maxSize": "7.80 kB"
+    },
+    {
+      "path": "./dist/umd/bModal.min.js",
+      "maxSize": "3.20 kB"
+    },
+    {
+      "path": "./dist/umd/bOffcanvas.js",
+      "maxSize": "5.10 kB"
+    },
+    {
+      "path": "./dist/umd/bOffcanvas.min.js",
+      "maxSize": "2.30 kB"
+    },
+    {
+      "path": "./dist/umd/bToast.js",
+      "maxSize": "6.20 kB"
+    },
+    {
+      "path": "./dist/umd/bToast.min.js",
+      "maxSize": "2.90 kB"
+    }
+  ],
+  "ci": {
+    "trackBranches": [
+      "main",
+      "dev"
+    ]
+  }
+}
