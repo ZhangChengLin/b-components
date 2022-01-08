@@ -1,4 +1,4 @@
-export * from "../../../util/index"
+export * from '../../../util/index'
 
 /**
  * @param {HTMLElement} _offcanvas
@@ -7,17 +7,17 @@ export * from "../../../util/index"
  */
 const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
   switch (eventsType) {
-    case "show":
-      _offcanvas.addEventListener("show.bs.offcanvas", () => eventsFun())
+    case 'show':
+      _offcanvas.addEventListener('show.bs.offcanvas', () => eventsFun())
       break
-    case "shown":
-      _offcanvas.addEventListener("shown.bs.offcanvas", () => eventsFun())
+    case 'shown':
+      _offcanvas.addEventListener('shown.bs.offcanvas', () => eventsFun())
       break
-    case "hide":
-      _offcanvas.addEventListener("hide.bs.offcanvas", () => eventsFun())
+    case 'hide':
+      _offcanvas.addEventListener('hide.bs.offcanvas', () => eventsFun())
       break
-    case "hidden":
-      _offcanvas.addEventListener("hidden.bs.offcanvas", () => eventsFun())
+    case 'hidden':
+      _offcanvas.addEventListener('hidden.bs.offcanvas', () => eventsFun())
       break
     default:
       throw 'eventsType error'
@@ -28,7 +28,7 @@ const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
  * @param {HTMLElement} _offcanvas
  */
 const removeOffcanvas = _offcanvas => {
-  _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+  _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
     const x = bootstrap.Offcanvas.getInstance(_offcanvas)
     x.dispose()
     setTimeout(() => {

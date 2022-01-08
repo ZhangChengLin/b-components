@@ -1,5 +1,5 @@
-import toastHeader from "./toast-header"
-import toastBody from "./toast-body"
+import toastHeader from './toast-header'
+import toastBody from './toast-body'
 
 /**
  * @param {Node|String|Function} headerNodeElement

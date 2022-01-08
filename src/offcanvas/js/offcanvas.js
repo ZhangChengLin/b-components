@@ -1,5 +1,5 @@
-import offcanvasHeader from "./offcanvas-header"
-import offcanvasBody from "./offcanvas-body"
+import offcanvasHeader from './offcanvas-header'
+import offcanvasBody from './offcanvas-body'
 
 /**
  * @param {Node|String|Function} headerNodeElement

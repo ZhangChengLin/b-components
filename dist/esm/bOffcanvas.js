@@ -10,7 +10,7 @@
  * GitHub: https://github.com/ZhangChengLin/b-components
 */
 const isNull = value => value === null;
-const isEmpty = value => typeof value === "string" && value === '';
+const isEmpty = value => typeof value === 'string' && value === '';
 
 const bsDismissBtn = (dismissType, whiteVariant = false) => {
   const btn = document.createElement('button');
@@ -32,17 +32,17 @@ const getTimeString = () => Date.now().toString();
  */
 const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
   switch (eventsType) {
-    case "show":
-      _offcanvas.addEventListener("show.bs.offcanvas", () => eventsFun());
+    case 'show':
+      _offcanvas.addEventListener('show.bs.offcanvas', () => eventsFun());
       break
-    case "shown":
-      _offcanvas.addEventListener("shown.bs.offcanvas", () => eventsFun());
+    case 'shown':
+      _offcanvas.addEventListener('shown.bs.offcanvas', () => eventsFun());
       break
-    case "hide":
-      _offcanvas.addEventListener("hide.bs.offcanvas", () => eventsFun());
+    case 'hide':
+      _offcanvas.addEventListener('hide.bs.offcanvas', () => eventsFun());
       break
-    case "hidden":
-      _offcanvas.addEventListener("hidden.bs.offcanvas", () => eventsFun());
+    case 'hidden':
+      _offcanvas.addEventListener('hidden.bs.offcanvas', () => eventsFun());
       break
     default:
       throw 'eventsType error'
@@ -53,7 +53,7 @@ const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
  * @param {HTMLElement} _offcanvas
  */
 const removeOffcanvas = _offcanvas => {
-  _offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+  _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
     const x = bootstrap.Offcanvas.getInstance(_offcanvas);
     x.dispose();
     setTimeout(() => {

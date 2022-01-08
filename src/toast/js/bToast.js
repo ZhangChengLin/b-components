@@ -1,6 +1,6 @@
-import toast from "./toast"
-import {toastContainerOutside, toastContainer} from "./toast-container"
-import {toastEvents, removeToast, getTimeString} from "./util/index"
+import toast from './toast'
+import {toastContainerOutside, toastContainer} from './toast-container'
+import {toastEvents, removeToast, getTimeString} from './util/index'
 
 /**
  * @param {Node|String|Function} headerNodeElement

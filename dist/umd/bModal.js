@@ -16,7 +16,7 @@
 })(this, (function () { 'use strict';
 
   const isNull = value => value === null;
-  const isEmpty = value => typeof value === "string" && value === '';
+  const isEmpty = value => typeof value === 'string' && value === '';
 
   const bsDismissBtn = (dismissType, whiteVariant = false) => {
     const btn = document.createElement('button');
@@ -38,20 +38,20 @@
    */
   const modalEvents = (_modal, eventsType, eventsFun) => {
     switch (eventsType) {
-      case "show":
-        _modal.addEventListener("show.bs.modal", () => eventsFun());
+      case 'show':
+        _modal.addEventListener('show.bs.modal', () => eventsFun());
         break
-      case "shown":
-        _modal.addEventListener("shown.bs.modal", () => eventsFun());
+      case 'shown':
+        _modal.addEventListener('shown.bs.modal', () => eventsFun());
         break
-      case "hide":
-        _modal.addEventListener("hide.bs.modal", () => eventsFun());
+      case 'hide':
+        _modal.addEventListener('hide.bs.modal', () => eventsFun());
         break
-      case "hidden":
-        _modal.addEventListener("hidden.bs.modal", () => eventsFun());
+      case 'hidden':
+        _modal.addEventListener('hidden.bs.modal', () => eventsFun());
         break
-      case "hidePrevented":
-        _modal.addEventListener("hidePrevented.bs.modal", () => eventsFun());
+      case 'hidePrevented':
+        _modal.addEventListener('hidePrevented.bs.modal', () => eventsFun());
         break
     }
   };
@@ -60,7 +60,7 @@
    * @param {HTMLElement} _modal
    */
   const removeModal = _modal => {
-    _modal.addEventListener("hidden.bs.modal", () => {
+    _modal.addEventListener('hidden.bs.modal', () => {
       const x = bootstrap.Modal.getInstance(_modal);
       x.dispose();
       setTimeout(() => {
@@ -136,9 +136,9 @@
    * @param {Node|String|Function} footerNodeElement
    */
   const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
-    const content = document.createElement("div");
+    const content = document.createElement('div');
 
-    content.className = "modal-content";
+    content.className = 'modal-content';
 
     content.append(
       modalHeader(headerNodeElement),
@@ -161,32 +161,32 @@
     dialog.className = 'modal-dialog';
 
     switch (ModalSizes) {
-      case "sm":
+      case 'sm':
         dialog.classList.add('modal-sm');
         break
-      case "lg":
+      case 'lg':
         dialog.classList.add('modal-lg');
         break
-      case "xl":
+      case 'xl':
         dialog.classList.add('modal-xl');
         break
-      case "full":
+      case 'full':
         dialog.classList.add('modal-fullscreen');
         break
-      case "full-sm":
+      case 'full-sm':
         dialog.classList.add('modal-fullscreen-sm-down');
         break
-      case "full-md":
+      case 'full-md':
         dialog.classList.add('modal-fullscreen-md-down');
         break
-      case "full-lg":
+      case 'full-lg':
         dialog.classList.add('modal-fullscreen-lg-down');
         break
-      case "full-xl":
+      case 'full-xl':
         dialog.classList.add('modal-fullscreen-xl-down');
         break
-      case "":
-      case "default":
+      case '':
+      case 'default':
         break
       default:
         dialog.classList.add(ModalSizes);
@@ -222,10 +222,10 @@
   const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
     const _modal = document.createElement('div');
 
-    _modal.className = "modal fade";
+    _modal.className = 'modal fade';
     _modal.id = modalId;
     _modal.tabIndex = -1;
-    _modal.role = "dialog";
+    _modal.role = 'dialog';
     _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
 
     _modal.append(modalDialog(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent));
@@ -250,7 +250,7 @@
     const _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
     document.body.append(_modal);
 
-    EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : "";
+    EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : '';
 
     const xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal);
     xxx.show();

@@ -15,7 +15,10 @@
     "object-shorthand": "off",
     "no-console": "error",
     "no-warning-comments": "error",
-    "singleQuote": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
     "semi": [
       "error",
       "never"

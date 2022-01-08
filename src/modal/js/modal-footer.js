@@ -1,4 +1,4 @@
-import {isEmpty, isNull} from "./util/index"
+import {isEmpty, isNull} from './util/index'
 
 /**
  * @param {Node|String|Function} footerNodeElement

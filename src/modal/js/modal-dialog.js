@@ -1,4 +1,4 @@
-import modalContent from "./modal-content"
+import modalContent from './modal-content'
 
 /**
  * @param {Node|String|Function} headerNodeElement
@@ -12,32 +12,32 @@ const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, Moda
   dialog.className = 'modal-dialog'
 
   switch (ModalSizes) {
-    case "sm":
+    case 'sm':
       dialog.classList.add('modal-sm')
       break
-    case "lg":
+    case 'lg':
       dialog.classList.add('modal-lg')
       break
-    case "xl":
+    case 'xl':
       dialog.classList.add('modal-xl')
       break
-    case "full":
+    case 'full':
       dialog.classList.add('modal-fullscreen')
       break
-    case "full-sm":
+    case 'full-sm':
       dialog.classList.add('modal-fullscreen-sm-down')
       break
-    case "full-md":
+    case 'full-md':
       dialog.classList.add('modal-fullscreen-md-down')
       break
-    case "full-lg":
+    case 'full-lg':
       dialog.classList.add('modal-fullscreen-lg-down')
       break
-    case "full-xl":
+    case 'full-xl':
       dialog.classList.add('modal-fullscreen-xl-down')
       break
-    case "":
-    case "default":
+    case '':
+    case 'default':
       break
     default:
       dialog.classList.add(ModalSizes)
