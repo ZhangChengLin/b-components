@@ -1,3 +1,5 @@
+'use strict'
+
 const root = './'
 const nodeModules = root + 'node_modules/'
 const src = root + 'src/'
@@ -6,7 +8,7 @@ const dist = root + 'dist/'
 const cache = root + '.cache/'
 
 
-export default {
+module.exports = {
   root: root,
   nodeModules: nodeModules,
   src: src,

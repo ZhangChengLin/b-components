@@ -1,7 +1,8 @@
-import {default as banner} from "./banner.js"
-import {default as paths} from "./paths"
+'use strict'
 
 const {terser} = require('rollup-plugin-terser')
+const banner = require('./banner')
+const paths = require('./paths')
 
 const PREFIX = 'b'
 const ESM = process.env.ESM === 'true'
@@ -40,5 +41,4 @@ if (!ESM) {
   })
 }
 
-
-export default rollupConfig
+module.exports = rollupConfig
