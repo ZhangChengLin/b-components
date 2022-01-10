@@ -22,6 +22,7 @@ const header = (headerNodeElement) => {
       : _title.innerHTML = headerNodeElement
 
   _header.append(_title, bsDismissBtn('modal'))
+
   return _header
 }
 

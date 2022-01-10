@@ -15,6 +15,34 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bOffcanvas = factory());
 })(this, (function () { 'use strict';
 
+  /**
+   * @param {String} Placement
+   * @param {String} offcanvasId
+   */
+  const offcanvas = (Placement, offcanvasId) => {
+    const _offcanvas = document.createElement('div');
+
+
+    Placement = Placement ?? 'start';
+    switch (Placement) {
+      case 'start':
+      case 'top':
+      case 'end':
+      case 'bottom':
+        break
+      default:
+        throw 'Placement error'
+    }
+
+    _offcanvas.className = `offcanvas offcanvas-${Placement}`;
+    _offcanvas.id = offcanvasId;
+    _offcanvas.tabIndex = -1;
+    _offcanvas.role = 'dialog';
+    _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel');
+
+    return _offcanvas
+  };
+
   const isNull = value => value === null;
   const isEmpty = value => typeof value === 'string' && value === '';
 
@@ -71,7 +99,7 @@
   /**
    * @param {Node|String|Function} headerNodeElement
    */
-  const header$1 = (headerNodeElement) => {
+  const header = (headerNodeElement) => {
     if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
       return ''
     }
@@ -90,13 +118,14 @@
         : _title.innerHTML = headerNodeElement;
 
     _header.append(_title, bsDismissBtn('offcanvas'));
+
     return _header
   };
 
   /**
    * @param {Node|String|Function} bodyNodeElement
    */
-  const body$1 = (bodyNodeElement) => {
+  const body = (bodyNodeElement) => {
     const _body = document.createElement('div');
 
     _body.className = 'offcanvas-body';
@@ -113,38 +142,6 @@
    * @param {Node|String|Function} headerNodeElement
    * @param {Node|String|Function} bodyNodeElement
    * @param {String} Placement
-   * @param {String} offcanvasId
-   */
-  const offcanvas = (Placement, offcanvasId) => {
-    const _offcanvas = document.createElement('div');
-
-
-    Placement = Placement ?? 'start';
-    switch (Placement) {
-      case 'start':
-      case 'top':
-      case 'end':
-      case 'bottom':
-        break
-      default:
-        throw 'Placement error'
-    }
-
-    _offcanvas.className = `offcanvas offcanvas-${Placement}`;
-    _offcanvas.id = offcanvasId;
-    _offcanvas.tabIndex = -1;
-    _offcanvas.role = 'dialog';
-    _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel');
-
-    _offcanvas.append(header, body);
-
-    return _offcanvas
-  };
-
-  /**
-   * @param {Node|String|Function} headerNodeElement
-   * @param {Node|String|Function} bodyNodeElement
-   * @param {String} Placement
    * @param {Object} Options
    * @param {String} EventsType
    * @param {Function} EventsFunction
@@ -153,8 +150,8 @@
     const offcanvasId = 'offcanvasId_' + getTimeString();
 
     const _offcanvas = offcanvas(Placement, offcanvasId);
-    const _header = header$1(headerNodeElement);
-    const _body = body$1(bodyNodeElement);
+    const _header = header(headerNodeElement);
+    const _body = body(bodyNodeElement);
 
     _offcanvas.append(_header, _body);
     document.body.append(_offcanvas);
