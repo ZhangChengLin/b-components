@@ -1,5 +1,5 @@
 import toast from './toast'
-import {toastContainerOutside, toastContainer} from './toast-container'
+import {containerOutside, container} from './toast-container'
 import {toastEvents, removeToast, getTimeString} from './util/index'
 
 /**
@@ -13,8 +13,8 @@ import {toastEvents, removeToast, getTimeString} from './util/index'
 const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
   const toastId = 'toastId_' + getTimeString()
 
-  const _containerOutsize = toastContainerOutside()
-  const _container = document.querySelector('.toast-container') ?? toastContainer(Placement)// Todo:尝试让新 toast 的位置可控
+  const _containerOutsize = containerOutside()
+  const _container = document.querySelector('.toast-container') ?? container(Placement)// Todo:尝试让新 toast 的位置可控
   const _toast = toast(headerNodeElement, bodyNodeElement, toastId)
 
   _container.append(_toast)

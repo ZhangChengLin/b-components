@@ -1,5 +1,5 @@
-import toastHeader from './toast-header'
-import toastBody from './toast-body'
+import header from './toast-header'
+import body from './toast-body'
 
 /**
  * @param {Node|String|Function} headerNodeElement
@@ -8,8 +8,8 @@ import toastBody from './toast-body'
  */
 const toast = (headerNodeElement, bodyNodeElement, toastId) => {
   const _toast = document.createElement('div')
-  const header = toastHeader(headerNodeElement)
-  const body = toastBody(bodyNodeElement)
+  const _header = header(headerNodeElement)
+  const _body = body(bodyNodeElement)
 
   _toast.className = 'toast'
   _toast.id = toastId
@@ -17,7 +17,7 @@ const toast = (headerNodeElement, bodyNodeElement, toastId) => {
   _toast.ariaLive = 'assertive'
   _toast.ariaAtomic = 'true'
 
-  _toast.append(header, body)
+  _toast.append(_header, _body)
 
   return _toast
 }

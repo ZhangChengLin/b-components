@@ -1,4 +1,4 @@
-const toastContainerOutside = (ariaLive) => {
+const containerOutside = (ariaLive) => {
   const containerOutside = document.createElement('div')
 
   containerOutside.className = 'position-relative'
@@ -11,7 +11,7 @@ const toastContainerOutside = (ariaLive) => {
 /**
  * @param {String} Placement
  */
-const toastContainer = (Placement) => {
+const container = (Placement) => {
   const container = document.createElement('div')
 
   Placement = Placement ?? 'be'
@@ -53,6 +53,6 @@ const toastContainer = (Placement) => {
 }
 
 export {
-  toastContainerOutside,
-  toastContainer
+  containerOutside,
+  container
 }

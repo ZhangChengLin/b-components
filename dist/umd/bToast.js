@@ -71,41 +71,41 @@
   /**
    * @param {Node|String|Function} headerNodeElement
    */
-  const toastHeader = (headerNodeElement) => {
+  const header = (headerNodeElement) => {
     if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
       return ''
     }
 
-    const header = document.createElement('div');
-    const title = document.createElement('strong');
+    const _header = document.createElement('div');
+    const _title = document.createElement('strong');
 
-    header.className = 'toast-header';
+    _header.className = 'toast-header';
 
-    title.className = 'toast-title me-auto';
+    _title.className = 'toast-title me-auto';
     headerNodeElement instanceof Function
-      ? title.append(headerNodeElement())
+      ? _title.append(headerNodeElement())
       : headerNodeElement instanceof HTMLElement
-        ? title.append(headerNodeElement)
-        : title.innerHTML = headerNodeElement;
+        ? _title.append(headerNodeElement)
+        : _title.innerHTML = headerNodeElement;
 
-    header.append(title, bsDismissBtn('toast'));
-    return header
+    _header.append(_title, bsDismissBtn('toast'));
+    return _header
   };
 
   /**
    * @param {Node|String|Function} bodyNodeElement
    */
-  const toastBody = (bodyNodeElement) => {
-    const body = document.createElement('div');
+  const body = (bodyNodeElement) => {
+    const _body = document.createElement('div');
 
-    body.className = 'toast-body';
+    _body.className = 'toast-body';
     bodyNodeElement instanceof Function
-      ? body.append(bodyNodeElement())
+      ? _body.append(bodyNodeElement())
       : bodyNodeElement instanceof HTMLElement
-        ? body.append(bodyNodeElement)
-        : body.innerHTML = bodyNodeElement;
+        ? _body.append(bodyNodeElement)
+        : _body.innerHTML = bodyNodeElement;
 
-    return body
+    return _body
   };
 
   /**
@@ -115,8 +115,8 @@
    */
   const toast = (headerNodeElement, bodyNodeElement, toastId) => {
     const _toast = document.createElement('div');
-    const header = toastHeader(headerNodeElement);
-    const body = toastBody(bodyNodeElement);
+    const _header = header(headerNodeElement);
+    const _body = body(bodyNodeElement);
 
     _toast.className = 'toast';
     _toast.id = toastId;
@@ -124,12 +124,12 @@
     _toast.ariaLive = 'assertive';
     _toast.ariaAtomic = 'true';
 
-    _toast.append(header, body);
+    _toast.append(_header, _body);
 
     return _toast
   };
 
-  const toastContainerOutside = (ariaLive) => {
+  const containerOutside = (ariaLive) => {
     const containerOutside = document.createElement('div');
 
     containerOutside.className = 'position-relative';
@@ -142,7 +142,7 @@
   /**
    * @param {String} Placement
    */
-  const toastContainer = (Placement) => {
+  const container = (Placement) => {
     const container = document.createElement('div');
 
     Placement = Placement ?? 'be';
@@ -194,8 +194,8 @@
   const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
     const toastId = 'toastId_' + getTimeString();
 
-    const _containerOutsize = toastContainerOutside();
-    const _container = document.querySelector('.toast-container') ?? toastContainer(Placement);// Todo:尝试让新 toast 的位置可控
+    const _containerOutsize = containerOutside();
+    const _container = document.querySelector('.toast-container') ?? container(Placement);// Todo:尝试让新 toast 的位置可控
     const _toast = toast(headerNodeElement, bodyNodeElement, toastId);
 
     _container.append(_toast);
