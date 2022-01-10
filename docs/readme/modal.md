@@ -13,19 +13,8 @@
 
 | Contents                                        |
 |:------------------------------------------------|
-| [How to install](#how-to-install)               |
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
-
-## How to install
-
-- Install via NPM package
-
-```
-npm i b-components-js --save
-```
-
----
 
 ## How to use
 
