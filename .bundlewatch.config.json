@@ -14,15 +14,15 @@
     },
     {
       "path": "./dist/esm/bOffcanvas.min.js",
-      "maxSize": "962 B"
+      "maxSize": "952 B"
     },
     {
       "path": "./dist/esm/bToast.js",
-      "maxSize": "1.59 kB"
+      "maxSize": "1.58 kB"
     },
     {
       "path": "./dist/esm/bToast.min.js",
-      "maxSize": "1.07 kB"
+      "maxSize": "1.06 kB"
     },
     {
       "path": "./dist/umd/bModal.js",
@@ -38,7 +38,7 @@
     },
     {
       "path": "./dist/umd/bOffcanvas.min.js",
-      "maxSize": "1.04 kB"
+      "maxSize": "1.03 kB"
     },
     {
       "path": "./dist/umd/bToast.js",
@@ -46,7 +46,7 @@
     },
     {
       "path": "./dist/umd/bToast.min.js",
-      "maxSize": "1.17 kB"
+      "maxSize": "1.15 kB"
     }
   ],
   "ci": {
