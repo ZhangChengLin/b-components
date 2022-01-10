@@ -3,26 +3,26 @@ import {isNull, isEmpty, bsDismissBtn} from './util/index'
 /**
  * @param {Node|String|Function} headerNodeElement
  */
-const offcanvasHeader = (headerNodeElement) => {
+const header = (headerNodeElement) => {
   if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
     return ''
   }
 
-  const header = document.createElement('div')
-  const title = document.createElement('h5')
+  const _header = document.createElement('div')
+  const _title = document.createElement('h5')
 
-  header.className = 'offcanvas-header'
+  _header.className = 'offcanvas-header'
 
-  title.className = 'offcanvas-title'
-  title.id = 'offcanvasTitleLabel'
+  _title.className = 'offcanvas-title'
+  _title.id = 'offcanvasTitleLabel'
   headerNodeElement instanceof Function
-    ? title.append(headerNodeElement())
+    ? _title.append(headerNodeElement())
     : headerNodeElement instanceof HTMLElement
-      ? title.append(headerNodeElement)
-      : title.innerHTML = headerNodeElement
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement
 
-  header.append(title, bsDismissBtn('offcanvas'))
-  return header
+  _header.append(_title, bsDismissBtn('offcanvas'))
+  return _header
 }
 
-export default offcanvasHeader
+export default header

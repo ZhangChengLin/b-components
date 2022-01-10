@@ -65,42 +65,42 @@ const removeOffcanvas = _offcanvas => {
 /**
  * @param {Node|String|Function} headerNodeElement
  */
-const offcanvasHeader = (headerNodeElement) => {
+const header$1 = (headerNodeElement) => {
   if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
     return ''
   }
 
-  const header = document.createElement('div');
-  const title = document.createElement('h5');
+  const _header = document.createElement('div');
+  const _title = document.createElement('h5');
 
-  header.className = 'offcanvas-header';
+  _header.className = 'offcanvas-header';
 
-  title.className = 'offcanvas-title';
-  title.id = 'offcanvasTitleLabel';
+  _title.className = 'offcanvas-title';
+  _title.id = 'offcanvasTitleLabel';
   headerNodeElement instanceof Function
-    ? title.append(headerNodeElement())
+    ? _title.append(headerNodeElement())
     : headerNodeElement instanceof HTMLElement
-      ? title.append(headerNodeElement)
-      : title.innerHTML = headerNodeElement;
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement;
 
-  header.append(title, bsDismissBtn('offcanvas'));
-  return header
+  _header.append(_title, bsDismissBtn('offcanvas'));
+  return _header
 };
 
 /**
  * @param {Node|String|Function} bodyNodeElement
  */
-const offcanvasBody = (bodyNodeElement) => {
-  const body = document.createElement('div');
+const body$1 = (bodyNodeElement) => {
+  const _body = document.createElement('div');
 
-  body.className = 'offcanvas-body';
+  _body.className = 'offcanvas-body';
   bodyNodeElement instanceof Function
-    ? body.append(bodyNodeElement())
+    ? _body.append(bodyNodeElement())
     : bodyNodeElement instanceof HTMLElement
-      ? body.append(bodyNodeElement)
-      : body.innerHTML = bodyNodeElement;
+      ? _body.append(bodyNodeElement)
+      : _body.innerHTML = bodyNodeElement;
 
-  return body
+  return _body
 };
 
 /**
@@ -109,10 +109,9 @@ const offcanvasBody = (bodyNodeElement) => {
  * @param {String} Placement
  * @param {String} offcanvasId
  */
-const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) => {
+const offcanvas = (Placement, offcanvasId) => {
   const _offcanvas = document.createElement('div');
-  const header = offcanvasHeader(headerNodeElement);
-  const body = offcanvasBody(bodyNodeElement);
+
 
   Placement = Placement ?? 'start';
   switch (Placement) {
@@ -147,7 +146,11 @@ const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) =
 const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
   const offcanvasId = 'offcanvasId_' + getTimeString();
 
-  const _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement, offcanvasId);
+  const _offcanvas = offcanvas(Placement, offcanvasId);
+  const _header = header$1(headerNodeElement);
+  const _body = body$1(bodyNodeElement);
+
+  _offcanvas.append(_header, _body);
   document.body.append(_offcanvas);
 
   EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : '';

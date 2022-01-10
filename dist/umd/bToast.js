@@ -15,6 +15,75 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bToast = factory());
 })(this, (function () { 'use strict';
 
+  /**
+   * @param {String} toastId
+   */
+  const toast = (toastId) => {
+    const _toast = document.createElement('div');
+
+    _toast.className = 'toast';
+    _toast.id = toastId;
+    _toast.role = 'alert';
+    _toast.ariaLive = 'assertive';
+    _toast.ariaAtomic = 'true';
+
+    return _toast
+  };
+
+  const containerOutside = (ariaLive) => {
+    const containerOutside = document.createElement('div');
+
+    containerOutside.className = 'position-relative';
+    containerOutside.ariaLive = ariaLive ?? 'polite';
+    containerOutside.ariaAtomic = 'true';
+
+    return containerOutside
+  };
+
+  /**
+   * @param {String} Placement
+   */
+  const container = (Placement) => {
+    const container = document.createElement('div');
+
+    Placement = Placement ?? 'be';
+    switch (Placement) {
+      case 'ts':
+        Placement = 'top-0 start-0';
+        break
+      case 'tc':
+        Placement = 'top-0 start-50 translate-middle-x';
+        break
+      case 'te':
+        Placement = 'top-0 end-0';
+        break
+      case 'ms':
+        Placement = 'top-50 start-0 translate-middle-y';
+        break
+      case 'mc':
+        Placement = 'top-50 start-50 translate-middle';
+        break
+      case 'me':
+        Placement = 'top-50 end-0 translate-middle-y';
+        break
+      case 'bs':
+        Placement = 'bottom-0 start-0';
+        break
+      case 'bc':
+        Placement = 'bottom-0 start-50 translate-middle-x';
+        break
+      case 'be':
+        Placement = 'bottom-0 end-0';
+        break
+      default:
+        throw 'Placement error'
+    }
+
+    container.className = `toast-container position-fixed ${Placement}`;
+
+    return container
+  };
+
   const isNull = value => value === null;
   const isEmpty = value => typeof value === 'string' && value === '';
 
@@ -111,81 +180,6 @@
   /**
    * @param {Node|String|Function} headerNodeElement
    * @param {Node|String|Function} bodyNodeElement
-   * @param {String} toastId
-   */
-  const toast = (headerNodeElement, bodyNodeElement, toastId) => {
-    const _toast = document.createElement('div');
-    const _header = header(headerNodeElement);
-    const _body = body(bodyNodeElement);
-
-    _toast.className = 'toast';
-    _toast.id = toastId;
-    _toast.role = 'alert';
-    _toast.ariaLive = 'assertive';
-    _toast.ariaAtomic = 'true';
-
-    _toast.append(_header, _body);
-
-    return _toast
-  };
-
-  const containerOutside = (ariaLive) => {
-    const containerOutside = document.createElement('div');
-
-    containerOutside.className = 'position-relative';
-    containerOutside.ariaLive = ariaLive ?? 'polite';
-    containerOutside.ariaAtomic = 'true';
-
-    return containerOutside
-  };
-
-  /**
-   * @param {String} Placement
-   */
-  const container = (Placement) => {
-    const container = document.createElement('div');
-
-    Placement = Placement ?? 'be';
-    switch (Placement) {
-      case 'ts':
-        Placement = 'top-0 start-0';
-        break
-      case 'tc':
-        Placement = 'top-0 start-50 translate-middle-x';
-        break
-      case 'te':
-        Placement = 'top-0 end-0';
-        break
-      case 'ms':
-        Placement = 'top-50 start-0 translate-middle-y';
-        break
-      case 'mc':
-        Placement = 'top-50 start-50 translate-middle';
-        break
-      case 'me':
-        Placement = 'top-50 end-0 translate-middle-y';
-        break
-      case 'bs':
-        Placement = 'bottom-0 start-0';
-        break
-      case 'bc':
-        Placement = 'bottom-0 start-50 translate-middle-x';
-        break
-      case 'be':
-        Placement = 'bottom-0 end-0';
-        break
-      default:
-        throw 'Placement error'
-    }
-
-    container.className = `toast-container position-fixed ${Placement}`;
-
-    return container
-  };
-
-  /**
-   * @param {Node|String|Function} headerNodeElement
-   * @param {Node|String|Function} bodyNodeElement
    * @param {String} Placement
    * @param {Object} Options
    * @param {String} EventsType
@@ -196,8 +190,11 @@
 
     const _containerOutsize = containerOutside();
     const _container = document.querySelector('.toast-container') ?? container(Placement);// Todo:尝试让新 toast 的位置可控
-    const _toast = toast(headerNodeElement, bodyNodeElement, toastId);
+    const _toast = toast(toastId);
+    const _header = header(headerNodeElement);
+    const _body = body(bodyNodeElement);
 
+    _toast.append(_header, _body);
     _container.append(_toast);
     _containerOutsize.append(_container);
     document.body.append(_containerOutsize);

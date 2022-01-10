@@ -3,21 +3,21 @@ import {isEmpty, isNull} from './util/index'
 /**
  * @param {Node|String|Function} footerNodeElement
  */
-const modalFooter = (footerNodeElement) => {
+const footer = (footerNodeElement) => {
   if (isNull(footerNodeElement) || isEmpty(footerNodeElement)) {
     return ''
   }
 
-  const footer = document.createElement('div')
+  const _footer = document.createElement('div')
 
-  footer.className = 'modal-footer'
+  _footer.className = 'modal-footer'
   footerNodeElement instanceof Function
-    ? footer.append(footerNodeElement())
+    ? _footer.append(footerNodeElement())
     : footerNodeElement instanceof HTMLElement
-      ? footer.append(footerNodeElement)
-      : footer.innerHTML = footerNodeElement
+      ? _footer.append(footerNodeElement)
+      : _footer.innerHTML = footerNodeElement
 
-  return footer
+  return _footer
 }
 
-export default modalFooter
+export default footer

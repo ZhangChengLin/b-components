@@ -7,10 +7,9 @@ import offcanvasBody from './offcanvas-body'
  * @param {String} Placement
  * @param {String} offcanvasId
  */
-const offcanvas = (headerNodeElement, bodyNodeElement, Placement, offcanvasId) => {
+const offcanvas = (Placement, offcanvasId) => {
   const _offcanvas = document.createElement('div')
-  const header = offcanvasHeader(headerNodeElement)
-  const body = offcanvasBody(bodyNodeElement)
+
 
   Placement = Placement ?? 'start'
   switch (Placement) {

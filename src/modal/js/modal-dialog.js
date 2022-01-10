@@ -1,52 +1,49 @@
-import modalContent from './modal-content'
-
 /**
- * @param {Node|String|Function} headerNodeElement
- * @param {Node|String|Function} bodyNodeElement
- * @param {Node|String|Function} footerNodeElement
  * @param {String} ModalSizes
+ * @param VerticallyCentered
+ * @param ScrollingLongContent
  */
-const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
-  const dialog = document.createElement('div')
+const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
+  const _dialog = document.createElement('div')
 
-  dialog.className = 'modal-dialog'
+  _dialog.className = 'modal-dialog'
 
   switch (ModalSizes) {
     case 'sm':
-      dialog.classList.add('modal-sm')
+      _dialog.classList.add('modal-sm')
       break
     case 'lg':
-      dialog.classList.add('modal-lg')
+      _dialog.classList.add('modal-lg')
       break
     case 'xl':
-      dialog.classList.add('modal-xl')
+      _dialog.classList.add('modal-xl')
       break
     case 'full':
-      dialog.classList.add('modal-fullscreen')
+      _dialog.classList.add('modal-fullscreen')
       break
     case 'full-sm':
-      dialog.classList.add('modal-fullscreen-sm-down')
+      _dialog.classList.add('modal-fullscreen-sm-down')
       break
     case 'full-md':
-      dialog.classList.add('modal-fullscreen-md-down')
+      _dialog.classList.add('modal-fullscreen-md-down')
       break
     case 'full-lg':
-      dialog.classList.add('modal-fullscreen-lg-down')
+      _dialog.classList.add('modal-fullscreen-lg-down')
       break
     case 'full-xl':
-      dialog.classList.add('modal-fullscreen-xl-down')
+      _dialog.classList.add('modal-fullscreen-xl-down')
       break
     case '':
     case 'default':
       break
     default:
-      dialog.classList.add(ModalSizes)
+      _dialog.classList.add(ModalSizes)
       break
   }
 
   switch (VerticallyCentered) {
     case true:
-      dialog.classList.add('modal-dialog-centered')
+      _dialog.classList.add('modal-dialog-centered')
       break
     case false:
     default:
@@ -54,15 +51,13 @@ const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, Moda
 
   switch (ScrollingLongContent) {
     case true:
-      dialog.classList.add('modal-dialog-scrollable')
+      _dialog.classList.add('modal-dialog-scrollable')
       break
     case false:
     default:
   }
 
-  dialog.append(modalContent(headerNodeElement, bodyNodeElement, footerNodeElement))
-
-  return dialog
+  return _dialog
 }
 
-export default modalDialog
+export default dialog

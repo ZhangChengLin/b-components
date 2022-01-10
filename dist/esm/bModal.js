@@ -9,6 +9,87 @@
  * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
  * GitHub: https://github.com/ZhangChengLin/b-components
 */
+/**
+ * @param {String} modalId
+ */
+const modal = (modalId) => {
+  const _modal = document.createElement('div');
+
+  _modal.className = 'modal fade';
+  _modal.id = modalId;
+  _modal.tabIndex = -1;
+  _modal.role = 'dialog';
+  _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
+
+  return _modal
+};
+
+/**
+ * @param {String} ModalSizes
+ * @param VerticallyCentered
+ * @param ScrollingLongContent
+ */
+const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
+  const _dialog = document.createElement('div');
+
+  _dialog.className = 'modal-dialog';
+
+  switch (ModalSizes) {
+    case 'sm':
+      _dialog.classList.add('modal-sm');
+      break
+    case 'lg':
+      _dialog.classList.add('modal-lg');
+      break
+    case 'xl':
+      _dialog.classList.add('modal-xl');
+      break
+    case 'full':
+      _dialog.classList.add('modal-fullscreen');
+      break
+    case 'full-sm':
+      _dialog.classList.add('modal-fullscreen-sm-down');
+      break
+    case 'full-md':
+      _dialog.classList.add('modal-fullscreen-md-down');
+      break
+    case 'full-lg':
+      _dialog.classList.add('modal-fullscreen-lg-down');
+      break
+    case 'full-xl':
+      _dialog.classList.add('modal-fullscreen-xl-down');
+      break
+    case '':
+    case 'default':
+      break
+    default:
+      _dialog.classList.add(ModalSizes);
+      break
+  }
+
+  switch (VerticallyCentered) {
+    case true:
+      _dialog.classList.add('modal-dialog-centered');
+      break
+  }
+
+  switch (ScrollingLongContent) {
+    case true:
+      _dialog.classList.add('modal-dialog-scrollable');
+      break
+  }
+
+  return _dialog
+};
+
+const content = () => {
+  const _content = document.createElement('div');
+
+  _content.className = 'modal-content';
+
+  return _content
+};
+
 const isNull = value => value === null;
 const isEmpty = value => typeof value === 'string' && value === '';
 
@@ -66,165 +147,62 @@ const removeModal = _modal => {
 /**
  * @param {Node|String|Function} headerNodeElement
  */
-const modalHeader = (headerNodeElement) => {
+const header = (headerNodeElement) => {
   if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
     return ''
   }
 
-  const header = document.createElement('div');
-  const title = document.createElement('h5');
+  const _header = document.createElement('div');
+  const _title = document.createElement('h5');
 
-  header.className = 'modal-header';
+  _header.className = 'modal-header';
 
-  title.className = 'modal-title';
-  title.id = 'modalTitleLabel';
+  _title.className = 'modal-title';
+  _title.id = 'modalTitleLabel';
   headerNodeElement instanceof Function
-    ? title.append(headerNodeElement())
+    ? _title.append(headerNodeElement())
     : headerNodeElement instanceof HTMLElement
-      ? title.append(headerNodeElement)
-      : title.innerHTML = headerNodeElement;
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement;
 
-  header.append(title, bsDismissBtn('modal'));
-  return header
+  _header.append(_title, bsDismissBtn('modal'));
+  return _header
 };
 
 /**
  * @param {Node|String|Function} bodyNodeElement
  */
-const modalBody = (bodyNodeElement) => {
-  const body = document.createElement('div');
+const body = (bodyNodeElement) => {
+  const _body = document.createElement('div');
 
-  body.className = 'modal-body';
+  _body.className = 'modal-body';
   bodyNodeElement instanceof Function
-    ? body.append(bodyNodeElement())
+    ? _body.append(bodyNodeElement())
     : bodyNodeElement instanceof HTMLElement
-      ? body.append(bodyNodeElement)
-      : body.innerHTML = bodyNodeElement;
+      ? _body.append(bodyNodeElement)
+      : _body.innerHTML = bodyNodeElement;
 
-  return body
+  return _body
 };
 
 /**
  * @param {Node|String|Function} footerNodeElement
  */
-const modalFooter = (footerNodeElement) => {
+const footer = (footerNodeElement) => {
   if (isNull(footerNodeElement) || isEmpty(footerNodeElement)) {
     return ''
   }
 
-  const footer = document.createElement('div');
+  const _footer = document.createElement('div');
 
-  footer.className = 'modal-footer';
+  _footer.className = 'modal-footer';
   footerNodeElement instanceof Function
-    ? footer.append(footerNodeElement())
+    ? _footer.append(footerNodeElement())
     : footerNodeElement instanceof HTMLElement
-      ? footer.append(footerNodeElement)
-      : footer.innerHTML = footerNodeElement;
+      ? _footer.append(footerNodeElement)
+      : _footer.innerHTML = footerNodeElement;
 
-  return footer
-};
-
-/**
- * @param {Node|String|Function} headerNodeElement
- * @param {Node|String|Function} bodyNodeElement
- * @param {Node|String|Function} footerNodeElement
- */
-const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
-  const content = document.createElement('div');
-
-  content.className = 'modal-content';
-
-  content.append(
-    modalHeader(headerNodeElement),
-    modalBody(bodyNodeElement),
-    modalFooter(footerNodeElement)
-  );
-
-  return content
-};
-
-/**
- * @param {Node|String|Function} headerNodeElement
- * @param {Node|String|Function} bodyNodeElement
- * @param {Node|String|Function} footerNodeElement
- * @param {String} ModalSizes
- */
-const modalDialog = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes = '', VerticallyCentered = false, ScrollingLongContent = false) => {
-  const dialog = document.createElement('div');
-
-  dialog.className = 'modal-dialog';
-
-  switch (ModalSizes) {
-    case 'sm':
-      dialog.classList.add('modal-sm');
-      break
-    case 'lg':
-      dialog.classList.add('modal-lg');
-      break
-    case 'xl':
-      dialog.classList.add('modal-xl');
-      break
-    case 'full':
-      dialog.classList.add('modal-fullscreen');
-      break
-    case 'full-sm':
-      dialog.classList.add('modal-fullscreen-sm-down');
-      break
-    case 'full-md':
-      dialog.classList.add('modal-fullscreen-md-down');
-      break
-    case 'full-lg':
-      dialog.classList.add('modal-fullscreen-lg-down');
-      break
-    case 'full-xl':
-      dialog.classList.add('modal-fullscreen-xl-down');
-      break
-    case '':
-    case 'default':
-      break
-    default:
-      dialog.classList.add(ModalSizes);
-      break
-  }
-
-  switch (VerticallyCentered) {
-    case true:
-      dialog.classList.add('modal-dialog-centered');
-      break
-  }
-
-  switch (ScrollingLongContent) {
-    case true:
-      dialog.classList.add('modal-dialog-scrollable');
-      break
-  }
-
-  dialog.append(modalContent(headerNodeElement, bodyNodeElement, footerNodeElement));
-
-  return dialog
-};
-
-/**
- * @param {Node|String|Function} headerNodeElement
- * @param {Node|String|Function} bodyNodeElement
- * @param {Node|String|Function} footerNodeElement
- * @param {String} ModalSizes
- * @param {*} VerticallyCentered
- * @param {*} ScrollingLongContent
- * @param {String} modalId
- */
-const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId) => {
-  const _modal = document.createElement('div');
-
-  _modal.className = 'modal fade';
-  _modal.id = modalId;
-  _modal.tabIndex = -1;
-  _modal.role = 'dialog';
-  _modal.setAttribute('aria-labelledby', 'modalTitleLabel');
-
-  _modal.append(modalDialog(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent));
-
-  return _modal
+  return _footer
 };
 
 /**
@@ -241,7 +219,16 @@ const modal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
   const modalId = 'modalId_' + getTimeString();
 
-  const _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId);
+  const _modal = modal(modalId);
+  const _dialog = dialog(ModalSizes, VerticallyCentered, ScrollingLongContent);
+  const _content = content();
+  const _header = header(headerNodeElement);
+  const _body = body(bodyNodeElement);
+  const _footer = footer(footerNodeElement);
+
+  _content.append(_header, _body, _footer);
+  _dialog.append(_content);
+  _modal.append(_dialog);
   document.body.append(_modal);
 
   EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : '';
