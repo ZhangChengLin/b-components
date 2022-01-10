@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "./dist/esm/bModal.js",
-      "maxSize": "1.64 kB"
+      "maxSize": "1.63 kB"
     },
     {
       "path": "./dist/esm/bModal.min.js",
