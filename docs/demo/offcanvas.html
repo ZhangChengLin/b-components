@@ -214,12 +214,12 @@
             <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
           </div>
           <div class="input-group">
-            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
-            <select class="form-select" id="EventsFunction">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="eventsFunction">Functions</label>
+            <select class="form-select" id="eventsFunction">
               <option value="" disabled selected>Choose...</option>
-              <option value="EventsFunction_1">EventsFunction_1</option>
-              <option value="EventsFunction_2">EventsFunction_2</option>
-              <option value="EventsFunction_3">EventsFunction_3</option>
+              <option value="eventsFunction_1">eventsFunction_1</option>
+              <option value="eventsFunction_2">eventsFunction_2</option>
+              <option value="eventsFunction_3">eventsFunction_3</option>
             </select>
           </div>
         </div>
@@ -335,7 +335,7 @@ function EventsFunction_3() {
     let offcanvasBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("offcanvasBody")
     let Placement = getRadio('offcanvasPlacement')
     let eventsType = getRadio("eventsType")
-    let EventsFunctionSelect = selectValue("EventsFunction")
+    let EventsFunctionSelect = selectValue("eventsFunction")
     let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
 
     let x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, eventsType, EventsFunction)
