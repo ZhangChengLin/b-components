@@ -10,8 +10,7 @@
 </p>
 
 <p align="center">
-<a href="https://nodei.co/npm/b-components-js" target="_blank" title="NPM package info"><img src="https://nodei.co/npm/b-components-js.png?downloads=true&downloadRank=true&stars=true&compact=false&mini=false" alt="NPM package info" title="NPM package info"></a>
-<a href="https://nodei.co/npm/b-components-js/" title="NPM package down info"><img src="https://nodei.co/npm-dl/b-components-js.png?months=12&height=2" alt="NPM package down info" title="NPM package down info"></a>
+<a href="https://openbase.com/js/b-components-js" title="Rate on Openbase"><img alt="Rate on Openbase" src="https://badges.openbase.com/js/rating/b-components-js.svg"></a>
 </p>
 
 <p align="center">

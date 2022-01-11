@@ -79,6 +79,7 @@
   },
   "files": [
     "dist/**/*.{js,css,map}",
-    "src/**/*.js"
+    "src/**/*.js",
+    "buildConfig/lifeCycleScripts/**/*.js"
   ]
 }
