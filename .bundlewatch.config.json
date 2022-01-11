@@ -18,7 +18,7 @@
     },
     {
       "path": "./dist/esm/bToast.js",
-      "maxSize": "1.58 kB"
+      "maxSize": "1.51 kB"
     },
     {
       "path": "./dist/esm/bToast.min.js",
@@ -42,7 +42,7 @@
     },
     {
       "path": "./dist/umd/bToast.js",
-      "maxSize": "1.73 kB"
+      "maxSize": "1.67 kB"
     },
     {
       "path": "./dist/umd/bToast.min.js",

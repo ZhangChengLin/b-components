@@ -1,6 +1,6 @@
 /*!
  * Name: b-components-js
- * Version: 0.0.1-alpha.4
+ * Version: 0.0.1-alpha.5
  * Author: ZhangChengLin
  * Email: 469946668@qq.com
  * Description: Generate Bootstrap components through JavaScript

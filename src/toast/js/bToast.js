@@ -16,7 +16,7 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
   const toastId = 'toastId_' + getTimeString()
 
   const _containerOutsize = containerOutside()
-  const _container = document.querySelector('.toast-container') ?? container(Placement)// Todo:尝试让新 toast 的位置可控
+  const _container = document.querySelector('.toast-container') ?? container(Placement)
   const _toast = toast(toastId)
   const _header = header(headerNodeElement)
   const _body = body(bodyNodeElement)
