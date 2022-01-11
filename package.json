@@ -1,6 +1,6 @@
 {
   "name": "b-components-js",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-alpha.7",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
@@ -20,7 +20,7 @@
     "release": "npm-run-all -s lint compile bundlewatch",
     "preinstall": "",
     "install": "",
-    "postinstall": "node buildConfig/lifeCycleScripts/postinstall.js",
+    "postinstall": "",
     "prepublish": "",
     "prepublishOnly": "",
     "publish": "",
