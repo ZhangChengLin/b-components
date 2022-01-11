@@ -57,11 +57,11 @@ Currently, supports bootstrap v5.x
 |       [README](https://ZhangChengLin.github.io/b-components/)        |
 | [DEMO](https://ZhangChengLin.github.io/b-components/docs/index.html) |
 
-|            |                                        README                                        |                                        DEMO                                        |
-|:-----------|:------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|
-| bModal     |     [modal](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)     |     [modal](https://ZhangChengLin.github.io/b-components/docs/demo/modal.html)     |
-| bOffcanvas | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [offcanvas](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html) |
-| bToast     |     [toast](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)     |     [toast](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)     |
+|            |                                     README                                      |                                     DEMO                                      |
+|:-----------|:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|
+| bModal     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/modal.html)   |
+| bOffcanvas | [Link](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html) |
+| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)   |
 
 ---
 

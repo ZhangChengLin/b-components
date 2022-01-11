@@ -1,6 +1,6 @@
 {
   "name": "b-components-js",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
@@ -17,14 +17,7 @@
     "js-lint-fix": "eslint --fix .",
     "lint": "npm-run-all --aggregate-output -p js-lint",
     "lint-fix": "npm-run-all --aggregate-output -p js-lint-fix",
-    "release": "npm-run-all -s lint compile bundlewatch",
-    "preinstall": "",
-    "install": "",
-    "postinstall": "",
-    "prepublish": "",
-    "prepublishOnly": "",
-    "publish": "",
-    "postpublish": ""
+    "release": "npm-run-all -s lint compile bundlewatch"
   },
   "repository": {
     "type": "git",
