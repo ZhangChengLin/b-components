@@ -2,10 +2,25 @@
 
 const open = require('open')
 
-const openDemo = async () => {
-  await open('https://ZhangChengLin.github.io/b-components/docs/index.html?form=npm_postinstall')
+const urls = [
+  'https://ZhangChengLin.github.io/b-components?form=npm_postinstall',
+  'https://ZhangChengLin.github.io/b-components/docs/index.html?form=npm_postinstall'
+]
 
-  console.log('ok')
+/**
+ *
+ * @param {string} url
+ */
+const openUrl = async (url) => {
+  await open(url).then(() => console.log('open ok', url))
 }
 
-module.exports = openDemo()
+/**
+ * @param {string[]} urls
+ */
+const openUrls = (urls) => {
+  urls.forEach(currentURL => openUrl(currentURL))
+  return true
+}
+
+module.exports = openUrls(urls)
