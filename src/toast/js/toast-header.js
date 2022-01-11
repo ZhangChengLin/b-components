@@ -1,28 +1,28 @@
-import {isNull, isEmpty, bsDismissBtn} from "../../util/index"
+import {isNull, isEmpty, bsDismissBtn} from './util/index'
 
 /**
  * @param {Node|String|Function} headerNodeElement
  */
-const toastHeader = (headerNodeElement) => {
+const header = (headerNodeElement) => {
   if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
     return ''
   }
 
-  const header = document.createElement('div')
-  const title = document.createElement('h5')
+  const _header = document.createElement('div')
+  const _title = document.createElement('strong')
 
-  header.className = 'toast-header'
+  _header.className = 'toast-header'
 
-  title.className = 'toast-title'
-  title.id = 'toastTitleLabel'
+  _title.className = 'toast-title me-auto'
   headerNodeElement instanceof Function
-    ? title.append(headerNodeElement())
+    ? _title.append(headerNodeElement())
     : headerNodeElement instanceof HTMLElement
-      ? title.append(headerNodeElement)
-      : title.innerHTML = headerNodeElement
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement
 
-  header.append(title, bsDismissBtn('toast'))
-  return header
+  _header.append(_title, bsDismissBtn('toast'))
+
+  return _header
 }
 
-export default toastHeader
+export default header

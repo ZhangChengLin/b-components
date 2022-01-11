@@ -6,13 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <link rel="icon" href="../static/img/favicons/favicon.ico">
-  <link rel="stylesheet" href="../static/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github-dark-dimmed.min.css">
   <title>Offcanvas demo</title>
   <meta name="description"
         content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
   <meta name="keywords"
         content="Bootstrap,Bootstrap5,Offcanvas,dynamic,backdrop,keyboard,scroll,getInstance,getOrCreateInstance,show.bs.offcanvas,shown.bs.offcanvas,hide.bs.offcanvas,hidden.bs.offcanvas">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement('script')
+      hm.src = 'https://hm.baidu.com/hm.js?097448a07faa6124412179f6c9bfc688'
+      var s = document.getElementsByTagName('script')[0]
+      s.parentNode.insertBefore(hm, s)
+    })()
+  </script>
   <script>
     function close_all_offcanvas() {
       let all_offcanvas = document.querySelectorAll('.offcanvas');
@@ -214,18 +223,19 @@
             <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
           </div>
           <div class="input-group">
-            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
-            <select class="form-select" id="EventsFunction">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="eventsFunction">Functions</label>
+            <select class="form-select" id="eventsFunction">
               <option value="" disabled selected>Choose...</option>
-              <option value="EventsFunction_1">EventsFunction_1</option>
-              <option value="EventsFunction_2">EventsFunction_2</option>
-              <option value="EventsFunction_3">EventsFunction_3</option>
+              <option value="eventsFunction_1">eventsFunction_1</option>
+              <option value="eventsFunction_2">eventsFunction_2</option>
+              <option value="eventsFunction_3">eventsFunction_3</option>
             </select>
           </div>
         </div>
       </div>
     </div>
     <button class="my-4 mx-auto d-block btn btn-outline-primary bg-gradient" type="button" id="renderOffcanvas">Render Offcanvas effect</button>
+    <span class="d-block text-center small text-muted">hot key "Enter"</span>
   </div>
 </div>
 <div class="min-vh-100 bg-black bg-opacity-50">
@@ -292,36 +302,38 @@ function EventsFunction_3() {
   <div class="position-relative min-vh-100">
     <div class="position-absolute top-50 start-50 translate-middle">
       <div class="mx-auto position-relative" style="width: 50vw;height: 30vh;">
-        <div class="position-absolute top-0 start-50 translate-middle">
-          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_top" data-offcanvas-placement="top">top</button>
+        <div class="position-absolute top-0 start-50 translate-middle-x">
+          <button class="btn btn-primary bg-gradient" type="button" id="offcanvas_top" data-offcanvas-placement="top">top</button>
         </div>
-        <div class="position-absolute top-50 start-0 translate-middle">
-          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_start" data-offcanvas-placement="start">start</button>
+        <div class="position-absolute top-50 start-0 translate-middle-y">
+          <button class="btn btn-primary bg-gradient" type="button" id="offcanvas_start" data-offcanvas-placement="start">start</button>
         </div>
         <div class="position-absolute top-50 start-50 translate-middle">Offcanvas</div>
-        <div class="position-absolute top-50 start-100 translate-middle">
-          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_end" data-offcanvas-placement="end">end</button>
+        <div class="position-absolute top-50 end-0 translate-middle-y">
+          <button class="btn btn-primary bg-gradient" type="button" id="offcanvas_end" data-offcanvas-placement="end">end</button>
         </div>
-        <div class="position-absolute top-100 start-50 translate-middle">
-          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">bottom</button>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x">
+          <button class="btn btn-primary bg-gradient" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">bottom</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<script src="../static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../dist/umd/bOffcanvas.min.js"></script>
 <script src="../static/js/index.js"></script>
 <script src="../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
-<script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+<script>hljs.highlightAll()</script>
 <script>
-  functionSwitch("headerFunction");
-  functionSwitch("bodyFunction");
+  functionSwitch("headerFunction")
+  functionSwitch("bodyFunction")
 
-  let render = document.querySelector('#renderOffcanvas')
-  render.addEventListener('click', () => {
+  document.querySelector('#renderOffcanvas').addEventListener('click', renderResult)
+  enterRender()
+
+  function renderResult() {
     let Options = {
       backdrop: getRadio('offcanvasBackdrop'),
       keyboard: getRadio('offcanvasKeyboard'),
@@ -332,12 +344,12 @@ function EventsFunction_3() {
     let offcanvasBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("offcanvasBody")
     let Placement = getRadio('offcanvasPlacement')
     let eventsType = getRadio("eventsType")
-    let EventsFunctionSelect = selectValue("EventsFunction")
+    let EventsFunctionSelect = selectValue("eventsFunction")
     let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
 
     let x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, eventsType, EventsFunction)
-    console.log('The return value of the current Offcanvas', x);
-  })
+    console.log('The return value of the current Offcanvas', x)
+  }
 </script>
 <script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")

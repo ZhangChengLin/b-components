@@ -1,8 +1,10 @@
+'use strict'
+
 const pkg = require('../package.json')
 const year = new Date().getFullYear()
 
 const Banner = () =>
-`/*!
+  `/*!
  * Name: ${pkg.name}
  * Version: ${pkg.version}
  * Author: ${pkg.author.name}
@@ -14,4 +16,4 @@ const Banner = () =>
  * GitHub: ${pkg.github}
 */`
 
-export default Banner
+module.exports = Banner

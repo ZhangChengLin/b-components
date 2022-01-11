@@ -1,6 +1,10 @@
-import {getTimeString} from "../../util/index"
-import modal from "./modal"
-import {removeModal, modalEvents} from "./util/index"
+import modal from './modal'
+import dialog from './modal-dialog'
+import content from './modal-content'
+import header from './modal-header'
+import body from './modal-body'
+import footer from './modal-footer'
+import {removeModal, modalEvents, getTimeString} from './util/index'
 
 /**
  * @param {Node|String|Function} headerNodeElement
@@ -16,10 +20,19 @@ import {removeModal, modalEvents} from "./util/index"
 const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
   const modalId = 'modalId_' + getTimeString()
 
-  const _modal = modal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, modalId)
+  const _modal = modal(modalId)
+  const _dialog = dialog(ModalSizes, VerticallyCentered, ScrollingLongContent)
+  const _content = content()
+  const _header = header(headerNodeElement)
+  const _body = body(bodyNodeElement)
+  const _footer = footer(footerNodeElement)
+
+  _content.append(_header, _body, _footer)
+  _dialog.append(_content)
+  _modal.append(_dialog)
   document.body.append(_modal)
 
-  EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : ""
+  EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : ''
 
   const xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
   xxx.show()

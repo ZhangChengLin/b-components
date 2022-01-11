@@ -40,14 +40,14 @@ function returnHTML_Element() {
   return html
 }
 
-function EventsFunction_1() {
-  alert('EventsFunction_1')
+function eventsFunction_1() {
+  alert('eventsFunction_1')
 }
 
-function EventsFunction_2() {
-  alert('EventsFunction_2')
+function eventsFunction_2() {
+  alert('eventsFunction_2')
 }
 
-function EventsFunction_3() {
-  console.log('EventsFunction_3')
+function eventsFunction_3() {
+  console.log('eventsFunction_3')
 }

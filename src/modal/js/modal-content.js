@@ -1,24 +1,9 @@
-import modalHeader from "./modal-header"
-import modalBody from "./modal-body"
-import modalFooter from "./modal-footer"
+const content = () => {
+  const _content = document.createElement('div')
 
-/**
- * @param {Node|String|Function} headerNodeElement
- * @param {Node|String|Function} bodyNodeElement
- * @param {Node|String|Function} footerNodeElement
- */
-const modalContent = (headerNodeElement, bodyNodeElement, footerNodeElement) => {
-  const content = document.createElement("div")
+  _content.className = 'modal-content'
 
-  content.className = "modal-content"
-
-  content.append(
-    modalHeader(headerNodeElement),
-    modalBody(bodyNodeElement),
-    modalFooter(footerNodeElement)
-  )
-
-  return content
+  return _content
 }
 
-export default modalContent
+export default content

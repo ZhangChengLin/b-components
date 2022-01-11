@@ -1,28 +1,29 @@
-import {isNull, isEmpty, bsDismissBtn} from "../../util/index"
+import {isNull, isEmpty, bsDismissBtn} from './util/index'
 
 /**
  * @param {Node|String|Function} headerNodeElement
  */
-const modalHeader = (headerNodeElement) => {
+const header = (headerNodeElement) => {
   if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
     return ''
   }
 
-  const header = document.createElement('div')
-  const title = document.createElement('h5')
+  const _header = document.createElement('div')
+  const _title = document.createElement('h5')
 
-  header.className = 'modal-header'
+  _header.className = 'modal-header'
 
-  title.className = 'modal-title'
-  title.id = 'modalTitleLabel'
+  _title.className = 'modal-title'
+  _title.id = 'modalTitleLabel'
   headerNodeElement instanceof Function
-    ? title.append(headerNodeElement())
+    ? _title.append(headerNodeElement())
     : headerNodeElement instanceof HTMLElement
-      ? title.append(headerNodeElement)
-      : title.innerHTML = headerNodeElement
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement
 
-  header.append(title, bsDismissBtn('modal'))
-  return header
+  _header.append(_title, bsDismissBtn('modal'))
+
+  return _header
 }
 
-export default modalHeader
+export default header

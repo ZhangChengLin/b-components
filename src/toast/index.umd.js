@@ -1,1 +1,1 @@
-export {default} from "./js/bToast"
+export {default} from './js/bToast'

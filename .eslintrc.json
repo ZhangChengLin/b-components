@@ -14,6 +14,11 @@
     "max-params": "off",
     "object-shorthand": "off",
     "no-console": "error",
+    "no-warning-comments": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
     "semi": [
       "error",
       "never"

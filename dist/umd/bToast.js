@@ -1,6 +1,6 @@
 /*!
  * Name: b-components-js
- * Version: 0.0.1-alpha.4
+ * Version: 0.0.1-alpha.5
  * Author: ZhangChengLin
  * Email: 469946668@qq.com
  * Description: Generate Bootstrap components through JavaScript
@@ -15,72 +15,11 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bToast = factory());
 })(this, (function () { 'use strict';
 
-  const isNull = value => value === null;
-  const isEmpty = value => typeof value === "string" && value === '';
-
-  const bsDismissBtn = DismissType => {
-    const btn = document.createElement('button');
-
-    btn.className = 'btn-close';
-    btn.type = 'button';
-    btn.dataset.bsDismiss = DismissType;
-    btn.ariaLabel = 'Close';
-
-    return btn
-  };
-
-  const getTimeString = () => Date.now().toString();
-
   /**
-   * @param {Node|String|Function} headerNodeElement
-   */
-  const toastHeader = (headerNodeElement) => {
-    if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
-      return ''
-    }
-
-    const header = document.createElement('div');
-    const title = document.createElement('h5');
-
-    header.className = 'toast-header';
-
-    title.className = 'toast-title';
-    title.id = 'toastTitleLabel';
-    headerNodeElement instanceof Function
-      ? title.append(headerNodeElement())
-      : headerNodeElement instanceof HTMLElement
-        ? title.append(headerNodeElement)
-        : title.innerHTML = headerNodeElement;
-
-    header.append(title, bsDismissBtn('toast'));
-    return header
-  };
-
-  /**
-   * @param {Node|String|Function} bodyNodeElement
-   */
-  const toastBody = (bodyNodeElement) => {
-    const body = document.createElement('div');
-
-    body.className = 'toast-body';
-    bodyNodeElement instanceof Function
-      ? body.append(bodyNodeElement())
-      : bodyNodeElement instanceof HTMLElement
-        ? body.append(bodyNodeElement)
-        : body.innerHTML = bodyNodeElement;
-
-    return body
-  };
-
-  /**
-   * @param {Node|String|Function} headerNodeElement
-   * @param {Node|String|Function} bodyNodeElement
    * @param {String} toastId
    */
-  const toast = (headerNodeElement, bodyNodeElement, toastId) => {
+  const toast = (toastId) => {
     const _toast = document.createElement('div');
-    const header = toastHeader(headerNodeElement);
-    const body = toastBody(bodyNodeElement);
 
     _toast.className = 'toast';
     _toast.id = toastId;
@@ -88,12 +27,10 @@
     _toast.ariaLive = 'assertive';
     _toast.ariaAtomic = 'true';
 
-    _toast.append(header, body);
-
     return _toast
   };
 
-  const toastContainerOutside = (ariaLive) => {
+  const containerOutside = (ariaLive) => {
     const containerOutside = document.createElement('div');
 
     containerOutside.className = 'position-relative';
@@ -106,7 +43,7 @@
   /**
    * @param {String} Placement
    */
-  const toastContainer = (Placement) => {
+  const container = (Placement) => {
     const container = document.createElement('div');
 
     Placement = Placement ?? 'be';
@@ -147,6 +84,22 @@
     return container
   };
 
+  const isNull = value => value === null;
+  const isEmpty = value => typeof value === 'string' && value === '';
+
+  const bsDismissBtn = (dismissType, whiteVariant = false) => {
+    const btn = document.createElement('button');
+
+    btn.className = whiteVariant ? 'btn-close btn-close-white' : 'btn-close';
+    btn.type = 'button';
+    btn.dataset.bsDismiss = dismissType;
+    btn.ariaLabel = 'Close';
+
+    return btn
+  };
+
+  const getTimeString = () => Date.now().toString();
+
   /**
    * @param {HTMLElement} _toast
    * @param {String} eventsType
@@ -154,17 +107,17 @@
    */
   const toastEvents = (_toast, eventsType, eventsFun) => {
     switch (eventsType) {
-      case "show":
-        _toast.addEventListener("show.bs.toast", () => eventsFun());
+      case 'show':
+        _toast.addEventListener('show.bs.toast', () => eventsFun());
         break
-      case "shown":
-        _toast.addEventListener("shown.bs.toast", () => eventsFun());
+      case 'shown':
+        _toast.addEventListener('shown.bs.toast', () => eventsFun());
         break
-      case "hide":
-        _toast.addEventListener("hide.bs.toast", () => eventsFun());
+      case 'hide':
+        _toast.addEventListener('hide.bs.toast', () => eventsFun());
         break
-      case "hidden":
-        _toast.addEventListener("hidden.bs.toast", () => eventsFun());
+      case 'hidden':
+        _toast.addEventListener('hidden.bs.toast', () => eventsFun());
         break
       default:
         throw 'eventsType error'
@@ -175,13 +128,54 @@
    * @param {HTMLElement} _toast
    */
   const removeToast = _toast => {
-    _toast.addEventListener("hidden.bs.toast", () => {
+    _toast.addEventListener('hidden.bs.toast', () => {
       const x = bootstrap.Toast.getInstance(_toast);
       x.dispose();
       setTimeout(() => {
         _toast.remove();
       }, 3e3);
     });
+  };
+
+  /**
+   * @param {Node|String|Function} headerNodeElement
+   */
+  const header = (headerNodeElement) => {
+    if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
+      return ''
+    }
+
+    const _header = document.createElement('div');
+    const _title = document.createElement('strong');
+
+    _header.className = 'toast-header';
+
+    _title.className = 'toast-title me-auto';
+    headerNodeElement instanceof Function
+      ? _title.append(headerNodeElement())
+      : headerNodeElement instanceof HTMLElement
+        ? _title.append(headerNodeElement)
+        : _title.innerHTML = headerNodeElement;
+
+    _header.append(_title, bsDismissBtn('toast'));
+
+    return _header
+  };
+
+  /**
+   * @param {Node|String|Function} bodyNodeElement
+   */
+  const body = (bodyNodeElement) => {
+    const _body = document.createElement('div');
+
+    _body.className = 'toast-body';
+    bodyNodeElement instanceof Function
+      ? _body.append(bodyNodeElement())
+      : bodyNodeElement instanceof HTMLElement
+        ? _body.append(bodyNodeElement)
+        : _body.innerHTML = bodyNodeElement;
+
+    return _body
   };
 
   /**
@@ -195,10 +189,13 @@
   const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
     const toastId = 'toastId_' + getTimeString();
 
-    const _containerOutsize = toastContainerOutside();
-    const _container = toastContainer(Placement);
-    const _toast = toast(headerNodeElement, bodyNodeElement, toastId);
+    const _containerOutsize = containerOutside();
+    const _container = document.querySelector('.toast-container') ?? container(Placement);
+    const _toast = toast(toastId);
+    const _header = header(headerNodeElement);
+    const _body = body(bodyNodeElement);
 
+    _toast.append(_header, _body);
     _container.append(_toast);
     _containerOutsize.append(_container);
     document.body.append(_containerOutsize);
