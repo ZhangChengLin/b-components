@@ -19,7 +19,7 @@ const inputOptions = [paths.src + `${BsNAME}/index.${ESM ? 'esm' : 'umd'}.js`]
 const outputOptions = [
   {
     banner,
-    file: paths.dist + `${ESM ? 'esm' : 'umd'}/${PREFIX}${toUpperCase(BsNAME)}.js`,
+    file: paths.dist + `${PREFIX}${toUpperCase(BsNAME)}${ESM ? '.esm' : ''}.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     plugins: [
@@ -29,7 +29,7 @@ const outputOptions = [
   },
   {
     banner,
-    file: paths.dist + `${ESM ? 'esm' : 'umd'}/${PREFIX}${toUpperCase(BsNAME)}.min.js`,
+    file: paths.dist + `${PREFIX}${toUpperCase(BsNAME)}${ESM ? '.esm' : ''}.min.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     plugins: [

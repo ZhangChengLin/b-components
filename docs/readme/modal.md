@@ -21,7 +21,7 @@
 ```
 <a href="javascript:;" onclick="bModal(parameter)">text</a>
 
-<script src="./dist/umd/bModal.min.js"></script>
+<script src="./dist/bModal.min.js"></script>
 ```
 
 OR
@@ -29,7 +29,7 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="./dist/umd/bModal.min.js"></script>
+<script src="./dist/bModal.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {

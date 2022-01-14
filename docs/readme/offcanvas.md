@@ -20,7 +20,7 @@
 ```
 <a href="javascript:;" onclick="bOffcanvas(parameter)">text</a>
 
-<script src="./dist/umd/bOffcanvas.min.js"></script>
+<script src="./dist/bOffcanvas.min.js"></script>
 ```
 
 OR
@@ -28,7 +28,7 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="./dist/umd/bOffcanvas.min.js"></script>
+<script src="./dist/bOffcanvas.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
