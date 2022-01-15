@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html)
+[https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html](https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html)
 
 ---
 
