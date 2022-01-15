@@ -61,7 +61,7 @@ Currently, supports bootstrap v5.x
 |:-----------|:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-----------:|
 | bModal     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/modal.html)   |    todo     |
 | bOffcanvas | [Link](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html) |    todo     |
-| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)   | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/esmumd/toast.html)  |    todo     |
+| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html)   |    todo     |
 
 ---
 
