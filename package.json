@@ -7,6 +7,8 @@
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "compile": "npm-run-all --aggregate-output -p js-compile",
     "js-compile": "npm-run-all --aggregate-output -p js-compile-*",
+    "js-compile-index": "rollup --environment BsNAME:components --config buildConfig/rollup.config.js",
+    "js-compile-index-esm": "rollup --environment BsNAME:components,ESM:true --config buildConfig/rollup.config.js",
     "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
     "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
     "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
