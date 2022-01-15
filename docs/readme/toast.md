@@ -21,7 +21,7 @@
 ```
 <a href="javascript:;" onclick="bToast(parameter)">text</a>
 
-<script src="./dist/umd/bToast.min.js"></script>
+<script src="./dist/bToast.min.js"></script>
 ```
 
 OR
@@ -29,7 +29,7 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="./dist/umd/bToast.min.js"></script>
+<script src="./dist/bToast.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
