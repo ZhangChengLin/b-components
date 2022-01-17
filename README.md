@@ -77,7 +77,8 @@ npm i b-components-js --save
 
 ## CDN
 
-- **[jsDelivr](https://www.jsdelivr.com/package/npm/b-components-js)**
+- **[jsDelivr NPM](https://www.jsdelivr.com/package/npm/b-components-js)**
+- **[jsDelivr GitHub](https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components)**
 
 ```javascript
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
