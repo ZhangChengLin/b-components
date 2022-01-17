@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html](https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html)
+[docs/demo/umd/toast.html](https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html)
 
 
 ---
