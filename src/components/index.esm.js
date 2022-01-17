@@ -1,3 +1,5 @@
-export {bModal} from '../../src/modal/index.esm'
-export {bOffcanvas} from '../../src/offcanvas/index.esm'
-export {bToast} from '../../src/toast/index.esm'
+import bModal from '../../src/modal/js/bModal'
+import bOffcanvas from '../../src/offcanvas/js/bOffcanvas'
+import bToast from '../../src/toast/js/bToast'
+
+export {bModal, bOffcanvas, bToast}

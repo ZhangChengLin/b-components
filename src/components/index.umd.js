@@ -1,3 +1,5 @@
-export {default as bModal} from '../../src/modal/index.umd'
-export {default as bOffcanvas} from '../../src/offcanvas/index.umd'
-export {default as bToast} from '../../src/toast/index.umd'
+import bModal from '../../src/modal/js/bModal'
+import bOffcanvas from '../../src/offcanvas/js/bOffcanvas'
+import bToast from '../../src/toast/js/bToast'
+
+export {bModal, bOffcanvas, bToast}
