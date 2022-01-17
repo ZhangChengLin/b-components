@@ -33,21 +33,21 @@ OR
 
 <script src="./dist/bModal.min.js"></script>
 <script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bModal(parameter)
-    })
+  const xx = document.querySelector("#xx");
+  xx.addEventListener("click", function () {
+  bModal(parameter)
+})
 </script>
 ```
 
 OR MORE
 
-
 ## Parameter Description
 
 ```javascript
 <script>
-  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,
+  Options, EventsType, EventsFunction)
 </script>
 ```
 
@@ -58,7 +58,6 @@ OR MORE
 | String | modalId_1552756356601 | "modalId_" starts with a 13-digit timestamp |
 
 ---
-
 
 | Order |       Argument       |                Type                |                        Default                         |                                                           Alternative                                                            |                                                                  Description                                                                  |
 |:-----:|:--------------------:|:----------------------------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|

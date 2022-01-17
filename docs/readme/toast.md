@@ -33,10 +33,10 @@ OR
 
 <script src="./dist/bToast.min.js"></script>
 <script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bToast(parameter)
-    })
+  const xx = document.querySelector("#xx");
+  xx.addEventListener("click", function () {
+  bToast(parameter)
+})
 </script>
 ```
 
@@ -46,7 +46,8 @@ OR MORE
 
 ```javascript
 <script>
-  bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+  bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,
+  Options, EventsType, EventsFunction)
 </script>
 ```
 
@@ -66,3 +67,5 @@ OR MORE
 |   4   |      Options      |               Object               |   {}    |                                                                                         animation : true,<br/>autohide : true,<br/>delay : 5000                                                                                          |  https://getbootstrap.com/docs/5.1/components/toasts/#options  |
 |   5   |    eventsType     |               String               |  None   |                                                                                           "show" &#124; "shown" &#124; "hide" &#124; "hidden"                                                                                            |  https://getbootstrap.com/docs/5.1/components/toasts/#events   |
 |   6   |     eventsFun     |              Function              |  None   |                                                                                                                   None                                                                                                                   |  https://getbootstrap.com/docs/5.1/components/toasts/#events   |
+
+---

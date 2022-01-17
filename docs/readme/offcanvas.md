@@ -32,10 +32,10 @@ OR
 
 <script src="./dist/bOffcanvas.min.js"></script>
 <script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bOffcanvas(parameter)
-    })
+  const xx = document.querySelector("#xx");
+  xx.addEventListener("click", function () {
+  bOffcanvas(parameter)
+})
 </script>
 ```
 
