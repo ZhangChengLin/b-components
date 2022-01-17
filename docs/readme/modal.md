@@ -46,8 +46,7 @@ OR MORE
 
 ```javascript
 <script>
-  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,
-  Options, EventsType, EventsFunction)
+  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,Options, EventsType, EventsFunction)
 </script>
 ```
 

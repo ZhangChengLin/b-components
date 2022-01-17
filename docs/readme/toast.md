@@ -46,8 +46,7 @@ OR MORE
 
 ```javascript
 <script>
-  bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,
-  Options, EventsType, EventsFunction)
+  bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,Options, EventsType, EventsFunction)
 </script>
 ```
 
