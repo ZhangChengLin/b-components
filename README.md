@@ -57,11 +57,11 @@ Currently, supports bootstrap v5.x
 |       [README](https://ZhangChengLin.github.io/b-components/)        |
 | [DEMO](https://ZhangChengLin.github.io/b-components/docs/index.html) |
 
-|            |                                     README                                      |                                    DEMO (umd)                                     |
-|:-----------|:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|
-| bModal     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/modal.html)   |
-| bOffcanvas | [Link](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html) |
-| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)   | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/esmumd/toast.html)  |
+|            |                                     README                                      |                                    DEMO (umd)                                     | DEMO (esm)  |
+|:-----------|:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-----------:|
+| bModal     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/modal.html)   |    todo     |
+| bOffcanvas | [Link](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html) |    todo     |
+| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html)   |    todo     |
 
 ---
 
@@ -77,9 +77,10 @@ npm i b-components-js --save
 
 ## CDN
 
-- **[jsDelivr](https://www.jsdelivr.com/package/npm/b-components-js)**
+- **[jsDelivr NPM](https://www.jsdelivr.com/package/npm/b-components-js)**
+- **[jsDelivr GitHub](https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components)**
 
-```
+```javascript
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bToast.min.js"></script>
@@ -91,27 +92,27 @@ npm i b-components-js --save
 
 - Get the files published by the GitHub repository through jsDelivr
 
-```
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bModal.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bOffcanvas.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bToast.min.js"></script>
+```javascript
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bModal.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bOffcanvas.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bToast.min.js"></script>
 
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bModal.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bOffcanvas.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bToast.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bModal.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bOffcanvas.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bToast.esm.min.js"></script>
 ```
 
 - View all versions
 
-```
-https://cdn.jsdelivr.net/npm/b-components-js/
-```
+[https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
+
+[https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/)
 
 - **[UNPKG](https://unpkg.com/browse/b-components-js/)**
 
 `After the browser parses, get the latest version address`
 
-```
+```javascript
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bModal.min.js"></script>
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bToast.min.js"></script>
@@ -123,9 +124,7 @@ https://cdn.jsdelivr.net/npm/b-components-js/
 
 - View all versions
 
-```
-https://unpkg.com/browse/b-components-js/
-```
+[https://unpkg.com/browse/b-components-js/](https://unpkg.com/browse/b-components-js/)
 
 ---
 
@@ -145,3 +144,4 @@ https://unpkg.com/browse/b-components-js/
 
 under the MIT License (license terms are at https://opensource.org/licenses/MIT).
 
+---

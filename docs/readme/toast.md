@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components/docs/demo/toast.html](https://ZhangChengLin.github.io/b-components/docs/demo/toast.html)
+[docs/demo/umd/toast.html](https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html)
 
 
 ---
@@ -16,9 +16,11 @@
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
+---
+
 ## How to use
 
-```
+```javascript
 <a href="javascript:;" onclick="bToast(parameter)">text</a>
 
 <script src="./dist/bToast.min.js"></script>
@@ -26,25 +28,26 @@
 
 OR
 
-```
+```javascript
 <a href="javascript:;" id="xx">text</a>
 
 <script src="./dist/bToast.min.js"></script>
 <script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bToast(parameter);
-    })
+  const xx = document.querySelector("#xx");
+  xx.addEventListener("click", function () {
+  bToast(parameter)
+})
 </script>
 ```
 
 OR MORE
 
-
 ## Parameter Description
 
-```
-bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+```javascript
+<script>
+  bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,Options, EventsType, EventsFunction)
+</script>
 ```
 
 **Return Values**
@@ -63,3 +66,5 @@ bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, Vertic
 |   4   |      Options      |               Object               |   {}    |                                                                                         animation : true,<br/>autohide : true,<br/>delay : 5000                                                                                          |  https://getbootstrap.com/docs/5.1/components/toasts/#options  |
 |   5   |    eventsType     |               String               |  None   |                                                                                           "show" &#124; "shown" &#124; "hide" &#124; "hidden"                                                                                            |  https://getbootstrap.com/docs/5.1/components/toasts/#events   |
 |   6   |     eventsFun     |              Function              |  None   |                                                                                                                   None                                                                                                                   |  https://getbootstrap.com/docs/5.1/components/toasts/#events   |
+
+---

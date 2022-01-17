@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components/docs/demo/modal.html](https://ZhangChengLin.github.io/b-components/docs/demo/modal.html)
+[docs/demo/umd/modal.html](https://ZhangChengLin.github.io/b-components/docs/demo/umd/modal.html)
 
 
 ---
@@ -16,9 +16,11 @@
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
+---
+
 ## How to use
 
-```
+```javascript
 <a href="javascript:;" onclick="bModal(parameter)">text</a>
 
 <script src="./dist/bModal.min.js"></script>
@@ -26,25 +28,26 @@
 
 OR
 
-```
+```javascript
 <a href="javascript:;" id="xx">text</a>
 
 <script src="./dist/bModal.min.js"></script>
 <script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bModal(parameter);
-    })
+  const xx = document.querySelector("#xx");
+  xx.addEventListener("click", function () {
+  bModal(parameter)
+})
 </script>
 ```
 
 OR MORE
 
-
 ## Parameter Description
 
-```
-bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+```javascript
+<script>
+  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,Options, EventsType, EventsFunction)
+</script>
 ```
 
 **Return Values**
@@ -54,7 +57,6 @@ bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, Vertic
 | String | modalId_1552756356601 | "modalId_" starts with a 13-digit timestamp |
 
 ---
-
 
 | Order |       Argument       |                Type                |                        Default                         |                                                           Alternative                                                            |                                                                  Description                                                                  |
 |:-----:|:--------------------:|:----------------------------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|

@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html](https://ZhangChengLin.github.io/b-components/docs/demo/offcanvas.html)
+[docs/demo/umd/offcanvas.html](https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html)
 
 ---
 
@@ -15,9 +15,11 @@
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
+---
+
 ## How to use
 
-```
+```javascript
 <a href="javascript:;" onclick="bOffcanvas(parameter)">text</a>
 
 <script src="./dist/bOffcanvas.min.js"></script>
@@ -25,15 +27,15 @@
 
 OR
 
-```
+```javascript
 <a href="javascript:;" id="xx">text</a>
 
 <script src="./dist/bOffcanvas.min.js"></script>
 <script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bOffcanvas(parameter);
-    })
+  const xx = document.querySelector("#xx");
+  xx.addEventListener("click", function () {
+  bOffcanvas(parameter)
+})
 </script>
 ```
 
@@ -44,10 +46,11 @@ OR MORE
 
 ## Parameter Description
 
+```javascript
+<script>
+  bOffcanvas(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction)
+</script>
 ```
-bOffcanvas(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction)
-```
-
 
 **Return Values**
 
@@ -56,7 +59,6 @@ bOffcanvas(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, E
 | String | offcanvasId_1552756356601 | "offcanvasId_" starts with a 13-digit timestamp |
 
 ---
-
 
 | Order |     Argument      |                Type                | Default |                       Alternative                        |                            Description                            |
 |:-----:|:-----------------:|:----------------------------------:|:-------:|:--------------------------------------------------------:|:-----------------------------------------------------------------:|

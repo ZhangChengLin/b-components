@@ -54,30 +54,11 @@ function getNumberValue(name) {
   return Number(element.value)
 }
 
-function enterRender() {
-  document.body.addEventListener('keyup', (e) => {
-    if (e.code === 'Enter' || e.code === 'NumpadEnter') {
-      e.preventDefault()
-      renderResult()
-    }
-  })
-}
-
-/**
- * @param {string} srcFile markdownString File
- * @param {Element} el parse result container
- */
-function markdownFileParser(srcFile, el) {
-  const markedOpts = {
-    gfm: true,
-  }
-  const request = new XMLHttpRequest()
-  request.open('get', srcFile)
-  request.send(null)
-  request.responseType = 'text'
-  request.onload = () => {
-    if (request.status === 200) {
-      el.innerHTML = marked.parse(request.responseText, markedOpts)
-    }
-  }
+export {
+  functionSwitch,
+  getRadio,
+  checkboxStatus,
+  selectFunctionValue,
+  selectValue,
+  getNumberValue,
 }
