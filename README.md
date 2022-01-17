@@ -105,7 +105,7 @@ npm i b-components-js --save
 
 [https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
 
-[https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/)
+[https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/)
 
 - **[UNPKG](https://unpkg.com/browse/b-components-js/)**
 
