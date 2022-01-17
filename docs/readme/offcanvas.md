@@ -15,6 +15,8 @@
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
+---
+
 ## How to use
 
 ```
@@ -48,7 +50,6 @@ OR MORE
 bOffcanvas(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction)
 ```
 
-
 **Return Values**
 
 |  type  |          such as          |                   Description                   |
@@ -56,7 +57,6 @@ bOffcanvas(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, E
 | String | offcanvasId_1552756356601 | "offcanvasId_" starts with a 13-digit timestamp |
 
 ---
-
 
 | Order |     Argument      |                Type                | Default |                       Alternative                        |                            Description                            |
 |:-----:|:-----------------:|:----------------------------------:|:-------:|:--------------------------------------------------------:|:-----------------------------------------------------------------:|

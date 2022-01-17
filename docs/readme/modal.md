@@ -16,6 +16,8 @@
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
+---
+
 ## How to use
 
 ```

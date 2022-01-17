@@ -16,6 +16,8 @@
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
+---
+
 ## How to use
 
 ```
@@ -39,7 +41,6 @@ OR
 ```
 
 OR MORE
-
 
 ## Parameter Description
 

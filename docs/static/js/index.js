@@ -1,13 +1,13 @@
 function functionSwitch(id) {
-  let switchEl = document.querySelector("#" + id + "Switch")
-  let select = document.querySelector("#" + id + "Select")
-  switchEl.addEventListener("click", function () {
-    select.parentElement.classList.toggle("d-none")
+  let switchEl = document.querySelector('#' + id + 'Switch')
+  let select = document.querySelector('#' + id + 'Select')
+  switchEl.addEventListener('click', function () {
+    select.parentElement.classList.toggle('d-none')
   })
 }
 
 function getRadio(name) {
-  let radio = document.querySelectorAll("[name='" + name + "']")
+  let radio = document.querySelectorAll('[name=\'' + name + '\']')
   let radioValue
   let returnValue
 
@@ -34,22 +34,22 @@ function getRadio(name) {
 }
 
 function checkboxStatus(id) {
-  const checkbox = document.querySelector("#" + id + "Switch")
+  const checkbox = document.querySelector('#' + id + 'Switch')
   return checkbox.checked ?? false
 }
 
 function selectFunctionValue(id) {
-  const fun_name = document.querySelector("#" + id + "Select").value
+  const fun_name = document.querySelector('#' + id + 'Select').value
   return eval(fun_name)
 }
 
 function selectValue(id) {
-  const option = document.querySelector("#" + id)
+  const option = document.querySelector('#' + id)
   return option.value
 }
 
 function getNumberValue(name) {
-  let element = document.querySelector("[name='" + name + "']")
+  let element = document.querySelector('[name=\'' + name + '\']')
 
   return Number(element.value)
 }
@@ -61,4 +61,23 @@ function enterRender() {
       renderResult()
     }
   })
+}
+
+/**
+ * @param {string} srcFile markdownString File
+ * @param {Element} el parse result container
+ */
+function markdownFileParser(srcFile, el) {
+  const markedOpts = {
+    gfm: true,
+  }
+  const request = new XMLHttpRequest()
+  request.open('get', srcFile)
+  request.send(null)
+  request.responseType = 'text'
+  request.onload = () => {
+    if (request.status === 200) {
+      el.innerHTML = marked.parse(request.responseText, markedOpts)
+    }
+  }
 }
