@@ -1,3 +1,1 @@
-import bModal from '../../src/modal/js/bModal'
-
-export {bModal}
+export {default as bModal} from '../../src/modal/js/bModal'

@@ -1,3 +1,1 @@
-import bToast from '../../src/toast/js/bToast'
-
-export {bToast}
+export {default as bToast} from '../../src/toast/js/bToast'

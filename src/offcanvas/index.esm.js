@@ -1,3 +1,1 @@
-import bOffcanvas from '../../src/offcanvas/js/bOffcanvas'
-
-export {bOffcanvas}
+export {default as bOffcanvas} from '../../src/offcanvas/js/bOffcanvas'
