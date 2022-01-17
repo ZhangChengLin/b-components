@@ -105,6 +105,8 @@ npm i b-components-js --save
 
 [https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
 
+[https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/)
+
 - **[UNPKG](https://unpkg.com/browse/b-components-js/)**
 
 `After the browser parses, get the latest version address`
