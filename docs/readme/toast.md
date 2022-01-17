@@ -20,7 +20,7 @@
 
 ## How to use
 
-```
+```javascript
 <a href="javascript:;" onclick="bToast(parameter)">text</a>
 
 <script src="./dist/bToast.min.js"></script>
@@ -28,14 +28,14 @@
 
 OR
 
-```
+```javascript
 <a href="javascript:;" id="xx">text</a>
 
 <script src="./dist/bToast.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
-        bToast(parameter);
+        bToast(parameter)
     })
 </script>
 ```
@@ -44,8 +44,10 @@ OR MORE
 
 ## Parameter Description
 
-```
-bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+```javascript
+<script>
+  bToast(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+</script>
 ```
 
 **Return Values**

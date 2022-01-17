@@ -20,7 +20,7 @@
 
 ## How to use
 
-```
+```javascript
 <a href="javascript:;" onclick="bModal(parameter)">text</a>
 
 <script src="./dist/bModal.min.js"></script>
@@ -28,14 +28,14 @@
 
 OR
 
-```
+```javascript
 <a href="javascript:;" id="xx">text</a>
 
 <script src="./dist/bModal.min.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
-        bModal(parameter);
+        bModal(parameter)
     })
 </script>
 ```
@@ -45,8 +45,10 @@ OR MORE
 
 ## Parameter Description
 
-```
-bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+```javascript
+<script>
+  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
+</script>
 ```
 
 **Return Values**
