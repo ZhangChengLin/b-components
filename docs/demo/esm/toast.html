@@ -363,12 +363,11 @@ function eventsFunction_3() {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!--<script type="module" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bToast.esm.min.js/+esm"></script>-->
 <script src="../../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script type="module">
-  import {bToast} from '../../../dist/bToast.esm.min.js'
+  import {bToast} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bToast.esm.min.js/+esm'
   import {
     functionSwitch,
     getRadio,
@@ -376,7 +375,7 @@ function eventsFunction_3() {
     selectFunctionValue,
     selectValue,
     getNumberValue,
-  } from '/docs/static/js/index.esm.js'
+  } from 'https://cdn.jsdelivr.net/gh/b-components-js/docs/static/js/index.esm.js/+esm'
 
   functionSwitch('headerFunction')
   functionSwitch('bodyFunction')
