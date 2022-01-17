@@ -79,7 +79,7 @@ npm i b-components-js --save
 
 - **[jsDelivr](https://www.jsdelivr.com/package/npm/b-components-js)**
 
-```
+```javascript
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bToast.min.js"></script>
@@ -91,7 +91,7 @@ npm i b-components-js --save
 
 - Get the files published by the GitHub repository through jsDelivr
 
-```
+```javascript
 <script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bModal.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/dist/bToast.min.js"></script>
@@ -103,15 +103,13 @@ npm i b-components-js --save
 
 - View all versions
 
-```
-https://cdn.jsdelivr.net/npm/b-components-js/
-```
+[https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
 
 - **[UNPKG](https://unpkg.com/browse/b-components-js/)**
 
 `After the browser parses, get the latest version address`
 
-```
+```javascript
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bModal.min.js"></script>
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bToast.min.js"></script>
@@ -123,9 +121,7 @@ https://cdn.jsdelivr.net/npm/b-components-js/
 
 - View all versions
 
-```
-https://unpkg.com/browse/b-components-js/
-```
+[https://unpkg.com/browse/b-components-js/](https://unpkg.com/browse/b-components-js/)
 
 ---
 
@@ -145,3 +141,4 @@ https://unpkg.com/browse/b-components-js/
 
 under the MIT License (license terms are at https://opensource.org/licenses/MIT).
 
+---
