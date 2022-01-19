@@ -52,16 +52,16 @@ Currently, supports bootstrap v5.x
 
 ---
 
-|                               Entrance                               |
-|:--------------------------------------------------------------------:|
-|       [README](https://ZhangChengLin.github.io/b-components/)        |
-| [DEMO](https://ZhangChengLin.github.io/b-components/docs/index.html) |
+|                            Entrance                             |
+|:---------------------------------------------------------------:|
+|     [README](https://ZhangChengLin.github.io/b-components/)     |
+| [DEMO](https://ZhangChengLin.github.io/b-components/index.html) |
 
-|            |                                     README                                      |                                    DEMO (umd)                                     |                                    DEMO (esm)                                     |
-|:-----------|:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|
-| bModal     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/esm/modal.html)   |
-| bOffcanvas | [Link](https://ZhangChengLin.github.io/b-components/docs/readme/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/docs/demo/esm/offcanvas.html) |
-| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/docs/readme/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/umd/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/docs/demo/esm/toast.html)   |
+|            |                                   README                                   |                                  DEMO (umd)                                  |                                  DEMO (esm)                                  |
+|:-----------|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
+| bModal     |   [Link](https://ZhangChengLin.github.io/b-components/readme/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/demo/umd/modal.html)   |   [Link](https://ZhangChengLin.github.io/b-components/demo/esm/modal.html)   |
+| bOffcanvas | [Link](https://ZhangChengLin.github.io/b-components/readme/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/demo/umd/offcanvas.html) | [Link](https://ZhangChengLin.github.io/b-components/demo/esm/offcanvas.html) |
+| bToast     |   [Link](https://ZhangChengLin.github.io/b-components/readme/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/demo/umd/toast.html)   |   [Link](https://ZhangChengLin.github.io/b-components/demo/esm/toast.html)   |
 
 ---
 
@@ -93,13 +93,19 @@ npm i b-components-js --save
 - Get the files published by the GitHub repository through jsDelivr
 
 ```javascript
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bModal.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bOffcanvas.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bToast.min.js"></script>
+<script type="javascript"
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bModal.min.js"></script>
+<script type="javascript"
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bOffcanvas.min.js"></script>
+<script type="javascript"
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bToast.min.js"></script>
 
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bModal.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bOffcanvas.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bToast.esm.min.js"></script>
+<script type="module"
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bModal.esm.min.js"></script>
+<script type="module"
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bOffcanvas.esm.min.js"></script>
+<script type="module"
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-alpha.10/dist/bToast.esm.min.js"></script>
 ```
 
 - View all versions
