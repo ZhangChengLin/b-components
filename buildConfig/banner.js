@@ -16,4 +16,11 @@ const Banner = () =>
  * GitHub: ${pkg.github}
 */`
 
-module.exports = Banner
+const BannerMin = () =>
+  `/*!
+ * ${pkg.name} v${pkg.version}
+ * ${pkg.github}
+ * Copyright (c) 2020 - ${year} ${pkg.license}
+*/`
+
+module.exports = {Banner, BannerMin}

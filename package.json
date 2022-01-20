@@ -1,6 +1,6 @@
 {
   "name": "b-components-js",
-  "version": "0.0.1-alpha.10",
+  "version": "0.0.1-rc.0",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
