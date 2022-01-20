@@ -1,5 +1,12 @@
 # b-components-js
 
+## Entrance
+
+|                              **Entrance**                              |
+|:----------------------------------------------------------------------:|
+| [**README**](https://ZhangChengLin.github.io/b-components/readme.html) |
+|  [**DEMO**](https://ZhangChengLin.github.io/b-components/index.html)   |
+
 ---
 
 ## How to install
@@ -55,7 +62,7 @@ npm i b-components-js --save
 ---
 
 - ### UNPKG
-   - **[UNPKG](https://unpkg.com/browse/b-components-js/)**
+    - **[UNPKG](https://unpkg.com/browse/b-components-js/)**
 
 `After the browser parses, get the latest version address`
 
