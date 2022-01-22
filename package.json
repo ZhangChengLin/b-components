@@ -20,7 +20,7 @@
     "lint": "npm-run-all --aggregate-output -p js-lint",
     "lint-fix": "npm-run-all --aggregate-output -p js-lint-fix",
     "release": "npm-run-all -s lint compile bundlewatch",
-    "deprecateCurrentVersion": "npm deprecate echo $npm_package_name@echo $npm_package_version ''"
+    "deprecateVersion": "npm deprecate b-components-js@0.0.1-rc.0 ''"
   },
   "repository": {
     "type": "git",
