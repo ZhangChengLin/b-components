@@ -32,7 +32,7 @@ const modalEvents = (_modal, eventsType, eventsFun) => {
  */
 const removeModal = _modal => {
   _modal.addEventListener('hidden.bs.modal', () => {
-    const x = bootstrap.Modal.getInstance(_modal)
+    const x = Modal.getInstance(_modal)
     x.dispose()
     setTimeout(() => {
       _modal.remove()

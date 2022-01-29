@@ -29,7 +29,7 @@ const toastEvents = (_toast, eventsType, eventsFun) => {
  */
 const removeToast = _toast => {
   _toast.addEventListener('hidden.bs.toast', () => {
-    const x = bootstrap.Toast.getInstance(_toast)
+    const x = Toast.getInstance(_toast)
     x.dispose()
     setTimeout(() => {
       _toast.remove()
