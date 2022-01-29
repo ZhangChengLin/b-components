@@ -22,7 +22,16 @@
       s.parentNode.insertBefore(hm, s)
     })()
   </script>
-  <script></script>
+  <script>
+    function close_all_modals() {
+      const all_modals = document.querySelectorAll('.modal');
+      const all_modals_length = all_modals.length;
+      for (let i = 0; i < all_modals_length; i++) {
+        const x = bootstrap.Modal.getInstance(all_modals[i]);
+        x.hide();
+      }
+    }
+  </script>
 </head>
 <body>
 <div class="container alert alert-primary alert-dismissible fade show" role="alert">
