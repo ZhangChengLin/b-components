@@ -37,3 +37,8 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Deprecate Previous Version
+        run: npm run deprecatePreviousVersion
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
