@@ -6,7 +6,7 @@ import content from './modal-content'
 import header from './modal-header'
 import body from './modal-body'
 import footer from './modal-footer'
-import {removeModal, modalEvents, getTimeString} from './util/index'
+import {modalEvents, removeModal, getTimeString} from './util/index'
 
 /**
  * @param {Node|String|Function} headerNodeElement

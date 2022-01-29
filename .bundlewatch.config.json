@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "./dist/bComponents.js",
-      "maxSize": "2.80 kB"
+      "maxSize": "2.84 kB"
     },
     {
       "path": "./dist/bComponents.min.js",
@@ -10,7 +10,7 @@
     },
     {
       "path": "./dist/bComponents.esm.js",
-      "maxSize": "2.61 kB"
+      "maxSize": "2.63 kB"
     },
     {
       "path": "./dist/bComponents.esm.min.js",

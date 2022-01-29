@@ -1,3 +1,4 @@
+import {Toast} from 'bootstrap'
 export * from '../../../util/index'
 
 /**

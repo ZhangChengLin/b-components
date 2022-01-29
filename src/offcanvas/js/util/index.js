@@ -1,3 +1,4 @@
+import {Offcanvas} from 'bootstrap'
 export * from '../../../util/index'
 
 /**

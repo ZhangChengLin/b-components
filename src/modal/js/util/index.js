@@ -1,3 +1,4 @@
+import {Modal} from 'bootstrap'
 export * from '../../../util/index'
 
 /**
