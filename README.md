@@ -39,25 +39,25 @@ npm i b-components-js --save
 
 ```javascript
 <script type="javascript"
-        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/dist/bModal.min.js"></script>
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/dist/bModal.min.js"></script>
 <script type="javascript"
-        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/dist/bOffcanvas.min.js"></script>
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/dist/bOffcanvas.min.js"></script>
 <script type="javascript"
-        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/dist/bToast.min.js"></script>
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/dist/bToast.min.js"></script>
 
 <script type="module"
-        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/dist/bModal.esm.min.js"></script>
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/dist/bModal.esm.min.js"></script>
 <script type="module"
-        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/dist/bOffcanvas.esm.min.js"></script>
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/dist/bOffcanvas.esm.min.js"></script>
 <script type="module"
-        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/dist/bToast.esm.min.js"></script>
+        src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/dist/bToast.esm.min.js"></script>
 ```
 
 **View all versions**
 
 [https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
 
-[https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.1/)
+[https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.2/)
 
 ---
 
