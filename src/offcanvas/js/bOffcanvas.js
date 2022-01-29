@@ -1,3 +1,5 @@
+import {Offcanvas} from 'bootstrap'
+
 import offcanvas from './offcanvas'
 import header from './offcanvas-header'
 import body from './offcanvas-body'
@@ -23,7 +25,7 @@ const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, Even
 
   EventsType && EventsFunction ? offcanvasEvents(_offcanvas, EventsType, EventsFunction) : ''
 
-  const xxx = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas)
+  const xxx = Options ? new Offcanvas(_offcanvas, Options) : new Offcanvas(_offcanvas)
   xxx.show()
   removeOffcanvas(_offcanvas)
   return offcanvasId

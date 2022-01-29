@@ -1,3 +1,5 @@
+import {Toast} from 'bootstrap'
+
 import toast from './toast'
 import {containerOutside, container} from './toast-container'
 import header from './toast-header'
@@ -28,7 +30,7 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
 
   EventsType && EventsFunction ? toastEvents(_toast, EventsType, EventsFunction) : ''
 
-  const xxx = Options ? new bootstrap.Toast(_toast, Options) : new bootstrap.Toast(_toast)
+  const xxx = Options ? new Toast(_toast, Options) : new Toast(_toast)
   xxx.show()
   removeToast(_toast)
   return toastId

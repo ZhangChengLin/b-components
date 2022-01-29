@@ -1,3 +1,5 @@
+import {Modal} from 'bootstrap'
+
 import modal from './modal'
 import dialog from './modal-dialog'
 import content from './modal-content'
@@ -34,7 +36,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
 
   EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : ''
 
-  const xxx = Options ? new bootstrap.Modal(_modal, Options) : new bootstrap.Modal(_modal)
+  const xxx = Options ? new Modal(_modal, Options) : new Modal(_modal)
   xxx.show()
   removeModal(_modal)
   return modalId

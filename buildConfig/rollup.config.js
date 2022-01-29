@@ -2,7 +2,7 @@
 
 const {terser} = require('rollup-plugin-terser')
 const filesize = require('rollup-plugin-filesize')
-const banner = require('./banner')
+const {Banner, BannerMin} = require('./banner')
 const paths = require('./paths')
 
 const PREFIX = 'b'
@@ -18,7 +18,7 @@ const toUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.t
 const inputOptions = [paths.src + `${BsNAME}/index.${ESM ? 'esm' : 'umd'}.js`]
 const outputOptions = [
   {
-    banner,
+    banner: Banner,
     file: paths.dist + `${PREFIX}${toUpperCase(BsNAME)}${ESM ? '.esm' : ''}.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
@@ -28,7 +28,7 @@ const outputOptions = [
     sourcemap: true
   },
   {
-    banner,
+    banner: BannerMin,
     file: paths.dist + `${PREFIX}${toUpperCase(BsNAME)}${ESM ? '.esm' : ''}.min.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
