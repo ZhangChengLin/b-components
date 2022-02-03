@@ -22,15 +22,6 @@
       s.parentNode.insertBefore(hm, s)
     })()
   </script>
-  <script>
-    function close_all_offcanvas() {
-      const all_offcanvas = document.querySelectorAll('.offcanvas');
-      for (let i = 0, x = all_offcanvas.length; i < x; i++) {
-        const x = bootstrap.Offcanvas.getInstance(all_offcanvas[i]);
-        x.hide();
-      }
-    }
-  </script>
 </head>
 <body>
 <div class="container alert alert-primary alert-dismissible fade show" role="alert">
@@ -321,6 +312,15 @@ function EventsFunction_3() {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function close_all_offcanvas() {
+    const all = document.querySelectorAll('.offcanvas');
+    for (let i = 0, x = all.length; i < x; i++) {
+      const x = bootstrap.Offcanvas.getInstance(all[i]);
+      x.hide();
+    }
+  }
+</script>
 <script src="../../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>

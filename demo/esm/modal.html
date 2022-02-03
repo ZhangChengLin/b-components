@@ -22,16 +22,6 @@
       s.parentNode.insertBefore(hm, s)
     })()
   </script>
-  <script>
-    function close_all_modals() {
-      const all_modals = document.querySelectorAll('.modal');
-      const all_modals_length = all_modals.length;
-      for (let i = 0; i < all_modals_length; i++) {
-        const x = bootstrap.Modal.getInstance(all_modals[i]);
-        x.hide();
-      }
-    }
-  </script>
 </head>
 <body>
 <div class="container alert alert-primary alert-dismissible fade show" role="alert">
@@ -361,6 +351,15 @@ function eventsFunction_3() {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function close_all_modals() {
+    const all = document.querySelectorAll('.modal')
+    for (let i = 0, x = all.length; i < x; i++) {
+      const x = bootstrap.Modal.getInstance(all[i])
+      x.hide()
+    }
+  }
+</script>
 <script src="../../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
