@@ -98,9 +98,7 @@
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="modalFooter">footer</label>
         <textarea class="form-control" id="modalFooter" placeholder="Please enter content" rows="9">
 <div>
-<div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">&nbsp;flexbox</a></div>
 <input type="button" class="btn btn-outline-success" data-bs-dismiss="modal" value="Close">
-<input type="button" class="btn btn-outline-success" onclick="close_all_modals()" value="Close All">
 <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
 </div>
         </textarea>
@@ -350,16 +348,7 @@ function eventsFunction_3() {
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  function close_all_modals() {
-    const all = document.querySelectorAll('.modal')
-    for (let i = 0, x = all.length; i < x; i++) {
-      const x = bootstrap.Modal.getInstance(all[i])
-      x.hide()
-    }
-  }
-</script>
+
 <script src="../../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
