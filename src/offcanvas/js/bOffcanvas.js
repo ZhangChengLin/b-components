@@ -1,9 +1,76 @@
 import {Offcanvas} from 'bootstrap'
 
-import offcanvas from './offcanvas'
-import header from './offcanvas-header'
-import body from './offcanvas-body'
-import {offcanvasEvents, removeOffcanvas, getTimeString} from './util/index'
+import {offcanvasEvents, removeOffcanvas, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
+
+/**
+ * @param {String} Placement
+ * @param {String} offcanvasId
+ */
+const offcanvas = (Placement, offcanvasId) => {
+  const _offcanvas = document.createElement('div')
+
+
+  Placement = Placement ?? 'start'
+  switch (Placement) {
+    case 'start':
+    case 'top':
+    case 'end':
+    case 'bottom':
+      break
+    default:
+      throw 'Placement error'
+  }
+
+  _offcanvas.className = `offcanvas offcanvas-${Placement}`
+  _offcanvas.id = offcanvasId
+  _offcanvas.tabIndex = -1
+  _offcanvas.role = 'dialog'
+  _offcanvas.setAttribute('aria-labelledby', 'offcanvasTitleLabel')
+
+  return _offcanvas
+}
+
+/**
+ * @param {Node|String|Function} headerNodeElement
+ */
+const header = (headerNodeElement) => {
+  if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
+    return ''
+  }
+
+  const _header = document.createElement('div')
+  const _title = document.createElement('h5')
+
+  _header.className = 'offcanvas-header'
+
+  _title.className = 'offcanvas-title'
+  _title.id = 'offcanvasTitleLabel'
+  headerNodeElement instanceof Function
+    ? _title.append(headerNodeElement())
+    : headerNodeElement instanceof HTMLElement
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement
+
+  _header.append(_title, bsDismissBtn('offcanvas'))
+
+  return _header
+}
+
+/**
+ * @param {Node|String|Function} bodyNodeElement
+ */
+const body = (bodyNodeElement) => {
+  const _body = document.createElement('div')
+
+  _body.className = 'offcanvas-body'
+  bodyNodeElement instanceof Function
+    ? _body.append(bodyNodeElement())
+    : bodyNodeElement instanceof HTMLElement
+      ? _body.append(bodyNodeElement)
+      : _body.innerHTML = bodyNodeElement
+
+  return _body
+}
 
 /**
  * @param {Node|String|Function} headerNodeElement

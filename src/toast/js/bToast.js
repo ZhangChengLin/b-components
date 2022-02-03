@@ -1,10 +1,116 @@
 import {Toast} from 'bootstrap'
 
-import toast from './toast'
-import {containerOutside, container} from './toast-container'
-import header from './toast-header'
-import body from './toast-body'
-import {toastEvents, removeToast, getTimeString} from './util/index'
+import {toastEvents, removeToast, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
+
+/**
+ * @param {String} toastId
+ */
+const toast = (toastId) => {
+  const _toast = document.createElement('div')
+
+  _toast.className = 'toast'
+  _toast.id = toastId
+  _toast.role = 'alert'
+  _toast.ariaLive = 'assertive'
+  _toast.ariaAtomic = 'true'
+
+  return _toast
+}
+
+const containerOutside = (ariaLive) => {
+  const containerOutside = document.createElement('div')
+
+  containerOutside.className = 'position-relative'
+  containerOutside.ariaLive = ariaLive ?? 'polite'
+  containerOutside.ariaAtomic = 'true'
+
+  return containerOutside
+}
+
+/**
+ * @param {String} Placement
+ */
+const container = (Placement) => {
+  const container = document.createElement('div')
+
+  Placement = Placement ?? 'be'
+  switch (Placement) {
+    case 'ts':
+      Placement = 'top-0 start-0'
+      break
+    case 'tc':
+      Placement = 'top-0 start-50 translate-middle-x'
+      break
+    case 'te':
+      Placement = 'top-0 end-0'
+      break
+    case 'ms':
+      Placement = 'top-50 start-0 translate-middle-y'
+      break
+    case 'mc':
+      Placement = 'top-50 start-50 translate-middle'
+      break
+    case 'me':
+      Placement = 'top-50 end-0 translate-middle-y'
+      break
+    case 'bs':
+      Placement = 'bottom-0 start-0'
+      break
+    case 'bc':
+      Placement = 'bottom-0 start-50 translate-middle-x'
+      break
+    case 'be':
+      Placement = 'bottom-0 end-0'
+      break
+    default:
+      throw 'Placement error'
+  }
+
+  container.className = `toast-container position-fixed ${Placement}`
+
+  return container
+}
+
+/**
+ * @param {Node|String|Function} headerNodeElement
+ */
+const header = (headerNodeElement) => {
+  if (isNull(headerNodeElement) || isEmpty(headerNodeElement)) {
+    return ''
+  }
+
+  const _header = document.createElement('div')
+  const _title = document.createElement('strong')
+
+  _header.className = 'toast-header'
+
+  _title.className = 'toast-title me-auto'
+  headerNodeElement instanceof Function
+    ? _title.append(headerNodeElement())
+    : headerNodeElement instanceof HTMLElement
+      ? _title.append(headerNodeElement)
+      : _title.innerHTML = headerNodeElement
+
+  _header.append(_title, bsDismissBtn('toast'))
+
+  return _header
+}
+
+/**
+ * @param {Node|String|Function} bodyNodeElement
+ */
+const body = (bodyNodeElement) => {
+  const _body = document.createElement('div')
+
+  _body.className = 'toast-body'
+  bodyNodeElement instanceof Function
+    ? _body.append(bodyNodeElement())
+    : bodyNodeElement instanceof HTMLElement
+      ? _body.append(bodyNodeElement)
+      : _body.innerHTML = bodyNodeElement
+
+  return _body
+}
 
 /**
  * @param {Node|String|Function} headerNodeElement

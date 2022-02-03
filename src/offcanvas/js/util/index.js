@@ -1,3 +1,4 @@
+import {Offcanvas} from 'bootstrap'
 export * from '../../../util/index'
 
 /**
@@ -29,7 +30,7 @@ const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
  */
 const removeOffcanvas = _offcanvas => {
   _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
-    const x = bootstrap.Offcanvas.getInstance(_offcanvas)
+    const x = Offcanvas.getInstance(_offcanvas)
     x.dispose()
     setTimeout(() => {
       _offcanvas.remove()
