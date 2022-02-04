@@ -22,7 +22,11 @@
 <div class="container">
   <div class="position-relative min-vh-100">
     <div class="position-absolute top-50 start-50 translate-middle">
-      <button class="btn btn-outline-success" type="button" id="xid">Xid</button>
+      <div class="d-flex flex-column">
+        <button class="my-1 btn btn-outline-success" type="button" id="bModal_">bModal</button>
+        <button class="my-1 btn btn-outline-success" type="button" id="bOffcanvas_">bOffcanvas</button>
+        <button class="my-1 btn btn-outline-success" type="button" id="bToast_">bToast</button>
+      </div>
     </div>
   </div>
 </div>
@@ -32,17 +36,18 @@
 <!--<script src="../../dist/bComponents.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bComponents.js"></script>
 <script>
-  const xid = document.querySelector('#xid')
+  const bModal_ = document.querySelector('#bModal_')
+  const bOffcanvas_ = document.querySelector('#bOffcanvas_')
+  const bToast_ = document.querySelector('#bToast_')
 
-  xid.addEventListener('click', function () {
-    console.log(0o0)
-    // bComponents.bModal('11111', '22222', null)
-    // bComponents.bOffcanvas('11111', '22222', null)
-    // bComponents.bToast('11111', '22222', null)
-    bModal('11111', '22222', null)
-    bOffcanvas('11111', '22222', null)
-    bToast('11111', '22222', null)
-    console.log(11)
+  bModal_.addEventListener('click', function () {
+    bComponents.bModal('11111', '22222', null)
+  })
+  bOffcanvas_.addEventListener('click', function () {
+    bComponents.bOffcanvas('11111', '22222', null)
+  })
+  bToast_.addEventListener('click', function () {
+    bComponents.bToast('11111', '22222', null)
   })
 </script>
 </body>
