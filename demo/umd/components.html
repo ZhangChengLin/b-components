@@ -33,6 +33,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!--<script src="../../dist/bComponents.iife.js"></script>-->
 <!--<script src="../../dist/bComponents.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bComponents.js"></script>
 <script>
@@ -41,13 +42,16 @@
   const bToast_ = document.querySelector('#bToast_')
 
   bModal_.addEventListener('click', function () {
-    bComponents.bModal('11111', '22222', null)
+    bComponents.bModal('11111', '22222')
+    // bModal('11111', '22222')
   })
   bOffcanvas_.addEventListener('click', function () {
-    bComponents.bOffcanvas('11111', '22222', null)
+    bComponents.bOffcanvas('11111', '22222')
+    // bOffcanvas('11111', '22222')
   })
   bToast_.addEventListener('click', function () {
-    bComponents.bToast('11111', '22222', null)
+    bComponents.bToast('11111', '22222')
+    // bToast('11111', '22222')
   })
 </script>
 </body>
