@@ -115,10 +115,10 @@ const body = (bodyNodeElement) => {
 /**
  * @param {Node|String|Function} headerNodeElement
  * @param {Node|String|Function} bodyNodeElement
- * @param {String} Placement
- * @param {Object} Options
- * @param {String} EventsType
- * @param {Function} EventsFunction
+ * @param {String|null} Placement
+ * @param {Object|null} Options
+ * @param {String|null} EventsType
+ * @param {Function|null} EventsFunction
  */
 const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
   const toastId = 'toastId_' + getTimeString()
