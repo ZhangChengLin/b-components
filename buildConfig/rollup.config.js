@@ -22,6 +22,9 @@ const outputOptions = [
     file: paths.dist + `${PREFIX}${toUpperCase(BsNAME)}${ESM ? '.esm' : ''}.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
+    globals: {
+      'bootstrap': 'bootstrap'
+    },
     plugins: [
       filesize(filesizeOptions)
     ],
@@ -32,6 +35,9 @@ const outputOptions = [
     file: paths.dist + `${PREFIX}${toUpperCase(BsNAME)}${ESM ? '.esm' : ''}.min.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
+    globals: {
+      'bootstrap': 'bootstrap'
+    },
     plugins: [
       terser(terserOptions),
       filesize(filesizeOptions)
@@ -41,6 +47,7 @@ const outputOptions = [
 ]
 
 const rollupConfig = {
+  external: ['bootstrap'],
   input: inputOptions,
   output: outputOptions
 }
