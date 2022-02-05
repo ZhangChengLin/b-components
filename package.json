@@ -1,6 +1,6 @@
 {
   "name": "b-components-js",
-  "version": "0.0.1-rc.5",
+  "version": "0.0.1-rc.6",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
@@ -20,7 +20,7 @@
     "lint": "npm-run-all --aggregate-output -p js-lint",
     "lint-fix": "npm-run-all --aggregate-output -p js-lint-fix",
     "release": "npm-run-all -s lint compile bundlewatch",
-    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1-rc.5' 'New version has been released'"
+    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1-rc.6' 'New version has been released'"
   },
   "repository": {
     "type": "git",
