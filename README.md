@@ -47,15 +47,15 @@ npm i b-components-js --save
 `Get the files published by the GitHub repository through jsDelivr`
 
 ```javascript
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bComponents.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bModal.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bOffcanvas.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bToast.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bComponents.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bModal.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bOffcanvas.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bToast.min.js"></script>
 
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bComponents.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bModal.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bOffcanvas.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.5/dist/bToast.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bComponents.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bModal.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bOffcanvas.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.6/dist/bToast.esm.min.js"></script>
 ```
 
 ---
