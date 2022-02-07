@@ -1,5 +1,6 @@
 'use strict'
 
+const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const {terser} = require('rollup-plugin-terser')
 const filesize = require('rollup-plugin-filesize')
 const {Banner, BannerMin} = require('./banner')
@@ -12,6 +13,7 @@ const filesizeOptions = {
   showBrotliSize: true
 }
 const terserOptions = {}
+const nodeResolveOptions = {}
 
 const toUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase())
 
@@ -48,6 +50,7 @@ const outputOptions = [
 
 const rollupConfig = {
   external: ['bootstrap'],
+  plugins: [nodeResolve(nodeResolveOptions)],
   input: inputOptions,
   output: outputOptions
 }
