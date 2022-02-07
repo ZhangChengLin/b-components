@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-<a href="https://openbase.com/js/b-components-js" title="Rate on Openbase"><img alt="Rate on Openbase" src="https://badges.openbase.com/js/rating/b-components-js.svg"></a>
+<a href="https://openbase.com/js/b-components-js" title="Rate on Openbase" target="_blank"><img alt="Rate on Openbase" src="https://badges.openbase.com/js/rating/b-components-js.svg"></a>
 </p>
 
 <p align="center">
@@ -27,13 +27,10 @@
 </p>
 
 <p align="center">
-<a href="https://npm.taobao.org/package/b-components-js" target="_blank" title="taonpm version"><img src="https://npm.taobao.org/badge/v/b-components-js.svg" alt="taonpm version" title="taonpm version"></a>
-<img src="https://npm.taobao.org/badge/d/b-components-js.svg" alt="taonpm download number">
-</p>
-
-<p align="center">
-<a href="https://cnpmjs.org/package/b-components-js" target="_blank" title="cnpm version"><img src="https://cnpmjs.org/badge/v/b-components-js.svg" alt="cnpm version" title="cnpm version"></a>
-<img src="https://cnpmjs.org/badge/d/b-components-js.svg" alt="cnpm download number">
+<a href="https://npmmirror.com/package/b-components-js" target="_blank" title="npmmirror version">
+<img src="https://npmmirror.com/badge/v/b-components-js.svg" alt="npmmirror version" title="npmmirror version">
+<img src="https://npmmirror.com/badge/d/b-components-js.svg" alt="npmmirror download number">
+</a>
 </p>
 
 |                        |                                                                 day                                                                  |                                                                  week                                                                  |                                                                  month                                                                   |                                                                  year                                                                  |                                          total                                          |
