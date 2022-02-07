@@ -2,7 +2,7 @@
 
 ## Entrance
 
-|       **Entrance**        |
+|      **v0.0.1-rc.6**      |
 |:-------------------------:|
 | [**README**](readme.html) |
 |  [**DEMO**](index.html)   |
