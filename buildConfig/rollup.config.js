@@ -2,6 +2,7 @@
 
 const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const {terser} = require('rollup-plugin-terser')
+const cleanup = require('rollup-plugin-cleanup')
 const filesize = require('rollup-plugin-filesize')
 const {Banner, BannerMin} = require('./banner')
 const paths = require('./paths')
@@ -50,7 +51,7 @@ const outputOptions = [
 
 const rollupConfig = {
   external: ['bootstrap'],
-  plugins: [nodeResolve(nodeResolveOptions)],
+  plugins: [nodeResolve(nodeResolveOptions), cleanup()],
   input: inputOptions,
   output: outputOptions
 }

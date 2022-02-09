@@ -9,12 +9,12 @@
   ],
   "rules": {
     "no-undef": "off",
+    "no-warning-comments": "off",
     "no-unused-expressions": "off",
     "no-throw-literal": "off",
     "max-params": "off",
     "object-shorthand": "off",
     "no-console": "error",
-    "no-warning-comments": "error",
     "quotes": [
       "error",
       "single"

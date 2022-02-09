@@ -22,7 +22,7 @@
     },
     {
       "path": "./dist/bModal.esm.min.js",
-      "maxSize": "1007B"
+      "maxSize": "1008B"
     },
     {
       "path": "./dist/bOffcanvas.esm.js",
@@ -38,7 +38,7 @@
     },
     {
       "path": "./dist/bToast.esm.min.js",
-      "maxSize": "954B"
+      "maxSize": "955B"
     },
     {
       "path": "./dist/bModal.js",

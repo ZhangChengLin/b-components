@@ -124,7 +124,7 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
   const toastId = 'toastId_' + getTimeString()
 
   const _containerOutsize = containerOutside()
-  const _container = document.querySelector('.toast-container') ?? container(Placement)
+  const _container = document.querySelector('.toast-container') ?? container(Placement)// TODO: 重复使用时，找到合适的重新设置新的位置类
   const _toast = toast(toastId)
   const _header = header(headerNodeElement)
   const _body = body(bodyNodeElement)
