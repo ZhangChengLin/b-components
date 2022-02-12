@@ -25,58 +25,54 @@ const filesizeOptions = {
   showBrotliSize: true
 }
 
-const dirArr = [
-  'components',
-  'modal',
-  'offcanvas',
-  'toast',
-]
-const inputOptions = {
-  input: 'src/components/index.esm.js',
-  plugins: [
-    del({
-      targets: 'dist',
-      hook: 'buildStart'
-    }),
-    nodeResolve(nodeResolveOptions),
-    cleanup(cleanupOptions),
-  ],
-  external: ['bootstrap']
+const minifyStatus = [true, false]
+const OutputFormat = ['esm', 'umd',]
+const Components = ['components', 'modal', 'offcanvas', 'toast',]
+
+function inputOptions(dirname) {
+  return {
+    input: `src/${dirname}/index.esm.js`, plugins: [del({
+      targets: 'dist', hook: 'buildStart'
+    }), nodeResolve(nodeResolveOptions), cleanup(cleanupOptions),], external: ['bootstrap']
+  }
 }
 
-const outputOptions = (dirArr) => {
+function outputOptions(filename, format = '', min = false, sourcemap = true) {
+  format = format === 'umd' ? '' : format === ('es' || 'esm' || 'module') ? 'esm' : format === ('cjs' || 'commonjs') ? 'cjs' : format === ('system' || 'systemjs') ? 'system' : format
+
   return {
-    name: `${PREFIX}${toUpperCase(dirArr)}`,
-    // banner: Banner,
-    banner: BannerMin,
-    format: 'umd',
-    file: paths.dist + `${PREFIX}${toUpperCase(dirArr)}.min.js`,
-    // format: 'es',
-    // file: paths.dist + `${PREFIX}${toUpperCase(dirArr)}.esm.js`,
-    plugins: [
-      // terser(terserOptions),
-      filesize(filesizeOptions),
+    name: `${PREFIX}${toUpperCase(filename)}`,
+    banner: min ? BannerMin : Banner,
+    format: format ? format : 'umd',
+    file: paths.dist + `${PREFIX}${toUpperCase(filename)}${format ? '.' + format : ''}${min ? '.min' : ''}.js`,
+    plugins: [min ? terser(terserOptions) : '', // filesize(filesizeOptions),
     ],
     generatedCode: 'es2015',
     globals: {
       'bootstrap': 'bootstrap'
     },
-    sourcemap: true
+    sourcemap: sourcemap
   }
 }
 
 buildList()
 
 function buildList() {
-  dirArr.forEach((currentName) => {
-    build(inputOptions, outputOptions(currentName))
-      .then(() => log(logBgGreen(`\n OK ${PREFIX}${toUpperCase(currentName)} `)))
-      .catch(error => log(logError(error)))
+  OutputFormat.forEach(currentFormat => {
+    Components.forEach(currentName => {
+      build(inputOptions(currentName), outputOptions(currentName, currentFormat, true))
+        .then(() => log(logBgGreen(`\n OK ${PREFIX}${toUpperCase(currentName)} `)))
+        .catch(error => log(logError(error)))
+    })
   })
 }
 
 
 async function build(inputOpts, outputOpts) {
+  // if (outputOpts['format'] === 'umd') {
+  //   outputOpts['name'] = `${PREFIX}${toUpperCase(filename)}`
+  // }
+
   // 创建一个捆绑包
   const bundle = await rollup(inputOpts)
 
@@ -88,6 +84,11 @@ async function build(inputOpts, outputOpts) {
 
   // 或将捆绑包写入磁盘
   await bundle.write(outputOpts)
+
+  if (bundle) {
+    // closes the bundle
+    await bundle.close()
+  }
 }
 
 const watchOptions = {}
