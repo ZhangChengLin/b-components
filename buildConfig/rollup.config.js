@@ -3,16 +3,13 @@
 const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const {terser} = require('rollup-plugin-terser')
 const cleanup = require('rollup-plugin-cleanup')
-const filesize = require('rollup-plugin-filesize')
 const {Banner, BannerMin} = require('./banner')
 const paths = require('./paths')
 
 const PREFIX = 'b'
 const ESM = process.env.ESM === 'true'
 const {BsNAME} = process.env
-const filesizeOptions = {
-  showBrotliSize: true
-}
+
 const terserOptions = {}
 const nodeResolveOptions = {}
 
@@ -28,9 +25,7 @@ const outputOptions = [
     globals: {
       'bootstrap': 'bootstrap'
     },
-    plugins: [
-      filesize(filesizeOptions)
-    ],
+    plugins: [],
     sourcemap: true
   },
   {
@@ -43,7 +38,6 @@ const outputOptions = [
     },
     plugins: [
       terser(terserOptions),
-      filesize(filesizeOptions)
     ],
     sourcemap: true
   },

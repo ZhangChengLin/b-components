@@ -1,24 +1,24 @@
+'use strict'
+
 const chalk = require('chalk')
+const {log} = require('console')
 
-// eslint-disable-next-line no-console
-const log = console.log
+const orange = '#FFA500'
 
-const logBgRed = chalk.bgRed.bold.black
-const logBgGreen = chalk.bgGreen.bold.black
-const logBgYellowBright = chalk.bgYellowBright.bold.black
-const logBgOrange = chalk.bgHex('#FFA500').bold.black
+const logBgError = chalk.bgRed.bold.black
+const logBgSuccess = chalk.bgGreen.bold.black
+const logBgWarn = chalk.bgHex(orange).bold.black
 
 const logSuccess = chalk.bold.green
 const logError = chalk.bold.red
-const logWarn = chalk.hex('#FFA500') // Orange color
+const logWarn = chalk.hex(orange) // Orange color
 
 module.exports = {
-    log,
-    logBgRed,
-    logBgGreen,
-    logBgYellowBright,
-    logBgOrange,
-    logSuccess,
-    logError,
-    logWarn,
+  log,
+  logBgSuccess,
+  logBgError,
+  logBgWarn,
+  logSuccess,
+  logError,
+  logWarn,
 }
