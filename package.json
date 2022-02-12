@@ -6,23 +6,13 @@
   "scripts": {
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "compile": "npm-run-all --aggregate-output -p js-compile",
-    "build": "npm-run-all --aggregate-output -p js-build",
-    "js-build": "node buildConfig/rollup.js",
-    "js-compile": "npm-run-all --aggregate-output -p js-compile-*",
-    "js-compile-index": "rollup --environment BsNAME:components --config buildConfig/rollup.config.js",
-    "js-compile-index-esm": "rollup --environment BsNAME:components,ESM:true --config buildConfig/rollup.config.js",
-    "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
-    "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
-    "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
-    "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js",
-    "js-compile-toast": "rollup --environment BsNAME:toast --config buildConfig/rollup.config.js",
-    "js-compile-toast-esm": "rollup --environment BsNAME:toast,ESM:true --config buildConfig/rollup.config.js",
+    "js-compile": "node buildConfig/rollup.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js-lint-fix": "eslint --fix .",
     "lint": "npm-run-all --aggregate-output -p js-lint",
     "lint-fix": "npm-run-all --aggregate-output -p js-lint-fix",
-    "release": "npm-run-all -s lint build bundlewatch",
-    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1-beta.0' 'New version has been released'"
+    "release": "npm-run-all -s lint compile bundlewatch",
+    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1-beta.1' 'New version has been released'"
   },
   "repository": {
     "type": "git",
