@@ -6,6 +6,7 @@
   "scripts": {
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "compile": "npm-run-all --aggregate-output -p js-compile",
+    "js-build": "node buildConfig/rollup.js",
     "js-compile": "npm-run-all --aggregate-output -p js-compile-*",
     "js-compile-index": "rollup --environment BsNAME:components --config buildConfig/rollup.config.js",
     "js-compile-index-esm": "rollup --environment BsNAME:components,ESM:true --config buildConfig/rollup.config.js",
@@ -68,12 +69,14 @@
     "eslint-config-xo": "^0.39.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-unicorn": "^40.1.0",
+    "html-minifier-terser": "^7.0.0-alpha.1",
     "marked": "^4.0.12",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "rollup": "^2.67.1",
     "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-terser": "^7.0.2",
     "terser": "^5.10.0"

@@ -75,3 +75,9 @@ Currently, supports bootstrap v5.x +
 under the MIT License (license terms are at https://opensource.org/licenses/MIT).
 
 ---
+
+## Semantic versioning
+
+This project follows [semver](https://semver.org/) as closely as possible **from version 1.0.0 onwards**.
+
+---
