@@ -15,6 +15,7 @@
     "max-params": "off",
     "object-shorthand": "off",
     "no-console": "error",
+    "no-negated-condition": "warn",
     "quotes": [
       "error",
       "single"

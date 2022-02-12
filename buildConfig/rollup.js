@@ -101,6 +101,8 @@ async function build(inputOpts, outputOpts) {
 const watchOptions = {}
 const watcher = watch(watchOptions)
 
+jsWatcher()
+
 function jsWatcher() {
   watcher.close()
 }
