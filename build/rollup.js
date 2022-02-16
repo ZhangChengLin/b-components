@@ -74,8 +74,7 @@ function buildList() {
   MinifyStatus.forEach(currentMinify => {
     OutputFormat.forEach(currentFormat => {
       Components.forEach(currentName => {
-        const x = `${PREFIX}${toUpperCase(currentName)}${currentFormat === 'umd' ? '' : '.' + currentFormat}${currentMinify ? '.min' : ''}.js`
-        build(inputOptions(currentName), outputOptions(currentName, currentFormat, currentMinify))
+        build(inputOptions(currentName), outputOptions(currentName, currentFormat, currentMinify)).abort()
       })
     })
   })
