@@ -22,10 +22,7 @@
         "SwitchCase": 1
       }
     ],
-    "max-params": [
-      "warn",
-      5
-    ],
+    "max-params": "off",
     "multiline-ternary": [
       "error",
       "always-multiline"
