@@ -4,7 +4,7 @@
 
 ## Demo
 
-[docs/demo/umd/offcanvas.html](https://ZhangChengLin.github.io/b-components/demo/umd/offcanvas.html)
+[docs/demo/umd/offcanvas.html](../demo/umd/offcanvas.html)
 
 ---
 
@@ -56,7 +56,7 @@ OR MORE
 
 |  type  |          such as          |                   Description                   |
 |:------:|:-------------------------:|:-----------------------------------------------:|
-| String | offcanvasId_1552756356601 | "offcanvasId_" starts with a 13-digit timestamp |
+| String | offcanvasId_1643811742000 | "offcanvasId_" starts with a 13-digit timestamp |
 
 ---
 

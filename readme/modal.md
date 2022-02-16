@@ -4,7 +4,7 @@
 
 ## Demo
 
-[docs/demo/umd/modal.html](https://ZhangChengLin.github.io/b-components/demo/umd/modal.html)
+[docs/demo/umd/modal.html](../demo/umd/modal.html)
 
 
 ---
@@ -54,7 +54,7 @@ OR MORE
 
 |  type  |        such as        |                 Description                 |
 |:------:|:---------------------:|:-------------------------------------------:|
-| String | modalId_1552756356601 | "modalId_" starts with a 13-digit timestamp |
+| String | modalId_1643811742000 | "modalId_" starts with a 13-digit timestamp |
 
 ---
 

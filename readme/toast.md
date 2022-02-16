@@ -4,7 +4,7 @@
 
 ## Demo
 
-[docs/demo/umd/toast.html](https://ZhangChengLin.github.io/b-components/demo/umd/toast.html)
+[docs/demo/umd/toast.html](../demo/umd/toast.html)
 
 
 ---
@@ -54,7 +54,7 @@ OR MORE
 
 |  type  |        such as        |                 Description                 |
 |:------:|:---------------------:|:-------------------------------------------:|
-| String | toastId_1552756356601 | "toastId_" starts with a 13-digit timestamp |
+| String | toastId_1643811742000 | "toastId_" starts with a 13-digit timestamp |
 
 ---
 

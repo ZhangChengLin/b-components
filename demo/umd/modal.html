@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <link rel="icon" href="../../static/img/favicons/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github-dark-dimmed.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github-dark-dimmed.min.css">
   <title>Modal - umd - DEMO</title>
   <meta name="description"
         content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
@@ -24,20 +25,23 @@
   </script>
   <script>
     function close_all_modals() {
-      let all_modals = document.querySelectorAll('.modal');
-      let all_modals_length = all_modals.length;
+      let all_modals = document.querySelectorAll('.modal')
+      let all_modals_length = all_modals.length
       for (let i = 0; i < all_modals_length; i++) {
-        let x = bootstrap.Modal.getInstance(all_modals[i]);
-        x.hide();
+        let x = bootstrap.Modal.getInstance(all_modals[i])
+        x.hide()
+        x = null
       }
     }
   </script>
 </head>
 <body>
 <div class="container alert alert-primary alert-dismissible fade show" role="alert">
-  <a class="alert-link small" href="https://ZhangChengLin.github.io/b-components/readme/modal.html" target="_blank" title="readme/bModal">readme/bModal</a>
+  <a class="alert-link small" href="../../readme/modal.html" target="_blank"
+     title="readme/bModal">readme/bModal</a>
   <div class="small">
-    <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+    <span
+      class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
   </div>
   <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
 </div>
@@ -49,7 +53,8 @@
         <span class="small text-muted">When empty, there will be no modal header</span>
       </div>
       <div class="input-group">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="modalHeader">header</label>
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white"
+               for="modalHeader">header</label>
         <input type="text" class="form-control" id="modalHeader" placeholder="" value="default header">
       </div>
       <div class="py-3">
@@ -105,7 +110,8 @@
         <span class="small text-muted"></span>
       </div>
       <div class="input-group">
-        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="modalFooter">footer</label>
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white"
+               for="modalFooter">footer</label>
         <textarea class="form-control" id="modalFooter" placeholder="Please enter content" rows="9">
 <div>
 <div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">&nbsp;flexbox</a></div>
@@ -161,11 +167,13 @@
         <span class="small text-muted"></span>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio" value="true">
+        <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio"
+               value="true">
         <label class="form-check-label" for="VerticallyCentered_true" title="true">true</label>
       </div>
       <div class="form-check form-check-inline">
-        <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio" value="false">
+        <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio"
+               value="false">
         <label class="form-check-label" for="VerticallyCentered_false" title="default">false</label>
       </div>
     </div>
@@ -175,11 +183,13 @@
         <span class="small text-muted"></span>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" id="ScrollingLongContent_true" name="ScrollingLongContent" type="radio" value="true">
+        <input class="form-check-input" id="ScrollingLongContent_true" name="ScrollingLongContent" type="radio"
+               value="true">
         <label class="form-check-label" for="ScrollingLongContent_true" title="true">true</label>
       </div>
       <div class="form-check form-check-inline">
-        <input checked class="form-check-input" id="ScrollingLongContent_false" name="ScrollingLongContent" type="radio" value="false">
+        <input checked class="form-check-input" id="ScrollingLongContent_false" name="ScrollingLongContent" type="radio"
+               value="false">
         <label class="form-check-label" for="ScrollingLongContent_false" title="default">false</label>
       </div>
     </div>
@@ -192,7 +202,8 @@
         <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalBackdrop" value='true' id="modalBackdrop_true" checked>
+            <input class="form-check-input" type="radio" name="modalBackdrop" value='true' id="modalBackdrop_true"
+                   checked>
             <label class="form-check-label" for="modalBackdrop_true">true</label>
           </div>
           <div class="form-check form-check-inline">
@@ -209,7 +220,8 @@
         <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="modalKeyboard" value="true" id="modalKeyboard_true" checked>
+            <input class="form-check-input" type="radio" name="modalKeyboard" value="true" id="modalKeyboard_true"
+                   checked>
             <label class="form-check-label" for="modalKeyboard_true">true</label>
           </div>
           <div class="form-check form-check-inline">
@@ -266,7 +278,8 @@
             </div>
             <div class="my-1 my-lg-auto col">
               <div class="form-check">
-                <input class="form-check-input" id="eventsType_hidePrevented" name="eventsType" type="radio" value="hidden">
+                <input class="form-check-input" id="eventsType_hidePrevented" name="eventsType" type="radio"
+                       value="hidden">
                 <label class="form-check-label" for="eventsType_hidePrevented" title="hidePrevented.bs.modal">hidePrevented</label>
               </div>
             </div>
@@ -291,7 +304,9 @@
         </div>
       </div>
     </div>
-    <button class="my-4 mx-auto d-block btn btn-outline-primary bg-gradient" type="button" id="renderModal">Render Modal effect</button>
+    <button class="my-4 mx-auto d-block btn btn-outline-primary bg-gradient" type="button" id="renderModal">Render Modal
+      effect
+    </button>
     <span class="d-block text-center small text-muted">hot key "Enter"</span>
   </div>
 </div>
@@ -361,30 +376,30 @@ function eventsFunction_3() {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!--<script src="../../dist/bModal.min.js"></script>-->
+<!--<script src="../../dist/bModal.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
 <script src="../../static/js/index.js"></script>
 <script src="../../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script>
-  functionSwitch("headerFunction")
-  functionSwitch("bodyFunction")
-  functionSwitch("footerFunction")
+  functionSwitch('headerFunction')
+  functionSwitch('bodyFunction')
+  functionSwitch('footerFunction')
 
-  document.querySelector("#renderModal").addEventListener("click", renderResult)
+  document.querySelector('#renderModal').addEventListener('click', renderResult)
   enterRender()
 
   function renderResult() {
-    let header = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("modalHeader")
-    let body = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("modalBody")
-    let footer = checkboxStatus("footerFunction") ? selectFunctionValue("footerFunction") : selectValue("modalFooter")
-    let ModalSizes = selectValue("modalSizes")
-    let VerticallyCentered = getRadio("VerticallyCentered")
-    let ScrollingLongContent = getRadio("ScrollingLongContent")
-    let eventsType = getRadio("eventsType")
-    let eventsFunctionSelect = selectValue("eventsFunction")
-    let eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ""
+    let header = checkboxStatus('headerFunction') ? selectFunctionValue('headerFunction') : selectValue('modalHeader')
+    let body = checkboxStatus('bodyFunction') ? selectFunctionValue('bodyFunction') : selectValue('modalBody')
+    let footer = checkboxStatus('footerFunction') ? selectFunctionValue('footerFunction') : selectValue('modalFooter')
+    let ModalSizes = selectValue('modalSizes')
+    let VerticallyCentered = getRadio('VerticallyCentered')
+    let ScrollingLongContent = getRadio('ScrollingLongContent')
+    let eventsType = getRadio('eventsType')
+    let eventsFunctionSelect = selectValue('eventsFunction')
+    let eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ''
     let options = {
       backdrop: getRadio('modalBackdrop'),
       keyboard: getRadio('modalKeyboard'),
