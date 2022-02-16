@@ -1,5 +1,4 @@
 import {Offcanvas} from 'bootstrap'
-
 import {offcanvasEvents, removeOffcanvas, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
 
 /**

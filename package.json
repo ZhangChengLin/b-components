@@ -1,6 +1,6 @@
 {
   "name": "b-components-js",
-  "version": "0.0.1-rc.7",
+  "version": "0.0.1-rc.8",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
@@ -12,7 +12,7 @@
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js-lint-fix": "eslint --fix .",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
-    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1-rc.7' 'New version has been released'"
+    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1-rc.8' 'New version has been released'"
   },
   "repository": {
     "type": "git",
