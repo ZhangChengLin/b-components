@@ -24,5 +24,5 @@ module.exports = {
   logBgWarn,
   logSuccess,
   logError,
-  logWarn,
+  logWarn
 }

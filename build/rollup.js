@@ -20,16 +20,17 @@ const cleanupOptions = {}
 
 
 const MinifyStatus = [true, false]
-const OutputFormat = ['esm', 'umd',]
-const Components = ['components', 'modal', 'offcanvas', 'toast',]
+const OutputFormat = ['esm', 'umd']
+const Components = ['components', 'modal', 'offcanvas', 'toast']
 
 function inputOptions(dirname) {
   return {
     input: `src/${dirname}/index.esm.js`,
-    plugins: [del({
-      targets: 'dist',
-      hook: 'buildStart'
-    }),
+    plugins: [
+      del({
+        targets: 'dist',
+        hook: 'buildStart'
+      }),
       nodeResolve(nodeResolveOptions),
       cleanup(cleanupOptions)
     ],
@@ -38,10 +39,14 @@ function inputOptions(dirname) {
 }
 
 function outputOptions(filename, format = '', min = false, sourcemap = true) {
-  format = format === 'umd' ? ''
-    : ['es', 'esm', 'module'].includes(format) ? 'esm'
-      : ['cjs', 'commonjs'].includes(format) ? 'cjs'
-        : ['system', 'systemjs'].includes(format) ? 'system'
+  format = format === 'umd'
+    ? ''
+    : ['es', 'esm', 'module'].includes(format)
+      ? 'esm'
+      : ['cjs', 'commonjs'].includes(format)
+        ? 'cjs'
+        : ['system', 'systemjs'].includes(format)
+          ? 'system'
           : format
 
   return {
@@ -50,7 +55,7 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
     format: format ? format : 'umd',
     file: paths.dist + `${PREFIX}${toUpperCase(filename)}${format ? '.' + format : ''}${min ? '.min' : ''}.js`,
     plugins: [
-      min ? terser(terserOptions) : '',
+      min ? terser(terserOptions) : ''
     ],
     generatedCode: 'es2015',
     globals: {
