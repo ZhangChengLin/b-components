@@ -7,7 +7,7 @@ const del = require('rollup-plugin-delete')
 const cleanup = require('rollup-plugin-cleanup')
 
 
-const {log, logError, logBgError, logBgSuccess} = require('./chalk')
+const {log, logBgError, logBgSuccess} = require('./chalk')
 const {Banner, BannerMin} = require('./banner')
 const paths = require('./paths')
 
@@ -38,11 +38,11 @@ function inputOptions(dirname) {
 }
 
 function outputOptions(filename, format = '', min = false, sourcemap = true) {
-  format = format === 'umd' ?
-    '' : format === ('es' || 'esm' || 'module') ?
-      'esm' : format === ('cjs' || 'commonjs') ?
-        'cjs' : format === ('system' || 'systemjs') ?
-          'system' : format
+  format = format === 'umd' ? ''
+    : ['es', 'esm', 'module'].includes(format) ? 'esm'
+      : ['cjs', 'commonjs'].includes(format) ? 'cjs'
+        : ['system', 'systemjs'].includes(format) ? 'system'
+          : format
 
   return {
     name: `${PREFIX}${toUpperCase(filename)}`,
@@ -74,7 +74,7 @@ function buildList() {
           })
           .catch(error => {
             log(logBgError(` Fail ${x} `))
-            log(logError(error))
+            log(logBgError(error))
           })
       })
     })
@@ -88,7 +88,7 @@ async function build(inputOpts, outputOpts) {
   try {
     bundle = await rollup(inputOpts)
   } catch (error) {
-    console.error(error)
+    log(logBgError(error))
   }
 
   await bundle.write(outputOpts)
