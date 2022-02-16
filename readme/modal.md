@@ -4,7 +4,7 @@
 
 ## Demo
 
-[docs/demo/umd/modal.html](https://ZhangChengLin.github.io/b-components/demo/umd/modal.html)
+[docs/demo/umd/modal.html](../demo/umd/modal.html)
 
 
 ---
