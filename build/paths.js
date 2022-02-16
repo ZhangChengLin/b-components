@@ -14,5 +14,5 @@ module.exports = {
   src: src,
   docs: docs,
   dist: dist,
-  cache: cache,
+  cache: cache
 }
