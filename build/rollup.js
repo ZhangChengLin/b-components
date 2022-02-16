@@ -23,9 +23,9 @@ const MinifyStatus = [true, false]
 const OutputFormat = ['esm', 'umd']
 const Components = ['components', 'modal', 'offcanvas', 'toast']
 
-function inputOptions(dirname) {
+function inputOptions(dirname, format) {
   return {
-    input: `src/${dirname}/index.esm.js`,
+    input: `src/${dirname}/index.${format}.js`,
     plugins: [
       del({
         targets: 'dist',
@@ -73,7 +73,7 @@ function buildList() {
       Components.forEach(currentName => {
         const x = `${PREFIX}${toUpperCase(currentName)}${currentFormat === 'umd' ? '' : '.' + currentFormat}${currentMinify ? '.min' : ''}.js`
 
-        build(inputOptions(currentName), outputOptions(currentName, currentFormat, currentMinify))
+        build(inputOptions(currentName, currentFormat), outputOptions(currentName, currentFormat, currentMinify))
           .then(() => {
             log(logBgSuccess(` OK ${x} `))
           })
