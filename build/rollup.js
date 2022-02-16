@@ -65,39 +65,33 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
   }
 }
 
-let ok = 0, fail = 0
-
 buildList()
-buildResult()
 
 function buildList() {
   MinifyStatus.forEach(currentMinify => {
     OutputFormat.forEach(currentFormat => {
       Components.forEach(currentName => {
-        build(inputOptions(currentName), outputOptions(currentName, currentFormat, currentMinify)).abort()
+        const x = `${PREFIX}${toUpperCase(currentName)}${currentFormat === 'umd' ? '' : '.' + currentFormat}${currentMinify ? '.min' : ''}.js`
+
+        build(inputOptions(currentName), outputOptions(currentName, currentFormat, currentMinify))
+          .then(() => {
+            log(logBgSuccess(` OK ${x} `))
+          })
+          .catch(error => {
+            log(logBgError(` Fail ${x} `))
+            log(logBgError(error))
+          })
       })
     })
   })
-}
-
-function buildResult() {
-  ok
-    ? log(logBgSuccess(` ${ok} files built successfully `))
-    : ''
-
-  fail
-    ? log(logBgError(` ${fail} files failed to build `))
-    : ''
 }
 
 async function build(inputOpts, outputOpts) {
   let bundle
 
   try {
-    ok += 1
     bundle = await rollup(inputOpts)
   } catch (error) {
-    fail += 1
     log(logBgError(error))
   }
 
