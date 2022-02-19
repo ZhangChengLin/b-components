@@ -1,24 +1,24 @@
 {
   "files": [
     {
-      "path": "./dist/bComponents.js",
-      "maxSize": "2.81KB"
+      "path": "./dist/b.bundle.js",
+      "maxSize": "2.44KB"
     },
     {
-      "path": "./dist/bComponents.min.js",
-      "maxSize": "1.67KB"
+      "path": "./dist/b.bundle.min.js",
+      "maxSize": "1.66KB"
     },
     {
-      "path": "./dist/bComponents.esm.js",
-      "maxSize": "2.60KB"
+      "path": "./dist/b.bundle.esm.js",
+      "maxSize": "2.27KB"
     },
     {
-      "path": "./dist/bComponents.esm.min.js",
+      "path": "./dist/b.bundle.esm.min.js",
       "maxSize": "1.56KB"
     },
     {
       "path": "./dist/bModal.esm.js",
-      "maxSize": "1.67KB"
+      "maxSize": "1.44KB"
     },
     {
       "path": "./dist/bModal.esm.min.js",
@@ -26,7 +26,7 @@
     },
     {
       "path": "./dist/bOffcanvas.esm.js",
-      "maxSize": "1.37KB"
+      "maxSize": "1.18KB"
     },
     {
       "path": "./dist/bOffcanvas.esm.min.js",
@@ -34,35 +34,35 @@
     },
     {
       "path": "./dist/bToast.esm.js",
-      "maxSize": "1.55KB"
+      "maxSize": "1.35KB"
     },
     {
       "path": "./dist/bToast.esm.min.js",
-      "maxSize": "955B"
+      "maxSize": "954B"
     },
     {
       "path": "./dist/bModal.js",
-      "maxSize": "1.82KB"
+      "maxSize": "1.59KB"
     },
     {
       "path": "./dist/bModal.min.js",
-      "maxSize": "1.11KB"
+      "maxSize": "1.08KB"
     },
     {
       "path": "./dist/bOffcanvas.js",
-      "maxSize": "1.51KB"
+      "maxSize": "1.32KB"
     },
     {
       "path": "./dist/bOffcanvas.min.js",
-      "maxSize": "966B"
+      "maxSize": "928B"
     },
     {
       "path": "./dist/bToast.js",
-      "maxSize": "1.69KB"
+      "maxSize": "1.5KB"
     },
     {
       "path": "./dist/bToast.min.js",
-      "maxSize": "1.07KB"
+      "maxSize": "1.03KB"
     }
   ],
   "ci": {

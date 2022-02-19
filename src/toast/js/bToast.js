@@ -1,5 +1,4 @@
 import {Toast} from 'bootstrap'
-
 import {toastEvents, removeToast, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
 
 /**
