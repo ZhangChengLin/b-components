@@ -21,7 +21,7 @@ const cleanupOptions = {}
 
 const MinifyStatus = [true, false]
 const OutputFormat = ['esm', 'umd']
-const Components = ['components', 'modal', 'offcanvas', 'toast']
+const ComponentNames = ['modal', 'offcanvas', 'toast', 'bundle']
 
 function inputOptions(dirname, format) {
   return {
@@ -49,7 +49,7 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
           ? 'system'
           : format
 
-  return {
+  const Opts = {
     name: `${PREFIX}${toUpperCase(filename)}`,
     banner: min ? BannerMin : Banner,
     format: format ? format : 'umd',
@@ -63,6 +63,12 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
     },
     sourcemap: sourcemap
   }
+  if (filename === 'bundle') {
+    Opts.name = ''
+    Opts.file = paths.dist + `${PREFIX}.${filename}${format ? '.' + format : ''}${min ? '.min' : ''}.js`
+  }
+
+  return Opts
 }
 
 buildList()
@@ -70,7 +76,7 @@ buildList()
 function buildList() {
   MinifyStatus.forEach(currentMinify => {
     OutputFormat.forEach(currentFormat => {
-      Components.forEach(currentName => {
+      ComponentNames.forEach(currentName => {
         const x = `${PREFIX}${toUpperCase(currentName)}${currentFormat === 'umd' ? '' : '.' + currentFormat}${currentMinify ? '.min' : ''}.js`
 
         build(inputOptions(currentName, currentFormat), outputOptions(currentName, currentFormat, currentMinify))

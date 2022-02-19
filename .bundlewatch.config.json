@@ -1,19 +1,19 @@
 {
   "files": [
     {
-      "path": "./dist/bComponents.js",
-      "maxSize": "2.48KB"
+      "path": "./dist/b.bundle.js",
+      "maxSize": "2.44KB"
     },
     {
-      "path": "./dist/bComponents.min.js",
-      "maxSize": "1.67KB"
+      "path": "./dist/b.bundle.min.js",
+      "maxSize": "1.66KB"
     },
     {
-      "path": "./dist/bComponents.esm.js",
+      "path": "./dist/b.bundle.esm.js",
       "maxSize": "2.27KB"
     },
     {
-      "path": "./dist/bComponents.esm.min.js",
+      "path": "./dist/b.bundle.esm.min.js",
       "maxSize": "1.56KB"
     },
     {
