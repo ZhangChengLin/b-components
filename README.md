@@ -5,11 +5,11 @@
 | **v0.0.1-rc.8** | [**DEMO**](../demo/demo.html) |
 |:---------------:|:-----------------------------:|
 
-|                **README**                 |
-|:-----------------------------------------:|
-|     [**bModal**](./readme/modal.html)     |
-| [**bOffcanvas**](./readme/offcanvas.html) |
-|     [**bToast**](./readme/toast.html)     |
+|                 **README**                 |
+|:------------------------------------------:|
+|     [**bModal**](../readme/modal.html)     |
+| [**bOffcanvas**](../readme/offcanvas.html) |
+|     [**bToast**](../readme/toast.html)     |
 
 ---
 
