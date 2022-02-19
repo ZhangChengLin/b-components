@@ -7,9 +7,9 @@ const del = require('rollup-plugin-delete')
 const cleanup = require('rollup-plugin-cleanup')
 
 
-const {log, logBgError, logBgSuccess} = require('./chalk')
-const {Banner, BannerMin} = require('./banner')
-const paths = require('./paths')
+const {log, logBgError, logBgSuccess} = require('./config/chalk')
+const {Banner, BannerMin} = require('./config/banner')
+const paths = require('./config/paths')
 
 
 const PREFIX = 'b'
@@ -25,7 +25,7 @@ const Components = ['components', 'modal', 'offcanvas', 'toast']
 
 function inputOptions(dirname, format) {
   return {
-    input: `src/${dirname}/index.${format}.js`,
+    input: paths.src + `${dirname}/index.${format}.js`,
     plugins: [
       del({
         targets: 'dist',
