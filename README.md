@@ -1,11 +1,9 @@
 # b-components-js
 
-## Entrance
+## Demo
 
-|      **v0.0.1-rc.8**      |
-|:-------------------------:|
-| [**README**](readme.html) |
-|  [**DEMO**](index.html)   |
+|      **v0.0.1-rc.8**      | [**DEMO**](index.html) |
+|:-------------------------:|:----------------------:|
 
 ---
 
@@ -22,15 +20,15 @@ npm i b-components-js --save
 ## CDN
 
 - ### jsDelivr
+  - NPM
+    - **[https://www.jsdelivr.com/package/npm/b-components-js](https://www.jsdelivr.com/package/npm/b-components-js)**
+  - GitHub
+    - **[https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components](https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components)**
+  - **View all versions**
     - NPM
-      - **[https://www.jsdelivr.com/package/npm/b-components-js](https://www.jsdelivr.com/package/npm/b-components-js)**
+      - [https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
     - GitHub
-      - **[https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components](https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components)**
-    - **View all versions**
-      - NPM
-        - [https://cdn.jsdelivr.net/npm/b-components-js/](https://cdn.jsdelivr.net/npm/b-components-js/)
-      - GitHub
-        - [https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/)
+      - [https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/)
 
 ```javascript
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bComponents.min.js"></script>
@@ -61,8 +59,8 @@ npm i b-components-js --save
 ---
 
 - ### UNPKG
-    - UNPKG
-      - [https://unpkg.com/browse/b-components-js/](https://unpkg.com/browse/b-components-js/)
+  - UNPKG
+    - [https://unpkg.com/browse/b-components-js/](https://unpkg.com/browse/b-components-js/)
 
 `After the browser parses, get the latest version address`
 
