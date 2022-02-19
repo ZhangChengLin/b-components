@@ -49,12 +49,9 @@ Currently, supports bootstrap v5.x +
 
 ---
 
-## Entrance
+## README
 
-|                              **Entrance**                              |
-|:----------------------------------------------------------------------:|
-| [**README**](https://ZhangChengLin.github.io/b-components/readme.html) |
-|  [**DEMO**](https://ZhangChengLin.github.io/b-components/index.html)   |
+[**README**](https://ZhangChengLin.github.io/b-components/)
 
 ---
 
