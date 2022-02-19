@@ -2,7 +2,7 @@
 
 ## Entrance
 
-|      **v0.0.1-rc.7**      |
+|      **v0.0.1-rc.8**      |
 |:-------------------------:|
 | [**README**](readme.html) |
 |  [**DEMO**](index.html)   |
@@ -47,15 +47,15 @@ npm i b-components-js --save
 `Get the files published by the GitHub repository through jsDelivr`
 
 ```javascript
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bComponents.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bModal.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bOffcanvas.min.js"></script>
-<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bToast.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bComponents.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bModal.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bOffcanvas.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bToast.min.js"></script>
 
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bComponents.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bModal.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bOffcanvas.esm.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.7/dist/bToast.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bComponents.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bModal.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bOffcanvas.esm.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components@v0.0.1-rc.8/dist/bToast.esm.min.js"></script>
 ```
 
 ---
