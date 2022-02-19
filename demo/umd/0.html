@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <link rel="icon" href="../../static/img/favicons/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
-  <title>Components - umd - DEMO</title>
+  <title>Single Bundle File - umd - DEMO</title>
   <script>
     var _hmt = _hmt || [];
     (function () {
@@ -21,6 +21,9 @@
 <body>
 <div class="container">
   <div class="position-relative min-vh-100">
+    <div class="text-center">
+      <p>The current page is using the 'dist\b.bundle.min.js' file</p>
+    </div>
     <div class="position-absolute top-50 start-50 translate-middle">
       <div class="d-flex flex-column">
         <button class="my-1 btn btn-outline-success" type="button" id="bModal_">bModal</button>
@@ -33,24 +36,21 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!--<script src="../../dist/bComponents.js"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bComponents.min.js"></script>
+<script src="../../dist/b.bundle.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/b-components-js/dist/b.bundle.min.js"></script>-->
 <script>
   const bModal_ = document.querySelector('#bModal_')
   const bOffcanvas_ = document.querySelector('#bOffcanvas_')
   const bToast_ = document.querySelector('#bToast_')
 
   bModal_.addEventListener('click', function () {
-    bComponents.bModal('11111', '22222')
-    // bModal('11111', '22222')
+    bModal('11111', '22222')
   })
   bOffcanvas_.addEventListener('click', function () {
-    bComponents.bOffcanvas('11111', '22222')
-    // bOffcanvas('11111', '22222')
+    bOffcanvas('11111', '22222')
   })
   bToast_.addEventListener('click', function () {
-    bComponents.bToast('11111', '22222')
-    // bToast('11111', '22222')
+    bToast('11111', '22222')
   })
 </script>
 </body>
