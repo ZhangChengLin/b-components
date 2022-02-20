@@ -45,7 +45,7 @@ OR MORE
 
 ```javascript
 <script>
-  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent,Options, EventsType, EventsFunction)
+  bModal(headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction)
 </script>
 ```
 
@@ -66,7 +66,7 @@ OR MORE
 |   5   |  VerticallyCentered  |              Boolean               |                         false                          |                                                        true &#124; false                                                         |                                    https://getbootstrap.com/docs/5.1/components/modal/#vertically-centered                                    |
 |   6   | ScrollingLongContent |              Boolean               |                         false                          |                                                        true &#124; false                                                         |                                  https://getbootstrap.com/docs/5.1/components/modal/#scrolling-long-content                                   |
 |   7   |       Options        |               Object               | backdrop : true,<br/>keyboard : true,<br/>focus : true |          backdrop : true &#124; false &#124; "static",<br/>keyboard : true &#124; false,<br/>focus : true &#124; false           |                                          https://getbootstrap.com/docs/5.1/components/modal/#options                                          |
-|   8   |      eventsType      |               String               |                          None                          |                             "show" &#124; "shown" &#124; "hide" &#124; "hidden" &#124; hidePrevented                             |                                          https://getbootstrap.com/docs/5.1/components/modal/#events                                           |
-|   9   |      eventsFun       |              Function              |                          None                          |                                                               None                                                               |                                          https://getbootstrap.com/docs/5.1/components/modal/#events                                           |
+|   8   |      EventsType      |               String               |                          None                          |                             "show" &#124; "shown" &#124; "hide" &#124; "hidden" &#124; hidePrevented                             |                                          https://getbootstrap.com/docs/5.1/components/modal/#events                                           |
+|   9   |    EventsFunction    |              Function              |                          None                          |                                                               None                                                               |                                          https://getbootstrap.com/docs/5.1/components/modal/#events                                           |
 
 ---
