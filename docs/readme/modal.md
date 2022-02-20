@@ -4,8 +4,9 @@
 
 ## Demo
 
-[docs/demo/umd/modal.html](../demo/umd/modal.html)
-[docs/demo/esm/modal.html](../demo/esm/modal.html)
+[umd](../demo/umd/modal.html)
+
+[esm](../demo/esm/modal.html)
 
 
 ---

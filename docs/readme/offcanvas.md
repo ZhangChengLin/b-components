@@ -4,8 +4,9 @@
 
 ## Demo
 
-[docs/demo/umd/offcanvas.html](../demo/umd/offcanvas.html)
-[docs/demo/esm/offcanvas.html](../demo/esm/offcanvas.html)
+[umd](../demo/umd/offcanvas.html)
+
+[esm](../demo/esm/offcanvas.html)
 
 ---
 

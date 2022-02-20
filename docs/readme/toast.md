@@ -4,8 +4,9 @@
 
 ## Demo
 
-[docs/demo/umd/toast.html](../demo/umd/toast.html)
-[docs/demo/esm/toast.html](../demo/esm/toast.html)
+[umd](../demo/umd/toast.html)
+
+[esm](../demo/esm/toast.html)
 
 
 ---
