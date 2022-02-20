@@ -1,6 +1,8 @@
 'use strict'
 
-const root = './'
+const path = require('path')
+
+const root = path.resolve(__dirname, '../../') + '/'
 const nodeModules = root + 'node_modules/'
 const src = root + 'src/'
 const docs = root + 'docs/'
