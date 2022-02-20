@@ -45,11 +45,9 @@
 
 - ✔ [**README**](https://ZhangChengLin.github.io/b-components/)
 
+Currently, supports bootstrap v5.x +
 <details>
-  <summary>
-    <p>Welcome PR</p>
-    <p>Currently, supports bootstrap v5.x +</p>
-  </summary>
+  <summary>Welcome PR</summary>
 
 Supports
 -
@@ -83,16 +81,17 @@ TODO
 
 ---
 
+
+## Semantic versioning
+
+This project follows [semver](https://semver.org/) as closely as possible **from version 1.0.0 onwards**.
+
+---
+
 ## License
 
 **MIT**
 
 under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-
----
-
-## Semantic versioning
-
-This project follows [semver](https://semver.org/) as closely as possible **from version 1.0.0 onwards**.
 
 ---
