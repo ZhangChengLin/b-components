@@ -1,13 +1,12 @@
 # bModal
 
-<a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
+[![](https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social)](https://github.com/ZhangChengLin/b-components)
 
 ## Demo
 
 [umd](../demo/umd/modal.html)
 
 [esm](../demo/esm/modal.html)
-
 
 ---
 

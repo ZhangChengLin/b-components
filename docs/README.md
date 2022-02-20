@@ -75,7 +75,7 @@ npm i b-components-js --save
 
 // module
 <script type="module">
-  import {bModal}, {bOffcanvas}, {bToast} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/b.bundle.esm.js/+esm'
+  import {bModal}, {bOffcanvas}, {bToast} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/b.bundle.esm.min.js/+esm'
 
   import {bModal} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.esm.min.js/+esm'
   import {bOffcanvas} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.esm.min.js/+esm'
@@ -100,11 +100,11 @@ npm i b-components-js --save
 
 // module
 <script type="module">
-  import {bModal},{bOffcanvas},{bToast} from 'https://unpkg.com/b-components-js/dist/b.bundle.esm.js?module'
+  import {bModal},{bOffcanvas},{bToast} from 'https://unpkg.com/b-components-js/dist/b.bundle.esm.min.js?module'
 
-  import {bModal} from 'https://unpkg.com/b-components-js/dist/bModal.esm.js?module'
-  import {bOffcanvas} from 'https://unpkg.com/b-components-js/dist/bOffcanvas.esm.js?module'
-  import {bToast} from 'https://unpkg.com/b-components-js/dist/bToast.esm.js?module'
+  import {bModal} from 'https://unpkg.com/b-components-js/dist/bModal.esm.min.js?module'
+  import {bOffcanvas} from 'https://unpkg.com/b-components-js/dist/bOffcanvas.esm.min.js?module'
+  import {bToast} from 'https://unpkg.com/b-components-js/dist/bToast.esm.min.js?module'
 </script>
 ```
 
