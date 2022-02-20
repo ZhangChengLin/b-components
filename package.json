@@ -2,7 +2,8 @@
   "name": "b-components-js",
   "version": "0.0.1",
   "description": "Generate Bootstrap components through JavaScript",
-  "main": "",
+  "main": "dist/b.bundle.js",
+  "module": "dist/b.bundle.esm.js",
   "scripts": {
     "release": "npm-run-all -s lint compile bundlewatch",
     "lint": "npm-run-all --aggregate-output -p js-lint",

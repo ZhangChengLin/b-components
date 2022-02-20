@@ -1,5 +1,9 @@
 # b-components-js
 
+[![](https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social)](https://github.com/ZhangChengLin/b-components)
+
+[![](https://img.shields.io/npm/v/b-components-js.svg)](https://www.npmjs.com/package/b-components-js)
+
 ## Demo
 
 | **v0.0.1** | [**DEMO**](../demo/) |
