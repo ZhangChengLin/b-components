@@ -5,6 +5,7 @@
 ## Demo
 
 [docs/demo/umd/offcanvas.html](../demo/umd/offcanvas.html)
+[docs/demo/esm/offcanvas.html](../demo/esm/offcanvas.html)
 
 ---
 
@@ -20,22 +21,20 @@
 ## How to use
 
 ```javascript
-<a href="javascript:;" onclick="bOffcanvas(parameter)">text</a>
-
-<script src="./dist/bOffcanvas.min.js"></script>
-```
-
-OR
-
-```javascript
 <a href="javascript:;" id="xx">text</a>
 
+// <script src="./dist/b.bundle.min.js"></script>
 <script src="./dist/bOffcanvas.min.js"></script>
 <script>
-  const xx = document.querySelector("#xx");
-  xx.addEventListener("click", function () {
-  bOffcanvas(parameter)
-})
+  const xx = document.querySelector("#xx")
+
+  demo()
+
+  function demo() {
+    xx.addEventListener("click", function () {
+        bOffcanvas(parameter)
+    })
+  }
 </script>
 ```
 

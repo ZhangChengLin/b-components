@@ -5,6 +5,7 @@
 ## Demo
 
 [docs/demo/umd/modal.html](../demo/umd/modal.html)
+[docs/demo/esm/modal.html](../demo/esm/modal.html)
 
 
 ---
@@ -21,22 +22,20 @@
 ## How to use
 
 ```javascript
-<a href="javascript:;" onclick="bModal(parameter)">text</a>
-
-<script src="./dist/bModal.min.js"></script>
-```
-
-OR
-
-```javascript
 <a href="javascript:;" id="xx">text</a>
 
+// <script src="./dist/b.bundle.min.js"></script>
 <script src="./dist/bModal.min.js"></script>
 <script>
-  const xx = document.querySelector("#xx");
-  xx.addEventListener("click", function () {
-  bModal(parameter)
-})
+  const xx = document.querySelector("#xx")
+
+  demo()
+
+  function demo() {
+    xx.addEventListener("click", function () {
+        bModal(parameter)
+    })
+  }
 </script>
 ```
 

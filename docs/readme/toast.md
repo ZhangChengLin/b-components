@@ -5,6 +5,7 @@
 ## Demo
 
 [docs/demo/umd/toast.html](../demo/umd/toast.html)
+[docs/demo/esm/toast.html](../demo/esm/toast.html)
 
 
 ---
@@ -21,22 +22,20 @@
 ## How to use
 
 ```javascript
-<a href="javascript:;" onclick="bToast(parameter)">text</a>
-
-<script src="./dist/bToast.min.js"></script>
-```
-
-OR
-
-```javascript
 <a href="javascript:;" id="xx">text</a>
 
+// <script src="./dist/b.bundle.min.js"></script>
 <script src="./dist/bToast.min.js"></script>
 <script>
-  const xx = document.querySelector("#xx");
-  xx.addEventListener("click", function () {
-  bToast(parameter)
-})
+  const xx = document.querySelector("#xx")
+
+  demo()
+
+  function demo() {
+    xx.addEventListener("click", function () {
+        bToast(parameter)
+    })
+  }
 </script>
 ```
 
