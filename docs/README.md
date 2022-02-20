@@ -17,6 +17,31 @@
 
 ---
 
+<details>
+  <summary>Welcome PR</summary>
+
+Supports
+-
+
+- 💚 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
+- 💚 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
+- 💚 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
+
+TODO
+-
+
+- 🖤 [Alert](https://getbootstrap.com/docs/5.1/components/alerts/)
+- 🖤 [Carousel](https://getbootstrap.com/docs/5.1/components/carousel/)
+- 🖤 [Collapse](https://getbootstrap.com/docs/5.1/components/collapse/)
+- 🖤 [Dropdown](https://getbootstrap.com/docs/5.1/components/dropdowns/)
+- 🖤 [Progress](https://getbootstrap.com/docs/5.1/components/progress/)
+- 🖤 [Scrollspy](https://getbootstrap.com/docs/5.1/components/scrollspy/)
+- 🖤 [Tab](https://getbootstrap.com/docs/5.1/components/navs-tabs/)
+
+</details>
+
+---
+
 ## How to install
 
 - **Install via NPM package**
