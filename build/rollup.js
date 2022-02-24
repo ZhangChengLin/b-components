@@ -8,7 +8,7 @@ const cleanup = require('rollup-plugin-cleanup')
 
 const {NODE_ENV} = process.env
 
-const {log, errorLog, infoLog, logBgError, logBgSuccess} = require('./config/chalk')
+const {log, errorLog, infoLog, logBgError, logBgSuccess, logSuccess} = require('./config/chalk')
 const {Banner, BannerMin} = require('./config/banner')
 const {paths} = require('./config/paths')
 
@@ -76,6 +76,10 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
 buildList()
 
 function buildList() {
+  NODE_ENV === 'development'
+    ? log(logBgSuccess(' 开发模式 '))
+    : log(logBgSuccess(' 生产模式 '))
+
   MinifyStatus.forEach(currentMinify => {
     OutputFormat.forEach(currentFormat => {
       ComponentNames.forEach(currentName => {
@@ -104,25 +108,24 @@ async function build(inputOpts, outputOpts) {
     errorLog(logBgError('rollup errorLog: '), error)
   }
 
-  await bundle.write(outputOpts)
-
 
   NODE_ENV === 'development'
     ? await (async () => {
       try {
-        // watcher = await watch([inputOpts, outputOpts, bundle.watchFiles, external])
         watcher = await watch({
           input: inputOpts,
           output: outputOpts,
           watch: bundle.watchFiles,
           external: external
         })
+        watcherTips(watcher)
       } catch (error) {
         errorLog(logBgError('watch errorLog: '), error)
       }
-      watcherTips(watcher)
     })()
     : ''
+
+  await bundle.write(outputOpts)
 
   if (bundle) {
     await bundle.close()
