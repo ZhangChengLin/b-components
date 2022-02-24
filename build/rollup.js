@@ -1,6 +1,6 @@
 'use strict'
 
-const {rollup, watch} = require('rollup')
+const {rollup, watch, RollupWatcher} = require('rollup')
 const {terser} = require('rollup-plugin-terser')
 const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const del = require('rollup-plugin-delete')
@@ -8,9 +8,9 @@ const cleanup = require('rollup-plugin-cleanup')
 
 const {NODE_ENV} = process.env
 
-const {log, logBgError, logBgSuccess} = require('./config/chalk')
+const {log, errorLog, infoLog, logBgError, logBgSuccess} = require('./config/chalk')
 const {Banner, BannerMin} = require('./config/banner')
-const paths = require('./config/paths')
+const {paths} = require('./config/paths')
 
 
 const PREFIX = 'b'
@@ -23,6 +23,7 @@ const cleanupOptions = {}
 const MinifyStatus = [true, false]
 const OutputFormat = ['esm', 'umd']
 const ComponentNames = ['modal', 'offcanvas', 'toast', 'bundle']
+const external = ['bootstrap']
 
 function inputOptions(dirname, format) {
   return {
@@ -35,7 +36,7 @@ function inputOptions(dirname, format) {
       nodeResolve(nodeResolveOptions),
       cleanup(cleanupOptions)
     ],
-    external: ['bootstrap']
+    external
   }
 }
 
@@ -95,28 +96,67 @@ function buildList() {
 
 async function build(inputOpts, outputOpts) {
   let bundle
+  let watcher
 
   try {
     bundle = await rollup(inputOpts)
   } catch (error) {
-    log(logBgError(error))
+    errorLog(logBgError('rollup errorLog: '), error)
   }
 
   await bundle.write(outputOpts)
+
+
+  NODE_ENV === 'development'
+    ? await (async () => {
+      try {
+        // watcher = await watch([inputOpts, outputOpts, bundle.watchFiles, external])
+        watcher = await watch({
+          input: inputOpts,
+          output: outputOpts,
+          watch: bundle.watchFiles,
+          external: external
+        })
+      } catch (error) {
+        errorLog(logBgError('watch errorLog: '), error)
+      }
+      watcherTips(watcher)
+    })()
+    : ''
 
   if (bundle) {
     await bundle.close()
   }
 }
 
-const watchOptions = {}
-const watcher = watch(watchOptions)
+/**
+ * @param {RollupWatcher} watcher
+ */
+function watcherTips(watcher = RollupWatcher) {
 
-NODE_ENV === 'development'
-  ? jsWatcher()
-  : ''
+  watcher.on('event', event => {
+    switch (event.code) {
+      case 'START':// START — 监听器正在启动（重启）
+        infoLog('Rebuilding...')
+        break
+      case 'BUNDLE_START':// BUNDLE_START — 构建单个文件束
+        infoLog('Bundling...')
+        break
+      case 'BUNDLE_END':// BUNDLE_END — 完成文件束构建
+        infoLog('Bundled!')
+        break
+      case 'END':// END — 完成所有文件束构建
+        infoLog('Done!')
+        break
+      case 'ERROR':// ERROR — 构建时遇到错误
+        // errorLog(logBgError('Rollup error: '), event)
+        break
+      default:
+        log(logBgError(event.code))
+        log(logBgError('157'))
+    }
+  })
 
-function jsWatcher() {
-  // log(logBgSuccess('正在监控'))
-  watcher.close()
+// 停止监听
+//   watcher.close()
 }

@@ -10,7 +10,7 @@ const dist = root + 'dist/'
 const cache = root + '.cache/'
 
 
-module.exports = {
+const paths = {
   root: root,
   nodeModules: nodeModules,
   src: src,
@@ -18,3 +18,5 @@ module.exports = {
   dist: dist,
   cache: cache
 }
+
+module.exports = {paths}
