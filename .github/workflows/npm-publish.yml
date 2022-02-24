@@ -7,6 +7,10 @@ on:
     types: [ created ]
   workflow_dispatch:
 
+env:
+  FORCE_COLOR: 2
+  NODE: 16
+
 jobs:
   publish-npm:
     runs-on: ubuntu-latest

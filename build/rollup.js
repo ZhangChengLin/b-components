@@ -6,6 +6,7 @@ const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const del = require('rollup-plugin-delete')
 const cleanup = require('rollup-plugin-cleanup')
 
+const {NODE_ENV} = process.env
 
 const {log, logBgError, logBgSuccess} = require('./config/chalk')
 const {Banner, BannerMin} = require('./config/banner')
@@ -111,8 +112,11 @@ async function build(inputOpts, outputOpts) {
 const watchOptions = {}
 const watcher = watch(watchOptions)
 
-jsWatcher()
+NODE_ENV === 'development'
+  ? jsWatcher()
+  : ''
 
 function jsWatcher() {
+  // log(logBgSuccess('正在监控'))
   watcher.close()
 }
