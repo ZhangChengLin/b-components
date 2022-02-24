@@ -8,7 +8,7 @@ const cleanup = require('rollup-plugin-cleanup')
 
 const {NODE_ENV} = process.env
 
-const {log, errorLog, infoLog, logBgError, logBgSuccess, logSuccess} = require('./config/chalk')
+const {log, errorLog, infoLog, logBgError, logBgSuccess} = require('./config/chalk')
 const {Banner, BannerMin} = require('./config/banner')
 const {paths} = require('./config/paths')
 
