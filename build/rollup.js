@@ -108,7 +108,6 @@ async function build(inputOpts, outputOpts) {
     errorLog(logBgError('rollup errorLog: '), error)
   }
 
-
   NODE_ENV === 'development'
     ? await (async () => {
       try {
@@ -116,7 +115,7 @@ async function build(inputOpts, outputOpts) {
           input: inputOpts,
           output: outputOpts,
           watch: bundle.watchFiles,
-          external: external
+          external
         })
         watcherTips(watcher)
       } catch (error) {
