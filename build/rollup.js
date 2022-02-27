@@ -6,15 +6,15 @@ const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const del = require('rollup-plugin-delete')
 const cleanup = require('rollup-plugin-cleanup')
 
-const {NODE_ENV} = process.env
-
 const {log, errorLog, infoLog, logBgError, logBgSuccess} = require('./config/chalk')
 const {Banner, BannerMin} = require('./config/banner')
 const {paths} = require('./config/paths')
 
-
-const PREFIX = 'b'
 const toUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase())
+
+const {NODE_ENV} = process.env
+const PREFIX = 'b'
+
 const terserOptions = {}
 const nodeResolveOptions = {}
 const cleanupOptions = {}
@@ -26,8 +26,10 @@ const ComponentNames = ['modal', 'offcanvas', 'toast', 'bundle']
 const external = ['bootstrap']
 
 NODE_ENV === 'development'
-  ? log(logBgSuccess(' 开发模式 '))
-  : log(logBgSuccess(' 生产模式 '))
+  ? log(logBgSuccess(' Development Mode '))
+  : log(logBgSuccess(' Production Mode '))
+
+buildList()
 
 function inputOptions(dirname, format) {
   return {
@@ -76,8 +78,6 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
 
   return Opts
 }
-
-buildList()
 
 function buildList() {
   MinifyStatus.forEach(currentMinify => {
