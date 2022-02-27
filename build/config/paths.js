@@ -9,7 +9,6 @@ const docs = root + 'docs/'
 const dist = root + 'dist/'
 const cache = root + '.cache/'
 
-
 const paths = {
   root: root,
   nodeModules: nodeModules,
@@ -19,4 +18,4 @@ const paths = {
   cache: cache
 }
 
-module.exports = {paths}
+module.exports = { paths }

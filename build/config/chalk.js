@@ -6,7 +6,7 @@ const customChalk = new chalk.Instance({
   level: 3
 })
 
-const {log, info, error, warn} = console
+const { log, info, error, warn } = console
 
 const orange = '#FFA500'
 

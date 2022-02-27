@@ -1,4 +1,4 @@
-import {Offcanvas} from 'bootstrap'
+import { Offcanvas } from 'bootstrap'
 export * from '../../../util/index'
 
 /**
@@ -28,7 +28,7 @@ const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _offcanvas
  */
-const removeOffcanvas = _offcanvas => {
+const removeOffcanvas = (_offcanvas) => {
   _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
     const x = Offcanvas.getInstance(_offcanvas)
     x.dispose()

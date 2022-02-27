@@ -1,5 +1,5 @@
-import {Toast} from 'bootstrap'
-import {toastEvents, removeToast, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
+import { Toast } from 'bootstrap'
+import { toastEvents, removeToast, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} toastId
@@ -86,9 +86,9 @@ const header = (headerNodeElement) => {
   _title.className = 'toast-title me-auto'
   headerNodeElement instanceof Function
     ? _title.append(headerNodeElement())
-    : headerNodeElement instanceof HTMLElement
+    : (headerNodeElement instanceof HTMLElement
       ? _title.append(headerNodeElement)
-      : _title.innerHTML = headerNodeElement
+      : _title.innerHTML = headerNodeElement)
 
   _header.append(_title, bsDismissBtn('toast'))
 
@@ -104,9 +104,9 @@ const body = (bodyNodeElement) => {
   _body.className = 'toast-body'
   bodyNodeElement instanceof Function
     ? _body.append(bodyNodeElement())
-    : bodyNodeElement instanceof HTMLElement
+    : (bodyNodeElement instanceof HTMLElement
       ? _body.append(bodyNodeElement)
-      : _body.innerHTML = bodyNodeElement
+      : _body.innerHTML = bodyNodeElement)
 
   return _body
 }
