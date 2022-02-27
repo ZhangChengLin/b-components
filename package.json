@@ -17,6 +17,8 @@
     "watch": "npm-run-all --aggregate-output -p watch-*",
     "watch-js": "nodemon --watch src/ --ext js --exec \"npm-run-all -s lint-js compile-js\"",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
+    "test": "",
+    "test-js": "",
     "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1' 'New version has been released'"
   },
   "repository": {

@@ -65,5 +65,21 @@
     "unicorn/no-unused-properties": "error",
     "unicorn/prefer-module": "off",
     "unicorn/prevent-abbreviations": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": "build/**/*.js",
+      "excludedFiles": "",
+      "env": {
+        "browser": false,
+        "node": true
+      },
+      "parserOptions": {
+        "sourceType": "script"
+      },
+      "rules": {
+        "strict": "error"
+      }
+    }
+  ]
 }
