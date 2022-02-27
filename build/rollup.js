@@ -25,6 +25,10 @@ const OutputFormat = ['esm', 'umd']
 const ComponentNames = ['modal', 'offcanvas', 'toast', 'bundle']
 const external = ['bootstrap']
 
+NODE_ENV === 'development'
+  ? log(logBgSuccess(' 开发模式 '))
+  : log(logBgSuccess(' 生产模式 '))
+
 function inputOptions(dirname, format) {
   return {
     input: paths.src + `${dirname}/index.${format}.js`,
@@ -76,10 +80,6 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
 buildList()
 
 function buildList() {
-  NODE_ENV === 'development'
-    ? log(logBgSuccess(' 开发模式 '))
-    : log(logBgSuccess(' 生产模式 '))
-
   MinifyStatus.forEach(currentMinify => {
     OutputFormat.forEach(currentFormat => {
       ComponentNames.forEach(currentName => {
