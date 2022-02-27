@@ -1,7 +1,62 @@
 {
-  "tabWidth": 2,
-  "useTabs": false,
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "embeddedLanguageFormatting": "off",
+  "endOfLine": "lf",
+  "plugins": [],
+  "printWidth": 80,
+  "requirePragma": true,
   "semi": false,
   "singleQuote": true,
-  "arrowParens": "avoid"
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "tabWidth": 4,
+        "printWidth": 120,
+        "htmlWhitespaceSensitivity": "strict",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.scss"],
+      "options": {
+        "parser": "scss",
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.css"],
+      "options": {
+        "parser": "css",
+        "tabWidth": 2,
+        "htmlWhitespaceSensitivity": "strict",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel",
+        "tabWidth": 2,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "build/**/*.js",
+      "options": {
+        "requirePragma": false
+      }
+    },
+    {
+      "files": "src/**/*.js",
+      "options": {
+        "requirePragma": false
+      }
+    }
+  ]
 }
