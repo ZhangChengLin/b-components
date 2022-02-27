@@ -1,11 +1,11 @@
 {
   "name": "b-components-js",
-  "version": "0.0.2-rc.0",
+  "version": "0.0.2",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "dist/b.bundle.js",
   "module": "dist/b.bundle.esm.js",
   "scripts": {
-    "release": "npm-run-all lint compile bundlewatch",
+    "release": "npm-run-all lint compile test bundlewatch",
     "lint": "npm-run-all --aggregate-output -p lint-*",
     "lint-js": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "fix-lint": "npm-run-all --aggregate-output -p fix-lint-*",
@@ -17,7 +17,7 @@
     "watch": "npm-run-all --aggregate-output -p watch-*",
     "watch-js": "nodemon --watch src/ --ext js --exec \"npm-run-all -s lint-js compile-js\"",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
-    "test": "",
+    "test": "npm-run-all --aggregate-output -p test-*",
     "test-js": "",
     "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1' 'New version has been released'"
   },
