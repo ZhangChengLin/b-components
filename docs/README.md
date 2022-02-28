@@ -1,8 +1,11 @@
 # b-components-js
 
-[![](https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social)](https://github.com/ZhangChengLin/b-components)
+Generate some common components in Bootstrap through JavaScript
 
 [![](https://img.shields.io/npm/v/b-components-js.svg)](https://www.npmjs.com/package/b-components-js)
+[![](https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social)](https://github.com/ZhangChengLin/b-components)
+
+---
 
 ## Demo
 
@@ -58,7 +61,7 @@ npm i b-components-js --save
   - [CDN NPM](https://www.jsdelivr.com/package/npm/b-components-js)
     - [files](https://cdn.jsdelivr.net/npm/b-components-js/)
   - [CDN GitHub](https://www.jsdelivr.com/package/gh/ZhangChengLin/b-components)
-      - [files](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/)
+    - [files](https://cdn.jsdelivr.net/gh/ZhangChengLin/b-components/)
 
 ```javascript
 // javascript

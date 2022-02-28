@@ -1,5 +1,9 @@
 # b-components-js
 
+Generate some common components in Bootstrap through JavaScript
+
+---
+
 <p align="center">
 <a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
 <a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components.svg"></a>
@@ -41,11 +45,10 @@
 
 ---
 
-## README
-
-- ✔ [**README**](https://ZhangChengLin.github.io/b-components/)
+## [**README**](https://ZhangChengLin.github.io/b-components/) ✔
 
 Currently, supports bootstrap v5.x +
+
 <details>
   <summary>Welcome PR</summary>
 

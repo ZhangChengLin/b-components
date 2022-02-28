@@ -1,7 +1,7 @@
 {
   "name": "b-components-js",
-  "version": "0.0.2",
-  "description": "Generate Bootstrap components through JavaScript",
+  "version": "0.0.3-rc.0",
+  "description": "Generate some common components in Bootstrap through JavaScript",
   "main": "dist/b.bundle.js",
   "module": "dist/b.bundle.esm.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "test": "npm-run-all --aggregate-output -p test-*",
     "test-js": "",
-    "deprecatePreviousVersion": "npm deprecate b-components-js@'< 0.0.1' 'New version has been released'"
+    "deprecates": "npm-run-all --aggregate-output -p deprecate-*",
+    "deprecate-OldVersion": "npm deprecate b-components-js@\"< 0.0.1\" \"New version has been released\""
   },
   "repository": {
     "type": "git",
