@@ -1,1 +1,1 @@
-export {default} from './js/bOffcanvas'
+export { default } from './js/bOffcanvas'

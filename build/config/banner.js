@@ -20,4 +20,4 @@ const BannerMin = () =>
  * Copyright (c) 2020 - ${year} ${pkg.license}
 */`
 
-module.exports = {Banner, BannerMin}
+module.exports = { Banner, BannerMin }

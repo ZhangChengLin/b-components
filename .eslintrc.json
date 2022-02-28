@@ -4,11 +4,18 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:unicorn/recommended",
-    "xo",
-    "prettier"
+    "xo"
   ],
   "rules": {
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
     "arrow-body-style": "off",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
     "capitalized-comments": "off",
     "comma-dangle": [
       "error",
@@ -18,8 +25,13 @@
       "error",
       2,
       {
-        "MemberExpression": "off",
         "SwitchCase": 1
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 120
       }
     ],
     "max-params": "off",
@@ -33,6 +45,10 @@
     "no-undef": "off",
     "no-unused-expressions": "off",
     "no-warning-comments": "off",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "object-shorthand": "off",
     "quotes": [
       "error",
@@ -44,9 +60,26 @@
     ],
     "unicorn/filename-case": "off",
     "unicorn/no-array-for-each": "off",
+    "unicorn/no-nested-ternary": "warn",
     "unicorn/no-null": "off",
     "unicorn/no-unused-properties": "error",
     "unicorn/prefer-module": "off",
     "unicorn/prevent-abbreviations": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": "build/**/*.js",
+      "excludedFiles": "",
+      "env": {
+        "browser": false,
+        "node": true
+      },
+      "parserOptions": {
+        "sourceType": "script"
+      },
+      "rules": {
+        "strict": "error"
+      }
+    }
+  ]
 }

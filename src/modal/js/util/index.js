@@ -1,4 +1,4 @@
-import {Modal} from 'bootstrap'
+import { Modal } from 'bootstrap'
 export * from '../../../util/index'
 
 /**
@@ -31,7 +31,7 @@ const modalEvents = (_modal, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _modal
  */
-const removeModal = _modal => {
+const removeModal = (_modal) => {
   _modal.addEventListener('hidden.bs.modal', () => {
     const x = Modal.getInstance(_modal)
     x.dispose()

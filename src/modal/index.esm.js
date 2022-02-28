@@ -1,1 +1,1 @@
-export {default as bModal} from './js/bModal'
+export { default as bModal } from './js/bModal'

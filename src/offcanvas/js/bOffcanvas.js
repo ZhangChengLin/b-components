@@ -1,5 +1,5 @@
-import {Offcanvas} from 'bootstrap'
-import {offcanvasEvents, removeOffcanvas, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
+import { Offcanvas } from 'bootstrap'
+import { offcanvasEvents, removeOffcanvas, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} Placement
@@ -7,7 +7,6 @@ import {offcanvasEvents, removeOffcanvas, getTimeString, isNull, isEmpty, bsDism
  */
 const offcanvas = (Placement, offcanvasId) => {
   const _offcanvas = document.createElement('div')
-
 
   Placement = Placement ?? 'start'
   switch (Placement) {
@@ -46,9 +45,9 @@ const header = (headerNodeElement) => {
   _title.id = 'offcanvasTitleLabel'
   headerNodeElement instanceof Function
     ? _title.append(headerNodeElement())
-    : headerNodeElement instanceof HTMLElement
+    : (headerNodeElement instanceof HTMLElement
       ? _title.append(headerNodeElement)
-      : _title.innerHTML = headerNodeElement
+      : _title.innerHTML = headerNodeElement)
 
   _header.append(_title, bsDismissBtn('offcanvas'))
 
@@ -64,9 +63,9 @@ const body = (bodyNodeElement) => {
   _body.className = 'offcanvas-body'
   bodyNodeElement instanceof Function
     ? _body.append(bodyNodeElement())
-    : bodyNodeElement instanceof HTMLElement
+    : (bodyNodeElement instanceof HTMLElement
       ? _body.append(bodyNodeElement)
-      : _body.innerHTML = bodyNodeElement
+      : _body.innerHTML = bodyNodeElement)
 
   return _body
 }

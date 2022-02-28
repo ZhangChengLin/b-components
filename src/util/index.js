@@ -1,5 +1,5 @@
-const isNull = value => value === null
-const isEmpty = value => typeof value === 'string' && value === ''
+const isNull = (value) => value === null
+const isEmpty = (value) => typeof value === 'string' && value === ''
 
 const bsDismissBtn = (dismissType, whiteVariant = false) => {
   const btn = document.createElement('button')

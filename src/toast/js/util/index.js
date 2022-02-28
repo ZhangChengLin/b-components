@@ -1,4 +1,4 @@
-import {Toast} from 'bootstrap'
+import { Toast } from 'bootstrap'
 export * from '../../../util/index'
 
 /**
@@ -28,7 +28,7 @@ const toastEvents = (_toast, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _toast
  */
-const removeToast = _toast => {
+const removeToast = (_toast) => {
   _toast.addEventListener('hidden.bs.toast', () => {
     const x = Toast.getInstance(_toast)
     x.dispose()

@@ -1,5 +1,5 @@
-import {Modal} from 'bootstrap'
-import {modalEvents, removeModal, getTimeString, isNull, isEmpty, bsDismissBtn} from './util/index'
+import { Modal } from 'bootstrap'
+import { modalEvents, removeModal, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} modalId
@@ -103,9 +103,9 @@ const header = (headerNodeElement) => {
   _title.id = 'modalTitleLabel'
   headerNodeElement instanceof Function
     ? _title.append(headerNodeElement())
-    : headerNodeElement instanceof HTMLElement
+    : (headerNodeElement instanceof HTMLElement
       ? _title.append(headerNodeElement)
-      : _title.innerHTML = headerNodeElement
+      : _title.innerHTML = headerNodeElement)
 
   _header.append(_title, bsDismissBtn('modal'))
 
@@ -121,9 +121,9 @@ const body = (bodyNodeElement) => {
   _body.className = 'modal-body'
   bodyNodeElement instanceof Function
     ? _body.append(bodyNodeElement())
-    : bodyNodeElement instanceof HTMLElement
+    : (bodyNodeElement instanceof HTMLElement
       ? _body.append(bodyNodeElement)
-      : _body.innerHTML = bodyNodeElement
+      : _body.innerHTML = bodyNodeElement)
 
   return _body
 }
@@ -141,9 +141,9 @@ const footer = (footerNodeElement) => {
   _footer.className = 'modal-footer'
   footerNodeElement instanceof Function
     ? _footer.append(footerNodeElement())
-    : footerNodeElement instanceof HTMLElement
+    : (footerNodeElement instanceof HTMLElement
       ? _footer.append(footerNodeElement)
-      : _footer.innerHTML = footerNodeElement
+      : _footer.innerHTML = footerNodeElement)
 
   return _footer
 }
