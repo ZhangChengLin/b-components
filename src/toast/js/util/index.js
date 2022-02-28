@@ -6,7 +6,7 @@ export * from '../../../util/index'
  * @param {String} eventsType
  * @param {Function} eventsFun
  */
-const toastEvents = (_toast, eventsType, eventsFun) => {
+const events = (_toast, eventsType, eventsFun) => {
   switch (eventsType) {
     case 'show':
       _toast.addEventListener('show.bs.toast', () => eventsFun())
@@ -28,7 +28,7 @@ const toastEvents = (_toast, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _toast
  */
-const removeToast = (_toast) => {
+const remove = (_toast) => {
   _toast.addEventListener('hidden.bs.toast', () => {
     const x = Toast.getInstance(_toast)
     x.dispose()
@@ -39,6 +39,6 @@ const removeToast = (_toast) => {
 }
 
 export {
-  toastEvents,
-  removeToast
+  events,
+  remove
 }

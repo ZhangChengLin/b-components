@@ -6,7 +6,7 @@ export * from '../../../util/index'
  * @param {String} eventsType
  * @param {function} eventsFun
  */
-const modalEvents = (_modal, eventsType, eventsFun) => {
+const events = (_modal, eventsType, eventsFun) => {
   switch (eventsType) {
     case 'show':
       _modal.addEventListener('show.bs.modal', () => eventsFun())
@@ -31,7 +31,7 @@ const modalEvents = (_modal, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _modal
  */
-const removeModal = (_modal) => {
+const remove = (_modal) => {
   _modal.addEventListener('hidden.bs.modal', () => {
     const x = Modal.getInstance(_modal)
     x.dispose()
@@ -42,6 +42,6 @@ const removeModal = (_modal) => {
 }
 
 export {
-  modalEvents,
-  removeModal
+  events,
+  remove
 }

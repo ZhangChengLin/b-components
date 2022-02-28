@@ -6,7 +6,7 @@ export * from '../../../util/index'
  * @param {String} eventsType
  * @param {Function} eventsFun
  */
-const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
+const events = (_offcanvas, eventsType, eventsFun) => {
   switch (eventsType) {
     case 'show':
       _offcanvas.addEventListener('show.bs.offcanvas', () => eventsFun())
@@ -28,7 +28,7 @@ const offcanvasEvents = (_offcanvas, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _offcanvas
  */
-const removeOffcanvas = (_offcanvas) => {
+const remove = (_offcanvas) => {
   _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
     const x = Offcanvas.getInstance(_offcanvas)
     x.dispose()
@@ -39,6 +39,6 @@ const removeOffcanvas = (_offcanvas) => {
 }
 
 export {
-  offcanvasEvents,
-  removeOffcanvas
+  events,
+  remove
 }
