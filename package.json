@@ -1,6 +1,6 @@
 {
   "name": "b-components-js",
-  "version": "0.0.3-rc.0",
+  "version": "0.0.3",
   "description": "Generate some common components in Bootstrap through JavaScript",
   "main": "dist/b.bundle.js",
   "module": "dist/b.bundle.esm.js",
