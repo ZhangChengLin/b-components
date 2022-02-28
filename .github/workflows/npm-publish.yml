@@ -1,4 +1,4 @@
-name: Node.js Package
+name: NPM Publish New Version Package
 
 on:
   push:
@@ -39,10 +39,5 @@ jobs:
 
       - name: Release NPM Package
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
-      - name: Deprecate Previous Version
-        run: npm run deprecatePreviousVersion
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
