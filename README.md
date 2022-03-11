@@ -23,9 +23,7 @@ Generate some common components in Bootstrap through JavaScript
 </p>
 
 <p align="center">
-<a href="https://zhangchenglin.github.io/b-components" title='Website' target='_blank'>
-<img alt="Website" src="https://img.shields.io/website?down_message=Offline&label=Docs%20%26%20Demo&up_message=Online&url=https%3A%2F%2Fzhangchenglin.github.io%2Fb-components">
-</a>
+<a href="https://zhangchenglin.github.io/b-components" title='Website' target='_blank'><img alt="Website" src="https://img.shields.io/website?down_message=Offline&label=Docs%20%26%20Demo&up_message=Online&url=https%3A%2F%2Fzhangchenglin.github.io%2Fb-components"></a>
 </p>
 
 <p align="center">
