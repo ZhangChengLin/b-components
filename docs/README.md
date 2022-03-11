@@ -12,12 +12,12 @@ Generate some common components in Bootstrap through JavaScript
 | **v0.0.3** | [**DEMO**](../demo/) |
 |:----------:|:--------------------:|
 
-|                 **README**                 |
-|:------------------------------------------:|
-|     [**bModal**](../readme/modal.html)     |
-| [**bOffcanvas**](../readme/offcanvas.html) |
-|     [**bToast**](../readme/toast.html)     |
-|   [**bTooltip**](../readme/tooltip.html)   |
+|                 **Docs**                 |
+|:----------------------------------------:|
+|     [**bModal**](../docs/modal.html)     |
+| [**bOffcanvas**](../docs/offcanvas.html) |
+|     [**bToast**](../docs/toast.html)     |
+|   [**bTooltip**](../docs/tooltip.html)   |
 
 ---
 
