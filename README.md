@@ -49,7 +49,7 @@ Generate some common components in Bootstrap through JavaScript
 
 ---
 
-## [**README**](https://ZhangChengLin.github.io/b-components/) ✔
+## [**Docs & Demo**](https://ZhangChengLin.github.io/b-components/) ✔
 
 Currently, supports bootstrap v5.x +
 
@@ -62,6 +62,7 @@ Supports
 - 💚 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
 - 💚 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
 - 💚 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
+- 💚 [Tooltip](https://getbootstrap.com/docs/5.1/components/tooltips/)
 
 TODO
 -

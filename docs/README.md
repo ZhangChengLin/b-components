@@ -9,7 +9,7 @@ Generate some common components in Bootstrap through JavaScript
 
 ## Demo
 
-| **v0.0.2** | [**DEMO**](../demo/) |
+| **v0.0.3** | [**DEMO**](../demo/) |
 |:----------:|:--------------------:|
 
 |                 **README**                 |
@@ -17,6 +17,7 @@ Generate some common components in Bootstrap through JavaScript
 |     [**bModal**](../readme/modal.html)     |
 | [**bOffcanvas**](../readme/offcanvas.html) |
 |     [**bToast**](../readme/toast.html)     |
+|   [**bTooltip**](../readme/tooltip.html)   |
 
 ---
 
@@ -29,6 +30,7 @@ Supports
 - 💚 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
 - 💚 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
 - 💚 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
+- 💚 [Tooltip](https://getbootstrap.com/docs/5.1/components/tooltips/)
 
 TODO
 -
@@ -70,6 +72,7 @@ npm i b-components-js --save
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bToast.min.js"></script>
+<script type="javascript" src="https://cdn.jsdelivr.net/npm/b-components-js/dist/bTooltip.min.js"></script>
 
 // module
 <script type="module">
@@ -78,6 +81,7 @@ npm i b-components-js --save
   import {bModal} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bModal.esm.min.js/+esm'
   import {bOffcanvas} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bOffcanvas.esm.min.js/+esm'
   import {bToast} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bToast.esm.min.js/+esm'
+  import {bToast} from 'https://cdn.jsdelivr.net/npm/b-components-js/dist/bTooltip.esm.min.js/+esm'
 </script>
 ```
 
@@ -95,6 +99,7 @@ npm i b-components-js --save
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bModal.min.js"></script>
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bOffcanvas.min.js"></script>
 <script type="javascript" src="https://unpkg.com/b-components-js/dist/bToast.min.js"></script>
+<script type="javascript" src="https://unpkg.com/b-components-js/dist/bTooltip.min.js"></script>
 
 // module
 <script type="module">
@@ -103,6 +108,7 @@ npm i b-components-js --save
   import {bModal} from 'https://unpkg.com/b-components-js/dist/bModal.esm.min.js?module'
   import {bOffcanvas} from 'https://unpkg.com/b-components-js/dist/bOffcanvas.esm.min.js?module'
   import {bToast} from 'https://unpkg.com/b-components-js/dist/bToast.esm.min.js?module'
+  import {bToast} from 'https://unpkg.com/b-components-js/dist/bTooltip.esm.min.js?module'
 </script>
 ```
 
