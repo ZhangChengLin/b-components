@@ -41,6 +41,14 @@
       "maxSize": "950B"
     },
     {
+      "path": "./dist/bTooltip.esm.js",
+      "maxSize": "1.36KB"
+    },
+    {
+      "path": "./dist/bTooltip.esm.min.js",
+      "maxSize": "950B"
+    },
+    {
       "path": "./dist/bModal.js",
       "maxSize": "1.60KB"
     },
@@ -62,6 +70,14 @@
     },
     {
       "path": "./dist/bToast.min.js",
+      "maxSize": "1.03KB"
+    },
+    {
+      "path": "./dist/bTooltip.js",
+      "maxSize": "1.51KB"
+    },
+    {
+      "path": "./dist/bTooltip.min.js",
       "maxSize": "1.03KB"
     }
   ],

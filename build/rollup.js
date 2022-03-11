@@ -21,7 +21,7 @@ const cleanupOptions = {}
 
 const MinifyStatus = [ true, false ]
 const OutputFormat = [ 'esm', 'umd' ]
-const ComponentNames = [ 'modal', 'offcanvas', 'toast', 'bundle' ]
+const ComponentNames = [ 'modal', 'offcanvas', 'toast', 'tooltip', 'bundle' ]
 const external = [ 'bootstrap' ]
 
 NODE_ENV === 'development'
