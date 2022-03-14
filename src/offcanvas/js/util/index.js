@@ -28,7 +28,7 @@ const events = (_offcanvas, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _offcanvas
  */
-const remove = (_offcanvas) => {
+const removeAfterHiding = (_offcanvas) => {
   _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
     const x = Offcanvas.getInstance(_offcanvas)
     x.dispose()
@@ -40,5 +40,5 @@ const remove = (_offcanvas) => {
 
 export {
   events,
-  remove
+  removeAfterHiding
 }

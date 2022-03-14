@@ -1,5 +1,5 @@
 import { Modal } from 'bootstrap'
-import { events, remove, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
+import { events, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} modalId
@@ -178,7 +178,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
 
   const xxx = Options ? new Modal(_modal, Options) : new Modal(_modal)
   xxx.show()
-  remove(_modal)
+  removeAfterHiding(_modal)
   return modalId
 }
 

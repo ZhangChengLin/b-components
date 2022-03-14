@@ -1,5 +1,5 @@
 import { Toast } from 'bootstrap'
-import { events, remove, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
+import { events, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} toastId
@@ -137,7 +137,7 @@ const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsTy
 
   const xxx = Options ? new Toast(_toast, Options) : new Toast(_toast)
   xxx.show()
-  remove(_toast)
+  removeAfterHiding(_toast)
   return toastId
 }
 

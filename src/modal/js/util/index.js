@@ -31,7 +31,7 @@ const events = (_modal, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _modal
  */
-const remove = (_modal) => {
+const removeAfterHiding = (_modal) => {
   _modal.addEventListener('hidden.bs.modal', () => {
     const x = Modal.getInstance(_modal)
     x.dispose()
@@ -43,5 +43,5 @@ const remove = (_modal) => {
 
 export {
   events,
-  remove
+  removeAfterHiding
 }

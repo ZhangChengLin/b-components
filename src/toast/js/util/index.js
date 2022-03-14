@@ -28,7 +28,7 @@ const events = (_toast, eventsType, eventsFun) => {
 /**
  * @param {HTMLElement} _toast
  */
-const remove = (_toast) => {
+const removeAfterHiding = (_toast) => {
   _toast.addEventListener('hidden.bs.toast', () => {
     const x = Toast.getInstance(_toast)
     x.dispose()
@@ -40,5 +40,5 @@ const remove = (_toast) => {
 
 export {
   events,
-  remove
+  removeAfterHiding
 }
