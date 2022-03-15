@@ -10,8 +10,12 @@ Generate some common components in Bootstrap through JavaScript
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ZhangChengLin/b-components">
 <a href="https://github.com/ZhangChengLin/b-components/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ZhangChengLin/b-components"></a>
 <img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/zhangchenglin/b-components">
-<a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components"></a>
 <a href="https://github.com/ZhangChengLin/b-components/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/ZhangChengLin/b-components"></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/ZhangChengLin/b-components/issues?q=is%3Aopen+is%3Aissue" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/zhangchenglin/b-components"></a>
+<a href="https://github.com/ZhangChengLin/b-components/issues?q=is%3Aissue+is%3Aclosed" target="_blank"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/zhangchenglin/b-components"></a>
 </p>
 
 <p align="center">
