@@ -5,12 +5,45 @@ Generate some common components in Bootstrap through JavaScript
 ---
 
 <p align="center">
-<a href="https://github.com/ZhangChengLin/b-components" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components.svg?style=social"></a>
-<a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components.svg"></a>
+<a href="https://github.com/ZhangChengLin/b-components/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components"></a>
+<a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components"></a>
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ZhangChengLin/b-components">
+<a href="https://github.com/ZhangChengLin/b-components/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ZhangChengLin/b-components"></a>
+<img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/zhangchenglin/b-components">
+<a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components"></a>
+<a href="https://github.com/ZhangChengLin/b-components/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/ZhangChengLin/b-components"></a>
+</p>
+
+<p align="center">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/zhangchenglin/b-components">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/zhangchenglin/b-components">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/zhangchenglin/b-components">
+</p>
+
+<p align="center">
+<img alt="GitHub deployments" src="https://img.shields.io/github/deployments/zhangchenglin/b-components/github-pages">
+</p>
+
+<p align="center">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/zhangchenglin/b-components">
+<img alt="GitHub contributors (via allcontributors.org)" src="https://img.shields.io/github/all-contributors/zhangchenglin/b-components/main">
+</p>
+
+<p align="center">
+<img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/zhangchenglin/b-components/main?label=main%20checks">
+<img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/zhangchenglin/b-components/gh-pages?label=gh-pages%20checks">
+</p>
+
+<p align="center">
+<img alt="GitHub search hit counter" src="https://img.shields.io/github/search/zhangchenglin/b-components/bootstrap">
+<img alt="GitHub search hit counter" src="https://img.shields.io/github/search/zhangchenglin/b-components/modal">
+<img alt="GitHub search hit counter" src="https://img.shields.io/github/search/zhangchenglin/b-components/toast">
+<img alt="GitHub search hit counter" src="https://img.shields.io/github/search/zhangchenglin/b-components/offcanvas">
+<img alt="GitHub search hit counter" src="https://img.shields.io/github/search/zhangchenglin/b-components/tooltip">
+</p>
+
+<p align='center'>
 <a href="https://snyk.io.cnpmjs.org/test/npm/b-components-js" title="Snyk Vulnerabilities for GitHub Repo" target="_blank"><img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/ZhangChengLin/b-components"></a>
-<a href="https://github.com/ZhangChengLin/b-components/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/b-components.svg"></a>
-<a href="https://github.com/ZhangChengLin/b-components/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/ZhangChengLin/b-components.svg"></a>
 </p>
 
 <p align="center">
