@@ -27,7 +27,7 @@ Generate some common components in Bootstrap through JavaScript
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/b-components-js" target="_blank"><img alt="NPM Version" title="NPM Package" src="https://img.shields.io/npm/v/b-components-js.svg"></a>
+<a href="https://www.npmjs.com/package/b-components-js" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/b-components-js"></a>
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (final)" target="_blank"><img alt="npms.io (final)" src="https://img.shields.io/npms-io/final-score/b-components-js"></a>
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (maintenance)" target="_blank"><img alt="npms.io (maintenance)" src="https://img.shields.io/npms-io/maintenance-score/b-components-js"></a>
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (popularity)" target="_blank"><img alt="npms.io (popularity)" src="https://img.shields.io/npms-io/popularity-score/b-components-js"></a>
