@@ -4,14 +4,17 @@ Generate some common components in Bootstrap through JavaScript
 
 ---
 
-<p align="center">
-<a href="https://github.com/ZhangChengLin/b-components/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components"></a>
-<a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components"></a>
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ZhangChengLin/b-components">
-<a href="https://github.com/ZhangChengLin/b-components/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ZhangChengLin/b-components"></a>
-<img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/zhangchenglin/b-components">
-<a href="https://github.com/ZhangChengLin/b-components/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/ZhangChengLin/b-components"></a>
-</p>
+<details>
+  <summary>
+    <p align="center">
+    <a href="https://github.com/ZhangChengLin/b-components/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ZhangChengLin/b-components"></a>
+    <a href="https://github.com/ZhangChengLin/b-components/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/b-components"></a>
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ZhangChengLin/b-components">
+    <a href="https://github.com/ZhangChengLin/b-components/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ZhangChengLin/b-components"></a>
+    <img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/zhangchenglin/b-components">
+    <a href="https://github.com/ZhangChengLin/b-components/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/ZhangChengLin/b-components"></a>
+    </p>
+  </summary>
 
 <p align="center">
 <a href="https://github.com/ZhangChengLin/b-components/issues?q=is%3Aopen+is%3Aissue" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/zhangchenglin/b-components"></a>
@@ -63,6 +66,8 @@ Generate some common components in Bootstrap through JavaScript
 <a href="https://zhangchenglin.github.io/b-components" title='Website' target='_blank'><img alt="Website" src="https://img.shields.io/website?down_message=Offline&label=Docs%20%26%20Demo&up_message=Online&url=https%3A%2F%2Fzhangchenglin.github.io%2Fb-components"></a>
 </p>
 
+</details>
+
 <p align="center">
 <a href="https://www.npmjs.com/package/b-components-js" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/b-components-js"></a>
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (final)" target="_blank"><img alt="npms.io (final)" src="https://img.shields.io/npms-io/final-score/b-components-js"></a>
@@ -71,18 +76,18 @@ Generate some common components in Bootstrap through JavaScript
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (quality)" target="_blank"><img alt="npms.io (quality)" src="https://img.shields.io/npms-io/quality-score/b-components-js"></a>
 </p>
 
-<p align="center">
-<a href="https://npmmirror.com/package/b-components-js" target="_blank" title="npmmirror version">
-<img src="https://npmmirror.com/badge/v/b-components-js.svg" alt="npmmirror version" title="npmmirror version">
-<img src="https://npmmirror.com/badge/d/b-components-js.svg" alt="npmmirror download number">
-</a>
-</p>
 
 |                        |                                                                 day                                                                  |                                                                  week                                                                  |                                                                  month                                                                   |                                                                  year                                                                  |                                          total                                          |
 |:----------------------:|:------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
 |          npm           |                                                                                                                                      |                        <img alt="npm download number" src="https://img.shields.io/npm/dw/b-components-js.svg">                         |                         <img alt="npm download number" src="https://img.shields.io/npm/dm/b-components-js.svg">                          |                        <img alt="npm download number" src="https://img.shields.io/npm/dy/b-components-js.svg">                         | <img alt="npm download number" src="https://img.shields.io/npm/dt/b-components-js.svg"> |
 |  jsDelivr hits (npm)   | <img src="https://img.shields.io/jsdelivr/npm/hd/b-components-js.svg" alt="jsDelivr hits (npm) day" title="jsDelivr hits (npm) day"> | <img src="https://img.shields.io/jsdelivr/npm/hw/b-components-js.svg" alt="jsDelivr hits (npm) week" title="jsDelivr hits (npm) week"> | <img src="https://img.shields.io/jsdelivr/npm/hm/b-components-js.svg" alt="jsDelivr hits (npm) month" title="jsDelivr hits (npm) month"> | <img src="https://img.shields.io/jsdelivr/npm/hy/b-components-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year"> |                                                                                         |
 | jsDelivr hits (GitHub) |            <img alt="jsDelivr hits (GitHub) day" src="https://img.shields.io/jsdelivr/gh/hd/ZhangChengLin/b-components">             |             <img alt="jsDelivr hits (GitHub) week" src="https://img.shields.io/jsdelivr/gh/hw/ZhangChengLin/b-components">             |             <img alt="jsDelivr hits (GitHub) month" src="https://img.shields.io/jsdelivr/gh/hm/ZhangChengLin/b-components">              |             <img alt="jsDelivr hits (GitHub) year" src="https://img.shields.io/jsdelivr/gh/hy/ZhangChengLin/b-components">             ||
+
+---
+
+<p align="center">
+  <a href="README-zh_CN.md">中文文档</a>
+</p>
 
 ---
 
@@ -100,6 +105,7 @@ Supports
 - 💚 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
 - 💚 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
 - 💚 [Tooltip](https://getbootstrap.com/docs/5.1/components/tooltips/)
+- 💚 [Popover](https://getbootstrap.com/docs/5.1/components/popovers/)
 
 TODO
 -
