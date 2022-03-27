@@ -1,6 +1,6 @@
 # b-components-js
 
-Generate some commonly used Bootstrap components through JavaScript
+通过 JavaScript 生成一些常用的Bootstrap组件
 
 ---
 
@@ -76,6 +76,12 @@ Generate some commonly used Bootstrap components through JavaScript
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (quality)" target="_blank"><img alt="npms.io (quality)" src="https://img.shields.io/npms-io/quality-score/b-components-js"></a>
 </p>
 
+<p align="center">
+<a href="https://npmmirror.com/package/b-components-js" target="_blank" title="npmmirror version">
+<img src="https://npmmirror.com/badge/v/b-components-js.svg" alt="npmmirror version" title="npmmirror version">
+<img src="https://npmmirror.com/badge/d/b-components-js.svg" alt="npmmirror download number">
+</a>
+</p>
 
 |                        |                                                                 day                                                                  |                                                                  week                                                                  |                                                                  month                                                                   |                                                                  year                                                                  |                                          total                                          |
 |:----------------------:|:------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
@@ -86,19 +92,19 @@ Generate some commonly used Bootstrap components through JavaScript
 ---
 
 <p align="center">
-  <a href="README-zh_CN.md">中文文档</a>
+  <a href="README.md">English Version</a>
 </p>
 
 ---
 
-## [**Docs & Demo**](https://ZhangChengLin.github.io/b-components/) ✔
+## [**文档和演示**](https://ZhangChengLin.github.io/b-components/) ✔
 
-Currently, supports bootstrap v5 +
+目前，支持bootstrap v5 +
 
 <details>
-  <summary>Welcome PR</summary>
+  <summary>欢迎拉取请求</summary>
 
-Supported
+已经支持
 -
 
 - 💚 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
@@ -107,7 +113,7 @@ Supported
 - 💚 [Tooltip](https://getbootstrap.com/docs/5.1/components/tooltips/)
 - 💚 [Popover](https://getbootstrap.com/docs/5.1/components/popovers/)
 
-TODO
+未来支持
 -
 
 - 🖤 [Alert](https://getbootstrap.com/docs/5.1/components/alerts/)
@@ -122,7 +128,7 @@ TODO
 
 ---
 
-## Thanks
+## 感谢
 
 <a href='https://www.netlify.com/' title='Netlify' target='_blank'>
 <svg xmlns="http://www.w3.org/2000/svg" width="147" height="40">
@@ -133,30 +139,30 @@ TODO
 </svg>
 </a>
 
-Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
+感谢 [Netlify](https://www.netlify.com/) 为我们提供了部署预览！
 
 ---
 
-## Donate
+## 捐赠
 
-| Way    |                          Image / Link                           |
-|:-------|:---------------------------------------------------------------:|
-| AliPay | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
-| QQ     |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
-| PayPal |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
-
----
-
-## Semantic versioning
-
-This project follows [semver](https://semver.org/) as closely as possible **from version 1.0.0 onwards**.
+| 途径     |                            图片或链接                            |
+|:-------|:-----------------------------------------------------------:|
+| 支付宝    | [二维码](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
+| QQ     |   [二维码](https://ZhangChengLin.github.io/image/pay-qq.png)   |
+| PayPal |      [PayPal.Me](https://www.paypal.me/ZhangChengLin)       |
 
 ---
 
-## License
+## 语义版本控制
+
+该项目**从 1.0.0 版本**开始尽可能地遵循 [semver](https://semver.org/)。
+
+---
+
+## 许可证
 
 **MIT**
 
-Code released under the MIT License ( [license terms](https://github.com/ZhangChengLin/b-components/blob/main/LICENSE) ).
+根据 MIT 许可证发布代码 ( [许可证条款](https://github.com/ZhangChengLin/b-components/blob/main/LICENSE) ).
 
 ---
