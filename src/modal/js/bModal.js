@@ -1,5 +1,5 @@
 import { Modal } from 'bootstrap'
-import { events, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
+import { componentEvent, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} modalId
@@ -174,7 +174,7 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
   _modal.append(_dialog)
   document.body.append(_modal)
 
-  EventsType && EventsFunction ? events(_modal, EventsType, EventsFunction) : ''
+  EventsType && EventsFunction ? componentEvent(_modal, EventsType, EventsFunction, 'modal') : ''
 
   const xxx = Options ? new Modal(_modal, Options) : new Modal(_modal)
   xxx.show()

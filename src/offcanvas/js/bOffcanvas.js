@@ -1,5 +1,5 @@
 import { Offcanvas } from 'bootstrap'
-import { events, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
+import { componentEvent, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} Placement
@@ -88,7 +88,7 @@ const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, Even
   _offcanvas.append(_header, _body)
   document.body.append(_offcanvas)
 
-  EventsType && EventsFunction ? events(_offcanvas, EventsType, EventsFunction) : ''
+  EventsType && EventsFunction ? componentEvent(_offcanvas, EventsType, EventsFunction, 'offcanvas') : ''
 
   const xxx = Options ? new Offcanvas(_offcanvas, Options) : new Offcanvas(_offcanvas)
   xxx.show()

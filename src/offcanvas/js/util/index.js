@@ -3,30 +3,6 @@ export * from '../../../util/index'
 
 /**
  * @param {HTMLElement} _offcanvas
- * @param {String} eventsType
- * @param {Function} eventsFun
- */
-const events = (_offcanvas, eventsType, eventsFun) => {
-  switch (eventsType) {
-    case 'show':
-      _offcanvas.addEventListener('show.bs.offcanvas', () => eventsFun())
-      break
-    case 'shown':
-      _offcanvas.addEventListener('shown.bs.offcanvas', () => eventsFun())
-      break
-    case 'hide':
-      _offcanvas.addEventListener('hide.bs.offcanvas', () => eventsFun())
-      break
-    case 'hidden':
-      _offcanvas.addEventListener('hidden.bs.offcanvas', () => eventsFun())
-      break
-    default:
-      throw 'eventsType error'
-  }
-}
-
-/**
- * @param {HTMLElement} _offcanvas
  */
 const removeAfterHiding = (_offcanvas) => {
   _offcanvas.addEventListener('hidden.bs.offcanvas', () => {
@@ -39,6 +15,5 @@ const removeAfterHiding = (_offcanvas) => {
 }
 
 export {
-  events,
   removeAfterHiding
 }
