@@ -331,38 +331,36 @@ function EventsFunction_3() {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script>
-  functionSwitch("headerFunction")
-  functionSwitch("bodyFunction")
+  functionSwitch('headerFunction')
+  functionSwitch('bodyFunction')
 
   document.querySelector('#renderOffcanvas').addEventListener('click', renderResult)
   enterRender()
 
   function renderResult() {
-    let Options = {
+    const offcanvasHeader = checkboxStatus('headerFunction') ? selectFunctionValue('headerFunction') : selectValue('offcanvasHeader')
+    const offcanvasBody = checkboxStatus('bodyFunction') ? selectFunctionValue('bodyFunction') : selectValue('offcanvasBody')
+    const Placement = getRadio('offcanvasPlacement')
+    const eventsType = getRadio('eventsType')
+    const EventsFunctionSelect = selectValue('eventsFunction')
+    const EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ''
+    const Options = {
       backdrop: getRadio('offcanvasBackdrop'),
       keyboard: getRadio('offcanvasKeyboard'),
       scroll: getRadio('offcanvasScroll')
     }
 
-    let offcanvasHeader = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("offcanvasHeader")
-    let offcanvasBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("offcanvasBody")
-    let Placement = getRadio('offcanvasPlacement')
-    let eventsType = getRadio("eventsType")
-    let EventsFunctionSelect = selectValue("eventsFunction")
-    let EventsFunction = EventsFunctionSelect ? eval(EventsFunctionSelect) : ""
-
-    let x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, eventsType, EventsFunction)
+    const x = bOffcanvas(offcanvasHeader, offcanvasBody, Placement, Options, eventsType, EventsFunction)
     console.log('The return value of the current Offcanvas', x)
   }
 </script>
 <script>
-  let btnList = document.querySelectorAll("[id^=offcanvas_]")
+  const btnList = document.querySelectorAll("[id^=offcanvas_]")
   btnList.forEach(currentBtn => {
     currentBtn.addEventListener('click', () => {
       bOffcanvas(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
     })
   })
 </script>
-
 </body>
 </html>

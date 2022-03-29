@@ -373,32 +373,31 @@ function eventsFunction_3() {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script>
-  functionSwitch("headerFunction")
-  functionSwitch("bodyFunction")
+  functionSwitch('headerFunction')
+  functionSwitch('bodyFunction')
 
   document.querySelector('#renderToast').addEventListener('click', renderResult)
   enterRender()
 
   function renderResult() {
-    let Options = {
+    const toastHeader = checkboxStatus('headerFunction') ? selectFunctionValue('headerFunction') : selectValue('toastHeader')
+    const toastBody = checkboxStatus('bodyFunction') ? selectFunctionValue('bodyFunction') : selectValue('toastBody')
+    const Placement = getRadio('toastPlacement')
+    const eventsType = getRadio('eventsType')
+    const eventsFunctionSelect = selectValue('eventsFunction')
+    const eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ''
+    const Options = {
       animation: getRadio('toastAnimation'),
       autohide: getRadio('toastAutohide'),
       delay: getNumberValue('toastDelay')
     }
 
-    let toastHeader = checkboxStatus("headerFunction") ? selectFunctionValue("headerFunction") : selectValue("toastHeader")
-    let toastBody = checkboxStatus("bodyFunction") ? selectFunctionValue("bodyFunction") : selectValue("toastBody")
-    let Placement = getRadio('toastPlacement')
-    let eventsType = getRadio("eventsType")
-    let eventsFunctionSelect = selectValue("eventsFunction")
-    let eventsFunction = eventsFunctionSelect ? eval(eventsFunctionSelect) : ""
-
-    let x = bToast(toastHeader, toastBody, Placement, Options, eventsType, eventsFunction)
+    const x = bToast(toastHeader, toastBody, Placement, Options, eventsType, eventsFunction)
     console.log('The return value of the current Toast', x)
   }
 </script>
 <script>
-  let btnList = document.querySelectorAll("[id^=toast_]")
+  const btnList = document.querySelectorAll("[id^=toast_]")
   btnList.forEach(currentBtn => {
     currentBtn.addEventListener('click', () => {
       bToast(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['toastPlacement'])
