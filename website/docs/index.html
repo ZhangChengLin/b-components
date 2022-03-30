@@ -23,9 +23,25 @@
   </script>
 </head>
 <body>
-<div class="container-fluid markdown-body">
-  <article id="readme"></article>
+<div class="container-fluid bg-dark d-flex justify-content-end">
+  <div class='dropdown'>
+    <button class='my-2 btn btn-sm text-secondary border-secondary dropdown-toggle' type='button' id='docs-version' data-bs-toggle='dropdown' aria-expanded='false'>
+      <span class='d-none d-lg-inline'>b-components</span>
+      <span class='current'>v0.0.3</span>
+    </button>
+    <ul class='dropdown-menu dropdown-menu-dark dropdown-menu-end text-center' aria-labelledby='docs-version'>
+      <li><a class='btn-sm dropdown-item fw-bolder active' href='../'>Latest</a></li>
+      <li><hr class='dropdown-divider'></li>
+      <li><a class='btn-sm dropdown-item' href='./0.0.2/'>v0.0.2</a></li>
+      <li><hr class='dropdown-divider'></li>
+      <li><a class='btn-sm dropdown-item' href='./versions/'>All versions</a></li>
+    </ul>
+  </div>
 </div>
+<main class="container-fluid markdown-body">
+  <article id="readme"></article>
+</main>
+<footer class="container-fluid d-flex justify-content-center bg-dark text-muted"></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
