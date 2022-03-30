@@ -1,0 +1,4 @@
+# editorconfig.org
+
+[**/*.{html,htm}]
+insert_final_newline = false

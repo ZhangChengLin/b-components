@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <link rel="icon" href="../static/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github-dark-dimmed.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
+  <title>README</title>
+  <meta name="description" content="Generate some commonly used Bootstrap components through JavaScript">
+  <meta name="keywords" content="Bootstrap,Bootstrap5,Modal,Offcanvas,Toast,Tooltip,Popover">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement('script')
+      hm.src = 'https://hm.baidu.com/hm.js?097448a07faa6124412179f6c9bfc688'
+      var s = document.getElementsByTagName('script')[0]
+      s.parentNode.insertBefore(hm, s)
+    })()
+  </script>
+</head>
+<body>
+<div class="container-fluid bg-dark d-flex justify-content-end">
+  <div class='dropdown'>
+    <button class='my-2 btn btn-sm text-secondary border-secondary dropdown-toggle' type='button' id='docs-version' data-bs-toggle='dropdown' aria-expanded='false'>
+      <span class='d-none d-lg-inline'>b-components</span>
+      <span class='current'>v0.0.3</span>
+    </button>
+    <ul class='dropdown-menu dropdown-menu-dark dropdown-menu-end text-center' aria-labelledby='docs-version'>
+      <li><a class='btn-sm dropdown-item fw-bolder active' href='../'>Latest</a></li>
+      <li><hr class='dropdown-divider'></li>
+      <li><a class='btn-sm dropdown-item' href='./0.0.2/'>v0.0.2</a></li>
+      <li><hr class='dropdown-divider'></li>
+      <li><a class='btn-sm dropdown-item' href='./versions/'>All versions</a></li>
+    </ul>
+  </div>
+</div>
+<main class="container-fluid markdown-body">
+  <article id="readme"></article>
+</main>
+<footer class="container-fluid d-flex justify-content-center bg-dark text-muted"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+<script>hljs.highlightAll()</script>
+<script src="../static/js/md.js"></script>
+<script>
+  const mdSrc = '../README.md'
+  const readme = document.querySelector('#readme')
+  markdownFileParser(mdSrc, readme)
+</script>
+</body>
+</html>
