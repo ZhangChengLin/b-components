@@ -2,19 +2,19 @@
   "files": [
     {
       "path": "./dist/b.bundle.js",
-      "maxSize": "2.56KB"
+      "maxSize": "2.61KB"
     },
     {
       "path": "./dist/b.bundle.min.js",
-      "maxSize": "1.73KB"
+      "maxSize": "1.75KB"
     },
     {
       "path": "./dist/b.bundle.esm.js",
-      "maxSize": "2.42KB"
+      "maxSize": "2.47KB"
     },
     {
       "path": "./dist/b.bundle.esm.min.js",
-      "maxSize": "1.67KB"
+      "maxSize": "1.70KB"
     },
 
     {
@@ -99,6 +99,23 @@
     },
     {
       "path": "./dist/bPopover.esm.min.js",
+      "maxSize": "950B"
+    },
+
+    {
+      "path": "./dist/bAlert.js",
+      "maxSize": "1.51KB"
+    },
+    {
+      "path": "./dist/bAlert.min.js",
+      "maxSize": "1.03KB"
+    },
+    {
+      "path": "./dist/bAlert.esm.js",
+      "maxSize": "1.36KB"
+    },
+    {
+      "path": "./dist/bAlert.esm.min.js",
       "maxSize": "950B"
     }
   ],
