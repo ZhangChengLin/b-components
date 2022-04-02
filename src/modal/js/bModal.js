@@ -63,7 +63,6 @@ const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongConten
     case true:
       _dialog.classList.add('modal-dialog-centered')
       break
-    case false:
     default:
   }
 
@@ -71,7 +70,6 @@ const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongConten
     case true:
       _dialog.classList.add('modal-dialog-scrollable')
       break
-    case false:
     default:
   }
 
