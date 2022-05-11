@@ -14,9 +14,21 @@ const bsDismissBtn = (dismissType, whiteVariant = false) => {
 
 const getTimeString = () => Date.now().toString()
 
+/**
+ * @param {HTMLElement} element
+ * @param {String} eventsType
+ * @param {Function} eventsFun
+ * @param {String} componentName
+ */
+const componentEvent = (element, eventsType, eventsFun, componentName) => {
+  const listenerType = eventsType + '.bs.' + componentName
+  element.addEventListener(listenerType, () => eventsFun())
+}
+
 export {
   isNull,
   isEmpty,
   getTimeString,
+  componentEvent,
   bsDismissBtn
 }
