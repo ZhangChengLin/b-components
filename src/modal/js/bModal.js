@@ -157,7 +157,17 @@ const footer = (footerNodeElement) => {
  * @param {String|null} EventsType
  * @param {Function|null} EventsFunction
  */
-const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
+const bModal = (
+  headerNodeElement = null,
+  bodyNodeElement = null,
+  footerNodeElement = null,
+  ModalSizes = null,
+  VerticallyCentered = null,
+  ScrollingLongContent = null,
+  Options = null,
+  EventsType = null,
+  EventsFunction = null
+) => {
   const modalId = 'modalId_' + getTimeString()
 
   const _modal = modal(modalId)

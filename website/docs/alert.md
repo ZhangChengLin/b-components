@@ -47,6 +47,6 @@ OR MORE
 |:-----:|:---------------:|:--------:|:-------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
 |   1   | parentContainer |          |   ""    |                                   None                                   |                                                               |
 |   2   |     content     |          |   ""    |                                   None                                   |                                                               |
-|   3   |      type       |          |   ""    |                                   None                                   | https://getbootstrap.com/docs/5.1/components/alerts/#examples |
-|   4   |   EventsType    |  String  |  None   | "show" &#124; "shown" &#124; "hide" &#124; "hidden" &#124; hidePrevented |  https://getbootstrap.com/docs/5.1/components/alert/#events   |
-|   5   | EventsFunction  | Function |  None   |                                   None                                   |  https://getbootstrap.com/docs/5.1/components/alert/#events   |
+|   3   |      type       |          |   ""    |                                   None                                   | https://getbootstrap.com/docs/5.2/components/alerts/#examples |
+|   4   |   EventsType    |  String  |  None   | "show" &#124; "shown" &#124; "hide" &#124; "hidden" &#124; hidePrevented |  https://getbootstrap.com/docs/5.2/components/alert/#events   |
+|   5   | EventsFunction  | Function |  None   |                                   None                                   |  https://getbootstrap.com/docs/5.2/components/alert/#events   |
