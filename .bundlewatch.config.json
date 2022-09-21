@@ -2,19 +2,19 @@
   "files": [
     {
       "path": "./dist/b.bundle.js",
-      "maxSize": "2.61KB"
+      "maxSize": "2.64KB"
     },
     {
       "path": "./dist/b.bundle.min.js",
-      "maxSize": "1.75KB"
+      "maxSize": "1.77KB"
     },
     {
       "path": "./dist/b.bundle.esm.js",
-      "maxSize": "2.47KB"
+      "maxSize": "2.49KB"
     },
     {
       "path": "./dist/b.bundle.esm.min.js",
-      "maxSize": "1.70KB"
+      "maxSize": "1.72KB"
     },
 
     {
