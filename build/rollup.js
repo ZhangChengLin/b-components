@@ -50,6 +50,7 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
     ? ''
     : ([ 'es', 'esm', 'module' ].includes(format)
       ? 'esm'
+      // eslint-disable-next-line unicorn/no-nested-ternary
       : [ 'cjs', 'commonjs' ].includes(format)
         ? 'cjs'
         : [ 'system', 'systemjs' ].includes(format)
@@ -59,7 +60,7 @@ function outputOptions(filename, format = '', min = false, sourcemap = true) {
   const Opts = {
     name: `${PREFIX}${toUpperCase(filename)}`,
     banner: min ? BannerMin : Banner,
-    format: format ? format : 'umd',
+    format: format || 'umd',
     file: paths.dist + `${PREFIX}${toUpperCase(filename)}${format ? '.' + format : ''}${min ? '.min' : ''}.js`,
     plugins: [
       min ? terser(terserOptions) : ''
@@ -82,7 +83,9 @@ function buildList() {
   MinifyStatus.forEach((currentMinify) => {
     OutputFormat.forEach((currentFormat) => {
       ComponentNames.forEach((currentName) => {
-        const x = `${PREFIX}${toUpperCase(currentName)}${currentFormat === 'umd' ? '' : '.' + currentFormat}${currentMinify ? '.min' : ''}.js`
+        const x = `${PREFIX}${toUpperCase(currentName)}${currentFormat === 'umd'
+          ? ''
+          : '.' + currentFormat}${currentMinify ? '.min' : ''}.js`
 
         build(inputOptions(currentName, currentFormat), outputOptions(currentName, currentFormat, currentMinify))
           .then(() => {
