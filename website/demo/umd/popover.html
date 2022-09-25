@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <link rel="icon" href="../../static/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github-dark-dimmed.min.css">
+  <title>bPopover - umd - DEMO</title>
+  <meta name="description"
+        content="Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.">
+  <meta name="keywords"
+        content="Bootstrap,Bootstrap5,Popover,dynamic,animation,autohide,delay,getInstance,getOrCreateInstance,show.bs.popover,shown.bs.popover,hide.bs.popover,hidden.bs.popover,inserted.bs.popover">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement('script')
+      hm.src = 'https://hm.baidu.com/hm.js?097448a07faa6124412179f6c9bfc688'
+      var s = document.getElementsByTagName('script')[0]
+      s.parentNode.insertBefore(hm, s)
+    })()
+  </script>
+</head>
+<body>
+<div class="container alert alert-primary alert-dismissible fade show" role="alert">
+  <a class="alert-link small" href="../../docs/popover.html" target="_blank" title="docs/bPopover">docs/bPopover</a>
+  <div class="small">
+    <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+  </div>
+  <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+</div>
+<div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
+  <div class="py-4 container border rounded text-center">
+    <button class='mt-5 btn btn-info' type='button' id='btnP'>bPopover</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<!--<script src="../../../dist/b.bundle.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/b-components-js@0.0.3/dist/b.bundle.min.js"></script>-->
+<script src='../../../dist/bPopover.min.js'></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/b-components-js@0.0.3/dist/bPopover.min.js"></script>-->
+<script src="../../static/js/index.js"></script>
+<script src="../../static/js/sampleFunctionCode.js" id="sampleFunctionCode"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+<script>hljs.highlightAll()</script>
+<script>
+  const tip = [
+    { 'title': '标题1', 'placement': '' },
+    { 'title': '标题2', 'placement': 'top' },
+    { 'title': '标题3', 'placement': 'top' },
+    { 'title': '标题4', 'placement': 'top' }
+  ]
+  const btn = document.querySelector('#btnP')
+  // bPopover(btn, '标题')
+  // bPopover(btn, '标题','top')
+  bPopover(btn, '标题','right')
+  // bPopover(btn, 'null')
+  // bPopover(btn, tip[0])
+  // bPopover(btn, tip[1])
+</script>
+</body>
+</html>

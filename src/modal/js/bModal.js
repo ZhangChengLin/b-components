@@ -1,5 +1,5 @@
 import { Modal } from 'bootstrap'
-import { modalEvents, removeModal, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
+import { componentEvent, removeAfterHiding, getTimeString, isNull, isEmpty, bsDismissBtn } from './util/index'
 
 /**
  * @param {String} modalId
@@ -63,7 +63,6 @@ const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongConten
     case true:
       _dialog.classList.add('modal-dialog-centered')
       break
-    case false:
     default:
   }
 
@@ -71,7 +70,6 @@ const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongConten
     case true:
       _dialog.classList.add('modal-dialog-scrollable')
       break
-    case false:
     default:
   }
 
@@ -159,7 +157,17 @@ const footer = (footerNodeElement) => {
  * @param {String|null} EventsType
  * @param {Function|null} EventsFunction
  */
-const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSizes, VerticallyCentered, ScrollingLongContent, Options, EventsType, EventsFunction) => {
+const bModal = (
+  headerNodeElement = null,
+  bodyNodeElement = null,
+  footerNodeElement = null,
+  ModalSizes = null,
+  VerticallyCentered = null,
+  ScrollingLongContent = null,
+  Options = null,
+  EventsType = null,
+  EventsFunction = null
+) => {
   const modalId = 'modalId_' + getTimeString()
 
   const _modal = modal(modalId)
@@ -174,11 +182,11 @@ const bModal = (headerNodeElement, bodyNodeElement, footerNodeElement, ModalSize
   _modal.append(_dialog)
   document.body.append(_modal)
 
-  EventsType && EventsFunction ? modalEvents(_modal, EventsType, EventsFunction) : ''
+  EventsType && EventsFunction ? componentEvent(_modal, EventsType, EventsFunction, 'modal') : ''
 
   const xxx = Options ? new Modal(_modal, Options) : new Modal(_modal)
   xxx.show()
-  removeModal(_modal)
+  removeAfterHiding(_modal)
   return modalId
 }
 
