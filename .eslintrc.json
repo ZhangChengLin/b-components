@@ -64,7 +64,8 @@
     "unicorn/no-null": "off",
     "unicorn/no-unused-properties": "error",
     "unicorn/prefer-module": "off",
-    "unicorn/prevent-abbreviations": "off"
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/switch-case-braces": "off"
   },
   "overrides": [
     {
