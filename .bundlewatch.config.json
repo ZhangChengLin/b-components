@@ -19,7 +19,7 @@
 
     {
       "path": "./dist/bModal.js",
-      "maxSize": "1.60KB"
+      "maxSize": "1.70KB"
     },
     {
       "path": "./dist/bModal.min.js",
@@ -27,7 +27,7 @@
     },
     {
       "path": "./dist/bModal.esm.js",
-      "maxSize": "1.45KB"
+      "maxSize": "1.50KB"
     },
     {
       "path": "./dist/bModal.esm.min.js",

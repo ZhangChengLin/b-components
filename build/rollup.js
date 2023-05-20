@@ -10,7 +10,7 @@ const { log, errorLog, infoLog, logBgError, logBgSuccess } = require('./config/c
 const { Banner, BannerMin } = require('./config/banner')
 const { paths } = require('./config/paths')
 
-const toUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase())
+const toUpperCase = (str) => str.toLowerCase().replaceAll(/( |^)[a-z]/g, (L) => L.toUpperCase())
 
 const { NODE_ENV } = process.env
 const PREFIX = 'b'
