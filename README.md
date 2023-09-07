@@ -76,6 +76,12 @@ Generate some commonly used Bootstrap components through JavaScript
 <a href="https://npms.io/search?q=b-components-js" title="npms.io (quality)" target="_blank"><img alt="npms.io (quality)" src="https://img.shields.io/npms-io/quality-score/b-components-js"></a>
 </p>
 
+<p align="center">
+<a href="https://npmmirror.com/package/b-components-js" target="_blank" title="npmmirror version">
+<img src="https://npmmirror.com/badge/v/b-components-js.svg" alt="npmmirror version" title="npmmirror version">
+<img src="https://npmmirror.com/badge/d/b-components-js.svg" alt="npmmirror download number">
+</a>
+</p>
 
 |                        |                                                                 day                                                                  |                                                                  week                                                                  |                                                                  month                                                                   |                                                                  year                                                                  |                                          total                                          |
 |:----------------------:|:------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
@@ -101,22 +107,22 @@ Currently, supports bootstrap v5 +
 Supported
 -
 
-- 💚 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
-- 💚 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
-- 💚 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
-- 💚 [Tooltip](https://getbootstrap.com/docs/5.1/components/tooltips/)
-- 💚 [Popover](https://getbootstrap.com/docs/5.1/components/popovers/)
+- 💚 [Modal](https://getbootstrap.com/docs/5.2/components/modal/)
+- 💚 [Offcanvas](https://getbootstrap.com/docs/5.2/components/offcanvas/)
+- 💚 [Toast](https://getbootstrap.com/docs/5.2/components/toasts/)
+- 💚 [Tooltip](https://getbootstrap.com/docs/5.2/components/tooltips/)
+- 💚 [Popover](https://getbootstrap.com/docs/5.2/components/popovers/)
 
 TODO
 -
 
-- 🖤 [Alert](https://getbootstrap.com/docs/5.1/components/alerts/)
-- 🖤 [Carousel](https://getbootstrap.com/docs/5.1/components/carousel/)
-- 🖤 [Collapse](https://getbootstrap.com/docs/5.1/components/collapse/)
-- 🖤 [Dropdown](https://getbootstrap.com/docs/5.1/components/dropdowns/)
-- 🖤 [Progress](https://getbootstrap.com/docs/5.1/components/progress/)
-- 🖤 [Scrollspy](https://getbootstrap.com/docs/5.1/components/scrollspy/)
-- 🖤 [Tab](https://getbootstrap.com/docs/5.1/components/navs-tabs/)
+- 🖤 [Alert](https://getbootstrap.com/docs/5.2/components/alerts/)
+- 🖤 [Carousel](https://getbootstrap.com/docs/5.2/components/carousel/)
+- 🖤 [Collapse](https://getbootstrap.com/docs/5.2/components/collapse/)
+- 🖤 [Dropdown](https://getbootstrap.com/docs/5.2/components/dropdowns/)
+- 🖤 [Progress](https://getbootstrap.com/docs/5.2/components/progress/)
+- 🖤 [Scrollspy](https://getbootstrap.com/docs/5.2/components/scrollspy/)
+- 🖤 [Tab](https://getbootstrap.com/docs/5.2/components/navs-tabs/)
 
 </details>
 

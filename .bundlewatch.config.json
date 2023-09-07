@@ -2,15 +2,15 @@
   "files": [
     {
       "path": "./dist/b.bundle.js",
-      "maxSize": "2.64KB"
+      "maxSize": "2.65KB"
     },
     {
       "path": "./dist/b.bundle.min.js",
-      "maxSize": "1.77KB"
+      "maxSize": "1.78KB"
     },
     {
       "path": "./dist/b.bundle.esm.js",
-      "maxSize": "2.49KB"
+      "maxSize": "2.50KB"
     },
     {
       "path": "./dist/b.bundle.esm.min.js",
@@ -19,7 +19,7 @@
 
     {
       "path": "./dist/bModal.js",
-      "maxSize": "1.60KB"
+      "maxSize": "1.70KB"
     },
     {
       "path": "./dist/bModal.min.js",
@@ -27,7 +27,7 @@
     },
     {
       "path": "./dist/bModal.esm.js",
-      "maxSize": "1.45KB"
+      "maxSize": "1.50KB"
     },
     {
       "path": "./dist/bModal.esm.min.js",

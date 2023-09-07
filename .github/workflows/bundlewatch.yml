@@ -8,7 +8,7 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 16
+  NODE: 18
 
 jobs:
   bundlewatch:
@@ -16,12 +16,12 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: npm
 
       - name: Install npm dependencies

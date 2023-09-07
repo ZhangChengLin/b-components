@@ -107,22 +107,22 @@
 已经支持
 -
 
-- 💚 [Modal](https://getbootstrap.com/docs/5.1/components/modal/)
-- 💚 [Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
-- 💚 [Toast](https://getbootstrap.com/docs/5.1/components/toasts/)
-- 💚 [Tooltip](https://getbootstrap.com/docs/5.1/components/tooltips/)
-- 💚 [Popover](https://getbootstrap.com/docs/5.1/components/popovers/)
+- 💚 [Modal](https://getbootstrap.com/docs/5.2/components/modal/)
+- 💚 [Offcanvas](https://getbootstrap.com/docs/5.2/components/offcanvas/)
+- 💚 [Toast](https://getbootstrap.com/docs/5.2/components/toasts/)
+- 💚 [Tooltip](https://getbootstrap.com/docs/5.2/components/tooltips/)
+- 💚 [Popover](https://getbootstrap.com/docs/5.2/components/popovers/)
 
 未来支持
 -
 
-- 🖤 [Alert](https://getbootstrap.com/docs/5.1/components/alerts/)
-- 🖤 [Carousel](https://getbootstrap.com/docs/5.1/components/carousel/)
-- 🖤 [Collapse](https://getbootstrap.com/docs/5.1/components/collapse/)
-- 🖤 [Dropdown](https://getbootstrap.com/docs/5.1/components/dropdowns/)
-- 🖤 [Progress](https://getbootstrap.com/docs/5.1/components/progress/)
-- 🖤 [Scrollspy](https://getbootstrap.com/docs/5.1/components/scrollspy/)
-- 🖤 [Tab](https://getbootstrap.com/docs/5.1/components/navs-tabs/)
+- 🖤 [Alert](https://getbootstrap.com/docs/5.2/components/alerts/)
+- 🖤 [Carousel](https://getbootstrap.com/docs/5.2/components/carousel/)
+- 🖤 [Collapse](https://getbootstrap.com/docs/5.2/components/collapse/)
+- 🖤 [Dropdown](https://getbootstrap.com/docs/5.2/components/dropdowns/)
+- 🖤 [Progress](https://getbootstrap.com/docs/5.2/components/progress/)
+- 🖤 [Scrollspy](https://getbootstrap.com/docs/5.2/components/scrollspy/)
+- 🖤 [Tab](https://getbootstrap.com/docs/5.2/components/navs-tabs/)
 
 </details>
 
