@@ -119,7 +119,13 @@ const body = (bodyNodeElement) => {
  * @param {String|null} EventsType
  * @param {Function|null} EventsFunction
  */
-const bToast = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
+const bToast = (headerNodeElement,
+  bodyNodeElement,
+  Placement,
+  Options,
+  EventsType,
+  EventsFunction
+) => {
   const toastId = 'toastId_' + getTimeString()
 
   const _containerOutsize = containerOutside()

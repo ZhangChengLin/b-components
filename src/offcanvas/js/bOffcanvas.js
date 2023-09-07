@@ -78,7 +78,14 @@ const body = (bodyNodeElement) => {
  * @param {String|null} EventsType
  * @param {Function|null} EventsFunction
  */
-const bOffcanvas = (headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction) => {
+const bOffcanvas = (
+  headerNodeElement,
+  bodyNodeElement,
+  Placement,
+  Options,
+  EventsType,
+  EventsFunction
+) => {
   const offcanvasId = 'offcanvasId_' + getTimeString()
 
   const _offcanvas = offcanvas(Placement, offcanvasId)

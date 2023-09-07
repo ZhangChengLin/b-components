@@ -20,7 +20,12 @@ const alert = (type = 'success') => {
  * @param {String | null} EventsType
  * @param {Function | null} EventsFunction
  */
-const bAlert = (parentContainer, content, type, EventsType, EventsFunction) => {
+const bAlert = (parentContainer,
+  content,
+  type,
+  EventsType,
+  EventsFunction
+) => {
   const _alert = alert(type)
 
   typeof content === 'string' ? _alert.innerHTML = content : _alert.append(content)
