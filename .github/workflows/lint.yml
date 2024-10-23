@@ -8,7 +8,7 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 18
+  NODE: 22
 
 jobs:
   bundlewatch:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: "${{ env.NODE }}"
           cache: npm
 
       - name: Install npm dependencies
