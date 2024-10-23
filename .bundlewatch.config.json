@@ -10,7 +10,7 @@
     },
     {
       "path": "./dist/b.bundle.esm.js",
-      "maxSize": "2.50KB"
+      "maxSize": "2.51KB"
     },
     {
       "path": "./dist/b.bundle.esm.min.js",

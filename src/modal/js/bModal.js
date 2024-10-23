@@ -52,6 +52,7 @@ const dialog = (ModalSizes = '', VerticallyCentered = false, ScrollingLongConten
       _dialog.classList.add('modal-fullscreen-xl-down')
       break
     case '':
+    case 'md':
     case 'default':
       break
     default:

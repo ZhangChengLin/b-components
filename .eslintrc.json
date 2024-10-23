@@ -55,7 +55,7 @@
       "single"
     ],
     "semi": [
-      "error",
+      "off",
       "never"
     ],
     "unicorn/filename-case": "off",

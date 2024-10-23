@@ -5,7 +5,7 @@ import bTooltip from '../tooltip/js/bTooltip'
 import bPopover from '../popover/js/bPopover'
 import bAlert from '../alert/js/bAlert'
 
-Object.assign(window, {
+Object.assign(globalThis, {
   bModal,
   bOffcanvas,
   bToast,
